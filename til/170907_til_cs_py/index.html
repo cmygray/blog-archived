@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='CS with python CS 학습목적: 면접 대응(js에서 꼭 알 필요는 없다고 한다)
+index bold: 오늘 꼭 챙겨야 할 내용들
+italic: 내일 다룰 내용
+ programming language &gt; 지금까지 python을 배웠다 data structure algorithm computer architecture  수, 진수 변환 memory address 정수가 저장되는 방법: 양수와 음수(2의 보수)의 차이 실수의 저장 방식: 부동소수점 문자열 인코딩: ASCII / UNICODE  memory hierachy  register locality cache hit miss virtual address space  code data heap stack  stack frame  OS'>
+
+<meta property='og:title' content='170907_TIL_CS&amp;python • cmygray'>
+<meta property='og:description' content='CS with python CS 학습목적: 면접 대응(js에서 꼭 알 필요는 없다고 한다)
+index bold: 오늘 꼭 챙겨야 할 내용들
+italic: 내일 다룰 내용
+ programming language &gt; 지금까지 python을 배웠다 data structure algorithm computer architecture  수, 진수 변환 memory address 정수가 저장되는 방법: 양수와 음수(2의 보수)의 차이 실수의 저장 방식: 부동소수점 문자열 인코딩: ASCII / UNICODE  memory hierachy  register locality cache hit miss virtual address space  code data heap stack  stack frame  OS'>
+<meta property='og:url' content='http://cmygray.github.io/til/170907_til_cs_py/'>
+<meta property='og:site_name' content='cmygray'>
+<meta property='og:type' content='article'><meta property='article:section' content='TIL'><meta property='article:tag' content='TIL'><meta property='article:published_time' content='2017-10-01T19:52:36&#43;09:00'/><meta property='article:modified_time' content='2017-10-01T19:52:36&#43;09:00'/>
+
+<meta name="generator" content="Hugo 0.29" />
+
+  <title>170907_TIL_CS&amp;python • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/til/170907_til_cs_py/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/assets/css/main.77da63e1.css'><link rel='stylesheet' href='/css/custom.css'>
+</head>
+
+
+<body class='page type-TIL'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  <li>
+      <a href='https://cmygray.github.io'>Home</a>
+    </li>
+  <li>
+      <a href='/til/'>TIL</a>
+    </li>
+  <li>
+      <a href='/blog/'>Dataviz</a>
+    </li>
+  
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>cmygray</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>170907_TIL_CS&amp;python</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2017-10-01T19:52:36&#43;09:00'>2017, Oct 1</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/> 
+  
+</svg>
+3 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  
+
+<h1 id="cs-with-python">CS with python</h1>
+
+<h3 id="cs">CS</h3>
+
+<p><em>학습목적: 면접 대응(js에서 꼭 알 필요는 없다고 한다)</em></p>
+
+<h4 id="index">index</h4>
+
+<p><strong>bold: 오늘 꼭 챙겨야 할 내용들</strong><br />
+<em>italic: 내일 다룰 내용</em></p>
+
+<ul>
+<li>programming language
+&gt; 지금까지 python을 배웠다</li>
+<li>data structure</li>
+<li>algorithm</li>
+<li>computer architecture
+
+<ul>
+<li><strong>수, 진수 변환</strong></li>
+<li><strong>memory address</strong></li>
+<li>정수가 저장되는 방법: 양수와 음수(2의 보수)의 차이</li>
+<li>실수의 저장 방식: 부동소수점</li>
+<li><strong>문자열 인코딩: ASCII / UNICODE</strong></li>
+</ul></li>
+<li><em>memory hierachy</em>
+
+<ul>
+<li>register</li>
+<li>locality</li>
+<li>cache</li>
+<li>hit</li>
+<li>miss</li>
+<li><em>virtual address space</em>
+
+<ul>
+<li>code</li>
+<li>data</li>
+<li>heap</li>
+<li>stack</li>
+</ul></li>
+<li><em>stack frame</em></li>
+</ul></li>
+<li>OS<br />
+<em>+network</em></li>
+</ul>
+
+<h4 id="number">number</h4>
+
+<ul>
+<li><p>types</p>
+
+<ul>
+<li>decimal
+0,1,2, &hellip; 9</li>
+<li>binary <code>0b</code>, <code>bin()</code>
+0, 1</li>
+<li>hexdecimal <code>0x</code>, <code>hex()</code>
+0, 1, 2, &hellip; 0, a, b, &hellip; f</li>
+</ul></li>
+
+<li><p>converting</p></li>
+</ul>
+
+<ol>
+<li>dec -&gt; bin, bin -&gt; dec<br />
+
+<ul>
+<li>직접 계산해보기
+2의 승수로 쪼개기: 46 = 32 + 8 + 4 + 2<br />
+<em>2^0 ~ 2^10 은 외워놔야 편하다</em></li>
+<li>check
+<code>0b1111</code> -&gt; 15</li>
+</ul></li>
+<li>bin -&gt; hex, hex -&gt; bin<br />
+2진수 4자리 -&gt; 16진수 1자리 라고 생각하면 된다.<br />
+<strong>a = 1010</strong><br />
+b = 1011<br />
+c = 1100<br />
+d = 1101<br />
+e = 1110<br />
+<strong>f = 1111</strong><br />
+<strong>a,f:외워</strong></li>
+</ol>
+
+<p>64bit &amp; 32bit<br />
+  한번에 보낼 수 있는(CPU -&gt; RAM) 데이터량<br />
+0 or 1 = 1bit<br />
+1byte = 8bit<br />
+1bit = cpu-ram 전선 한개<br />
+64bit 컴퓨터: 전선이 64가닥</p>
+
+<p>0과 1의 구분<br />
+트랜지스터가 전기를 사용해 구별하는데, 전기(전류 전압 저항) 중 전압으로 판단.<br />
+  3.7~5v -&gt; True<br />
+  0~?v -&gt; False<br />
+<em>0, 1은 데이터. 0과 1의 판단은 볼트로.</em></p>
+
+<h4 id="memory-address">memory address</h4>
+
+<ul>
+<li>32bit<br />
+32 bin numbers = 2 ** 32 = 4gigabit<br />
+한개의 주소당 1byte<br />
+최대 표현량은 2 ** 32 bytes = 4gb<br /></li>
+</ul>
+
+<blockquote>
+<p>32bit PC에 8gb 램을 사용하면 안되는 이유 ㅋㅋ</p>
+</blockquote>
+
+<p>32개의 bin 자리 -&gt; 8개의 hex 자리<br />
+hex주소를 쓴다. 짧기 때문에.<br />
+주소 조회: <code>hx(id(var))</code></p>
+
+<ul>
+<li>정수<br />
+8bit 정수(<code>char</code>)의 구성<br />
+맨 앞에 sign자리 1개 + 숫자 자리 7개<br />
+range = (2 ** 7, 2 ** 7) == (-128, 128) -&gt; -128 부터 127 까지<br />
+<em>이건 음수를 저장하는 방식은 아니다. 음수는 2의 보수</em><br /></li>
+<li>why?<br />
+sign 방식의 문제점
+1 000 0000 == 0 000 0000 ???? +0? -0?</li>
+</ul>
+
+<p>음수(2의 보수)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#25</span><span style="">
+</span><span style=""></span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="">(</span><span style="color:#ae81ff">25</span><span style="">)</span><span style="color:#f92672">.</span><span style="">to_bytes</span><span style="">(</span><span style="color:#ae81ff">1</span><span style="">,</span><span style=""> </span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;little&#39;</span><span style="">,</span><span style=""> </span><span style="">signed</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">True</span><span style="">)</span><span style="">
+</span><span style=""></span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\x19</span><span style="color:#e6db74">&#39;</span><span style="">
+</span><span style="">
+</span><span style=""></span><span style="color:#75715e">#-25</span><span style="">
+</span><span style=""></span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="">(</span><span style="color:#f92672">-</span><span style="color:#ae81ff">25</span><span style="">)</span><span style="color:#f92672">.</span><span style="">to_bytes</span><span style="">(</span><span style="color:#ae81ff">1</span><span style="">,</span><span style=""> </span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;little&#39;</span><span style="">,</span><span style=""> </span><span style="">signed</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">True</span><span style="">)</span><span style="">
+</span><span style=""></span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\xe7</span><span style="color:#e6db74">&#39;</span><span style="">
+</span><span style=""></span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="">bin</span><span style="">(</span><span style="color:#ae81ff">0xe7</span><span style="">)</span><span style="">
+</span><span style=""></span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;0b11100111&#39;</span></code></pre>
+</div>
+<ul>
+<li><p>보수</p>
+
+<ul>
+<li>10진수<br />
+9의 보수 + 1 = 10의 보수(자릿수가 변하게 하는 수)<br />
+53에 대한 9의 보수 = 46, +1 한 47은 10의 보수</li>
+<li>2진수<br />
+1의 보수 + 1 = 2의 보수(자릿수가 변하게 하는 수)</li>
+</ul></li>
+
+<li><p>예시<br />
+11100111(2)<br />
+첫자리 빼고 2의 보수로 만들면<br />
+0011000 + 1 = 0011001 -&gt; <code>int(0b0011001)</code> == 25<br />
+결과값에 -만 붙이면 됨.<br />
+sign이 1이면 첫자리를 빼고 2의 보수로 변환.<br />
+바뀐 2의 보수를 10진수로 변환하고 앞에 -를 달아서 반환.</p></li>
+
+<li><p>32bit 정수(<code>int</code>)<br />
+최대 표현 숫자 = 2 ** 31 - 1 =</p></li>
+
+<li><p>부동소수점<br />
+소수점이 떠다닌다. exponent만 조절해주면 된다.  <em>exponent: 지수</em></p></li>
+
+<li><p>핵심(부동소수 점이 무어냐 물어본다면)</p>
+
+<ol>
+<li><code>if realnumber == 실수:</code> <strong>사용금지</strong></li>
+<li>부동소수점은 표현범위는 넓은데 정확도가 떨어진다.</li>
+</ol></li>
+</ul>
+
+<p>test</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="color:#f92672">import</span><span style=""> </span><span style="">sys</span><span style="">
+</span><span style=""></span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="">sys</span><span style="color:#f92672">.</span><span style="">float_info</span><span style="">
+</span><span style=""></span><span style="">sys</span><span style="color:#f92672">.</span><span style="">float_info</span><span style="">(</span><span style="">max</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1.7976931348623157e+308</span><span style="">,</span><span style=""> </span><span style="">max_exp</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1024</span><span style="">,</span><span style=""> </span><span style="">max_10_exp</span><span style="color:#f92672">=</span><span style="color:#ae81ff">308</span><span style="">,</span><span style=""> </span><span style="">min</span><span style="color:#f92672">=</span><span style="color:#ae81ff">2.2250738585072014e-308</span><span style="">,</span><span style=""> </span><span style="">min_exp</span><span style="color:#f92672">=-</span><span style="color:#ae81ff">1021</span><span style="">,</span><span style=""> </span><span style="">min_10_exp</span><span style="color:#f92672">=-</span><span style="color:#ae81ff">307</span><span style="">,</span><span style=""> </span><span style="">dig</span><span style="color:#f92672">=</span><span style="color:#ae81ff">15</span><span style="">,</span><span style=""> </span><span style="">mant_dig</span><span style="color:#f92672">=</span><span style="color:#ae81ff">53</span><span style="">,</span><span style=""> </span><span style="">epsilon</span><span style="color:#f92672">=</span><span style="color:#ae81ff">2.220446049250313e-16</span><span style="">,</span><span style=""> </span><span style="">radix</span><span style="color:#f92672">=</span><span style="color:#ae81ff">2</span><span style="">,</span><span style=""> </span><span style="">rounds</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span><span style="">)</span></code></pre>
+</div>
+<p><em>dig: 정확도, radix: 기수</em></p>
+
+<blockquote>
+<p>플로팅 포인트는 나중에라도 꼭 공부해야 한다. 내년 1월 양태환 강사님의 책이 나온다고&hellip;</p>
+</blockquote>
+
+<h4 id="encoding">encoding</h4>
+
+<p>abcde와 같은 문자열을 어떻게 binary로 저장할까? mapping에 대한 약속.</p>
+
+<ul>
+<li><p>ASCII</p>
+
+<ol>
+<li>숫자 1개 : 문자 1개 로 묶어보자.</li>
+<li>A-Z, a-z, 숫자, 특수문자 합쳐서 2^8개 = 8bit = 1byte -&gt; <code>char</code>자료형의 탄생</li>
+</ol></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="">  </span><span style="color:#75715e">#ASCII test</span><span style="">
+</span><span style="">  </span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="">a</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;abcde&#39;</span><span style="color:#f92672">.</span><span style="">encode</span><span style="">()</span><span style="">
+</span><span style="">  </span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="">a</span><span style="">
+</span><span style="">  </span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;abcde&#39;</span><span style="">
+</span><span style="">  </span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">ch</span><span style=""> </span><span style="color:#f92672">in</span><span style=""> </span><span style="">a</span><span style="">:</span><span style="">
+</span><span style="">  </span><span style="color:#f92672">...</span><span style="">     </span><span style="color:#66d9ef">print</span><span style="">(</span><span style="">ch</span><span style="">)</span><span style="">
+</span><span style="">  </span><span style="color:#ae81ff">97</span><span style=""> </span><span style="color:#75715e">#a</span><span style="">
+</span><span style="">  </span><span style="color:#ae81ff">98</span><span style=""> </span><span style="color:#75715e">#b</span><span style="">
+</span><span style="">  </span><span style="color:#ae81ff">99</span><span style=""> </span><span style="color:#75715e">#c</span><span style="">
+</span><span style="">  </span><span style="color:#ae81ff">100</span><span style=""> </span><span style="color:#75715e">#d</span><span style="">
+</span><span style="">  </span><span style="color:#ae81ff">101</span><span style=""> </span><span style="color:#75715e">#e</span></code></pre>
+</div>
+<ul>
+<li>unicode
+
+<ol>
+<li>2byte = 2^16 - 1 = 65,536 개의 문자-숫자의 연결을 담은 테이블(의 평면)</li>
+<li>평면이 17개(인데 보통은 기본평면, 많아야 3개 평면을 쓰고 나머지는 비어있음)</li>
+</ol></li>
+</ul>
+
+<blockquote>
+<p>기존의 아스키는? unicode에서 포용해서 호환됨.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="">  </span><span style="color:#75715e">#unicode address test</span><span style="">
+</span><span style="">  </span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\uAC00</span><span style="color:#e6db74">&#39;</span><span style="">
+</span><span style="">  </span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;가&#39;</span></code></pre>
+</div>
+<ul>
+<li>encoding model
+
+<ol>
+<li>UTF-8(가변)</li>
+<li>UTF-16(2byte or 4byte)</li>
+<li>UTF-32(4byte)</li>
+<li>CP949 &hellip;?0</li>
+</ol></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="">  </span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="">a</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;가&#39;</span><span style="">
+</span><span style="">  </span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="">a</span><span style="color:#f92672">.</span><span style="">encode</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;utf-8&#39;</span><span style="">)</span><span style="">
+</span><span style="">  </span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\xea\xb0\x80</span><span style="color:#e6db74">&#39;</span><span style="">
+</span><span style="">  </span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="">b</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\u0041</span><span style="color:#e6db74">&#39;</span><span style="">
+</span><span style="">  </span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="">b</span><span style="">
+</span><span style="">  </span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;A&#39;</span><span style="">
+</span><span style="">  </span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="">b</span><span style="color:#f92672">.</span><span style="">encode</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;utf-8&#39;</span><span style="">)</span><span style="">
+</span><span style="">  </span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;A&#39;</span><span style="">
+</span><span style="">  </span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="">a</span><span style="color:#f92672">.</span><span style="">encode</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;utf-8&#39;</span><span style="">)</span><span style="">
+</span><span style="">  </span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\xea\xb0\x80</span><span style="color:#e6db74">&#39;</span></code></pre>
+</div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="">  </span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="">a</span><span style="color:#f92672">.</span><span style="">encode</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;utf-32&#39;</span><span style="">)</span><span style="">
+</span><span style="">  </span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\xff\xfe\x00\x00\x00\xac\x00\x00</span><span style="color:#e6db74">&#39;</span><span style="">
+</span><span style="">  </span><span style="color:#f92672">&gt;&gt;&gt;</span><span style=""> </span><span style="">b</span><span style="color:#f92672">.</span><span style="">encode</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;utf-32&#39;</span><span style="">)</span><span style="">
+</span><span style="">  </span><span style="color:#e6db74">b</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\xff\xfe\x00\x00</span><span style="color:#e6db74">A</span><span style="color:#ae81ff">\x00\x00\x00</span><span style="color:#e6db74">&#39;</span></code></pre>
+</div>
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  <div class='categories'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/til'>TIL</a></div>
+<div class='tags'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/til'>TIL</a></div>
+
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/til/170906_til_cs_py/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>170906_TIL_CS&amp;python</a>
+    </div><div class='next-entry'>
+      <a href='/til/170908_til_cs_py/'>
+        <span class='screen-reader'>Next post: </span>170908_TIL_CS&amp;python<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+  
+<div class='comments-container'>
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cmygray" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:cmygray@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+  <p>
+        
+      
+
+       &copy; 2017 Won Kim 
+  </p>
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='/assets/js/main.f29c93b9.js'></script><script src='/js/custom.js'></script></body>
+
+</html>
+

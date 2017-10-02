@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='17.09.18.(월) DONE  webcafe 페이지 게시판, 새소식 마크업 / 스타일 적용  click, focusin 이벤트 사용해서 jquery로 게시판별 활성화/비활성화 기능 구현 임시 비활성화 클래스를 만들어서 분기해두고 활성/비활성 메뉴 구현하는 요령 white-space, overflow, text-overflow 태그로 넘치는 텍스트 처리 min-height 속성으로 컨텐츠 양에 따라 유연한 레이아웃 만들기 padding과 position 속성을 사용해서 간단하게 레이아웃 바꾸기 그래디언트 윤곽선을 1px 박스로 구현     마크업이 어느정도 익숙해져서 강사님의 방식에서 크게 벗어나지 않고 작성할 수 있었다.'>
+
+<meta property='og:title' content='170918_TIL_html_css • cmygray'>
+<meta property='og:description' content='17.09.18.(월) DONE  webcafe 페이지 게시판, 새소식 마크업 / 스타일 적용  click, focusin 이벤트 사용해서 jquery로 게시판별 활성화/비활성화 기능 구현 임시 비활성화 클래스를 만들어서 분기해두고 활성/비활성 메뉴 구현하는 요령 white-space, overflow, text-overflow 태그로 넘치는 텍스트 처리 min-height 속성으로 컨텐츠 양에 따라 유연한 레이아웃 만들기 padding과 position 속성을 사용해서 간단하게 레이아웃 바꾸기 그래디언트 윤곽선을 1px 박스로 구현     마크업이 어느정도 익숙해져서 강사님의 방식에서 크게 벗어나지 않고 작성할 수 있었다.'>
+<meta property='og:url' content='http://cmygray.github.io/til/170918_til_html_css/'>
+<meta property='og:site_name' content='cmygray'>
+<meta property='og:type' content='article'><meta property='article:section' content='TIL'><meta property='article:tag' content='TIL'><meta property='article:published_time' content='2017-10-02T19:09:09&#43;09:00'/><meta property='article:modified_time' content='2017-10-02T19:09:09&#43;09:00'/>
+
+<meta name="generator" content="Hugo 0.29" />
+
+  <title>170918_TIL_html_css • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/til/170918_til_html_css/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/assets/css/main.77da63e1.css'><link rel='stylesheet' href='/css/custom.css'>
+</head>
+
+
+<body class='page type-TIL'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  <li>
+      <a href='https://cmygray.github.io'>Home</a>
+    </li>
+  <li>
+      <a href='/til/'>TIL</a>
+    </li>
+  <li>
+      <a href='/blog/'>Dataviz</a>
+    </li>
+  
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>cmygray</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>170918_TIL_html_css</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2017-10-02T19:09:09&#43;09:00'>2017, Oct 2</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/> 
+  
+</svg>
+One min read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  
+
+<h1 id="17-09-18-월">17.09.18.(월)</h1>
+
+<h2 id="done">DONE</h2>
+
+<ul>
+<li>webcafe 페이지 게시판, 새소식 마크업 / 스타일 적용
+
+<ul>
+<li><code>click, focusin</code> 이벤트 사용해서 jquery로 게시판별 활성화/비활성화 기능 구현</li>
+<li>임시 비활성화 클래스를 만들어서 분기해두고 활성/비활성 메뉴 구현하는 요령</li>
+<li><code>white-space</code>, <code>overflow</code>, <code>text-overflow</code> 태그로 넘치는 텍스트 처리</li>
+<li><code>min-height</code> 속성으로 컨텐츠 양에 따라 유연한 레이아웃 만들기</li>
+<li><code>padding</code>과 <code>position</code> 속성을 사용해서 간단하게 레이아웃 바꾸기</li>
+<li>그래디언트 윤곽선을 1px 박스로 구현</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<ol>
+<li>마크업이 어느정도 익숙해져서 강사님의 방식에서 크게 벗어나지 않고 작성할 수 있었다. 또 코드 작성이 빨라져서 수업을 들으면서 내 생각의 다른 점도 같이 적어볼 수 있었다. 상위 클래스로 하위 클래스를 한번에 관리하는 부분이 아직 어색하다. 스타일 적용으로 위치 바꾸는 것은 배경색만 지정해두고 테트리스 하듯 맞춰가는 게 가장 실수가 적은 방법인 것 같다.<br /></li>
+<li>링크 커서범위를 넓히기 vs 텍스트 선택의 용이성, 썸네일 이미지와 더보기 버튼의 마크업 순서같은 문제에 대해 생각해볼 수 있는 글이나 책이 있으면 좋겠다.</li>
+</ol>
+</blockquote>
+
+<h2 id="todo">TODO</h2>
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <code>article</code> 태그의 적용범위 확인 <em>09/19</em></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> grid 사용해서 게시판 구현하기</label></li>
+</ul>
+
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  <div class='categories'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/til'>TIL</a></div>
+<div class='tags'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/til'>TIL</a></div>
+
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/til/170915_til_html_css/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>170915_TIL_html_css</a>
+    </div><div class='next-entry'>
+      <a href='/til/170919_til_html_css/'>
+        <span class='screen-reader'>Next post: </span>170919_TIL_html_css<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+  
+<div class='comments-container'>
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cmygray" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:cmygray@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+  <p>
+        
+      
+
+       &copy; 2017 Won Kim 
+  </p>
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='/assets/js/main.f29c93b9.js'></script><script src='/js/custom.js'></script></body>
+
+</html>
+

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='수업시간에 다룬 CSS animation, form tag, 그외 찾아본 자료들 정리
+CSS animation form, fieldset, input&hellip; &lt;form&gt; 태그의 기본 구조
+&lt;form&gt;여기가 어떤 폼인지 써준다 &lt;fieldset&gt;서로 연관된 인풋들끼리 묶는 역할 &lt;legend&gt;필드셋의 내용에 대해서 안내&lt;/legend&gt;&lt;div&gt;필요시 디비전태그로 라벨,인풋을 묶는다 &lt;label&gt;인풋에 기입할 내용 설명&lt;/label&gt;&lt;input&gt;정보 입력하는 곳, 다양한 속성 제공 &lt;/div&gt;&lt;button&gt;버튼으로 제출&lt;/button&gt;&lt;/fieldset&gt;&lt;/form&gt;  label, input 묶는 법
+ &lt;label for=&quot;text&quot;&gt;, &lt;input id=&quot;text&quot;&gt; 짝 맞추기 &lt;input title=&quot;label-text&quot;&gt;, 한가지 태그만 사용하는 방법  button, input 묶는법
+ button type=&quot;button&quot; == input type=&quot;button&quot;'>
+
+<meta property='og:title' content='170914_TIL_html_css • cmygray'>
+<meta property='og:description' content='수업시간에 다룬 CSS animation, form tag, 그외 찾아본 자료들 정리
+CSS animation form, fieldset, input&hellip; &lt;form&gt; 태그의 기본 구조
+&lt;form&gt;여기가 어떤 폼인지 써준다 &lt;fieldset&gt;서로 연관된 인풋들끼리 묶는 역할 &lt;legend&gt;필드셋의 내용에 대해서 안내&lt;/legend&gt;&lt;div&gt;필요시 디비전태그로 라벨,인풋을 묶는다 &lt;label&gt;인풋에 기입할 내용 설명&lt;/label&gt;&lt;input&gt;정보 입력하는 곳, 다양한 속성 제공 &lt;/div&gt;&lt;button&gt;버튼으로 제출&lt;/button&gt;&lt;/fieldset&gt;&lt;/form&gt;  label, input 묶는 법
+ &lt;label for=&quot;text&quot;&gt;, &lt;input id=&quot;text&quot;&gt; 짝 맞추기 &lt;input title=&quot;label-text&quot;&gt;, 한가지 태그만 사용하는 방법  button, input 묶는법
+ button type=&quot;button&quot; == input type=&quot;button&quot;'>
+<meta property='og:url' content='http://cmygray.github.io/til/170914_til_html_css/'>
+<meta property='og:site_name' content='cmygray'>
+<meta property='og:type' content='article'><meta property='article:section' content='TIL'><meta property='article:tag' content='TIL'><meta property='article:published_time' content='2017-10-02T19:08:46&#43;09:00'/><meta property='article:modified_time' content='2017-10-02T19:08:46&#43;09:00'/>
+
+<meta name="generator" content="Hugo 0.29" />
+
+  <title>170914_TIL_html_css • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/til/170914_til_html_css/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/assets/css/main.77da63e1.css'><link rel='stylesheet' href='/css/custom.css'>
+</head>
+
+
+<body class='page type-TIL'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  <li>
+      <a href='https://cmygray.github.io'>Home</a>
+    </li>
+  <li>
+      <a href='/til/'>TIL</a>
+    </li>
+  <li>
+      <a href='/blog/'>Dataviz</a>
+    </li>
+  
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>cmygray</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>170914_TIL_html_css</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2017-10-02T19:08:46&#43;09:00'>2017, Oct 2</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/> 
+  
+</svg>
+2 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  
+
+<p>수업시간에 다룬 CSS animation, form tag, 그외 찾아본 자료들 정리</p>
+
+<h2 id="css-animation">CSS animation</h2>
+
+<h2 id="form-fieldset-input">form, fieldset, input&hellip;</h2>
+
+<p><code>&lt;form&gt;</code> 태그의 기본 구조</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTML" data-lang="HTML"><span style="">&lt;</span><span style=""></span><span style="color:#f92672">form</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">여기가 어떤 폼인지 써준다
+</span><span style="">  </span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">fieldset</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">서로 연관된 인풋들끼리 묶는 역할
+</span><span style="">    </span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">legend</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">필드셋의 내용에 대해서 안내</span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">legend</span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style="">    </span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">div</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">필요시 디비전태그로 라벨,인풋을 묶는다
+</span><span style="">      </span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">label</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">인풋에 기입할 내용 설명</span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">label</span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style="">      </span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">input</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">정보 입력하는 곳, 다양한 속성 제공
+</span><span style="">    </span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">div</span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style="">    </span><span style="">&lt;</span><span style=""></span><span style="color:#f92672">button</span><span style=""></span><span style=""></span><span style="">&gt;</span><span style="">버튼으로 제출</span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">button</span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style="">  </span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">fieldset</span><span style=""></span><span style="">&gt;</span><span style="">
+</span><span style=""></span><span style="">&lt;</span><span style=""></span><span style="">/</span><span style=""></span><span style="color:#f92672">form</span><span style=""></span><span style="">&gt;</span></code></pre>
+</div>
+<p><strong>label, input 묶는 법</strong></p>
+
+<ol>
+<li><code>&lt;label for=&quot;text&quot;&gt;</code>, <code>&lt;input id=&quot;text&quot;&gt;</code> 짝 맞추기</li>
+<li><code>&lt;input title=&quot;label-text&quot;&gt;</code>, 한가지 태그만 사용하는 방법</li>
+</ol>
+
+<p><strong>button, input 묶는법</strong></p>
+
+<ul>
+<li><code>button type=&quot;button&quot;</code> == <code>input type=&quot;button&quot;</code><br /></li>
+</ul>
+
+<blockquote>
+<p>로그에 이렇게 써있는데 다시 보니까 무슨 소린지 잘 모르겠네&hellip;</p>
+</blockquote>
+
+<p><strong>form 태그로 묶는 이유</strong></p>
+
+<ul>
+<li>submit 정보 모아두려고. 폼 바깥에 있는 버튼으로 접근이 가능하긴 함. <em>폼의 id와 바깥 버튼의 폼속성을 일치시켜주면 됨. HTML5에 생긴 변화</em></li>
+</ul>
+
+<h2 id="html-content-categories">HTML content categories</h2>
+
+<p>시멘틱 태그명이랑 원래 있는 태그명이 헷갈려서 컨텐츠 카테고리를 살펴봄. MDN 참조.<br />
+<img src="https://developer.mozilla.org/@api/deki/files/6244/=Content_categories_venn.png?size=webview" alt="HTML content category model" /><br />
+컨텐츠 범주의 다이어그램. 다이어그램 말고도 요소의 구분 기준이 문서별로 다양해서 엄청 헷갈린다. 자주 등장했던 태그들의 해당 분류를 살펴봤다.</p>
+
+<ul>
+<li>Flow content, 텍스트 또는 임베디드 컨텐츠를 포함하는 <em>거의</em> 모든 것.</li>
+<li>Sectioning content, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code> 영역과 heading content를 정의하는 역할. eg. <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code></li>
+</ul>
+
+<blockquote>
+<p><code>&lt;body&gt;</code> 내부의 모든 컨텐츠는 섹션의 일부이다. HTML5에서 섹션은 중첩될 수 있다. <code>&lt;body&gt;</code> 요소에 의해 정의된 메인 섹션을 제외하면, 섹션의 범위는 명확하게 또는 암묵적으로 정의된다. 명확하게 정의된 섹션으로는 <code>&lt;body&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code> 내부 컨텐츠가 있다.<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Sectioning_content" target="_blank">MDN,Sectioning content</a></p>
+
+<blockquote>
+<p>각 섹션은 고유의 헤딩 계층을 가질 수 있다. 따라서, 중첩된 섹션일지라도 <code>&lt;h1&gt;</code> 요소를 가질 수 있다.</p>
+</blockquote>
+</blockquote>
+
+<ul class="task-list">
+<li><code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>는 섹셔닝 컨텐츠가 아님.<br /></li>
+<li>섹셔닝 컨텐츠에는 헤딩 컨텐츠로 제목을 마크업 해줌.</li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> 헤더와 푸터 사이에 <code>&lt;main-conent&gt;</code> 태그를 사용하면 이건 섹셔닝 컨텐츠?<br /></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> div 태그로 메인박스를 만드는 경우에는?</label></li>
+<li>Heading content, 섹션의 제목. 섹션 없이 제목 자체로도 사용.</li>
+</ul>
+
+<blockquote>
+<p>섹셔닝 요소들이 문서의 구조를 정의한다면, 아웃라인 또한 헤딩을 필요로한다. 기본 규칙은 간단하다: 첫번째 HTML 헤딩 요소(<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> 중 하나)가 현재 섹션의 제목을 정의한다. <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Defining_headings" target="_blank">MDN,Defining headings</a></p>
+
+<p>헤딩 요소는 요소 이름의 숫자에 의해 우선순위를 가진다. <code>&lt;h1&gt;</code> 이 가장 높고, <code>&lt;h6&gt;</code>가 가장 낮다. 상대적인 우선순위는 한 섹션 내에서만 유효하다; 섹션들의 구조는 섹션들의 헤딩 간 우선순위가 아니라 아웃라인을 정한다.</p>
+</blockquote>
+
+<h3 id="결론">결론</h3>
+
+<p>마크업을 할 때는 <code>&lt;header&gt;</code>와 <code>&lt;footer&gt;</code>, 그 사이에 - 그때그때 상황별로 만든 &lsquo;시멘틱&rsquo;한 이름의 - <code>&lt;main-name&gt;</code> 따위의 태그로 크게 세가지 섹션으로 분리한다. 이때 헤더와 푸터는 섹셔닝 컨텐츠가 아니다. 헤더와 푸터 사이의 공간을 컨텐츠 내용 상 구조에 따라서 더 나눌 수도 있으며 이때 표제 컨텐츠를 덧붙여 마크업 할 수 있다. 제목 태그의 숫자가 섹션의 우선순위를 정하지 않는다. 이는 한 섹션 내에서만 유효하다. 다만 제목태그에 클래스를 부여하는 식으로 암시적인 구조를 부여할 수는 있다.</p>
+
+<blockquote>
+<p><code>&lt;header&gt;</code> 태그의 명세를 보면, 헤더는 <code>&lt;section&gt;</code>들, 그러니까 어떤 위계에 따라 나뉜 메인 섹션들의 표제(<code>&lt;h1&gt;</code>~<code>&lt;h6&gt;</code>)들을 담도록 설계됐다. 그렇다면 헤더 아래에 등장하는 섹션들의 시멘틱 태그명은 곧 헤딩의 텍스트인 셈인가? 결론같지 않은 결론&hellip;</p>
+</blockquote>
+
+<ul>
+<li><p>참고 글</p>
+
+<ul>
+<li><a href="http://pflannery.github.io/oocss-skeleton.docpad/oocss/help/components.html#" target="_blank">HTML component library</a></li>
+</ul></li>
+
+<li><p>CSS 레이아웃 관련 읽어볼 내용</p>
+
+<ul>
+<li><a href="http://naradesign.net/wp/2008/05/27/144/" target="_blank">float을 clear하는 4가지 방법</a></li>
+<li><a href="http://wit.nts-corp.com/2015/04/16/3538" target="_blank">CSS 방법론</a></li>
+</ul></li>
+</ul>
+
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  <div class='tags'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/til'>TIL</a></div>
+
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/til/170913_til_html_css/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>170913_TIL_html_css</a>
+    </div><div class='next-entry'>
+      <a href='/til/170915_til_html_css/'>
+        <span class='screen-reader'>Next post: </span>170915_TIL_html_css<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+  
+<div class='comments-container'>
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cmygray" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:cmygray@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+  <p>
+        
+      
+
+       &copy; 2017 Won Kim 
+  </p>
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='/assets/js/main.f29c93b9.js'></script><script src='/js/custom.js'></script></body>
+
+</html>
+

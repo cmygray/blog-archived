@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='fds week2 day3
+HTML/CSS 오전 지각내용  모서리 둥글게 하기, 그래디언트 넣기
+ .readable-hidden 클래스 숨기기
+ li a {, li&gt;a { 의 차이점: 메인메뉴만 글자 흰색으로 바꾸기   main-menu &gt; li 가로배치하기. float: left 사용.
+li 크기를 지정하지 않아서, 모든 하위 엘리먼트가 선택되서 정렬이 이상해짐. &gt; 사용.
+.sub-menu 때문에 span의 크기까지 영향을 받는다.
+자유롭게 스팬 위치를 정하면서도 li에 영향을 주지 않도록하려면 하위 엘리먼트 .sub-menu의 z-index를 바꾼다. 각 서브메뉴의 기준점은 나중에 좌표로 정해주면 된다.'>
+
+<meta property='og:title' content='170913_TIL_html_css • cmygray'>
+<meta property='og:description' content='fds week2 day3
+HTML/CSS 오전 지각내용  모서리 둥글게 하기, 그래디언트 넣기
+ .readable-hidden 클래스 숨기기
+ li a {, li&gt;a { 의 차이점: 메인메뉴만 글자 흰색으로 바꾸기   main-menu &gt; li 가로배치하기. float: left 사용.
+li 크기를 지정하지 않아서, 모든 하위 엘리먼트가 선택되서 정렬이 이상해짐. &gt; 사용.
+.sub-menu 때문에 span의 크기까지 영향을 받는다.
+자유롭게 스팬 위치를 정하면서도 li에 영향을 주지 않도록하려면 하위 엘리먼트 .sub-menu의 z-index를 바꾼다. 각 서브메뉴의 기준점은 나중에 좌표로 정해주면 된다.'>
+<meta property='og:url' content='http://cmygray.github.io/til/170913_til_html_css/'>
+<meta property='og:site_name' content='cmygray'>
+<meta property='og:type' content='article'><meta property='article:section' content='TIL'><meta property='article:tag' content='TIL'><meta property='article:published_time' content='2017-10-02T19:08:44&#43;09:00'/><meta property='article:modified_time' content='2017-10-02T19:08:44&#43;09:00'/>
+
+<meta name="generator" content="Hugo 0.29" />
+
+  <title>170913_TIL_html_css • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/til/170913_til_html_css/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/assets/css/main.77da63e1.css'><link rel='stylesheet' href='/css/custom.css'>
+</head>
+
+
+<body class='page type-TIL'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  <li>
+      <a href='https://cmygray.github.io'>Home</a>
+    </li>
+  <li>
+      <a href='/til/'>TIL</a>
+    </li>
+  <li>
+      <a href='/blog/'>Dataviz</a>
+    </li>
+  
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>cmygray</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>170913_TIL_html_css</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2017-10-02T19:08:44&#43;09:00'>2017, Oct 2</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/> 
+  
+</svg>
+2 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  
+
+<p>fds week2 day3</p>
+
+<h1 id="html-css">HTML/CSS</h1>
+
+<h2 id="오전">오전</h2>
+
+<h3 id="지각내용">지각내용</h3>
+
+<ul>
+<li>모서리 둥글게 하기, 그래디언트 넣기<br /></li>
+<li><code>.readable-hidden</code> 클래스 숨기기<br /></li>
+<li><code>li a {</code>, <code>li&gt;a {</code> 의 차이점: 메인메뉴만 글자 흰색으로 바꾸기</li>
+</ul>
+
+<hr />
+
+<ul>
+<li><code>main-menu &gt; li</code> 가로배치하기.</li>
+<li><code>float: left</code> 사용.<br />
+<code>li</code> 크기를 지정하지 않아서, 모든 하위 엘리먼트가 선택되서 정렬이 이상해짐.</li>
+<li><code>&gt;</code> 사용.<br />
+<code>.sub-menu</code> 때문에 <code>span</code>의 크기까지 영향을 받는다.<br />
+자유롭게 스팬 위치를 정하면서도 li에 영향을 주지 않도록하려면 하위 엘리먼트 <code>.sub-menu</code>의 <code>z-index</code>를 바꾼다. 각 서브메뉴의 기준점은 나중에 좌표로 정해주면 된다.</li>
+</ul>
+
+<blockquote>
+<p>line-height, font-size?<br />
+(LH - FS)/2 = 위아래 여백. 0.5px단위를 렌더링 하는 브라우저에서만&hellip;
+<code>font</code> 단축 표기할 때 line-heigth를 같이 써줘야 함.</p>
+</blockquote>
+
+<ul>
+<li><code>position: absolute</code> 사용.</li>
+<li><code>li</code>말고 <code>span</code>에 장식요소를 넣어줘야 사용성 증대</li>
+<li>손가락 커서 넣기<br /></li>
+<li>메인메뉴에 텍스트 섀도우 넣기<br />
+<code>text-shadow: x y blur-radius #color, 2nd, 3rd shadows... ;</code> 속성을 사용한다. x,y/1,-1로 네방향 그림자를 주는 방식으로&hellip;<br /></li>
+<li>메인메뉴 호버 시 색상 조정.<br /></li>
+</ul>
+
+<blockquote>
+<p>호버 시 텍스트 폭 만큼만 스팬 밑으로 라인이 생기도록 하기<br />
+hover::after 에 빈 컨텐츠를 쑤셔넣으면 밑줄용 span이 하나 더 생김</p>
+</blockquote>
+
+<hr />
+
+<h2 id="오후">오후</h2>
+
+<p>메인메뉴 스타일 적용하기</p>
+
+<ul>
+<li>sub-menu 가로로 배열하기<br />
+<code>inline-block</code>사용. 가로배열을 위해서 <code>inline</code>을 사용하면 <code>width</code>, <code>height</code>와 같은 <code>block</code> 전용 속성을 적용할 수 없다.<br />
+미세한 여백은 <code>&lt;li&gt;</code> 태그 사이사이의 줄바꿈 때문이다. font-size을 0, 1.4rem으로 조정해서 해결한다.<br />
+
+<ul>
+<li>a tag 정렬하기
+inline은 여백이 아니라 line-height 기준으로 줄을 바꾼다.(졸았음)<br /></li>
+<li>sub-menu 아이콘 넣기
+<code>a::before</code> 선택자로 커스텀 글리프 사용.<br />
+<code>a:hover::before</code> 선택자로 호버 시 아이콘을 변경할 수 있다.<br />
+<em>선택자 배열순서에 주의</em></li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p><a href="fontello.com" target="_blank">커스텀 블릿 사용하기</a><br />
+폰텔로에서 원하는 글리프들을 골라서 자동으로 font폴더에 폰트파일을 생성, 다운받을 수 있다. font 폴더는 <code>css/font/</code>에 넣어주고, <code>fontello.css</code>파일을 열어서 <code>@import</code>, <code>.icon</code> 속성을 가져온다.
+  * sub-menu 기준 맞추기
+  <code>position: absolute</code>, <code>white-space: nowrap;</code> 사용.  right:0
+  * main-menu&gt;li active-&gt;sub-menu 클래스 토글(jquery.js 사용하기)<br />
+jquery 팩토리 함수는 css선택자로 엘리먼트를 선택할 수 있다.</p>
+</blockquote>
+
+<ul>
+<li>animation 만들기<br />
+태그에는 제목만 적어주고, 배경은 정보가 없으므로 태그에서 배제한다.
+
+<ul>
+<li>scenario 작성, 필요한 기능 선택</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>draft - working draft - candidate recommendation - propose recommendation - recommendation(standard) W3C에서 확인, 참고.</p>
+</blockquote>
+
+<ul>
+<li><code>@keyframes</code> 사용<br /></li>
+</ul>
+
+<blockquote>
+<p>개발자도구 performance 탭에서 애니메이션을 녹화해서, painting이 얼마나 점유하는지 확인할 수 있다.</p>
+</blockquote>
+
+<p>margin 늘리는 법<br />
+  posi: absolute로 부모크기변경 방지<br />
+  transform 사용하는 방법<br />
+  width를 조절해줘야 스크롤바가 안생김.</p>
+
+<blockquote>
+<p>그밖에 animation 속성들&hellip;</p>
+</blockquote>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> <code>.main-menu span</code> font: 1.6&rdquo;rem&rdquo; ? &ldquo;em&rdquo;</label></li>
+</ul>
+
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  <div class='categories'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/til'>TIL</a></div>
+<div class='tags'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/til'>TIL</a></div>
+
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/til/170912_til_html_css/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>170912_TIL_html_css</a>
+    </div><div class='next-entry'>
+      <a href='/til/170914_til_html_css/'>
+        <span class='screen-reader'>Next post: </span>170914_TIL_html_css<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+  
+<div class='comments-container'>
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cmygray" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:cmygray@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+  <p>
+        
+      
+
+       &copy; 2017 Won Kim 
+  </p>
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='/assets/js/main.f29c93b9.js'></script><script src='/js/custom.js'></script></body>
+
+</html>
+

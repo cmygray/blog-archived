@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TIL on cmygray</title>
+    <link>http://cmygray.github.io/til/</link>
+    <description>Recent content in TIL on cmygray</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 02 Oct 2017 19:09:44 +0900</lastBuildDate>
+    
+	<atom:link href="http://cmygray.github.io/til/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>170930_TIL_js</title>
+      <link>http://cmygray.github.io/til/170930_til_js/</link>
+      <pubDate>Mon, 02 Oct 2017 19:09:44 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170930_til_js/</guid>
+      <description> 17.09.30.(토) DONE  javascript fundamentals recap(draft) 블로그에 TIL 업로드  TODO 헥소 블로그 테마적용 문제 해결(hexo-renderer-bourbon 설치문제) 일일알고리즘  </description>
+    </item>
+    
+    <item>
+      <title>170929_TIL_js</title>
+      <link>http://cmygray.github.io/til/170929_til_js/</link>
+      <pubDate>Mon, 02 Oct 2017 19:09:42 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170929_til_js/</guid>
+      <description> 17.09.29.(금) DONE  일일 알고리즘 시저 암호 python으로 완료 &amp;gt; 풀긴 풀었지만 문자열 내장함수를 알았다면 더 간단하게 풀었을 것이고, 쓸데없는 이터레이션을 줄이려면 차분한 생각 OR 리팩토링이 필요하다~ 헥소 블로그 테마 적용(실패&amp;hellip;)  TODO  알고스터디 헥소 블로그 테마적용 문제 해결.. javascript fundamental recap  </description>
+    </item>
+    
+    <item>
+      <title>170928_TIL_js</title>
+      <link>http://cmygray.github.io/til/170928_til_js/</link>
+      <pubDate>Mon, 02 Oct 2017 19:09:40 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170928_til_js/</guid>
+      <description> 17.09.28.(목) DONE  일일 알고리즘. 카카오 코딩테스트 문제 1번 &amp;ldquo;비밀지도&amp;rdquo; 완료. (py) &amp;gt; bit 연산 안되는데 어떻게 한다는건지 모르겠다&amp;hellip; 일단 품 js는 내일&amp;hellip; JS preview: Scope, this, Prototype  </description>
+    </item>
+    
+    <item>
+      <title>170927_TIL_js</title>
+      <link>http://cmygray.github.io/til/170927_til_js/</link>
+      <pubDate>Mon, 02 Oct 2017 19:09:37 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170927_til_js/</guid>
+      <description>17.09.27.(수) DONE  for 퀴즈를 풀고 JS loop optimization 자료를 찾아봤다.   optimizing 관련해서 다른 케이스도 많은데, 반복문 외에는 아직 익숙치 않으니 나중에 다시 참고하기로 했다. 아래 코드 참고.
+ vararray=[1,2,3]//배열의 길이 3을 활용한 루프 코드블록 3가지의 속도 비교 //1. standard: 루프마다 조건식을 연산 for(vari=0;i&amp;lt;array.length;i++){};//2. faster: 조건식 결과를 변수에 할당 for(vari=0,len=array.length;i&amp;lt;len;i++){};//3. the fastest: 조건식에서 크기비교 연산을 없앤다 vari=array.length;while(i--){};   가독성을 고려한 for 구문 리팩토링, 최적화를 위해 while 로 리팩토링 연습.</description>
+    </item>
+    
+    <item>
+      <title>170926_TIL_js</title>
+      <link>http://cmygray.github.io/til/170926_til_js/</link>
+      <pubDate>Mon, 02 Oct 2017 19:09:35 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170926_til_js/</guid>
+      <description> 17.09.26.(화) DONE  알고리즘 퀴즈- 소수 찾기 JS for-loop-quiz 완료 js basic recap (chapter 4)  TODO js basic 예습 Lesson 7,8,9,10 js basic 복습 Lesson 4,5,6 js basic chap4 recap check, chap5,6 recap  </description>
+    </item>
+    
+    <item>
+      <title>170925_TIL_js</title>
+      <link>http://cmygray.github.io/til/170925_til_js/</link>
+      <pubDate>Mon, 02 Oct 2017 19:09:33 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170925_til_js/</guid>
+      <description>17.09.25.(월) DONE  알고리즘 퀴즈- 괄호 확인하기, self_number js basic. Intro ~ Data type &amp;amp; variable  TODO js basic 예습 Operator ~ immutability &amp;ndash; control flow까지 완료 megabrain 코딩테스트 CSS 풀어보기 js basic 복습 intro ~ Data type &amp;amp; variable   알고리즘 퀴즈를 절차대로 꾸역꾸역 짜다보면 코드가 완성되긴 하는데, 이게 계산기 두드리는건지 코드를 짜는건지 좀 헷갈린다. 재밌어서 자꾸 하게되는데 메인함수도 만들 줄 모르고 주피터로 줄줄줄 써내려가는데 이게 맞는 공부법인지 의문&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>170924_TIL_js</title>
+      <link>http://cmygray.github.io/til/170924_til_js/</link>
+      <pubDate>Mon, 02 Oct 2017 19:09:31 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170924_til_js/</guid>
+      <description> 17.09.24.(일) DONE  알고리즘 퀴즈- 2016년(py, js), 소수찾기(py) js 공부- data type &amp;amp; variable  데이터형에 따른 immutability, 변수 재 할당의 차이 이해 &amp;gt; Symbol 자료형이 할당된 변수명을 key로 갖는 경우 | Symbol 자료형의 리터럴을 key로 갖는 경우, 둘의 차이는?   TODO megabrain 코딩테스트 CSS 풀어보기   예비군 훈련에 약속까지 있어서 알고리즘만 조금 건드린 하루
+ </description>
+    </item>
+    
+    <item>
+      <title>170923_TIL_js</title>
+      <link>http://cmygray.github.io/til/170923_til_js/</link>
+      <pubDate>Mon, 02 Oct 2017 19:09:28 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170923_til_js/</guid>
+      <description> 17.09.23.(토) DONE  m사 알고리즘 퀴즈에 도전.. 주피터 노트북으로 스텝별 함수만 만들고 메인함수로 묶는건 몰라서 패스- poiemaweb 참고해서 자바스크립트 데이터타입, 변수 학습.  TODO 어제에 이어서-
+js tutorial 보기 w3c grid doc 빠르게 훑기   알고리즘 퀴즈를 파이썬, 자바스크립트로 한번씩 풀고 있는데 내장함수를 전부 파악하지 않은 채로 무작정 풀다보니, 내장함수를 몰랐던 것 뿐인데 언어 간 차이라고 넘겨짚는 문제가 발생. 쉬운 것부터 차근차근, 내장함수 목록을 확인하면서 풀기로.
+ </description>
+    </item>
+    
+    <item>
+      <title>170922_TIL_html_css</title>
+      <link>http://cmygray.github.io/til/170922_til_html_css/</link>
+      <pubDate>Mon, 02 Oct 2017 19:09:21 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170922_til_html_css/</guid>
+      <description>17.09.22.(금) DONE  알고리즘- 하샤드 수 (py, js) &amp;gt; 파이썬이 js보다 훨씬 쉬운게 함정.. 아직 쉬운난이도이기도 하고 단순히 익숙함의 차이인듯 fds HTML/CSS 마지막 수업  { position: sticky;} 속성과 미지원 브라우저 솔루션 jquery로 메뉴 트랜지션 반응형 레이아웃에서 구현하기 &amp;gt; 제이쿼리는 찾아가면서 더듬더듬은 작성할 수 있게 됨. 적어도 첫 줄 레디함수는 안막힌다&amp;hellip; 특히 클래스 선택할 때 / add-remove시 점 안찍게 주의해야 한다. 한 요소에 클래스가 여러개일때 하위 클래스가 아니라 추가된 클래스로 착각하기 십상이라 모듈화가 아직 어색하다.</description>
+    </item>
+    
+    <item>
+      <title>170921_TIL_html_css</title>
+      <link>http://cmygray.github.io/til/170921_til_html_css/</link>
+      <pubDate>Mon, 02 Oct 2017 19:09:19 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170921_til_html_css/</guid>
+      <description> 17.09.21.(목) DONE  fds 반응형웹 구현연습- 미디어쿼리로 스타일 시트 내부에서 분기하여 공통, 상황별 스타일 적용, 접근성 향상을 위한 건너뛰기 인터페이스 만들기 알고리즘- 삼각형 출력하기, 핸드폰번호 가리기 (py, js)  TODO(아마 주말까지?) 알고리즘 레벨 살짝 건너뛰어 해보기 html, css 수업내용 정리 w3c grid doc 빠르게 훑기  </description>
+    </item>
+    
+    <item>
+      <title>170920_TIL_html_css</title>
+      <link>http://cmygray.github.io/til/170920_til_html_css/</link>
+      <pubDate>Mon, 02 Oct 2017 19:09:16 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170920_til_html_css/</guid>
+      <description>17.09.20.(수) DONE  fds: IR 기법 마무리, transition, @keyframes, 클래스 모듈화, 인용태그, &amp;lt;address&amp;gt; 태그  { height: 0; } | { height: nnpx; padding-top: nnpx; }     box-sizing 의 값에 따라서 달라진다.
+  MDN CSS Visual Formatting Model 문서 눈꼽 번역. normal flow, float, absolute 이해 크롬 홈화면(구글어스) 메뉴 탭 트랜지션만 빼고 구현   무작정 하다가 코드가 엄청 더러워지는 참사 발생&amp;hellip; count함수로 fontello 글리프를 불러올 순 없는지 궁금.</description>
+    </item>
+    
+    <item>
+      <title>170919_TIL_html_css</title>
+      <link>http://cmygray.github.io/til/170919_til_html_css/</link>
+      <pubDate>Mon, 02 Oct 2017 19:09:13 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170919_til_html_css/</guid>
+      <description> 17.09.19.(화) DONE  웹접근성 권고 표준에 대해서 배웠다. WCAC, KWCAG 가이드라인. ARIA 스펙으로 웹 접근성을 높이는 마크업에 대해서 배웠다. 웹 접근성을 높이기위한 CSS IR(Image Replacement) 테크닉 배움.  padding-top: height;로 내보내기 position: absolute;로 가리기  background-position: 000px; 속성으로 sprite 이미지 사용하기. MDN &amp;lt;article&amp;gt; 문서 일부 번역 HTML sectioning, heading content 의 역할 스펙 확인  TODO hexo blog 만들기 grid 조부모 엘리먼트 참조시키는 법 알아내기 - 안되는 것으로 밝혀짐&amp;hellip;  </description>
+    </item>
+    
+    <item>
+      <title>170918_TIL_html_css</title>
+      <link>http://cmygray.github.io/til/170918_til_html_css/</link>
+      <pubDate>Mon, 02 Oct 2017 19:09:09 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170918_til_html_css/</guid>
+      <description>17.09.18.(월) DONE  webcafe 페이지 게시판, 새소식 마크업 / 스타일 적용  click, focusin 이벤트 사용해서 jquery로 게시판별 활성화/비활성화 기능 구현 임시 비활성화 클래스를 만들어서 분기해두고 활성/비활성 메뉴 구현하는 요령 white-space, overflow, text-overflow 태그로 넘치는 텍스트 처리 min-height 속성으로 컨텐츠 양에 따라 유연한 레이아웃 만들기 padding과 position 속성을 사용해서 간단하게 레이아웃 바꾸기 그래디언트 윤곽선을 1px 박스로 구현     마크업이 어느정도 익숙해져서 강사님의 방식에서 크게 벗어나지 않고 작성할 수 있었다.</description>
+    </item>
+    
+    <item>
+      <title>170915_TIL_html_css</title>
+      <link>http://cmygray.github.io/til/170915_til_html_css/</link>
+      <pubDate>Mon, 02 Oct 2017 19:08:49 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170915_til_html_css/</guid>
+      <description>17.09.15.(금) DONE  :nth-child(), :nth-of-type() 선택자로 반복선택을 간단히 처리하기 &amp;lt;dl&amp;gt;태그 사용해서 제목, 본문, 썸네일 이미지를 마크업하고 float속성을 활용해서 레이아웃 target 속성의 정확한 역할을 배웠다. (부연 툴팁을 위한 것이 아님) display: flex -webkit 계열 버그 해결하기 Mastering margin collapse, negative margin
+   검색바 마크업에 &amp;lt;form&amp;gt; 태그 사용 시 heading과 label 중 어떤 걸 숨겨야 할지, 돋보기 썸네일을 img로 마크업 할 것인지 스타일속성으로 배경처리할 것인지에 대해 생각하면서 마크업이 좀 더 이해가 됐다.</description>
+    </item>
+    
+    <item>
+      <title>170914_TIL_html_css</title>
+      <link>http://cmygray.github.io/til/170914_til_html_css/</link>
+      <pubDate>Mon, 02 Oct 2017 19:08:46 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170914_til_html_css/</guid>
+      <description>수업시간에 다룬 CSS animation, form tag, 그외 찾아본 자료들 정리
+CSS animation form, fieldset, input&amp;hellip; &amp;lt;form&amp;gt; 태그의 기본 구조
+&amp;lt;form&amp;gt;여기가 어떤 폼인지 써준다 &amp;lt;fieldset&amp;gt;서로 연관된 인풋들끼리 묶는 역할 &amp;lt;legend&amp;gt;필드셋의 내용에 대해서 안내&amp;lt;/legend&amp;gt;&amp;lt;div&amp;gt;필요시 디비전태그로 라벨,인풋을 묶는다 &amp;lt;label&amp;gt;인풋에 기입할 내용 설명&amp;lt;/label&amp;gt;&amp;lt;input&amp;gt;정보 입력하는 곳, 다양한 속성 제공 &amp;lt;/div&amp;gt;&amp;lt;button&amp;gt;버튼으로 제출&amp;lt;/button&amp;gt;&amp;lt;/fieldset&amp;gt;&amp;lt;/form&amp;gt;  label, input 묶는 법
+ &amp;lt;label for=&amp;quot;text&amp;quot;&amp;gt;, &amp;lt;input id=&amp;quot;text&amp;quot;&amp;gt; 짝 맞추기 &amp;lt;input title=&amp;quot;label-text&amp;quot;&amp;gt;, 한가지 태그만 사용하는 방법  button, input 묶는법
+ button type=&amp;quot;button&amp;quot; == input type=&amp;quot;button&amp;quot;</description>
+    </item>
+    
+    <item>
+      <title>170913_TIL_html_css</title>
+      <link>http://cmygray.github.io/til/170913_til_html_css/</link>
+      <pubDate>Mon, 02 Oct 2017 19:08:44 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170913_til_html_css/</guid>
+      <description>fds week2 day3
+HTML/CSS 오전 지각내용  모서리 둥글게 하기, 그래디언트 넣기
+ .readable-hidden 클래스 숨기기
+ li a {, li&amp;gt;a { 의 차이점: 메인메뉴만 글자 흰색으로 바꾸기   main-menu &amp;gt; li 가로배치하기. float: left 사용.
+li 크기를 지정하지 않아서, 모든 하위 엘리먼트가 선택되서 정렬이 이상해짐. &amp;gt; 사용.
+.sub-menu 때문에 span의 크기까지 영향을 받는다.
+자유롭게 스팬 위치를 정하면서도 li에 영향을 주지 않도록하려면 하위 엘리먼트 .sub-menu의 z-index를 바꾼다. 각 서브메뉴의 기준점은 나중에 좌표로 정해주면 된다.</description>
+    </item>
+    
+    <item>
+      <title>170912_TIL_html_css</title>
+      <link>http://cmygray.github.io/til/170912_til_html_css/</link>
+      <pubDate>Mon, 02 Oct 2017 19:08:36 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170912_til_html_css/</guid>
+      <description>HTML, CSS 복습. web cafe 마크업, header layout 연습, homeworks
+web cafe review Markup(linealization)  brief layout
+tag명이 될지, class명이 될지 모르지만 일단 페이지를 보고 레이아웃을 기억하면서 다시 그려본다.
+  body tag 밑으로-
+header logo info-menu links navigator sub-menu visual main-content leftsidebar mainbox rightsidebar slogan footer    sementic markup
+위에서 작성한 &amp;lsquo;막&amp;rsquo;크업에 어떤 태그를 사용할지 덧붙인다.
+wrapperdiv -&amp;gt; wrapper도 추가해준다. 이유는 기억이 안나지만&amp;hellip;  header`header` logo`h1` info`ul` links`li` `a` navigator`ul` sub-menu`li` visual`div` main-content`div` leftsidebar`div` mainbox`div` rightsidebar`div` slogan`slogan` footer`footer`    markup with class</description>
+    </item>
+    
+    <item>
+      <title>170911_TIL_html&amp;css</title>
+      <link>http://cmygray.github.io/til/170911_til_html_css/</link>
+      <pubDate>Mon, 02 Oct 2017 19:07:47 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170911_til_html_css/</guid>
+      <description>HTML basic fds week2 day1
+html의 발전과정, 웹표준, 접근성을 간단히 배웠다.
+sementic &amp;amp; logically structured markup 이란 어떤 것인지, 왜 중요한 것인지 HTML변천사와 버전간 비교를 통해 배웠다.
+HTML/CSS/Javascript 웹 기술 중 프론트엔드 단에서 주로 사용하는 기술 세가지.
+ HTML: structure
+먼저 건강한 구조를 구축한다. sementic, logical structure CSS: styling
+선형으로 구축된 HTML 구조에 스타일을 부여한다. 비선형 레이아웃으로 바뀌는 것도 모두 여기서 처리한다. 주요 의의는 문서의 구조와 스타일을 분리하는 것이다&amp;hellip; Javascript: dynamic(?</description>
+    </item>
+    
+    <item>
+      <title>170908_TIL_CS&amp;python</title>
+      <link>http://cmygray.github.io/til/170908_til_cs_py/</link>
+      <pubDate>Sun, 01 Oct 2017 19:54:23 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170908_til_cs_py/</guid>
+      <description>WEB developer tool -&amp;gt; network -&amp;gt; Headers, Response 에 나타나는 정보들을 이해하기
+ structure
+호스트들이 연결된 라우터들이 연결된 인터넷 서비스 공급자들이 연결된 원거리 통신망의 연결
+LAN이 모여 WAN이 되고 WAN이 모여 구성된 WEB  router: public/private (eg. 192.168.0.1) LAN: Local Area Network WAN: Wide Area Network ISP: Internet Service Provider   {&amp;#34;WAN&amp;#34;:[{&amp;#34;ISP1&amp;#34;:[{&amp;#34;router1&amp;#34;:[&amp;#34;host1&amp;#34;,&amp;#34;host2&amp;#34;,&amp;#34;host3&amp;#34;,&amp;#34;...&amp;#34;]},{&amp;#34;router2&amp;#34;:[&amp;#34;host1&amp;#34;,&amp;#34;host2&amp;#34;,&amp;#34;host3&amp;#34;,&amp;#34;...&amp;#34;]},{&amp;#34;...&amp;#34;:[&amp;#34;...&amp;#34;]}]},{&amp;#34;ISP2&amp;#34;:[{&amp;#34;router1&amp;#34;:[&amp;#34;host1&amp;#34;,&amp;#34;host2&amp;#34;,&amp;#34;host3&amp;#34;,&amp;#34;...&amp;#34;]},{&amp;#34;router2&amp;#34;:[&amp;#34;host1&amp;#34;,&amp;#34;host2&amp;#34;,&amp;#34;host3&amp;#34;,&amp;#34;...&amp;#34;]},{&amp;#34;...&amp;#34;:[&amp;#34;...&amp;#34;]}]},{&amp;#34;...&amp;#34;:[{&amp;#34;...&amp;#34;:[&amp;#34;...&amp;#34;]}]}]}  hopping
+$ traceroute google.com traceroute to google.com (216.58.197.174), 64hops max, 52byte packets 1192.168.1.254 (192.168.1.254)1.206 ms 0.</description>
+    </item>
+    
+    <item>
+      <title>170907_TIL_CS&amp;python</title>
+      <link>http://cmygray.github.io/til/170907_til_cs_py/</link>
+      <pubDate>Sun, 01 Oct 2017 19:52:36 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170907_til_cs_py/</guid>
+      <description>CS with python CS 학습목적: 면접 대응(js에서 꼭 알 필요는 없다고 한다)
+index bold: 오늘 꼭 챙겨야 할 내용들
+italic: 내일 다룰 내용
+ programming language &amp;gt; 지금까지 python을 배웠다 data structure algorithm computer architecture  수, 진수 변환 memory address 정수가 저장되는 방법: 양수와 음수(2의 보수)의 차이 실수의 저장 방식: 부동소수점 문자열 인코딩: ASCII / UNICODE  memory hierachy  register locality cache hit miss virtual address space  code data heap stack  stack frame  OS</description>
+    </item>
+    
+    <item>
+      <title>170906_TIL_CS&amp;python</title>
+      <link>http://cmygray.github.io/til/170906_til_cs_py/</link>
+      <pubDate>Sun, 01 Oct 2017 19:52:27 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170906_til_cs_py/</guid>
+      <description>cs &amp;amp; python to do dic.clear, dic.copy 알아보기 asterisk 이해하기 a, *b = list  bool logical operator file I/O 이해/복습 TIL 작성 이산수학? 대략적으로 무엇인지 dictionary comprehention  python install openpyxl
+(env3)$ pip install openpyxl  dictionary  명칭: 딕셔너리, 해시 테이블, 맵 (모두 같은 의미) 형태: {key : value, &amp;hellip;} -&amp;gt; pairs dic에는 순서가 없다. key로 접근한다. dic[&#39;key-name&#39;] change value dic[&#39;key-name&#39;] = new-value remove dic del dic[&#39;key-name&#39;]   강력한 del object 뭐든지 지워버린다</description>
+    </item>
+    
+    <item>
+      <title>170905_TIL_git</title>
+      <link>http://cmygray.github.io/til/170905_til_git/</link>
+      <pubDate>Sun, 01 Oct 2017 19:52:11 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170905_til_git/</guid>
+      <description>git basic create new repository #create new folder and change dir mkdir repo-name cdrepo-name #initiate git and check git init git status  add file and commit touch file-name git status untracked files: ... git add file-name git status new file: ... git commit -m &amp;#34;commit message here&amp;#34;git commit -m &amp;#34;commit title /n commit description&amp;#34;#after edit file git status modified: ... git add ... git commit ... #after commit git status nothing to commit(need to push)  add remote and push #git cofig git config --global user.</description>
+    </item>
+    
+    <item>
+      <title>170904_TIL_readme</title>
+      <link>http://cmygray.github.io/til/170904_til_readme/</link>
+      <pubDate>Sun, 01 Oct 2017 14:04:35 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/til/170904_til_readme/</guid>
+      <description>TIL (2017-09-04 ~) 9월 초 프론트엔드 개발을 배우기 시작하며 TIL(Today I Learn) 작성을 시작했었다. 연휴를 맞아 블로그로 사용할 github io 페이지에 그동안 작성한 TIL을 업로드하기로 했고 hexo, jekyll의 테마 설정에 애를 먹다가 결국 심플한 hugo를 사용하는 것으로 선택아닌 선택을 하였다.
+기록 방식 변경 (2017-09-15) 배운 내용을 매일매일 마크다운으로 정리한다는 건 지속가능성이 떨어져서 항목만 적기로 했다. 정리한 내용은 추후 새로운 카테고리를 만들어서 언어별, 종류별로 할 예정이다. 아래와 같은 방식으로 github에 저장하고, 가급적 그날그날 블로그에 업로드한다.</description>
+    </item>
+    
+  </channel>
+</rss>
