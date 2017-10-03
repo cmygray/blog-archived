@@ -5,9 +5,28 @@
     <link>http://cmygray.github.io/tags/</link>
     <description>Recent content in Tags on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 03 Oct 2017 21:40:07 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Javascript</title>
+      <link>http://cmygray.github.io/tags/javascript/</link>
+      <pubDate>Tue, 03 Oct 2017 21:40:07 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>http://cmygray.github.io/tags/python/</link>
+      <pubDate>Tue, 03 Oct 2017 21:40:07 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/tags/python/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
