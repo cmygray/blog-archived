@@ -5,7 +5,7 @@
     <link>http://cmygray.github.io/</link>
     <description>Recent content in Home on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 04 Oct 2017 14:30:45 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 05 Oct 2017 00:32:23 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,6 +26,15 @@
       
       <guid>http://cmygray.github.io/tags/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>171004_TIL</title>
+      <link>http://cmygray.github.io/post/til/171004_til/</link>
+      <pubDate>Thu, 05 Oct 2017 00:32:23 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171004_til/</guid>
+      <description>17.10.04.(수) DONE  일일 알고리즘- 콜라츠 추측 py, js js fundamentals recap MDN 문서 반영까지 완료 &amp;gt; MDN 참고문서를 보면서 빠진 내용을 살펴봤으며, 특히 프로토타입을 들여다봤다. 다른 생성자의 인스턴스를 프로토타입으로 할당하여 계층구조를 만드는 방법과, 생성자 호출 시 인수가 없더라도 기본값을 갖도록 || 연산자를 사용하는 방법을 알았다. 생성자의 매개변수에 =연산자를 사용하여 기본값을 부여하는 방법과의 차이는 없나 궁금.  TODO (연휴간) js fundamentals recap - MDN 문서 남은 페이지 마저 반영하고 log와 비교 통계가 빨라지는 수학력 끝내기 데이터 사이언스 스쿨 파이썬 6절, 7절 recharted 사이트 구상 구문 읽기  function foo(i) { if (i &amp;lt; 0) return; console.</description>
     </item>
     
     <item>
