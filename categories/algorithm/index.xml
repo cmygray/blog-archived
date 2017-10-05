@@ -5,10 +5,20 @@
     <link>http://cmygray.github.io/categories/algorithm/</link>
     <description>Recent content in Algorithm on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 04 Oct 2017 14:30:45 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 05 Oct 2017 15:05:30 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>N개의 최소공배수</title>
+      <link>http://cmygray.github.io/post/algorithm/171005_nlcm/</link>
+      <pubDate>Thu, 05 Oct 2017 15:05:30 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/algorithm/171005_nlcm/</guid>
+      <description>문제 두 수의 최소공배수(Least Common Multiple)란 입력된 두 수의 배수 중 공통이 되는 가장 작은 숫자를 의미합니다. 예를 들어 2와 7의 최소공배수는 14가 됩니다. 정의를 확장해서, n개의 수의 최소공배수는 n 개의 수들의 배수 중 공통이 되는 가장 작은 숫자가 됩니다. nlcm 함수를 통해 n개의 숫자가 입력되었을 때, 최소공배수를 반환해 주세요. 예를들어 [2,6,8,14] 가 입력된다면 168을 반환해 주면 됩니다.
+풀이  가장 큰 수에 1,2,3&amp;hellip;배 한 값에 대해 다른 수의 나머지 체크 &amp;gt; 연산시간 초과로 실패</description>
+    </item>
     
     <item>
       <title>콜라츠 추측</title>

@@ -4,19 +4,19 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='17.10.04.(수) DONE  일일 알고리즘- 콜라츠 추측 py, js js fundamentals recap MDN 문서 반영까지 완료 &gt; MDN 참고문서를 보면서 빠진 내용을 살펴봤으며, 특히 프로토타입을 들여다봤다. 다른 생성자의 인스턴스를 프로토타입으로 할당하여 계층구조를 만드는 방법과, 생성자 호출 시 인수가 없더라도 기본값을 갖도록 || 연산자를 사용하는 방법을 알았다. 생성자의 매개변수에 =연산자를 사용하여 기본값을 부여하는 방법과의 차이는 없나 궁금.  TODO (연휴간) js fundamentals recap - MDN 문서 남은 페이지 마저 반영하고 log와 비교 통계가 빨라지는 수학력 끝내기 데이터 사이언스 스쿨 파이썬 6절, 7절 recharted 사이트 구상 구문 읽기  function foo(i) { if (i &lt; 0) return; console.'>
+<meta name='description' content='17.10.05.(목) DONE  일일 알고리즘- N개의 최소공배수 py (오답) MDN javascript 안내서 중 객체 모델의 세부사항 부문 읽고 번역 일부 수정 js fundamentals recap. 객체, this 내용 추가 js  TODO (연휴간) js fundamentals recap - 수업 log와 비교 통계가 빨라지는 수학력 끝내기 데이터 사이언스 스쿨 파이썬 6절, 7절 recharted 사이트 구상 구문 읽기  function foo(i) { if (i &lt; 0) return; console.log(&#39;begin:&#39; &#43; i); foo(i - 1); console.'>
 
-<meta property='og:title' content='171004_TIL • cmygray'>
-<meta property='og:description' content='17.10.04.(수) DONE  일일 알고리즘- 콜라츠 추측 py, js js fundamentals recap MDN 문서 반영까지 완료 &gt; MDN 참고문서를 보면서 빠진 내용을 살펴봤으며, 특히 프로토타입을 들여다봤다. 다른 생성자의 인스턴스를 프로토타입으로 할당하여 계층구조를 만드는 방법과, 생성자 호출 시 인수가 없더라도 기본값을 갖도록 || 연산자를 사용하는 방법을 알았다. 생성자의 매개변수에 =연산자를 사용하여 기본값을 부여하는 방법과의 차이는 없나 궁금.  TODO (연휴간) js fundamentals recap - MDN 문서 남은 페이지 마저 반영하고 log와 비교 통계가 빨라지는 수학력 끝내기 데이터 사이언스 스쿨 파이썬 6절, 7절 recharted 사이트 구상 구문 읽기  function foo(i) { if (i &lt; 0) return; console.'>
-<meta property='og:url' content='http://cmygray.github.io/post/til/171004_til/'>
+<meta property='og:title' content='171005_TIL • cmygray'>
+<meta property='og:description' content='17.10.05.(목) DONE  일일 알고리즘- N개의 최소공배수 py (오답) MDN javascript 안내서 중 객체 모델의 세부사항 부문 읽고 번역 일부 수정 js fundamentals recap. 객체, this 내용 추가 js  TODO (연휴간) js fundamentals recap - 수업 log와 비교 통계가 빨라지는 수학력 끝내기 데이터 사이언스 스쿨 파이썬 6절, 7절 recharted 사이트 구상 구문 읽기  function foo(i) { if (i &lt; 0) return; console.log(&#39;begin:&#39; &#43; i); foo(i - 1); console.'>
+<meta property='og:url' content='http://cmygray.github.io/post/til/171005_til/'>
 <meta property='og:site_name' content='cmygray'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-10-05T00:32:23&#43;09:00'/><meta property='article:modified_time' content='2017-10-05T00:32:23&#43;09:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-10-05T23:35:46&#43;09:00'/><meta property='article:modified_time' content='2017-10-05T23:35:46&#43;09:00'/>
 
 <meta name="generator" content="Hugo 0.29" />
 
   <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
-  <title>171004_TIL • cmygray</title>
-  <link rel='canonical' href='http://cmygray.github.io/post/til/171004_til/'>
+  <title>171005_TIL • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til/171005_til/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -65,7 +65,7 @@
     <header class='header-container'>
   <div class='header entry-header'>
     <div class='header-info'>
-      <h1 class='title'>171004_TIL</h1>
+      <h1 class='title'>171005_TIL</h1>
       
 
     </div>
@@ -80,7 +80,7 @@
   
 </svg>
 <span class='screen-reader'>Posted on </span>
-  <time class='date' datetime='2017-10-05T00:32:23&#43;09:00'>2017, Oct 5</time>
+  <time class='date' datetime='2017-10-05T23:35:46&#43;09:00'>2017, Oct 5</time>
 </span>
 
   
@@ -107,24 +107,25 @@ One min read
     <div class='entry-content'>
   
 
-<h1 id="17-10-04-수">17.10.04.(수)</h1>
+<h1 id="17-10-05-목">17.10.05.(목)</h1>
 
 <h2 id="done">DONE</h2>
 
 <ul>
-<li>일일 알고리즘- <a href="https://programmers.co.kr/learn/challenge_codes/15" target="_blank">콜라츠 추측</a> py, js</li>
-<li>js fundamentals recap MDN 문서 반영까지 완료
-&gt; MDN 참고문서를 보면서 빠진 내용을 살펴봤으며, 특히 프로토타입을 들여다봤다. 다른 생성자의 인스턴스를 프로토타입으로 할당하여 계층구조를 만드는 방법과, 생성자 호출 시 인수가 없더라도 기본값을 갖도록 <code>||</code> 연산자를 사용하는 방법을 알았다. 생성자의 매개변수에 <code>=</code>연산자를 사용하여 기본값을 부여하는 방법과의 차이는 없나 궁금.</li>
+<li>일일 알고리즘- <a href="https://programmers.co.kr/learn/challenge_codes/29" target="_blank">N개의 최소공배수</a> py <del>(오답)</del></li>
+<li>MDN javascript 안내서 중 객체 모델의 세부사항 부문 읽고 번역 일부 수정</li>
+<li>js fundamentals recap. 객체, this 내용 추가</li>
+<li>js</li>
 </ul>
 
 <h2 id="todo-연휴간">TODO (연휴간)</h2>
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> js fundamentals recap - MDN 문서 남은 페이지 마저 반영하고 log와 비교</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> js fundamentals recap - 수업 log와 비교</label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> 통계가 빨라지는 수학력 끝내기</label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> 데이터 사이언스 스쿨 파이썬 6절, 7절</label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> recharted 사이트 구상</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> 구문 읽기</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> 구문 읽기</label></li>
 </ul>
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">function</span> foo(i) {
   <span style="color:#007020;font-weight:bold">if</span> (i <span style="color:#666">&lt;</span> <span style="color:#40a070">0</span>)
@@ -136,11 +137,11 @@ One min read
 foo(<span style="color:#40a070">3</span>);
 
 <span style="color:#60a0b0;font-style:italic">// Output:
-</span><span style="color:#60a0b0;font-style:italic"></span>
-<span style="color:#60a0b0;font-style:italic">// begin:3
-</span><span style="color:#60a0b0;font-style:italic">// begin:2
-</span><span style="color:#60a0b0;font-style:italic">// begin:1
-</span><span style="color:#60a0b0;font-style:italic">// begin:0
+</span><span style="color:#60a0b0;font-style:italic">// begin:3 출력 &amp; foo(2) 실행 &amp; foo(3) 남은명령 -&gt; 스택1
+</span><span style="color:#60a0b0;font-style:italic">// begin:2 출력 &amp; foo(1) 실행 &amp; foo(2) 남은명령 -&gt; 스택2
+</span><span style="color:#60a0b0;font-style:italic">// begin:1 출력 &amp; foo(0) 실행 &amp; foo(-1) 남은명령 -&gt; 스택3
+</span><span style="color:#60a0b0;font-style:italic">// begin:0 출력 &amp; foo(-1) 실행 즉시 탈출 &amp; 남은명령 -&gt; 스택4
+</span><span style="color:#60a0b0;font-style:italic">// 위에서 함수를 탈출했으니, 쌓인 스택을 실행한다 (LIFO; 4-3-2-1 스택 순으로 실행)
 </span><span style="color:#60a0b0;font-style:italic">// end:0 &#39;end:&#39; + i 출력 구문에서, 쌓인 스택들이 왜 LIFO로 실행되는건지?
 </span><span style="color:#60a0b0;font-style:italic">// end:1
 </span><span style="color:#60a0b0;font-style:italic">// end:2
@@ -168,7 +169,7 @@ foo(<span style="color:#40a070">3</span>);
   
 <nav class='entry-nav-container'>
   <div class='entry-nav'><div class='prev-entry'>
-      <a href='/post/algorithm/171004_collatz/'>
+      <a href='/post/algorithm/171005_nlcm/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -176,17 +177,7 @@ foo(<span style="color:#40a070">3</span>);
   
 </svg>
  Previous</span>
-        <span class='screen-reader'>Previous post: </span>콜라츠 추측</a>
-    </div><div class='next-entry'>
-      <a href='/post/algorithm/171005_nlcm/'>
-        <span class='screen-reader'>Next post: </span>N개의 최소공배수<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader'>Previous post: </span>N개의 최소공배수</a>
     </div></div>
 </nav>
 
