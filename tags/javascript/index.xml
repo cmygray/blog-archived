@@ -5,10 +5,22 @@
     <link>http://cmygray.github.io/tags/javascript/</link>
     <description>Recent content in Javascript on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 04 Oct 2017 14:30:45 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 07 Oct 2017 01:15:36 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fundamentals</title>
+      <link>http://cmygray.github.io/post/javascript/fundamentals/</link>
+      <pubDate>Sat, 07 Oct 2017 01:15:36 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/javascript/fundamentals/</guid>
+      <description>javascript fundamentals recap  지금(작성일 기준)까지 배운 자바스크립트의 기본 내용을 정리. 웹 프로그래밍 튜토리얼과 MDN 자바스크립트 문서를 참고하여 보완. 추가된 항목은 볼드표시해서 구분. ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 @ES6 표시.  programming 문제 인식 - 작은 문제로 쪼개기 - 쪼개진 문제를 해결 - 해결의 종합 - 문제 해결
+Computational thinking을 토대로 위의 절차를 진행하는 것
+basic syntax  sentence;구문
+&amp;gt; 구문이란 자바스크립트 내의 모든 명령이다. 명령은 세미콜론(;)으로 분리된다.</description>
+    </item>
     
     <item>
       <title>콜라츠 추측</title>

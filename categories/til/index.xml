@@ -5,10 +5,19 @@
     <link>http://cmygray.github.io/categories/til/</link>
     <description>Recent content in TIL on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 05 Oct 2017 23:35:46 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 07 Oct 2017 01:17:04 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/categories/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>171006_TIL</title>
+      <link>http://cmygray.github.io/post/til/171006_til/</link>
+      <pubDate>Sat, 07 Oct 2017 01:17:04 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171006_til/</guid>
+      <description> 17.10.06.(금) DONE  js fundamentals recap. 수업 log 다시보기. (scope 전까지)  TODO (연휴간) js fundamentals recap 끝내기 통계가 빨라지는 수학력 끝내기 데이터 사이언스 스쿨 파이썬 6절, 7절 recharted 사이트 구상  </description>
+    </item>
     
     <item>
       <title>171005_TIL</title>
