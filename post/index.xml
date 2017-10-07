@@ -28,7 +28,7 @@
       <description>javascript fundamentals recap  지금(작성일 기준)까지 배운 자바스크립트의 기본 내용을 정리. 웹 프로그래밍 튜토리얼과 MDN 자바스크립트 문서를 참고하여 보완. 추가된 항목은 볼드표시해서 구분. ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 @ES6 표시.  programming 문제 인식 - 작은 문제로 쪼개기 - 쪼개진 문제를 해결 - 해결의 종합 - 문제 해결
 Computational thinking을 토대로 위의 절차를 진행하는 것
 basic syntax  sentence;구문
-&amp;gt; 구문이란 자바스크립트 내의 모든 명령이다. 명령은 세미콜론(;)으로 분리된다.</description>
+구문이란 자바스크립트 내의 모든 명령이다. 명령은 세미콜론(;)으로 분리된다. 아래의 요소들이 모여서 구문을 구성한다.</description>
     </item>
     
     <item>

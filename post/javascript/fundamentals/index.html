@@ -7,13 +7,13 @@
 <meta name='description' content='javascript fundamentals recap  지금(작성일 기준)까지 배운 자바스크립트의 기본 내용을 정리. 웹 프로그래밍 튜토리얼과 MDN 자바스크립트 문서를 참고하여 보완. 추가된 항목은 볼드표시해서 구분. ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 @ES6 표시.  programming 문제 인식 - 작은 문제로 쪼개기 - 쪼개진 문제를 해결 - 해결의 종합 - 문제 해결
 Computational thinking을 토대로 위의 절차를 진행하는 것
 basic syntax  sentence;구문
-&gt; 구문이란 자바스크립트 내의 모든 명령이다. 명령은 세미콜론(;)으로 분리된다.'>
+구문이란 자바스크립트 내의 모든 명령이다. 명령은 세미콜론(;)으로 분리된다. 아래의 요소들이 모여서 구문을 구성한다.'>
 
 <meta property='og:title' content='Fundamentals • cmygray'>
 <meta property='og:description' content='javascript fundamentals recap  지금(작성일 기준)까지 배운 자바스크립트의 기본 내용을 정리. 웹 프로그래밍 튜토리얼과 MDN 자바스크립트 문서를 참고하여 보완. 추가된 항목은 볼드표시해서 구분. ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 @ES6 표시.  programming 문제 인식 - 작은 문제로 쪼개기 - 쪼개진 문제를 해결 - 해결의 종합 - 문제 해결
 Computational thinking을 토대로 위의 절차를 진행하는 것
 basic syntax  sentence;구문
-&gt; 구문이란 자바스크립트 내의 모든 명령이다. 명령은 세미콜론(;)으로 분리된다.'>
+구문이란 자바스크립트 내의 모든 명령이다. 명령은 세미콜론(;)으로 분리된다. 아래의 요소들이 모여서 구문을 구성한다.'>
 <meta property='og:url' content='http://cmygray.github.io/post/javascript/fundamentals/'>
 <meta property='og:site_name' content='cmygray'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='javascript'><meta property='article:published_time' content='2017-10-07T01:15:36&#43;09:00'/><meta property='article:modified_time' content='2017-10-07T01:15:36&#43;09:00'/>
@@ -129,24 +129,20 @@ Computational thinking을 토대로 위의 절차를 진행하는 것</p>
 <h2 id="basic-syntax">basic syntax</h2>
 
 <ul>
-<li><p>sentence;구문<br />
-&gt; 구문이란 자바스크립트 내의 모든 명령이다. 명령은 세미콜론(;)으로 분리된다. 아래의 요소들이 모여서 구문을 구성한다.</p>
+<li>sentence;구문<br />
+<em>구문이란 자바스크립트 내의 모든 명령이다. 명령은 세미콜론(;)으로 분리된다. 아래의 요소들이 모여서 구문을 구성한다.</em>
 
 <ul>
 <li>value;값</li>
 <li>operator;연산자</li>
-
-<li><p>expression;표현식
-하나의 값으로 <strong>evaluated;평가되는</strong> 구문을 표현식이라고 할 수 있다. 조건문이 요구되는 특수한 맥락<strong>(boolean context)</strong>에서는 Boolean이 아닌 값이 true, false로 판정되기도 한다;<strong>type coercion</strong>. 값과 연산자, 변수를 조합하여 표현식을 작성한다.</p></li>
-
-<li><p><strong>keyword;키워드</strong><br />
-특정 기능 또는 역할이 이미 정의되어 있는 단어들로, 변수나 프로퍼티, 함수의 이름으로 사용하지 않는 것이 좋다.</p></li>
-
-<li><p><strong>comments</strong><br />
-&gt; 주석구문은 실행되지 않는다.</p></li>
-
-<li><p><strong>code block;코드블록</strong>
-중괄호({})를 사용하여 코드를 그룹화하여 블록을 만든다. 구문들을 함께 실행하기 위해 사용한다. 또 자바스크립트의 코드블록은 변수의 스코프에 영향을 미치지 않는다. (ES5 기준)함수만이 스코프에 영향을 미칠 수 있다.</p></li>
+<li>expression;표현식<br />
+하나의 값으로 <strong>evaluated;평가되는</strong> 구문을 표현식이라고 할 수 있다. 조건문이 요구되는 특수한 맥락<strong>(boolean context)</strong>에서는 Boolean이 아닌 값이 true, false로 판정되기도 한다;<strong>type coercion</strong>. 값과 연산자, 변수를 조합하여 표현식을 작성한다.</li>
+<li><strong>keyword;키워드</strong><br />
+특정 기능 또는 역할이 이미 정의되어 있는 단어들로, 변수나 프로퍼티, 함수의 이름으로 사용하지 않는 것이 좋다.</li>
+<li><strong>comments</strong><br />
+주석구문은 실행되지 않는다.</li>
+<li><strong>code block;코드블록</strong><br />
+중괄호({})를 사용하여 코드를 그룹화하여 블록을 만든다. 구문들을 함께 실행하기 위해 사용한다. 또 자바스크립트의 코드블록은 변수의 스코프에 영향을 미치지 않는다. (ES5 기준)함수만이 스코프에 영향을 미칠 수 있다.</li>
 </ul></li>
 </ul>
 
@@ -156,11 +152,14 @@ Computational thinking을 토대로 위의 절차를 진행하는 것</p>
 <li>primitive data type;기본자료형, 원시데이터, 원시값, 6가지
 
 <ul>
-<li>number</li>
+<li>number
+
+<ul>
 <li>js는 정수와 실수를 구분하지 않고 저장한다</li>
 <li>NaN;Not a Number, 숫자가 아닌 데이터<br />
-숫자가 아니라는 뜻이지만, type은 number이다.</li>
+<em>숫자가 아니라는 뜻이지만, type은 number이다.</em></li>
 <li>+/-Infinity</li>
+</ul></li>
 <li>string</li>
 <li>Boolean</li>
 <li>undefined</li>
@@ -174,22 +173,31 @@ Computational thinking을 토대로 위의 절차를 진행하는 것</p>
 <h3 id="primitive-data-as-object">primitive data as object</h3>
 
 <ul>
-<li>built-in Constructor;native<br />
+<li>built-in Constructor;native 생성자<br />
 <code>undefined</code>, <code>null</code>을 제외한 나머지 primitive data는 object처럼 표현하는 것이 가능하다. <code>String()</code>, <code>Number()</code> 등의 네이티브 생성자 이용.</li>
 </ul>
 
 <h3 id="type-change-type-coercion">type change (type coercion)</h3>
 
-<p>일치연산자, 부등호 연산자 사용 시에는 문자열을 숫자로 변환하기도 한다.<br />
-1. Number to String
-  1. <code>+ ''</code>
-  1. <code>.toString()</code>
-  1. <code>String()</code> <strong>&gt; 생성자를 사용하기 때문에 좋지 않은 방법이다.</strong>
-1. String to Number<br />
-  문자열이 숫자를 나타내고 있지 않은 경우엔 <code>NaN</code>이 된다.
-  1. <code>+</code>, <code>*1</code>, <code>-0</code>
-  1. <code>parseInt()</code>
-  1. <code>Number()</code> <strong>&gt; 생성자를 사용하기 때문에 좋지 않은 방법이다.</strong></p>
+<ol>
+<li>Number to String
+
+<ol>
+<li><code>+ ''</code></li>
+<li><code>.toString()</code></li>
+<li><code>String()</code> <strong>: 생성자를 사용하기 때문에 좋지 않은 방법이다.</strong></li>
+</ol></li>
+<li>String to Number<br />
+<em>문자열이 숫자를 나타내고 있지 않은 경우엔 <code>NaN</code>이 된다.</em>
+
+<ol>
+<li><code>+</code>, <code>*1</code>, <code>-0</code></li>
+<li><code>parseInt()</code></li>
+<li><code>Number()</code> <strong>: 생성자를 사용하기 때문에 좋지 않은 방법이다.</strong></li>
+</ol></li>
+</ol>
+
+<p>일치연산자, 부등호 연산자 사용 시에는 문자열을 숫자로 변환하기도 한다.</p>
 
 <h2 id="immutability">immutability</h2>
 
@@ -197,7 +205,7 @@ Computational thinking을 토대로 위의 절차를 진행하는 것</p>
 
 <h2 id="pass-by-value">pass-by-value</h2>
 
-<p>pass-by-value란 한번 메모리에 저장된 값을 변경할 수 없어서 복사, 재할당하는 것을 말한다. 할당연산자의 우항이 primitive거나, primitive를 가리키고 있는 변수 혹은 프로퍼티일 경우 발생한다.</p>
+<p>pass-by-value란 한번 메모리에 저장된 값을 변경할 수 없어서 복사, 재할당하는 것을 말한다. 할당연산자의 우항이 primitive거나, primitive를 가리키고 있는 변수 혹은 프로퍼티일 경우가 이에 해당한다.</p>
 
 <h2 id="pass-by-reference">pass-by-reference</h2>
 
@@ -209,39 +217,47 @@ Computational thinking을 토대로 위의 절차를 진행하는 것</p>
 
 <h2 id="variable-변수">variable;변수</h2>
 
-<p>변수는 값을 가리키는 identifier와 할당된 value이다.
-* <strong>identifier;식별자는 변수의 이름이다.</strong><br />
-  identifier의 이름을 표기하는 방식은 크게 세가지가 있다.
-  1. camel case<br />
-    첫글자는 소문자로, 단어를 분리할 때만 대문자를 사용한다. e.g. myNumber
-  1. snake case<br />
-    모두 소문자로 표시하며, 단어 분리에 _(underscore)를 사용한다. e.g. my_number
-  1. kebap case<br />
-    모두 소문자로 표시하며, 단어 분리에 -(dash)를 사용한다. e.g. my-number
-&gt; 식별자는 _, $, 문자로 시작해야하며 숫자를 덧붙일 수 있다.</p>
+<p>변수는 값을 가리키는 identifier와 할당된 value이다.</p>
 
 <ul>
-<li>process</li>
+<li><strong>identifier;식별자는 변수의 이름이다.</strong><br />
+<em>identifier의 이름을 표기하는 방식은 크게 세가지가 있다.</em>
+
+<ol>
+<li>camel case<br />
+첫글자는 소문자로, 단어를 분리할 때만 대문자를 사용한다. e.g. myNumber</li>
+<li>snake case<br />
+모두 소문자로 표시하며, 단어 분리에 _(underscore)를 사용한다. e.g. my_number</li>
+<li>kebap case<br />
+모두 소문자로 표시하며, 단어 분리에 -(dash)를 사용한다. e.g. my-number</li>
+</ol></li>
 </ul>
 
-<p>1,2가 우선 실행되고, 3은 해당 코드가 등장할 때 실행된다. (hoisting)
-  1. declaration<br />
-    identifier가 VO(variable object)에 할당된다.
-  1. initialization<br />
-    값으로 <code>undefined</code>를 할당한다.
-  1. assignment<br />
-    우항의 값을 변수에 할당한다</p>
+<blockquote>
+<p>식별자는 _, $, 문자로 시작해야하며 숫자를 덧붙일 수 있다.</p>
+</blockquote>
 
 <ul>
-<li>hoisting(in case of variable)</li>
+<li><p>process<br />
+<em><code>var a = 1;</code> 구문에서,</em><br />
+<em>1,2번 과정이 먼저 일어나고(hoisting), 3번 과정은 해당 코드가 실행되는 시점에 일어난다.</em></p>
+
+<ol>
+<li>declaration<br />
+identifier가 VO(variable object)에 할당된다.</li>
+<li>initialization<br />
+값으로 <code>undefined</code>를 할당한다.</li>
+<li>assignment<br />
+우항의 값을 변수에 할당한다</li>
+</ol></li>
+
+<li><p>hoisting(in case of variable)</p></li>
 </ul>
 
 <p>브라우저 엔진은 스크립트 문서의 <em>모든?</em> 선언문을 먼저 실행하고, 할당은 나중에 한다. 즉 변수의 선언과 초기화를 먼저 실행한다. 이를 변수 호이스팅이라고 한다. 함수 내부에 선언한 지역변수 역시, 함수 호출 시점에 (지역 내에서)호이스팅된다.</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">console.log(<span style="color:#4070a0">&#39;after-hoisting: &#39;</span>,b);
-<span style="color:#007020;font-weight:bold">var</span> b <span style="color:#666">=</span> <span style="color:#40a070">1</span>;
-console.log(<span style="color:#4070a0">&#39;after-assignment: &#39;</span>,b);
-<span style="color:#60a0b0;font-style:italic">// after-hoisting:  undefined
-</span><span style="color:#60a0b0;font-style:italic"></span><span style="">// after-assignment:  1</span></code></pre>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">console.log(<span style="color:#4070a0">&#39;after-hoisting: &#39;</span>,b); <span style="color:#60a0b0;font-style:italic">// after-hoisting: undefined
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">var</span> b <span style="color:#666">=</span> <span style="color:#40a070">1</span>;
+console.log(<span style="color:#4070a0">&#39;after-assignment: &#39;</span>,b); <span style="">// after-assignment: 1</span></code></pre>
 </div>
 <p>선언하지 않은 전역변수에 접근한다는 건, window에 존재하지 않는 프로퍼티로의 접근이라고 할 수 있다.</p>
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020">window</span>.a  <span style="color:#60a0b0;font-style:italic">//undefined
@@ -249,97 +265,246 @@ console.log(<span style="color:#4070a0">&#39;after-assignment: &#39;</span>,b);
 </div>
 <h2 id="operator-연산자">operator;연산자</h2>
 
-<p>하나 이상의 값을 하나의 값으로 평가하기 위해 연산자를 사용한다. 종류는 아래와 같다.
+<p>하나 이상의 값을 하나의 값으로 평가하기 위해 연산자를 사용한다. 종류는 아래와 같다.<br />
 <em>비트연산자 제외</em></p>
 
 <ul>
-<li><p>assignment;대입(할당) 연산자<br />
-대입 연산자는 값을 반환하지 않으며, 할당만 한다.<br />
-|syntax|meaning|
-|:&ndash;|:&ndash;|
-|<code>x=y</code>|<code>x에 y할당</code>|
-|<code>x+=y</code>|<code>x = x + y</code>|
-|<code>x-=y</code>|<code>x = x - y</code>|
-|<code>x*=y</code>|<code>x = x * y</code>|
-|<code>x/=y</code>|<code>x = x / y</code>|
-|<code>x%=y</code>|<code>x = x % y</code>|</p></li>
-
-<li><p>comparison;비교 연산자<br />
-비교 연산자는 Boolean 값을 반환한다.<br />
-|syntax|meaning|
-|:&ndash;|:&ndash;|
-|<code>==</code>|<code>equal</code>(값 비교)|
-|<code>!=</code>|<code>not equal</code>(값 비교)|
-|<code>===</code>|<code>equal</code>(값과 타입 비교)|
-|<code>!==</code>|<code>not equal</code>(값과 타입 비교)|
-|<code>&gt;</code>|<code>larger</code>|
-|<code>&gt;=</code>|<code>larger or equal</code>|
-|<code>&lt;</code>|<code>smaller</code>|
-|<code>&lt;=</code>|<code>smaller or equal</code>|</p></li>
-
-<li><p>arithmetic;산술 연산자<br />
-산술연산자는 하나의 Number 값을 반환한다.<br />
-<em>사칙연산은 생략</em>
-|syntax|meaning|
-|:&ndash;|:&ndash;|
-|<code>%</code>|나머지|
-|<code>++</code>|증가|
-|<code>--</code>|감소|</p></li>
+<li>assignment;대입(할당) 연산자<br />
+<em>대입 연산자는 값을 반환하지 않으며, 할당만 한다.</em></li>
 </ul>
+
+<table>
+<thead>
+<tr>
+<th align="left">syntax</th>
+<th align="left">meaning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>x=y</code></td>
+<td align="left"><code>x에 y할당</code></td>
+</tr>
+
+<tr>
+<td align="left"><code>x+=y</code></td>
+<td align="left"><code>x = x + y</code></td>
+</tr>
+
+<tr>
+<td align="left"><code>x-=y</code></td>
+<td align="left"><code>x = x - y</code></td>
+</tr>
+
+<tr>
+<td align="left"><code>x*=y</code></td>
+<td align="left"><code>x = x * y</code></td>
+</tr>
+
+<tr>
+<td align="left"><code>x/=y</code></td>
+<td align="left"><code>x = x / y</code></td>
+</tr>
+
+<tr>
+<td align="left"><code>x%=y</code></td>
+<td align="left"><code>x = x % y</code></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>comparison;비교 연산자<br />
+<em>비교 연산자는 Boolean 값을 반환한다.</em></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="left">syntax</th>
+<th align="left">meaning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>==</code></td>
+<td align="left"><code>equal</code>(값 비교)</td>
+</tr>
+
+<tr>
+<td align="left"><code>!=</code></td>
+<td align="left"><code>not equal</code>(값 비교)</td>
+</tr>
+
+<tr>
+<td align="left"><code>===</code></td>
+<td align="left"><code>equal</code>(값과 타입 비교)</td>
+</tr>
+
+<tr>
+<td align="left"><code>!==</code></td>
+<td align="left"><code>not equal</code>(값과 타입 비교)</td>
+</tr>
+
+<tr>
+<td align="left"><code>&gt;</code></td>
+<td align="left"><code>larger</code></td>
+</tr>
+
+<tr>
+<td align="left"><code>&gt;=</code></td>
+<td align="left"><code>larger or equal</code></td>
+</tr>
+
+<tr>
+<td align="left"><code>&lt;</code></td>
+<td align="left"><code>smaller</code></td>
+</tr>
+
+<tr>
+<td align="left"><code>&lt;=</code></td>
+<td align="left"><code>smaller or equal</code></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>arithmetic;산술 연산자<br />
+<em>산술연산자는 하나의 Number 값을 반환한다.</em><br />
+<em>사칙연산은 생략</em></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="left">syntax</th>
+<th align="left">meaning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>%</code></td>
+<td align="left">나머지</td>
+</tr>
+
+<tr>
+<td align="left"><code>++</code></td>
+<td align="left">증가</td>
+</tr>
+
+<tr>
+<td align="left"><code>--</code></td>
+<td align="left">감소</td>
+</tr>
+</tbody>
+</table>
 <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">var</span> x <span style="color:#666">=</span> <span style="color:#40a070">0</span>;
 x <span style="color:#666">++</span> <span style="color:#60a0b0;font-style:italic">// 0 (선 반환 후 대입)
 </span><span style="color:#60a0b0;font-style:italic"></span>x <span style="color:#60a0b0;font-style:italic">// 1
 </span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#666">++</span> x <span style="">// 2 (선 대입 후 반환)</span></code></pre>
 </div>
 <ul>
-<li><p>logical;논리 연산자<br />
-논리의 합 또는 곱 반환(<code>true=1, false=0</code>으로 치환해서 이해하자)
-|syntax|meaning|
-|:&ndash;|:&ndash;|
-|<code>||</code>|or|
-|<code>&amp;&amp;</code>|and|
-|<code>!</code>|not|</p></li>
+<li>logical;논리 연산자<br />
+<em>논리의 합 또는 곱 반환(<code>true=1, false=0</code>으로 치환해서 이해하자)</em></li>
+</ul>
 
-<li><p>conditional;삼항 연산자
-|syntax|meaning|
-|:&ndash;|:&ndash;|
-|<code>con ? val : val</code>|조건의 참 거짓에 따라 값 반환|
-&gt; 삼항연산자는 조건과 실행문이 간략할 때(한줄 정도) 사용하는 것이 좋다.</p></li>
+<table>
+<thead>
+<tr>
+<th align="left">syntax</th>
+<th align="left">meaning</th>
+</tr>
+</thead>
 
-<li><p>그외<br />
-<code>delete</code>, <code>,</code> <code>typeof</code>, <code>in</code>, <code>instanceof</code>, <code>new</code>,</p></li>
+<tbody>
+<tr>
+<td align="left">||</td>
+<td align="left">or</td>
+</tr>
+
+<tr>
+<td align="left"><code>&amp;&amp;</code></td>
+<td align="left">and</td>
+</tr>
+
+<tr>
+<td align="left"><code>!</code></td>
+<td align="left">not</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>conditional;삼항 연산자</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="left">syntax</th>
+<th align="left">meaning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>con ? val : val</code></td>
+<td align="left">조건의 참 거짓에 따라 값 반환</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>삼항연산자는 조건과 실행문이 간략할 때(한줄 정도) 사용하는 것이 좋다.</p>
+</blockquote>
+
+<ul>
+<li>그외<br />
+<code>delete</code>, <code>,</code> <code>typeof</code>, <code>in</code>, <code>instanceof</code>, <code>new</code>&hellip;</li>
 </ul>
 
 <h2 id="control-flow-제어-흐름">control flow;제어 흐름</h2>
 
-<p>구문은 위에서부터 차례대로 실행되지만, 흐름 제어를 통해 이를 의도적으로 조절할 수 있다. 조건, 반복 구문 등을 활용한다. e.g. <code>if</code>, <code>while</code>, <code>for</code>
-* conditional statement;조건문<br />
-  괄호 안의 표현식이 true일 때 블록 내부의 구문을 실행한다.<br />
-  <code>if</code>, <code>switch</code>, &hellip;
-* loop statement;반복문<br />
-  괄호 안의 표현식이 조건을 만족하는 동안 블록 내부의 구문을 실행한다.<br />
-  <code>for</code>, <code>while</code>, &hellip;</p>
+<p>구문은 위에서부터 차례대로 실행되지만, 이를 의도적으로 조절할 수 있다. 조건, 반복 구문 등을 활용한다. e.g. <code>if</code>, <code>while</code>, <code>for</code></p>
+
+<ul>
+<li>conditional statement;조건문<br />
+괄호 안의 표현식이 true일 때 블록 내부의 구문을 실행한다.<br />
+<code>if</code>, <code>switch</code>, &hellip;</li>
+<li>loop statement;반복문<br />
+괄호 안의 표현식이 조건을 만족하는 동안 블록 내부의 구문을 실행한다.<br />
+<code>for</code>, <code>while</code>, &hellip;</li>
+</ul>
 
 <h3 id="conditional-statement-조건문">conditional statement; 조건문</h3>
 
-<p>keyword와 조건, 참일 때 실행할 블록구문으로 구성된다. 거짓인 경우를 위해 절을 추가할 수 있다.</p>
+<p>keyword와 조건, 참일 때 실행할 블록구문으로 구성된다. 거짓인 경우에 실행할 절을 추가할 수 있다.</p>
 
 <h3 id="loop-statement-반복문">loop statement; 반복문</h3>
 
-<p>keyword와 반복 조건, 반복할 블록구문으로 구성된다.
+<p>keyword와 반복 조건, 반복할 블록구문으로 구성된다.<br />
 <code>for</code>, <code>while</code>, <code>do...while</code>, <code>for...in</code>, <code>for...of</code>, <code>cotinue</code>, <code>break</code>, <code>lable</code></p>
 
 <ul>
 <li>for 문<br />
-<code>for ([init]; [condition]; [increment]) (block)statement</code><br />
-&gt; 전역에서 실행한 반복문의 변수는 전역변수이다. 초기화 구문은 없어도 되지만, 전역 변수의 값을 예측할 수 없기 때문에 좋은 방법은 아니다. 구문은 생략해도 되지만 세미콜론은 생략할 수 없다. 조건문 생략 시 조건은 참으로 간주된다.</li>
+<code>for ([init]; [condition]; [increment]) (block)statement</code><br /></li>
 </ul>
+
+<blockquote>
+<p>전역에서 실행한 반복문의 변수는 전역변수이다. 초기화 구문은 없어도 되지만, 전역 변수의 값을 예측할 수 없기 때문에 좋은 방법은 아니다. 구문은 생략해도 되지만 세미콜론은 생략할 수 없다. 조건문 생략 시 조건은 참으로 간주된다.</p>
+</blockquote>
 
 <h3 id="falsy-value">falsy value</h3>
 
 <p>흐름제어에 필요한 조건식 내부는 boolean context이다. 이 때는 조건식의 평가값이 boolean 리터럴이 아니어도 boolean 값으로 변환하게 되는데 이는 implicit conversion;암묵적 형변환의 일종이다. implicit conversion을 통해 <code>false</code>가 되는 값을 falsy value라고 한다. 아래의 값들은 falsy.<br />
-<code>0</code>, <code>undefined</code>, <code>null</code>, <code>''</code>, <code>NaN</code>, <code>false</code>
-&gt; false 값을 가진 Boolean 오브젝트는 falsy가 아니다. 오브젝트이기 때문에 boolean context에서 true로 평가된다.</p>
+<code>0</code>, <code>undefined</code>, <code>null</code>, <code>''</code>, <code>NaN</code>, <code>false</code></p>
+
+<blockquote>
+<p>false 값을 가진 Boolean 오브젝트는 falsy가 아니다. 오브젝트이기 때문에 boolean context에서 true로 평가된다.</p>
+</blockquote>
 
 <h2 id="object-객체-not-as-data-type-as-container">object;객체(not as data type, as container)</h2>
 
@@ -357,11 +522,14 @@ x <span style="color:#666">++</span> <span style="color:#60a0b0;font-style:itali
 <li><p>생성하기</p>
 
 <ol>
-<li>리터럴; 2-1의 축약과 다름없다.</li>
-<li><code>new</code> 연산자</li>
+<li>리터럴; 2_1의 축약과 다름없다.</li>
+<li><code>new</code> 연산자
+
+<ol>
 <li><code>Object()</code></li>
 <li>constructor f();생성자 함수<br />
 <code>new</code>연산자를 만나면, 먼저 native constructor Object()를 호출해 빈 객체를 생성하고,생성자 함수 내부의 동작을 수행한다. 일반함수에 new 연산자를 사용하면, 빈 객체가 생성된다. 생성자 함수를 일반 함수와 구분하기 위해 함수명의 첫글자를 대문자로 하는 것이 보통이다.</li>
+</ol></li>
 </ol></li>
 </ul>
 
@@ -371,9 +539,8 @@ x <span style="color:#666">++</span> <span style="color:#60a0b0;font-style:itali
 
 <p>0개 이상의 인수를 받아서 함수 블록 내의 구문(명령 내지는 코드-인수와 유관할 수도 무관할 수도 있다)을 실행하도록 선언한다. 결과값을 반환할 수도 있고 안할 수도 있다. 함수는 일급객체로, 어디에든 호출할 수 있다. e.g. 변수에 할당하거나, 다른 함수의 인수로 전달하기 등</p>
 
-<ul class="task-list">
-<li><strong>함수를 정의하는 방법</strong></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> 표현식, 선언식의 혼동을 주의. 함수의 이름과 할당된 변수명의 차이, 다른함수에서 호출 시 둘 중 하나를 사용해도 무방한 이유 체크.
+<ul>
+<li><p><strong>함수를 정의하는 방법</strong></p>
 
 <ol>
 <li>선언 방식<br />
@@ -382,20 +549,23 @@ x <span style="color:#666">++</span> <span style="color:#60a0b0;font-style:itali
 <li>표현 방식<br />
 <code>var funcName = function(parms) { statements; }</code></li>
 <li>Function() 생성자 방식<br />
-<code>var funcName = new Function()</code></li>
-</ol></label></li>
+<code>var funcName = new Function()</code><br />
+결국 무슨 방법이든 3번 방식을 경유한다.</li>
+</ol></li>
+
+<li><p><strong>parameter;매개변수, 인자 &amp; argument;인수</strong><br />
+<em>함수 선언 시</em> parameter를 사용한다. <code>()</code> 내부에서 parameter는 argument를 받을 자리를 만든다. <code>{}</code> 내부에서 작성한 동작 내지는 명령에 parameter를 활용할 수 있다. <em>함수 호출 시</em> 이 자리에 argument가 들어와서 사전에 선언한 명령의 구체적 대상이 된다.<br />
+즉, 함수 호출 시 <code>parameter = argument</code> 꼴의 할당이 일어나는 셈이다. 이때 argument의 타입에 따라 pass-by-value 혹은 pass-by-reference가 일어난다. 후자의 경우 함수 외부의 변수에 저장된 값이 변경될 수 있다.(impure function)</p></li>
 </ul>
 
-<p>결국 무슨 방법이든 3번 방식을 경유한다.</p>
+<blockquote>
+<p>함수가 오브젝트를 인수로 받아(pass-by-reference) 내부에서 프로퍼티를 변경하면, 전역변수에 할당된 오브젝트의 프로퍼티 역시 바뀐다.</p>
+</blockquote>
 
 <ul>
-<li><p><strong>parameter;매개변수, 인자 &amp; argument;인수</strong><br />
-<em>함수 선언 시</em> parameter를 사용한다. <code>()</code> 내부에서 parameter는 argument를 받을 자리를 만든다. <code>{}</code> 내부에서 parameter를 동작 내지는 명령에 활용할 수 있다. <em>함수 호출 시</em> 이 자리에 argument가 들어와서 사전에 선언한 명령의 구체적 대상이 된다.<br />
-함수 호출 시 <code>parameter = argument</code> 꼴의 할당이 일어나는 셈이다. 이때 argument의 타입에 따라 pass-by-value 혹은 pass-by-reference가 일어난다. 후자의 경우 함수 외부의 변수에 저장된 값이 변경될 수 있다.(impure function)
-&gt; 함수가 오브젝트를 인수로 받아(pass-by-reference) 내부에서 프로퍼티를 변경하면, 전역변수에 할당된 오브젝트의 프로퍼티 역시 바뀐다.</p></li>
-
-<li><p>function as object<br />
-함수 역시 (일급)객체다. 다만 생성자가 Object()가 아니라 Function()이며, <code>__proto__</code>를 통해 상위의 참조객체를 확인하면 결국 최상위의 object 객체를 만날 수 있다. <strong>일급객체로서 함수는&hellip;</strong></p>
+<li>function as object<br />
+함수 역시 (일급)객체다. 다만 생성자가 Object()가 아니라 Function()이며, <code>__proto__</code>를 통해 상위의 참조객체를 확인하면 결국 최상위의 object 객체를 만날 수 있다.<br />
+<strong>일급객체로서 함수는&hellip;</strong>
 
 <ol>
 <li>무명의 리터럴로 표현 가능</li>
@@ -425,7 +595,7 @@ x <span style="color:#666">++</span> <span style="color:#60a0b0;font-style:itali
 </div>
 <h3 id="함수-내에서-arguments-property-사용하기">함수 내에서 arguments property 사용하기</h3>
 
-<p>함수 객체에는 <code>arguments</code>라는 프로퍼티가 있다. 이는 함수 호출 시점에 전달 될 인수들을 의미한다. 선언 시에는 파라메터처럼 활용한다.(i.e. 함수 선언단에서 사용된 <code>arguments</code>는 실행단에서 받을 인수들을 위해 마련된 &ldquo;자리&rdquo;다.) 함수 내에서 &lsquo;유사 배열 객체&rsquo; 처럼 취급되어 인수 순회 등의 용도로 사용한다.</p>
+<p>함수 객체에는 <code>arguments</code>라는 프로퍼티가 있다. 이는 함수 호출 시점에 전달 될 인수들을 의미한다. 선언 시에는 파라메터처럼 활용한다.(i.e. 함수 선언단에서 사용된 <code>arguments</code>는 실행단에서 받을 인수들을 위해 마련된 &ldquo;자리&rdquo;다) 함수 내에서 &lsquo;유사 배열 객체&rsquo; 처럼 취급되어 인수 순회 등의 용도로 사용한다.</p>
 
 <h3 id="함수의-형태들">함수의 형태들</h3>
 
@@ -454,9 +624,9 @@ object.constructor(inherit)        myObject.__proto__
 |  myConstructor  |                | prototype |
 |                 | &lt;-constructor- |           |
 \=================\                \===========\
-         |                              |  ↑
-         |                      inherit |  | .__proto__ (access)
-         |                              ↓  |
+         |                               
+         |                      inherit ⬇︎  ⬆︎ .__proto__ (access)
+         |                                
          |                         \==========\
          |                         | &lt;2&gt;      |
           ---------new f()-------&gt; | myObject |
@@ -464,37 +634,47 @@ object.constructor(inherit)        myObject.__proto__
                                    \==========\</pre>
 </div>
 <h3 id="prototype-proto"><code>prototype</code> &amp; <code>__proto__</code></h3>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#60a0b0;font-style:italic">//대문자로 명시한 생성자함수 MyConstructor를 선언한다.
-</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">function</span> MyConstructor(parameter) {
+
+<p>두 프로퍼티는 같은 객체를 가리키는 프로퍼티지만, 각각 다른 객체가 소유하고 있다. 코드를 통해 확인해보자.</p>
+
+<hr />
+
+<p>생성자함수 MyConstructor를 선언한다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">function</span> MyConstructor(parameter) {
   <span style="color:#60a0b0;font-style:italic">//생성자는 &#39;앞으로 생성될&#39; 인스턴스의 myProp 프로퍼티에 인수를 할당한다.
 </span><span style="color:#60a0b0;font-style:italic"></span>  <span style="color:#007020;font-weight:bold">this</span>.myProp <span style="color:#666">=</span> parameter;
-}
-
-<span style="color:#60a0b0;font-style:italic">//MyConstructor의 prototype에 접근하여 myMethod라는 프로퍼티의 값으로 함수를 할당한다. 즉 myMethod는 prototype에 보관되는 메소드이다.
-</span><span style="color:#60a0b0;font-style:italic"></span>MyConstructor.prototype.myMethod <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">function</span>() {
-  <span style="color:#60a0b0;font-style:italic">//myMethod는 메세지를 출력한다. 여기서 this는 prototype, 혹은 prototype과 상속관계인 instance의 프로퍼티 myProp을 가리키는 키워드이다.
+}</code></pre>
+</div>
+<p>MyConstructor의 prototype에 접근하여, myMethod라는 프로퍼티의 값으로 함수를 할당한다. 즉 myMethod는 prototype이 소유한 메소드이다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">MyConstructor.prototype.myMethod <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">function</span>() {
+  <span style="color:#60a0b0;font-style:italic">//myMethod는 메세지를 출력한다.
+</span><span style="color:#60a0b0;font-style:italic"></span>  <span style="color:#60a0b0;font-style:italic">//여기서 this는 prototype, 혹은 prototype과 상속관계인 instance의 프로퍼티 myProp을 가리키는 키워드이다.
 </span><span style="color:#60a0b0;font-style:italic"></span>  console.log(<span style="color:#4070a0">&#39;this_in_prototype_method_points_at: &#39;</span> <span style="color:#666">+</span> <span style="color:#007020;font-weight:bold">this</span>.myProp);
-}
+}</code></pre>
+</div>
+<p>변수 myArg에, &lsquo;myValue&rsquo;라는 String 데이터를 할당하였다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">var</span> myArg <span style="color:#666">=</span> <span style="color:#4070a0">&#39;myValue&#39;</span>;</code></pre>
+</div>
+<p>변수 myInstance에, new 연산자로 생성한 객체를 할당한다. 이 객체는 MyConstructor 생성자 함수에 의해 생성된 인스턴스이다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">var</span> myInstance <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> MyConstructor(myArg);
+<span style="">//생성자 함수에 인수로 전달된 변수 myArg는 myInstance의 myProp 프로퍼티에 할당될 것이다.</span></code></pre>
+</div>
+<p>생성자 함수에 myMethod를 정의하지 않았기 때문에 인스턴스에는 myMethod라는 이름의 프로퍼티가 없다. 하지만 엔진은 인스턴스가 참조하는 __proto__에서 해당 프로퍼티를 찾는다. 즉, prototype에 보관한 메소드를 참조해 메세지가 출력된다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">myInstance.myMethod();
+<span style="">//this_in_prototype_method_points_at: myValue 가 출력된다.</span></code></pre>
+</div>
+<blockquote>
+<p>prototype에 메소드를 추가(선언)할 때 this는 prototype 객체에 바인딩된다. prototype과 상속관계인 인스턴스가 해당 메소드를 호출할 때, this는 호출한 인스턴스에 바인딩된다. 따라서 위와 같은 메세지가 출력되는 것이다.</p>
+</blockquote>
 
-<span style="color:#60a0b0;font-style:italic">//변수 myArg에, &#39;myValue&#39;라는 String 데이터를 할당하였다.
-</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">var</span> myArg <span style="color:#666">=</span> <span style="color:#4070a0">&#39;myValue&#39;</span>;
-
-<span style="color:#60a0b0;font-style:italic">//변수 myInstance에, new 연산자로 인해 생성된 객체를 할당한다. 이 객체는 MyConstructor 생성자 함수에 의해 생성된 인스턴스이다. 생성자 함수에 인수로 전달된 변수 myArg는 myInstance의 myProp 프로퍼티에 할당될 것이다. 변수에 저장된 값이 문자열이므로 pass-by-value.
-</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">var</span> myInstance <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> MyConstructor(myArg);
-
-<span style="color:#60a0b0;font-style:italic">//생성자 함수에 myMethod를 정의하지 않았기 때문에 인스턴스에는 myMethod라는 이름의 프로퍼티가 없다. 하지만 엔진은 인스턴스가 참조하는 __proto__에서 해당 프로퍼티를 찾는다. prototype에 보관한 메소드를 참조해 메세지가 출력된다.
-</span><span style="color:#60a0b0;font-style:italic"></span>myInstance.myMethod(); <span style="color:#60a0b0;font-style:italic">//this_in_prototype_method_points_at: myValue 가 출력된다.
-</span><span style="color:#60a0b0;font-style:italic">//prototype에 메소드를 선언할 때 this는 prototype 객체에 바인딩된다.
-</span><span style="color:#60a0b0;font-style:italic">//prototype과 상속관계인 인스턴스가 해당 메소드를 호출할 때, this는 호출한 인스턴스에 바인딩된다. 따라서 위와 같은 메세지가 출력된다.
-</span><span style="color:#60a0b0;font-style:italic"></span>
-<span style="color:#60a0b0;font-style:italic">//myMethod를 보관하는 prototype에 접근하는 두 가지 방법. 둘 모두 같은 객체를 가리키고 있는 것을 알 수 있다.
-</span><span style="color:#60a0b0;font-style:italic"></span>myInstance.__proto__ <span style="color:#666">===</span> MyConstructor.prototype <span style="color:#60a0b0;font-style:italic">//true
-</span><span style="color:#60a0b0;font-style:italic"></span>
-<span style="color:#60a0b0;font-style:italic">//인스턴스에는 prototype 프로퍼티가 없다. 함수가 아니니까.
-</span><span style="color:#60a0b0;font-style:italic"></span>myInstance.prototype; <span style="color:#60a0b0;font-style:italic">//undefined
-</span><span style="color:#60a0b0;font-style:italic"></span>
-<span style="color:#60a0b0;font-style:italic">//MyConstructor에는 __proto__ 프로퍼티가 있다. 생성자 함수&#39;객체&#39;인 MyConstructor는 Function() 생성자에 의해 생성된 인스턴스이며, Function 생성자의 prototype과 상속관계이다.
-</span><span style="color:#60a0b0;font-style:italic"></span>MyConstructor.__proto__; <span style="color:#60a0b0;font-style:italic">//ƒ () { [native code] }
+<p>myMethod를 소유한 prototype에 접근하는 두 가지 방법. 둘 모두 같은 객체를 가리키고 있는 것을 알 수 있다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">myInstance.__proto__ <span style="color:#666">===</span> MyConstructor.prototype <span style="">//true</span></code></pre>
+</div>
+<p>인스턴스에는 prototype 프로퍼티가 없다. 함수가 아니니까.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">myInstance.prototype; <span style="">//undefined</span></code></pre>
+</div>
+<p>MyConstructor에는 __proto__ 프로퍼티가 있다. 생성자 함수&rsquo;객체&rsquo;인 MyConstructor는 Function() 생성자에 의해 생성된 인스턴스이며, Function 생성자의 prototype과 상속관계이다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">MyConstructor.__proto__; <span style="color:#60a0b0;font-style:italic">//ƒ () { [native code] }
 </span><span style="color:#60a0b0;font-style:italic"></span>MyConstructor.__proto__ <span style="color:#666">===</span> <span style="color:#007020">Function</span>.prototype <span style="">//true</span></code></pre>
 </div>
 <h2 id="scope-스코프-영향범위">scope;스코프, 영향범위</h2>

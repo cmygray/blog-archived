@@ -12,7 +12,7 @@
 풀이  가장 큰 수에 1,2,3&hellip;배 한 값에 대해 다른 수의 나머지 체크 &gt; 연산시간 초과로 실패'>
 <meta property='og:url' content='http://cmygray.github.io/post/algorithm/171005_nlcm/'>
 <meta property='og:site_name' content='cmygray'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='python'><meta property='article:published_time' content='2017-10-05T15:05:30&#43;09:00'/><meta property='article:modified_time' content='2017-10-05T15:05:30&#43;09:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='python'><meta property='article:tag' content='javascript'><meta property='article:published_time' content='2017-10-05T15:05:30&#43;09:00'/><meta property='article:modified_time' content='2017-10-05T15:05:30&#43;09:00'/>
 
 <meta name="generator" content="Hugo 0.29" />
 
@@ -93,7 +93,7 @@
   <polyline points="12 6 12 12 15 15"/> 
   
 </svg>
-2 mins read
+4 mins read
 </span>
 
 
@@ -163,6 +163,70 @@
 </div>
 <p>결과를 제출했는데 오답이다. 리팩토링 코드는 이후에 추가 예정..</p>
 
+<h2 id="오답으로-인한-리팩토링">오답으로 인한 리팩토링</h2>
+
+<p>알고리즘 모임 트렐로에 위 코드를 공유해서 맹점을 발견할 수 있었다.<br />
+제출한 알고리즘은 n개의 최소공배수 ngcd를 구하고, 각 수를 ngcd로 나눈 값을 곱하고 ngcd를 한번 더 곱하여 결과를 반환한다. 만약 리스트에 소수가 하나라도 포함되면 ngcd는 1이 되고, 결과는 모든 수의 곱이 되는데 [4,8,5]를 대입해보면 손쉽게 반례를 찾을 수 있다. <em>4, 8, 5의 최소공배수는 80이지만 위 알고리즘에 대입하면 160이 나온다.</em><br />
+while loop에서 두 수의 최소공배수를 구하고, 이를 다음 for loop의 a로 할당하여 b(num[i])와의 연산을 반복하면 될 것이라고 판단하고 코드를 아래와 같이 수정하였다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">nlcm</span>(num):
+    <span style="color:#4070a0"></span><span style="color:#4070a0">&#39;&#39;&#39;
+</span><span style="color:#4070a0">    함수 nlcm(최소공배수)는 n개의 숫자 리스트를 인수로 받아 최소공배수를 반환한다.
+</span><span style="color:#4070a0">    두 수 A, B가 있을 때,
+</span><span style="color:#4070a0">    lcm_AB = A * B / gcd 임을 이용하여 결과를 구한다.
+</span><span style="color:#4070a0">    세 수 A, B, C로 확장하면,
+</span><span style="color:#4070a0">    nlcm = lcm_AB * C / gcd 가 될 것이다. 이때 gcd는 lcm_AB와 C의 최대공약수이다.
+</span><span style="color:#4070a0">    &#39;&#39;&#39;</span>
+    <span style="color:#60a0b0;font-style:italic">#변수 a에 첫번째 수 할당</span>
+    a <span style="color:#666">=</span> num[<span style="color:#40a070">0</span>]
+    <span style="color:#60a0b0;font-style:italic">#나머지 수에 대해 반복문 실행</span>
+    <span style="color:#007020;font-weight:bold">for</span> i <span style="color:#007020;font-weight:bold">in</span> <span style="color:#007020">range</span>(<span style="color:#40a070">1</span>, <span style="color:#007020">len</span>(num)):
+        b <span style="color:#666">=</span> num[i]
+        <span style="color:#60a0b0;font-style:italic">#큰 수를 작은수로 나누기 위해 a, b의 크기를 비교하여 호제법의 좌항, 우항이 될 c, d에 할당</span>
+        c <span style="color:#666">=</span> <span style="color:#007020">max</span>(a, b)
+        d <span style="color:#666">=</span> <span style="color:#007020">min</span>(a, b)
+        <span style="color:#60a0b0;font-style:italic">#호제법 알고리즘</span>
+        <span style="color:#007020;font-weight:bold">while</span> c <span style="color:#666">%</span> d:
+            r <span style="color:#666">=</span> c <span style="color:#666">%</span> d
+            c <span style="color:#666">=</span> d
+            d <span style="color:#666">=</span> r
+        <span style="color:#60a0b0;font-style:italic">#두 수의 최소공배수를 구해서 다음 수(b=num[i])와 비교한다</span>
+        lcm <span style="color:#666">=</span> (a <span style="color:#666">*</span> b) <span style="color:#666">/</span> d
+        a <span style="color:#666">=</span> lcm
+    result <span style="color:#666">=</span> a
+    <span style="color:#007020;font-weight:bold">return</span> <span style="color:#007020">int</span>(result)</code></pre>
+</div>
+<p>정답이다. 이제 js 코드로 다시 작성해보자. 똑같이 하면 재미없으니까 <code>push()</code>, <code>pop()</code> 메소드를 사용하기로 했다.<br />
+<strong>&lsquo;숫자를 두개씩 pop, 호제법 알고리즘에 의해 도출한 최소공배수 하나를 push.&rsquo;</strong> 이를 반복하면 결국 마지막에 배열에 남는 숫자가 nlcm이 될 것이다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">function</span> nlcm(num) {
+    <span style="color:#60a0b0;font-style:italic">/*
+</span><span style="color:#60a0b0;font-style:italic">    함수 nlcm은 n개의 자연수로 구성된 배열을 인수로 받아서, 모든 수의 최소공배수를 반환한다.
+</span><span style="color:#60a0b0;font-style:italic">    */</span>
+    <span style="color:#007020;font-weight:bold">while</span> (num.length <span style="color:#666">&gt;</span> <span style="color:#40a070">1</span>) {
+        <span style="color:#60a0b0;font-style:italic">//인수에 한개의 원소가 남을 때까지 숫자를 두개씩 뽑고, 크기를 비교한다. 
+</span><span style="color:#60a0b0;font-style:italic"></span>        <span style="color:#007020;font-weight:bold">var</span> a <span style="color:#666">=</span> num.pop();
+        <span style="color:#007020;font-weight:bold">var</span> b <span style="color:#666">=</span> num.pop();
+        <span style="color:#007020;font-weight:bold">var</span> c <span style="color:#666">=</span> <span style="color:#007020">Math</span>.max(a, b);
+        <span style="color:#007020;font-weight:bold">var</span> d <span style="color:#666">=</span> <span style="color:#007020">Math</span>.min(a, b);
+        <span style="color:#60a0b0;font-style:italic">//두 수를 가지고 호제법 알고리즘을 수행한다.
+</span><span style="color:#60a0b0;font-style:italic"></span>        <span style="color:#007020;font-weight:bold">while</span> (c <span style="color:#666">%</span> d) {
+            <span style="color:#007020;font-weight:bold">var</span> r <span style="color:#666">=</span> c <span style="color:#666">%</span> d;
+            c <span style="color:#666">=</span> d;
+            d <span style="color:#666">=</span> r;
+        }
+        <span style="color:#60a0b0;font-style:italic">/*
+</span><span style="color:#60a0b0;font-style:italic">        결과를 이용해 두 수의 최소공배수를 구하고, num에 push한다.
+</span><span style="color:#60a0b0;font-style:italic">        이 수는 다음 loop에서 다시 pop되어 다음 수와 비교에 쓰인다.
+</span><span style="color:#60a0b0;font-style:italic">        */</span>
+        <span style="color:#007020;font-weight:bold">var</span> lcm <span style="color:#666">=</span> (a <span style="color:#666">*</span> b) <span style="">/ d;</span>
+        num.push(lcm)
+    }
+    <span style="color:#007020;font-weight:bold">return</span> num[<span style="color:#40a070">0</span>];
+}</code></pre>
+</div>
+<blockquote>
+<p>이틀동안 어디가 틀린건지 발견할 수 없어서 무지 답답했는데, 막상 발견하니(도움을 받았지만) 수정작업은 매우 간단했다. 별건 아니지만 js로 재작성 시에도 매끄러워서 만족. 밑도끝도 없는 변수명 a,b,c,d는 아쉽다.</p>
+</blockquote>
+
 </div>
 
     
@@ -184,7 +248,7 @@
   
 </svg>
 </span>
-  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/python'>Python</a></div>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/python'>Python</a>, <a class='tag' href='/tags/javascript'>Javascript</a></div>
 
   </div>
 </footer>
