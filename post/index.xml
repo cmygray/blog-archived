@@ -5,10 +5,19 @@
     <link>http://cmygray.github.io/post/</link>
     <description>Recent content in Posts on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 07 Oct 2017 01:17:04 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 08 Oct 2017 00:32:58 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>171007_TIL</title>
+      <link>http://cmygray.github.io/post/til/171007_til/</link>
+      <pubDate>Sun, 08 Oct 2017 00:32:58 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171007_til/</guid>
+      <description> 17.10.07.(토) DONE  일일 알고리즘- N개의 최소공배수 리팩토링. (py, js) js fundamentals recap 완료 통계가 빨라지는 수학력 3장(상관관계를 알기 위한 수학)까지 완료  TODO (연휴간) 통계가 빨라지는 수학력 끝내기 js preview- execution context, closure, OOP 데이터 사이언스 스쿨 파이썬 6절, 7절 recharted 사이트 구상  </description>
+    </item>
     
     <item>
       <title>171006_TIL</title>
