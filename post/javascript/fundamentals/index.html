@@ -4,16 +4,20 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='javascript fundamentals recap  지금(작성일 기준)까지 배운 자바스크립트의 기본 내용을 정리. 웹 프로그래밍 튜토리얼과 MDN 자바스크립트 문서를 참고하여 보완. 추가된 항목은 볼드표시해서 구분. ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 @ES6 표시.  programming 문제 인식 - 작은 문제로 쪼개기 - 쪼개진 문제를 해결 - 해결의 종합 - 문제 해결
+<meta name='description' content='수정내역
+10.07. scope, this 내용 보충
+javascript fundamentals recap  지금(작성일 기준)까지 배운 자바스크립트의 기본 내용을 정리. 웹 프로그래밍 튜토리얼과 MDN 자바스크립트 문서를 참고하여 보완. 추가된 항목은 볼드표시해서 구분. ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 @ES6 표시.  programming 문제 인식 - 작은 문제로 쪼개기 - 쪼개진 문제를 해결 - 해결의 종합 - 문제 해결
 Computational thinking을 토대로 위의 절차를 진행하는 것
 basic syntax  sentence;구문
-구문이란 자바스크립트 내의 모든 명령이다. 명령은 세미콜론(;)으로 분리된다. 아래의 요소들이 모여서 구문을 구성한다.'>
+구문이란 자바스크립트 내의 모든 명령이다.'>
 
-<meta property='og:title' content='Fundamentals • cmygray'>
-<meta property='og:description' content='javascript fundamentals recap  지금(작성일 기준)까지 배운 자바스크립트의 기본 내용을 정리. 웹 프로그래밍 튜토리얼과 MDN 자바스크립트 문서를 참고하여 보완. 추가된 항목은 볼드표시해서 구분. ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 @ES6 표시.  programming 문제 인식 - 작은 문제로 쪼개기 - 쪼개진 문제를 해결 - 해결의 종합 - 문제 해결
+<meta property='og:title' content='JS_Fundamentals • cmygray'>
+<meta property='og:description' content='수정내역
+10.07. scope, this 내용 보충
+javascript fundamentals recap  지금(작성일 기준)까지 배운 자바스크립트의 기본 내용을 정리. 웹 프로그래밍 튜토리얼과 MDN 자바스크립트 문서를 참고하여 보완. 추가된 항목은 볼드표시해서 구분. ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 @ES6 표시.  programming 문제 인식 - 작은 문제로 쪼개기 - 쪼개진 문제를 해결 - 해결의 종합 - 문제 해결
 Computational thinking을 토대로 위의 절차를 진행하는 것
 basic syntax  sentence;구문
-구문이란 자바스크립트 내의 모든 명령이다. 명령은 세미콜론(;)으로 분리된다. 아래의 요소들이 모여서 구문을 구성한다.'>
+구문이란 자바스크립트 내의 모든 명령이다.'>
 <meta property='og:url' content='http://cmygray.github.io/post/javascript/fundamentals/'>
 <meta property='og:site_name' content='cmygray'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='javascript'><meta property='article:published_time' content='2017-10-07T01:15:36&#43;09:00'/><meta property='article:modified_time' content='2017-10-07T01:15:36&#43;09:00'/>
@@ -21,7 +25,7 @@ basic syntax  sentence;구문
 <meta name="generator" content="Hugo 0.29" />
 
   <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
-  <title>Fundamentals • cmygray</title>
+  <title>JS_Fundamentals • cmygray</title>
   <link rel='canonical' href='http://cmygray.github.io/post/javascript/fundamentals/'>
   
   
@@ -71,7 +75,7 @@ basic syntax  sentence;구문
     <header class='header-container'>
   <div class='header entry-header'>
     <div class='header-info'>
-      <h1 class='title'>Fundamentals</h1>
+      <h1 class='title'>JS_Fundamentals</h1>
       
 
     </div>
@@ -97,7 +101,7 @@ basic syntax  sentence;구문
   <polyline points="12 6 12 12 15 15"/> 
   
 </svg>
-9 mins read
+10 mins read
 </span>
 
 
@@ -112,6 +116,11 @@ basic syntax  sentence;구문
 
     <div class='entry-content'>
   
+
+<p>수정내역<br />
+10.07. scope, this 내용 보충</p>
+
+<hr />
 
 <h1 id="javascript-fundamentals-recap">javascript fundamentals recap</h1>
 
@@ -705,12 +714,76 @@ object.constructor(inherit)        myObject.__proto__
 <li>함수 또는 내부함수에서 필요한 변수에 접근할 수 없을 때, 가까운 부모함수에서 전역 스코프의 순서로 탐색한다.</li>
 <li>내부함수에서 변수 할당 시 <code>var</code> 키워드를 빠뜨리면 부모 함수 또는 전역에서 같은 이름의 변수에 값을 재할당한다.</li>
 <li>로컬 함수 내부에서도 호이스팅이 일어난다(?) 지역 변수 선언보다 먼저 변수를 사용하면 undefined 값을 사용한다.</li>
+<li>스코프는 함수의 선언시점을 기준으로 한다. 전역함수 A()를 다른 전역함수 B() 내부에서 호출한다면, A()함수의 선언구문을 우선적으로 참조한다. -&gt; <strong>lexical scoping</strong></li>
 </ul>
-
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">  <span style="color:#007020;font-weight:bold">var</span> scope <span style="color:#666">=</span> <span style="color:#4070a0">&#39;this is global&#39;</span>;
+  <span style="color:#007020;font-weight:bold">function</span> b() {
+    <span style="color:#007020;font-weight:bold">var</span> scope <span style="color:#666">=</span> <span style="color:#4070a0">&#39;this is local in b()&#39;</span>;
+    a();
+  }
+  <span style="color:#007020;font-weight:bold">function</span> a() {
+    console.log(scope);
+  }
+  b() <span style="">//this is global</span></code></pre>
+</div>
 <h2 id="this">this</h2>
 
 <p>함수 블록 내부의 <code>this</code>는 함수를 메소드로 소유한 객체를 가리킨다. 전역함수 a는 <code>window</code> 객체 내부에서 a라는 이름의 메소드이다. 따라서 일반함수의 <code>this</code>는 <code>window</code>라고 할 수 있다.<br />
 <code>new</code> 연산자로 함수를 호출하면, <code>this</code>는 생성될 인스턴스를 가리킨다. 생성자 함수 내에서 사용하는 메소드의 <code>this</code> 역시 같은 인스턴스를 가리킨다. 이는 내부함수의 <code>this</code> 역시 윈도우를 가리키는 것과 같은 원리이다.</p>
+
+<ul>
+<li><p><code>this</code> binding patterns (<em>according to function invocation patterns</em>)</p>
+
+<ol>
+<li>function invocation<br />
+<code>this === window</code> &gt;&gt; true</li>
+
+<li><p>method invocation<br />
+<code>내부함수 ? window : object</code></p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">var</span> test <span style="color:#666">=</span> {};
+test.check <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">function</span>() {
+console.log(<span style="color:#4070a0">&#39;this === test: &#39;</span>, <span style="color:#007020;font-weight:bold">this</span> <span style="color:#666">===</span> test);
+<span style="color:#007020;font-weight:bold">function</span> check() {
+console.log(<span style="color:#4070a0">&#39;this === window: &#39;</span>, <span style="color:#007020;font-weight:bold">this</span> <span style="color:#666">===</span> <span style="color:#007020">window</span>);
+}
+check();
+};
+test.check();
+<span style="color:#60a0b0;font-style:italic">//this === test: true
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="">//this === window: true</span></code></pre>
+</div></li>
+
+<li><p>constructor invocation<br />
+<code>this === instance</code><br />
+<code>new</code> keyword 누락 대비 패턴</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">function</span> AnyConstructor(arg) {
+<span style="color:#60a0b0;font-style:italic">// 아래 구문부터 대비 패턴이다.
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">if</span>(<span style="color:#666">!</span>(<span style="color:#007020;font-weight:bold">this</span> <span style="color:#007020;font-weight:bold">instanceof</span> arguments.callee)) {
+<span style="color:#007020;font-weight:bold">return</span> <span style="color:#007020;font-weight:bold">new</span> arguments.callee(arg);
+}
+<span style="color:#007020;font-weight:bold">this</span>.prop <span style="color:#666">=</span> arg <span style="color:#666">?</span> expression <span style="color:#007020;font-weight:bold">with</span> arg or not <span style="color:#666">:</span> <span style="color:#40a070">0</span>;
+}</code></pre>
+</div></li>
+
+<li><p>apply (call) invocation<br />
+<em>instant <code>this</code></em></p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">var</span> Person <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">function</span>(name) {
+<span style="color:#007020;font-weight:bold">this</span>.name <span style="color:#666">=</span> name;
+}
+Person.prototype.nation <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">function</span>(nation) {
+<span style="color:#007020;font-weight:bold">this</span>.nation <span style="color:#666">=</span> nation;
+}
+<span style="color:#007020;font-weight:bold">var</span> byNew <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> Person(<span style="color:#4070a0">&#39;KIM&#39;</span>);
+byNew.nation(<span style="color:#4070a0">&#39;KOR&#39;</span>);
+<span style="color:#007020;font-weight:bold">var</span> byApply <span style="color:#666">=</span> {};
+Person.apply(byApply, [<span style="color:#4070a0">&#39;LEE&#39;</span>])
+byApply.nation(<span style="color:#4070a0">&#39;KOR&#39;</span>);
+byNew.nation.apply(byApply, [<span style="color:#4070a0">&#39;JPN&#39;</span>]);
+Person.prototype.nation.apply(byApply, [<span style="color:#4070a0">&#39;JPN&#39;</span>]);
+byApply.__proto__ <span style="color:#666">===</span> byNew.__proto__</code></pre>
+</div></li>
+</ol></li>
+</ul>
 
 </div>
 
