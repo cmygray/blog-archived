@@ -5,10 +5,29 @@
     <link>http://cmygray.github.io/post/</link>
     <description>Recent content in Posts on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 08 Oct 2017 00:32:58 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 08 Oct 2017 19:21:15 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>다음 큰 수 찾기</title>
+      <link>http://cmygray.github.io/post/algorithm/171008_next_big_number/</link>
+      <pubDate>Sun, 08 Oct 2017 19:21:15 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/algorithm/171008_next_big_number/</guid>
+      <description>문제 어떤 수 N(1≤N≤1,000,000) 이 주어졌을 때, N의 다음 큰 숫자는 다음과 같습니다.
+ N의 다음 큰 숫자는 N을 2진수로 바꾸었을 때의 1의 개수와 같은 개수로 이루어진 수입니다. 1번째 조건을 만족하는 숫자들 중 N보다 큰 수 중에서 가장 작은 숫자를 찾아야 합니다.  예를 들어, 78을 2진수로 바꾸면 1001110 이며, 78의 다음 큰 숫자는 83으로 2진수는 1010011 입니다. N이 주어질 때, N의 다음 큰 숫자를 찾는 nextBigNumber 함수를 완성하세요.</description>
+    </item>
+    
+    <item>
+      <title>171008_TIL</title>
+      <link>http://cmygray.github.io/post/til/171008_til/</link>
+      <pubDate>Sun, 08 Oct 2017 19:20:27 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171008_til/</guid>
+      <description> 17.10.08.(일) DONE  일일 알고리즘- 다음 큰 숫자 py, js 통계가 빨라지는 수학력 집합까지  TODO (연휴간) 통계가 빨라지는 수학력 끝내기 js preview- execution context, closure, OOP 데이터 사이언스 스쿨 파이썬 6절, 7절 recharted 사이트 구상  </description>
+    </item>
     
     <item>
       <title>171007_TIL</title>
