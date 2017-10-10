@@ -4,21 +4,21 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='문제 어떤 수 N(1≤N≤1,000,000) 이 주어졌을 때, N의 다음 큰 숫자는 다음과 같습니다.
- N의 다음 큰 숫자는 N을 2진수로 바꾸었을 때의 1의 개수와 같은 개수로 이루어진 수입니다. 1번째 조건을 만족하는 숫자들 중 N보다 큰 수 중에서 가장 작은 숫자를 찾아야 합니다.  예를 들어, 78을 2진수로 바꾸면 1001110 이며, 78의 다음 큰 숫자는 83으로 2진수는 1010011 입니다. N이 주어질 때, N의 다음 큰 숫자를 찾는 nextBigNumber 함수를 완성하세요.'>
+<meta name='description' content='문제 야근 지수
+회사원인 수민이는 많은 일이 쌓여 있습니다. 수민이는 야근을 최소화하기 위해 남은 일의 작업량을 숫자로 메기고, 일에 대한 야근 지수를 줄이기로 결정했습니다. 야근 지수는 남은 일의 작업량을 제곱하여 더한 값을 의미합니다. 수민이는 1시간 동안 남은 일 중 하나를 골라 작업량 1만큼 처리할 수 있습니다. 수민이의 퇴근까지 남은 N 시간과 각 일에 대한 작업량이 있을 때, noOvertime 함수를 제작하여 수민이의 야근 지수를 최소화 한 결과를 출력해 주세요. 예를 들어, N=4 일 때, 남은 일의 작업량이 [4, 3, 3] 이라면 야근 지수를 최소화하기 위해 일을 한 결과는 [2, 2, 2]가 되고 야근 지수는 22 &#43; 22 &#43; 22 = 12가 되어 12를 반환해 줍니다.'>
 
-<meta property='og:title' content='다음 큰 수 찾기 • cmygray'>
-<meta property='og:description' content='문제 어떤 수 N(1≤N≤1,000,000) 이 주어졌을 때, N의 다음 큰 숫자는 다음과 같습니다.
- N의 다음 큰 숫자는 N을 2진수로 바꾸었을 때의 1의 개수와 같은 개수로 이루어진 수입니다. 1번째 조건을 만족하는 숫자들 중 N보다 큰 수 중에서 가장 작은 숫자를 찾아야 합니다.  예를 들어, 78을 2진수로 바꾸면 1001110 이며, 78의 다음 큰 숫자는 83으로 2진수는 1010011 입니다. N이 주어질 때, N의 다음 큰 숫자를 찾는 nextBigNumber 함수를 완성하세요.'>
-<meta property='og:url' content='http://cmygray.github.io/post/algorithm/171008_next_big_number/'>
+<meta property='og:title' content='야근 지수 • cmygray'>
+<meta property='og:description' content='문제 야근 지수
+회사원인 수민이는 많은 일이 쌓여 있습니다. 수민이는 야근을 최소화하기 위해 남은 일의 작업량을 숫자로 메기고, 일에 대한 야근 지수를 줄이기로 결정했습니다. 야근 지수는 남은 일의 작업량을 제곱하여 더한 값을 의미합니다. 수민이는 1시간 동안 남은 일 중 하나를 골라 작업량 1만큼 처리할 수 있습니다. 수민이의 퇴근까지 남은 N 시간과 각 일에 대한 작업량이 있을 때, noOvertime 함수를 제작하여 수민이의 야근 지수를 최소화 한 결과를 출력해 주세요. 예를 들어, N=4 일 때, 남은 일의 작업량이 [4, 3, 3] 이라면 야근 지수를 최소화하기 위해 일을 한 결과는 [2, 2, 2]가 되고 야근 지수는 22 &#43; 22 &#43; 22 = 12가 되어 12를 반환해 줍니다.'>
+<meta property='og:url' content='http://cmygray.github.io/post/algorithm/171010_overwork/'>
 <meta property='og:site_name' content='cmygray'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='python'><meta property='article:tag' content='javascript'><meta property='article:published_time' content='2017-10-08T19:21:15&#43;09:00'/><meta property='article:modified_time' content='2017-10-08T19:21:15&#43;09:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='python'><meta property='article:published_time' content='2017-10-10T23:31:35&#43;09:00'/><meta property='article:modified_time' content='2017-10-10T23:31:35&#43;09:00'/>
 
 <meta name="generator" content="Hugo 0.29" />
 
   <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
-  <title>다음 큰 수 찾기 • cmygray</title>
-  <link rel='canonical' href='http://cmygray.github.io/post/algorithm/171008_next_big_number/'>
+  <title>야근 지수 • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/algorithm/171010_overwork/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -67,7 +67,7 @@
     <header class='header-container'>
   <div class='header entry-header'>
     <div class='header-info'>
-      <h1 class='title'>다음 큰 수 찾기</h1>
+      <h1 class='title'>야근 지수</h1>
       
 
     </div>
@@ -82,7 +82,7 @@
   
 </svg>
 <span class='screen-reader'>Posted on </span>
-  <time class='date' datetime='2017-10-08T19:21:15&#43;09:00'>2017, Oct 8</time>
+  <time class='date' datetime='2017-10-10T23:31:35&#43;09:00'>2017, Oct 10</time>
 </span>
 
   
@@ -93,7 +93,7 @@
   <polyline points="12 6 12 12 15 15"/> 
   
 </svg>
-One min read
+2 mins read
 </span>
 
 
@@ -111,58 +111,43 @@ One min read
 
 <h2 id="문제">문제</h2>
 
-<p>어떤 수 N(1≤N≤1,000,000) 이 주어졌을 때, N의 다음 큰 숫자는 다음과 같습니다.</p>
-
-<ul>
-<li>N의 다음 큰 숫자는 N을 2진수로 바꾸었을 때의 1의 개수와 같은 개수로 이루어진 수입니다.</li>
-<li>1번째 조건을 만족하는 숫자들 중 N보다 큰 수 중에서 가장 작은 숫자를 찾아야 합니다.</li>
-</ul>
-
-<p>예를 들어, 78을 2진수로 바꾸면 <code>1001110</code> 이며, 78의 다음 큰 숫자는 83으로 2진수는 <code>1010011</code> 입니다.
-N이 주어질 때, N의 다음 큰 숫자를 찾는 nextBigNumber 함수를 완성하세요.</p>
+<p>야근 지수<br />
+회사원인 수민이는 많은 일이 쌓여 있습니다. 수민이는 야근을 최소화하기 위해 남은 일의 작업량을 숫자로 메기고, 일에 대한 야근 지수를 줄이기로 결정했습니다. 야근 지수는 남은 일의 작업량을 제곱하여 더한 값을 의미합니다. 수민이는 1시간 동안 남은 일 중 하나를 골라 작업량 1만큼 처리할 수 있습니다. 수민이의 퇴근까지 남은 N 시간과 각 일에 대한 작업량이 있을 때, noOvertime 함수를 제작하여 수민이의 야근 지수를 최소화 한 결과를 출력해 주세요. 예를 들어, N=4 일 때, 남은 일의 작업량이 [4, 3, 3] 이라면 야근 지수를 최소화하기 위해 일을 한 결과는 [2, 2, 2]가 되고 야근 지수는 22 + 22 + 22 = 12가 되어 12를 반환해 줍니다.</p>
 
 <hr />
 
 <h2 id="풀이">풀이</h2>
 
 <ul>
-<li>인수 n을 이진수로 변환하여 1의 개수를 반환하는 count1 함수를 만든다.</li>
-<li>count1(n) 과 반환값이 같을때까지 n을 1씩 증가시킨다.</li>
-</ul>
+<li><p>로직</p>
 
-<p>간단하지만 무식하게 풀 수 있긴 한데 어쩐지 찝찝하다. 비트연산자를 활용해야할 것만 같은 느낌적인 느낌&hellip;<br />
-어쨌든 위의 방법으로 코드를 작성하면 아래와 같다.</p>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#60a0b0;font-style:italic">#python</span>
-<span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">nextBigNumber</span>(n):
-    <span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">count1</span>(n):
-        cnt <span style="color:#666">=</span> <span style="color:#40a070">0</span>
-        <span style="color:#007020;font-weight:bold">for</span> i <span style="color:#007020;font-weight:bold">in</span> <span style="color:#007020">bin</span>(n):
-            <span style="color:#007020;font-weight:bold">if</span> i <span style="color:#666">==</span> <span style="color:#4070a0"></span><span style="color:#4070a0">&#39;1&#39;</span>:
-                cnt <span style="color:#666">+=</span><span style="color:#40a070">1</span>
-        <span style="color:#007020;font-weight:bold">return</span> cnt
-    result <span style="color:#666">=</span> n <span style="color:#666">+</span> <span style="color:#40a070">1</span>
-    <span style="color:#007020;font-weight:bold">while</span> count1(n) <span style="color:#666">!=</span> count1(result):
-        result <span style="color:#666">+=</span> <span style="color:#40a070">1</span>
-    <span style="color:#007020;font-weight:bold">return</span> result</code></pre>
-</div><div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#60a0b0;font-style:italic">//javascript
-</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">function</span> nextBigNumber(n) {
-    <span style="color:#007020;font-weight:bold">function</span> countOne(n) {
-        <span style="color:#007020;font-weight:bold">var</span> bin <span style="color:#666">=</span> n.toString(<span style="color:#40a070">2</span>);
-        <span style="color:#007020;font-weight:bold">var</span> cnt <span style="color:#666">=</span> <span style="color:#40a070">0</span>;
-        <span style="color:#007020;font-weight:bold">for</span> (<span style="color:#007020;font-weight:bold">var</span> <span style="color:#007020;font-weight:bold">char</span> <span style="color:#007020;font-weight:bold">of</span> bin) {
-            <span style="color:#007020;font-weight:bold">if</span> (<span style="color:#007020;font-weight:bold">char</span> <span style="color:#666">==</span> <span style="color:#4070a0">&#39;1&#39;</span>) {
-                cnt <span style="color:#666">+=</span> <span style="color:#40a070">1</span>;
-            }
-        }
-        <span style="color:#007020;font-weight:bold">return</span> cnt
-    }
-    <span style="color:#007020;font-weight:bold">var</span> result <span style="color:#666">=</span> n <span style="color:#666">+</span> <span style="color:#40a070">1</span>;
-    <span style="color:#007020;font-weight:bold">while</span> (countOne(n) <span style="color:#666">!=</span> countOne(result)) {
-        result <span style="color:#666">+=</span> <span style="color:#40a070">1</span>;
-    }
-    <span style="color:#007020;font-weight:bold">return</span> result;
-}</code></pre>
+<ul>
+<li>남은 작업량이 n일 때 야근지수는 n^2이다.</li>
+<li>한시간을 투자하면 야근지수는 (n-1)^2이다.</li>
+<li>시간당 야근지수의 감소량 r = n^2 - (n^2 - 2n + 1) = 2n - 1.</li>
+<li>r과 n은 비례하므로 매 시간마다 많이 남은 일부터 처리해야 한다는 결론 도출.</li>
+</ul></li>
+
+<li><p>구현(python)</p>
+
+<ol>
+<li>반복문(n회)을 만든다.</li>
+<li>max 함수로 works 에서 가장 큰 수를 찾는다.</li>
+<li>index 함수로 해당 수의 인덱스 넘버를 찾고, 1씩 감산한다.</li>
+<li>반복문 밖에서 리스트 각 요소의 제곱의 합을 구하여 반환한다.</li>
+</ol></li>
+</ul>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007020;font-weight:bold">def</span> <span style="color:#06287e">noOvertime</span>(n, works):
+    <span style="color:#007020;font-weight:bold">for</span> i <span style="color:#007020;font-weight:bold">in</span> <span style="color:#007020">range</span>(n):
+        works[works<span style="color:#666">.</span>index(<span style="color:#007020">max</span>(works))] <span style="color:#666">-=</span> <span style="color:#40a070">1</span>
+    remain <span style="color:#666">=</span> <span style="color:#007020">sum</span>([i <span style="color:#666">**</span> <span style="color:#40a070">2</span> <span style="color:#007020;font-weight:bold">for</span> i <span style="color:#007020;font-weight:bold">in</span> works])
+    <span style="color:#007020;font-weight:bold">return</span> remain</code></pre>
 </div>
+<blockquote>
+<p>매 반복마다 sort해서 works[0]만 1씩 감산하는 방법도 있다. 잘 읽히기는 그쪽이 나을 것 같다.
+이 문제는 데일리 알고리즘을 시작하면서 열어봤을 땐 엄두가 안났었다. 쉬운 것 부터 풀어가다가 2주만에 다시 만났는데 순식간에 풀어서 신기하다. 컴퓨터적 사고보단 수리적 추론이 관건인건 함정(그때도 차분히 봤다면 풀었을 것).</p>
+</blockquote>
+
 </div>
 
     
@@ -184,7 +169,7 @@ N이 주어질 때, N의 다음 큰 숫자를 찾는 nextBigNumber 함수를 완
   
 </svg>
 </span>
-  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/python'>Python</a>, <a class='tag' href='/tags/javascript'>Javascript</a></div>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/python'>Python</a></div>
 
   </div>
 </footer>
@@ -194,7 +179,7 @@ N이 주어질 때, N의 다음 큰 숫자를 찾는 nextBigNumber 함수를 완
   
 <nav class='entry-nav-container'>
   <div class='entry-nav'><div class='prev-entry'>
-      <a href='/post/til/171008_til/'>
+      <a href='/post/algorithm/171008_next_big_number/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -202,10 +187,10 @@ N이 주어질 때, N의 다음 큰 숫자를 찾는 nextBigNumber 함수를 완
   
 </svg>
  Previous</span>
-        <span class='screen-reader'>Previous post: </span>171008_TIL</a>
+        <span class='screen-reader'>Previous post: </span>다음 큰 수 찾기</a>
     </div><div class='next-entry'>
-      <a href='/post/algorithm/171010_overwork/'>
-        <span class='screen-reader'>Next post: </span>야근 지수<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+      <a href='/post/til/171010_til/'>
+        <span class='screen-reader'>Next post: </span>171010_TIL<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="4" y1="12" x2="20" y2="12"/>
   <polyline points="14 6 20 12 14 18"/>

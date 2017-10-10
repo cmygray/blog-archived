@@ -5,10 +5,19 @@
     <link>http://cmygray.github.io/categories/til/</link>
     <description>Recent content in TIL on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 08 Oct 2017 19:20:27 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 10 Oct 2017 23:32:37 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/categories/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>171010_TIL</title>
+      <link>http://cmygray.github.io/post/til/171010_til/</link>
+      <pubDate>Tue, 10 Oct 2017 23:32:37 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171010_til/</guid>
+      <description>17.10.10.(화) DONE  javascript built-in object: Standards, String, Date javascript homework: algorithm quiz(8찾기, 요일찾기, 홀짝, 알파스트링) javascript preview: Number, Math, RegExp 일일 알고리즘- 야근 지수 py  TODO recharted 사이트 구상 google newslab fellowship 지원서 작성    그동안 알고리즘을 풀면서 2중 반복문을 습관적으로 사용했는데, 실습 알고리즘을 풀면서 1중 반복문을 두번 사용하며 가독성을 높이는 방법을 배웠다. 코드 작성 전 로직을 고민할 때 항상 이 부분을 염두에 둬야겠다는 생각. 또 eslint를 적극적으로 수용해서 변수 선언문을 죄다 수정하는 것도 처음 해봤는데 틈틈이 해보는 것이 ES6와 typescript 대비에 좋을 것 같다.</description>
+    </item>
     
     <item>
       <title>171008_TIL</title>
