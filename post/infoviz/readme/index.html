@@ -4,19 +4,19 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='17.10.10.(화) DONE  javascript built-in object: Standards, String, Date javascript homework: algorithm quiz(8찾기, 요일찾기, 홀짝, 알파스트링) javascript preview: Number, Math, RegExp 일일 알고리즘- 야근 지수 py  TODO recharted 사이트 구상 google newslab fellowship 지원서 작성    그동안 알고리즘을 풀면서 2중 반복문을 습관적으로 사용했는데, 실습 알고리즘을 풀면서 1중 반복문을 두번 사용하며 가독성을 높이는 방법을 배웠다. 코드 작성 전 로직을 고민할 때 항상 이 부분을 염두에 둬야겠다는 생각. 또 eslint를 적극적으로 수용해서 변수 선언문을 죄다 수정하는 것도 처음 해봤는데 틈틈이 해보는 것이 ES6와 typescript 대비에 좋을 것 같다.'>
+<meta name='description' content='뉴욕타임즈에서 학생들의 토론학습을 위해 제공하는 What&rsquo;s Going On in This Graph? 번역 및 그래프 리뷰입니다. 보도했던 기사의 그래프 이미지를 본문은 생략한 채로 먼저 공개하고, 몇가지 질문에 대해 코멘트를 제출하면 이후 본문을 공개하는 방식의 컨텐츠입니다. 뉴스를 위한 데이터 시각화를 알아보고자 작성을 시작했으며 본문 번역과 제 의견, 가능하다면 해당 그래프 유형에 대한 정보까지 추가하려고 합니다.'>
 
-<meta property='og:title' content='171010_TIL • cmygray'>
-<meta property='og:description' content='17.10.10.(화) DONE  javascript built-in object: Standards, String, Date javascript homework: algorithm quiz(8찾기, 요일찾기, 홀짝, 알파스트링) javascript preview: Number, Math, RegExp 일일 알고리즘- 야근 지수 py  TODO recharted 사이트 구상 google newslab fellowship 지원서 작성    그동안 알고리즘을 풀면서 2중 반복문을 습관적으로 사용했는데, 실습 알고리즘을 풀면서 1중 반복문을 두번 사용하며 가독성을 높이는 방법을 배웠다. 코드 작성 전 로직을 고민할 때 항상 이 부분을 염두에 둬야겠다는 생각. 또 eslint를 적극적으로 수용해서 변수 선언문을 죄다 수정하는 것도 처음 해봤는데 틈틈이 해보는 것이 ES6와 typescript 대비에 좋을 것 같다.'>
-<meta property='og:url' content='http://cmygray.github.io/post/til/171010_til/'>
+<meta property='og:title' content='What&#39;s going on in this graph?: 시작하며 • cmygray'>
+<meta property='og:description' content='뉴욕타임즈에서 학생들의 토론학습을 위해 제공하는 What&rsquo;s Going On in This Graph? 번역 및 그래프 리뷰입니다. 보도했던 기사의 그래프 이미지를 본문은 생략한 채로 먼저 공개하고, 몇가지 질문에 대해 코멘트를 제출하면 이후 본문을 공개하는 방식의 컨텐츠입니다. 뉴스를 위한 데이터 시각화를 알아보고자 작성을 시작했으며 본문 번역과 제 의견, 가능하다면 해당 그래프 유형에 대한 정보까지 추가하려고 합니다.'>
+<meta property='og:url' content='http://cmygray.github.io/post/infoviz/readme/'>
 <meta property='og:site_name' content='cmygray'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-10-10T23:32:37&#43;09:00'/><meta property='article:modified_time' content='2017-10-10T23:32:37&#43;09:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='data-visualization'><meta property='article:tag' content='graph'><meta property='article:published_time' content='2017-10-12T00:26:07&#43;09:00'/><meta property='article:modified_time' content='2017-10-12T00:26:07&#43;09:00'/>
 
 <meta name="generator" content="Hugo 0.29" />
 
   <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
-  <title>171010_TIL • cmygray</title>
-  <link rel='canonical' href='http://cmygray.github.io/post/til/171010_til/'>
+  <title>What&#39;s going on in this graph?: 시작하며 • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/infoviz/readme/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -65,7 +65,7 @@
     <header class='header-container'>
   <div class='header entry-header'>
     <div class='header-info'>
-      <h1 class='title'>171010_TIL</h1>
+      <h1 class='title'>What&#39;s going on in this graph?: 시작하며</h1>
       
 
     </div>
@@ -80,7 +80,7 @@
   
 </svg>
 <span class='screen-reader'>Posted on </span>
-  <time class='date' datetime='2017-10-10T23:32:37&#43;09:00'>2017, Oct 10</time>
+  <time class='date' datetime='2017-10-12T00:26:07&#43;09:00'>2017, Oct 12</time>
 </span>
 
   
@@ -105,33 +105,7 @@ One min read
     
 
     <div class='entry-content'>
-  
-
-<h1 id="17-10-10-화">17.10.10.(화)</h1>
-
-<h2 id="done">DONE</h2>
-
-<ul>
-<li>javascript built-in object: Standards, String, Date</li>
-<li>javascript homework: algorithm quiz(8찾기, 요일찾기, 홀짝, 알파스트링)</li>
-<li>javascript preview: Number, Math, RegExp</li>
-<li>일일 알고리즘- <a href="https://programmers.co.kr/learn/challenge_codes/145" target="_blank">야근 지수</a> py</li>
-</ul>
-
-<h2 id="todo">TODO</h2>
-
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> recharted 사이트 구상</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> google newslab fellowship 지원서 작성</label></li>
-</ul>
-
-<blockquote>
-<ol>
-<li>그동안 알고리즘을 풀면서 2중 반복문을 습관적으로 사용했는데, 실습 알고리즘을 풀면서 1중 반복문을 두번 사용하며 가독성을 높이는 방법을 배웠다. 코드 작성 전 로직을 고민할 때 항상 이 부분을 염두에 둬야겠다는 생각. 또 eslint를 적극적으로 수용해서 변수 선언문을 죄다 수정하는 것도 처음 해봤는데 틈틈이 해보는 것이 ES6와 typescript 대비에 좋을 것 같다.</li>
-<li>내장 객체 메소드를 배우기 시작하면서 나열식이라 조금 루즈해지는 느낌이라 그동안 풀었던 쉬운 문제들에 적용해봐야 재미를 유지할 수 있겠다.</li>
-<li>블로그에 시각화 리뷰를 올려야 하는데 늘어지고 늘어지고 늘어진다&hellip;</li>
-</ol>
-</blockquote>
+  <p>뉴욕타임즈에서 학생들의 토론학습을 위해 제공하는 <a href="https://www.nytimes.com/column/whats-going-on-in-this-graph?action=click&amp;contentCollection=The%20Learning%20Network&amp;module=ExtendedByline&amp;region=Header&amp;pgtype=article" target="_blank">What&rsquo;s Going On in This Graph?</a> 번역 및 그래프 리뷰입니다. 보도했던 기사의 그래프 이미지를 본문은 생략한 채로 먼저 공개하고, 몇가지 질문에 대해 코멘트를 제출하면 이후 본문을 공개하는 방식의 컨텐츠입니다. 뉴스를 위한 데이터 시각화를 알아보고자 작성을 시작했으며 본문 번역과 제 의견, 가능하다면 해당 그래프 유형에 대한 정보까지 추가하려고 합니다.</p>
 
 </div>
 
@@ -145,7 +119,16 @@ One min read
   
 </svg>
 </span>
-  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/til'>TIL</a></div>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/infoviz'>Infoviz</a></div>
+<div class='tags'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/data-visualization'>Data-visualization</a>, <a class='tag' href='/tags/graph'>Graph</a></div>
 
   </div>
 </footer>
@@ -155,7 +138,7 @@ One min read
   
 <nav class='entry-nav-container'>
   <div class='entry-nav'><div class='prev-entry'>
-      <a href='/post/algorithm/171010_overwork/'>
+      <a href='/post/til/171011_til/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -163,17 +146,7 @@ One min read
   
 </svg>
  Previous</span>
-        <span class='screen-reader'>Previous post: </span>야근 지수</a>
-    </div><div class='next-entry'>
-      <a href='/post/til/171011_til/'>
-        <span class='screen-reader'>Next post: </span>171011_TIL<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader'>Previous post: </span>171011_TIL</a>
     </div></div>
 </nav>
 

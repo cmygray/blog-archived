@@ -4,7 +4,7 @@
   
   <url>
     <loc>http://cmygray.github.io/</loc>
-    <lastmod>2017-10-10T23:32:37+09:00</lastmod>
+    <lastmod>2017-10-12T00:26:07+09:00</lastmod>
   </url>
   
   <url>
@@ -13,6 +13,16 @@
   
   <url>
     <loc>http://cmygray.github.io/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>http://cmygray.github.io/post/infoviz/readme/</loc>
+    <lastmod>2017-10-12T00:26:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://cmygray.github.io/post/til/171011_til/</loc>
+    <lastmod>2017-10-12T00:24:17+09:00</lastmod>
   </url>
   
   <url>
@@ -219,6 +229,24 @@
   </url>
   
   <url>
+    <loc>http://cmygray.github.io/tags/data-visualization/</loc>
+    <lastmod>2017-10-12T00:26:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://cmygray.github.io/tags/graph/</loc>
+    <lastmod>2017-10-12T00:26:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://cmygray.github.io/categories/infoviz/</loc>
+    <lastmod>2017-10-12T00:26:07+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://cmygray.github.io/categories/javascript/</loc>
     <lastmod>2017-10-07T01:15:36+09:00</lastmod>
     <priority>0</priority>
@@ -237,7 +265,7 @@
   
   <url>
     <loc>http://cmygray.github.io/post/</loc>
-    <lastmod>2017-10-10T23:32:37+09:00</lastmod>
+    <lastmod>2017-10-12T00:26:07+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -249,13 +277,13 @@
   
   <url>
     <loc>http://cmygray.github.io/categories/til/</loc>
-    <lastmod>2017-10-10T23:32:37+09:00</lastmod>
+    <lastmod>2017-10-12T00:24:17+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://cmygray.github.io/tags/</loc>
-    <lastmod>2017-10-08T19:21:15+09:00</lastmod>
+    <lastmod>2017-10-12T00:26:07+09:00</lastmod>
     <priority>0</priority>
   </url>
   

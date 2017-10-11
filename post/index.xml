@@ -5,10 +5,28 @@
     <link>http://cmygray.github.io/post/</link>
     <description>Recent content in Posts on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 10 Oct 2017 23:32:37 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 12 Oct 2017 00:26:07 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What&#39;s going on in this graph?: 시작하며</title>
+      <link>http://cmygray.github.io/post/infoviz/readme/</link>
+      <pubDate>Thu, 12 Oct 2017 00:26:07 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/infoviz/readme/</guid>
+      <description>뉴욕타임즈에서 학생들의 토론학습을 위해 제공하는 What&amp;rsquo;s Going On in This Graph? 번역 및 그래프 리뷰입니다. 보도했던 기사의 그래프 이미지를 본문은 생략한 채로 먼저 공개하고, 몇가지 질문에 대해 코멘트를 제출하면 이후 본문을 공개하는 방식의 컨텐츠입니다. 뉴스를 위한 데이터 시각화를 알아보고자 작성을 시작했으며 본문 번역과 제 의견, 가능하다면 해당 그래프 유형에 대한 정보까지 추가하려고 합니다.</description>
+    </item>
+    
+    <item>
+      <title>171011_TIL</title>
+      <link>http://cmygray.github.io/post/til/171011_til/</link>
+      <pubDate>Thu, 12 Oct 2017 00:24:17 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171011_til/</guid>
+      <description>17.10.11.(수) DONE  javascript built-in object: Number, Math, RegExp, Array javascript algorithm quiz(weird case, numPY) using regexp. javascript preview: Execution context, Closure, OOP 일일 알고리즘- 등차수열 합계함수(재귀) nyt, &amp;ldquo;what&amp;rsquo;s going on in this graph?&amp;rdquo; 171009 일부 번역  TODO recharted 사이트 구상 google newslab fellowship 지원서 작성    바빠서 그래프를 못그리면 읽기라도 더 하려고, 이왕이면 양질의 그래프를 읽으려고 번역까지 덧붙여 NYT 그래프 리뷰를 시작했다. 집중해서 뭐든지 빨아들일 기세였는데 연휴 지나고나니 늘어지고 수동적인 느낌이다.</description>
+    </item>
     
     <item>
       <title>171010_TIL</title>

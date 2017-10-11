@@ -4,19 +4,19 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='17.10.10.(화) DONE  javascript built-in object: Standards, String, Date javascript homework: algorithm quiz(8찾기, 요일찾기, 홀짝, 알파스트링) javascript preview: Number, Math, RegExp 일일 알고리즘- 야근 지수 py  TODO recharted 사이트 구상 google newslab fellowship 지원서 작성    그동안 알고리즘을 풀면서 2중 반복문을 습관적으로 사용했는데, 실습 알고리즘을 풀면서 1중 반복문을 두번 사용하며 가독성을 높이는 방법을 배웠다. 코드 작성 전 로직을 고민할 때 항상 이 부분을 염두에 둬야겠다는 생각. 또 eslint를 적극적으로 수용해서 변수 선언문을 죄다 수정하는 것도 처음 해봤는데 틈틈이 해보는 것이 ES6와 typescript 대비에 좋을 것 같다.'>
+<meta name='description' content='17.10.11.(수) DONE  javascript built-in object: Number, Math, RegExp, Array javascript algorithm quiz(weird case, numPY) using regexp. javascript preview: Execution context, Closure, OOP 일일 알고리즘- 등차수열 합계함수(재귀) nyt, &ldquo;what&rsquo;s going on in this graph?&rdquo; 171009 일부 번역  TODO recharted 사이트 구상 google newslab fellowship 지원서 작성    바빠서 그래프를 못그리면 읽기라도 더 하려고, 이왕이면 양질의 그래프를 읽으려고 번역까지 덧붙여 NYT 그래프 리뷰를 시작했다. 집중해서 뭐든지 빨아들일 기세였는데 연휴 지나고나니 늘어지고 수동적인 느낌이다.'>
 
-<meta property='og:title' content='171010_TIL • cmygray'>
-<meta property='og:description' content='17.10.10.(화) DONE  javascript built-in object: Standards, String, Date javascript homework: algorithm quiz(8찾기, 요일찾기, 홀짝, 알파스트링) javascript preview: Number, Math, RegExp 일일 알고리즘- 야근 지수 py  TODO recharted 사이트 구상 google newslab fellowship 지원서 작성    그동안 알고리즘을 풀면서 2중 반복문을 습관적으로 사용했는데, 실습 알고리즘을 풀면서 1중 반복문을 두번 사용하며 가독성을 높이는 방법을 배웠다. 코드 작성 전 로직을 고민할 때 항상 이 부분을 염두에 둬야겠다는 생각. 또 eslint를 적극적으로 수용해서 변수 선언문을 죄다 수정하는 것도 처음 해봤는데 틈틈이 해보는 것이 ES6와 typescript 대비에 좋을 것 같다.'>
-<meta property='og:url' content='http://cmygray.github.io/post/til/171010_til/'>
+<meta property='og:title' content='171011_TIL • cmygray'>
+<meta property='og:description' content='17.10.11.(수) DONE  javascript built-in object: Number, Math, RegExp, Array javascript algorithm quiz(weird case, numPY) using regexp. javascript preview: Execution context, Closure, OOP 일일 알고리즘- 등차수열 합계함수(재귀) nyt, &ldquo;what&rsquo;s going on in this graph?&rdquo; 171009 일부 번역  TODO recharted 사이트 구상 google newslab fellowship 지원서 작성    바빠서 그래프를 못그리면 읽기라도 더 하려고, 이왕이면 양질의 그래프를 읽으려고 번역까지 덧붙여 NYT 그래프 리뷰를 시작했다. 집중해서 뭐든지 빨아들일 기세였는데 연휴 지나고나니 늘어지고 수동적인 느낌이다.'>
+<meta property='og:url' content='http://cmygray.github.io/post/til/171011_til/'>
 <meta property='og:site_name' content='cmygray'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-10-10T23:32:37&#43;09:00'/><meta property='article:modified_time' content='2017-10-10T23:32:37&#43;09:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-10-12T00:24:17&#43;09:00'/><meta property='article:modified_time' content='2017-10-12T00:24:17&#43;09:00'/>
 
 <meta name="generator" content="Hugo 0.29" />
 
   <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
-  <title>171010_TIL • cmygray</title>
-  <link rel='canonical' href='http://cmygray.github.io/post/til/171010_til/'>
+  <title>171011_TIL • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til/171011_til/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -65,7 +65,7 @@
     <header class='header-container'>
   <div class='header entry-header'>
     <div class='header-info'>
-      <h1 class='title'>171010_TIL</h1>
+      <h1 class='title'>171011_TIL</h1>
       
 
     </div>
@@ -80,7 +80,7 @@
   
 </svg>
 <span class='screen-reader'>Posted on </span>
-  <time class='date' datetime='2017-10-10T23:32:37&#43;09:00'>2017, Oct 10</time>
+  <time class='date' datetime='2017-10-12T00:24:17&#43;09:00'>2017, Oct 12</time>
 </span>
 
   
@@ -107,15 +107,16 @@ One min read
     <div class='entry-content'>
   
 
-<h1 id="17-10-10-화">17.10.10.(화)</h1>
+<h1 id="17-10-11-수">17.10.11.(수)</h1>
 
 <h2 id="done">DONE</h2>
 
 <ul>
-<li>javascript built-in object: Standards, String, Date</li>
-<li>javascript homework: algorithm quiz(8찾기, 요일찾기, 홀짝, 알파스트링)</li>
-<li>javascript preview: Number, Math, RegExp</li>
-<li>일일 알고리즘- <a href="https://programmers.co.kr/learn/challenge_codes/145" target="_blank">야근 지수</a> py</li>
+<li>javascript built-in object: Number, Math, RegExp, Array</li>
+<li>javascript algorithm quiz(weird case, numPY) using regexp.</li>
+<li>javascript preview: Execution context, Closure, OOP</li>
+<li>일일 알고리즘- 등차수열 합계함수(재귀)</li>
+<li>nyt, &ldquo;what&rsquo;s going on in this graph?&rdquo; 171009 일부 번역</li>
 </ul>
 
 <h2 id="todo">TODO</h2>
@@ -127,9 +128,9 @@ One min read
 
 <blockquote>
 <ol>
-<li>그동안 알고리즘을 풀면서 2중 반복문을 습관적으로 사용했는데, 실습 알고리즘을 풀면서 1중 반복문을 두번 사용하며 가독성을 높이는 방법을 배웠다. 코드 작성 전 로직을 고민할 때 항상 이 부분을 염두에 둬야겠다는 생각. 또 eslint를 적극적으로 수용해서 변수 선언문을 죄다 수정하는 것도 처음 해봤는데 틈틈이 해보는 것이 ES6와 typescript 대비에 좋을 것 같다.</li>
-<li>내장 객체 메소드를 배우기 시작하면서 나열식이라 조금 루즈해지는 느낌이라 그동안 풀었던 쉬운 문제들에 적용해봐야 재미를 유지할 수 있겠다.</li>
-<li>블로그에 시각화 리뷰를 올려야 하는데 늘어지고 늘어지고 늘어진다&hellip;</li>
+<li>바빠서 그래프를 못그리면 읽기라도 더 하려고, 이왕이면 양질의 그래프를 읽으려고 번역까지 덧붙여 NYT 그래프 리뷰를 시작했다.</li>
+<li>집중해서 뭐든지 빨아들일 기세였는데 연휴 지나고나니 늘어지고 수동적인 느낌이다. 다시 끌어올릴 방법을 고민중..</li>
+<li>지금까지 무리없이 잘 해왔다고 생각함에도 불구하고, Angular2로 프로젝트를 수행하는게 과연 가능할까 불현듯 의구심이 든다. 어떡하지&hellip;</li>
 </ol>
 </blockquote>
 
@@ -155,7 +156,7 @@ One min read
   
 <nav class='entry-nav-container'>
   <div class='entry-nav'><div class='prev-entry'>
-      <a href='/post/algorithm/171010_overwork/'>
+      <a href='/post/til/171010_til/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -163,10 +164,10 @@ One min read
   
 </svg>
  Previous</span>
-        <span class='screen-reader'>Previous post: </span>야근 지수</a>
+        <span class='screen-reader'>Previous post: </span>171010_TIL</a>
     </div><div class='next-entry'>
-      <a href='/post/til/171011_til/'>
-        <span class='screen-reader'>Next post: </span>171011_TIL<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+      <a href='/post/infoviz/readme/'>
+        <span class='screen-reader'>Next post: </span>What&#39;s going on in this graph?: 시작하며<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="4" y1="12" x2="20" y2="12"/>
   <polyline points="14 6 20 12 14 18"/>
