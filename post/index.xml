@@ -5,10 +5,22 @@
     <link>http://cmygray.github.io/post/</link>
     <description>Recent content in Posts on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 13 Oct 2017 00:11:59 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2017 14:31:25 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>171014_TIL</title>
+      <link>http://cmygray.github.io/post/til/171014_til/</link>
+      <pubDate>Sun, 15 Oct 2017 14:31:25 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171014_til/</guid>
+      <description>17.10.14.(토) DONE  알고리즘 스터디: sum(n) 재귀문, fibo(n) 반복문, Dynamic programming(memorization, bottom up)   변수 이름에 대한 고민과 다이내믹 프로그래밍을 위한 방법 등을 나눴다.
+  통계가 빨라지는 수학력
+확률변수와 확률분포, 기댓값, 확률변수의 분산과 표준편차, 표준화, 기댓값의 합과 곱, 연속형 확률변수를 위한 극한과 미적분
+ 특정 값을 얻을 확률이 정해져있는 변수를 확률변수라고 한다. 각 확률변수에 대한 확률의 대응관계를 확률분포라 한다. 기댓값은 확률변수와 각 확률의 곱의 합이다. V(X) = E({X - E(X)}^2) = E(X^2) - {E(X)}^2 s(X) = sqrt(V(X)) Y = aX + b 일때,  E(Y) = a * E(X) + b V(Y) = a^2 * V(X) s(Y) = a * s(X)  Z = {X - E(X)} / s(X) &amp;ldquo;확률변수의 표준화&amp;rdquo;</description>
+    </item>
     
     <item>
       <title>171012_TIL</title>
