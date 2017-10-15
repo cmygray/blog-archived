@@ -4,25 +4,21 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='17.10.14.(토) DONE  알고리즘 스터디: sum(n) 재귀문, fibo(n) 반복문, Dynamic programming(memorization, bottom up)   변수 이름에 대한 고민과 다이내믹 프로그래밍을 위한 방법 등을 나눴다.
-  통계가 빨라지는 수학력
-확률변수와 확률분포, 기댓값, 확률변수의 분산과 표준편차, 표준화, 기댓값의 합과 곱, 연속형 확률변수를 위한 극한과 미적분
- 특정 값을 얻을 확률이 정해져있는 변수를 확률변수라고 한다. 각 확률변수에 대한 확률의 대응관계를 확률분포라 한다. 기댓값은 확률변수와 각 확률의 곱의 합이다. V(X) = E({X - E(X)}^2) = E(X^2) - {E(X)}^2 s(X) = sqrt(V(X)) Y = aX &#43; b 일때,  E(Y) = a * E(X) &#43; b V(Y) = a^2 * V(X) s(Y) = a * s(X)  Z = {X - E(X)} / s(X) &ldquo;확률변수의 표준화&rdquo;'>
+<meta name='description' content=' 17.10.15.(일) DONE  통계가 빨라지는 수학력을 드디어 다 읽었다 JS summary
+built-in objects/methods, execution context, closure 등 이번주에 다뤘던 내용들 정리 &gt; 블로그에도 업로드 하였다. DOM, Ajax를 아주 빠르게 훑어봤다. &gt; summary를 아주그냥 쓸데없이 열심히 해서 시간이 모자랐다. 어제 분명 앞으로 다룰 부분에 집중키로 했건만.. 역시 하기 싫은 일이 있으면 다른 일을 열심히 하는것&hellip;.  TODO JS Built-in summary DOM, Ajax 예습 recharted 사이트 구상 google newslab fellowship 지원서 작성  '>
 
-<meta property='og:title' content='171014_TIL • cmygray'>
-<meta property='og:description' content='17.10.14.(토) DONE  알고리즘 스터디: sum(n) 재귀문, fibo(n) 반복문, Dynamic programming(memorization, bottom up)   변수 이름에 대한 고민과 다이내믹 프로그래밍을 위한 방법 등을 나눴다.
-  통계가 빨라지는 수학력
-확률변수와 확률분포, 기댓값, 확률변수의 분산과 표준편차, 표준화, 기댓값의 합과 곱, 연속형 확률변수를 위한 극한과 미적분
- 특정 값을 얻을 확률이 정해져있는 변수를 확률변수라고 한다. 각 확률변수에 대한 확률의 대응관계를 확률분포라 한다. 기댓값은 확률변수와 각 확률의 곱의 합이다. V(X) = E({X - E(X)}^2) = E(X^2) - {E(X)}^2 s(X) = sqrt(V(X)) Y = aX &#43; b 일때,  E(Y) = a * E(X) &#43; b V(Y) = a^2 * V(X) s(Y) = a * s(X)  Z = {X - E(X)} / s(X) &ldquo;확률변수의 표준화&rdquo;'>
-<meta property='og:url' content='http://cmygray.github.io/post/til/171014_til/'>
+<meta property='og:title' content='171015_TIL • cmygray'>
+<meta property='og:description' content=' 17.10.15.(일) DONE  통계가 빨라지는 수학력을 드디어 다 읽었다 JS summary
+built-in objects/methods, execution context, closure 등 이번주에 다뤘던 내용들 정리 &gt; 블로그에도 업로드 하였다. DOM, Ajax를 아주 빠르게 훑어봤다. &gt; summary를 아주그냥 쓸데없이 열심히 해서 시간이 모자랐다. 어제 분명 앞으로 다룰 부분에 집중키로 했건만.. 역시 하기 싫은 일이 있으면 다른 일을 열심히 하는것&hellip;.  TODO JS Built-in summary DOM, Ajax 예습 recharted 사이트 구상 google newslab fellowship 지원서 작성  '>
+<meta property='og:url' content='http://cmygray.github.io/post/til/171015_til/'>
 <meta property='og:site_name' content='cmygray'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-10-15T14:31:25&#43;09:00'/><meta property='article:modified_time' content='2017-10-15T14:31:25&#43;09:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-10-16T01:38:44&#43;09:00'/><meta property='article:modified_time' content='2017-10-16T01:38:44&#43;09:00'/>
 
 <meta name="generator" content="Hugo 0.29" />
 
   <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
-  <title>171014_TIL • cmygray</title>
-  <link rel='canonical' href='http://cmygray.github.io/post/til/171014_til/'>
+  <title>171015_TIL • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til/171015_til/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -71,7 +67,7 @@
     <header class='header-container'>
   <div class='header entry-header'>
     <div class='header-info'>
-      <h1 class='title'>171014_TIL</h1>
+      <h1 class='title'>171015_TIL</h1>
       
 
     </div>
@@ -86,7 +82,7 @@
   
 </svg>
 <span class='screen-reader'>Posted on </span>
-  <time class='date' datetime='2017-10-15T14:31:25&#43;09:00'>2017, Oct 15</time>
+  <time class='date' datetime='2017-10-16T01:38:44&#43;09:00'>2017, Oct 16</time>
 </span>
 
   
@@ -97,7 +93,7 @@
   <polyline points="12 6 12 12 15 15"/> 
   
 </svg>
-2 mins read
+One min read
 </span>
 
 
@@ -113,67 +109,24 @@
     <div class='entry-content'>
   
 
-<h1 id="17-10-14-토">17.10.14.(토)</h1>
+<h1 id="17-10-15-일">17.10.15.(일)</h1>
 
 <h2 id="done">DONE</h2>
 
 <ul>
-<li>알고리즘 스터디: sum(n) 재귀문, fibo(n) 반복문, Dynamic programming(memorization, bottom up)</li>
+<li>통계가 빨라지는 수학력을 드디어 다 읽었다</li>
+<li>JS summary<br />
+built-in objects/methods, execution context, closure 등 이번주에 다뤘던 내용들 정리
+&gt; 블로그에도 업로드 하였다.</li>
+<li>DOM, Ajax를 아주 빠르게 훑어봤다.
+&gt; summary를 아주그냥 쓸데없이 열심히 해서 시간이 모자랐다. 어제 분명 앞으로 다룰 부분에 집중키로 했건만.. 역시 하기 싫은 일이 있으면 다른 일을 열심히 하는것&hellip;.</li>
 </ul>
-
-<blockquote>
-<p>변수 이름에 대한 고민과 다이내믹 프로그래밍을 위한 방법 등을 나눴다.</p>
-</blockquote>
-
-<ul>
-<li><p>통계가 빨라지는 수학력<br />
-확률변수와 확률분포, 기댓값, 확률변수의 분산과 표준편차, 표준화, 기댓값의 합과 곱, 연속형 확률변수를 위한 극한과 미적분</p>
-
-<ul>
-<li>특정 값을 얻을 확률이 정해져있는 변수를 확률변수라고 한다.</li>
-<li>각 확률변수에 대한 확률의 대응관계를 확률분포라 한다.</li>
-<li>기댓값은 확률변수와 각 확률의 곱의 합이다.</li>
-<li>V(X) = E({X - E(X)}^2)
- = E(X^2) - {E(X)}^2</li>
-<li>s(X) = sqrt(V(X))</li>
-<li>Y = aX + b 일때,
-
-<ul>
-<li>E(Y) = a * E(X) + b</li>
-<li>V(Y) = a^2 * V(X)</li>
-<li>s(Y) = a * s(X)</li>
-</ul></li>
-<li>Z = {X - E(X)} / s(X) &ldquo;확률변수의 표준화&rdquo;<br />
-<strong>평균이 0, 표준편차가 1인 확률변수</strong></li>
-<li>E(X + Y) = E(X) + E(Y) <em>X, Y는 서로 독립</em></li>
-<li>E(X * Y) = E(X) * E(Y) <em>X, Y는 서로 독립</em></li>
-<li>V(X + Y) = V(X) + V(Y) <em>X, Y는 서로 독립</em></li>
-<li>B(n, p) &ldquo;성공확률이 p, 시행횟수가 n인 이항분포&rdquo;</li>
-<li>이항분포를 따르는 확률변수 X에 대해,
-
-<ul>
-<li>E(X) = n * p</li>
-<li>V(X) = np(1 - p)</li>
-</ul></li>
-</ul></li>
-
-<li><p>javascript pair-programming quiz<br />
-어제 푼 9문제 리팩토링, 남은 문제도 마저 풀었다. <a href="https://github.com/cmygray/TIL/tree/master/categories/algorithms/fds/171013" target="_blank">풀이</a></p></li>
-</ul>
-
-<blockquote>
-<ol>
-<li><code>getElements...</code>메소드를 사용하여 요소(들)에 접근하면 배열을 반환하므로, 특정 요소에 접근하기 위해서는 인덱스 접근이 필요하다. 인덱스를 빼먹어서 자꾸 요소를 못찾는 문제가 발생했었다..</li>
-<li>Array 메소드는 만능이 아니다. 보기에는 짧지만 반복문과 유사하게 동작하며, 분명 반복문이 더 효과적인 경우가 있다. 구별하기 위해서 코딩 전에 생각하는 시간이 필요.</li>
-<li>앞으로는 DOM, Ajax에 더 중점을 둘 것이다. 재밌다고 자꾸 풀다보니 알고리즘 퀴즈가 앞으로 다룰 생소한 내용에 대한 도피처(?)가 되어버렸다. 당분간은 했던 문제 리팩토링만 하고 앞으로 배울 내용에 집중할 예정.</li>
-</ol>
-</blockquote>
 
 <h2 id="todo">TODO</h2>
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> JS Built-in summary</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> DOM, Ajax 예습</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> JS Built-in summary</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> DOM, Ajax 예습</label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> recharted 사이트 구상</label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> google newslab fellowship 지원서 작성</label></li>
 </ul>
@@ -200,7 +153,7 @@
   
 <nav class='entry-nav-container'>
   <div class='entry-nav'><div class='prev-entry'>
-      <a href='/post/til/171012_til/'>
+      <a href='/post/til/171014_til/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -208,10 +161,10 @@
   
 </svg>
  Previous</span>
-        <span class='screen-reader'>Previous post: </span>171012_TIL</a>
+        <span class='screen-reader'>Previous post: </span>171014_TIL</a>
     </div><div class='next-entry'>
-      <a href='/post/til/171015_til/'>
-        <span class='screen-reader'>Next post: </span>171015_TIL<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+      <a href='/post/javascript/deep-dive/'>
+        <span class='screen-reader'>Next post: </span>javascript deep-dive summary<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="4" y1="12" x2="20" y2="12"/>
   <polyline points="14 6 20 12 14 18"/>

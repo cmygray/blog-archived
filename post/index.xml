@@ -5,10 +5,32 @@
     <link>http://cmygray.github.io/post/</link>
     <description>Recent content in Posts on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 15 Oct 2017 14:31:25 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 16 Oct 2017 01:38:59 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>javascript deep-dive summary</title>
+      <link>http://cmygray.github.io/post/javascript/deep-dive/</link>
+      <pubDate>Mon, 16 Oct 2017 01:38:59 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/javascript/deep-dive/</guid>
+      <description>javascript deep-dive summary  10월 10일 - 12일 간 배운 자바스크립트 deep-dive에 대한 정리 웹 프로그래밍 튜토리얼과 MDN 자바스크립트 문서를 참고. ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 @ES6 표시.  
+1. Built in Object  오브젝트의 구조
+ Host obj(user-made) Built in obj  Standard(global objects of window;global object) Native  BOM DOM    구성 순서: Standards -&amp;gt; Native
+  2. Standard built-in Object  구조  Global Object(window;js | global;node)  Global Objects: Object, Function, Boolean, Number, String &amp;hellip;    표준 빌트인 객체에는 글로벌 오브젝트인 윈도우와, 윈도우에 속하는 나머지 글로벌 오브젝트&amp;rsquo;들&amp;rsquo;이 있다.</description>
+    </item>
+    
+    <item>
+      <title>171015_TIL</title>
+      <link>http://cmygray.github.io/post/til/171015_til/</link>
+      <pubDate>Mon, 16 Oct 2017 01:38:44 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171015_til/</guid>
+      <description> 17.10.15.(일) DONE  통계가 빨라지는 수학력을 드디어 다 읽었다 JS summary
+built-in objects/methods, execution context, closure 등 이번주에 다뤘던 내용들 정리 &amp;gt; 블로그에도 업로드 하였다. DOM, Ajax를 아주 빠르게 훑어봤다. &amp;gt; summary를 아주그냥 쓸데없이 열심히 해서 시간이 모자랐다. 어제 분명 앞으로 다룰 부분에 집중키로 했건만.. 역시 하기 싫은 일이 있으면 다른 일을 열심히 하는것&amp;hellip;.  TODO JS Built-in summary DOM, Ajax 예습 recharted 사이트 구상 google newslab fellowship 지원서 작성  </description>
+    </item>
     
     <item>
       <title>171014_TIL</title>

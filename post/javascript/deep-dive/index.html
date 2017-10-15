@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='javascript deep-dive summary  10월 10일 - 12일 간 배운 자바스크립트 deep-dive에 대한 정리 웹 프로그래밍 튜토리얼과 MDN 자바스크립트 문서를 참고. ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 @ES6 표시.  
+1. Built in Object  오브젝트의 구조
+ Host obj(user-made) Built in obj  Standard(global objects of window;global object) Native  BOM DOM    구성 순서: Standards -&gt; Native
+  2. Standard built-in Object  구조  Global Object(window;js | global;node)  Global Objects: Object, Function, Boolean, Number, String &hellip;    표준 빌트인 객체에는 글로벌 오브젝트인 윈도우와, 윈도우에 속하는 나머지 글로벌 오브젝트&rsquo;들&rsquo;이 있다.'>
+
+<meta property='og:title' content='javascript deep-dive summary • cmygray'>
+<meta property='og:description' content='javascript deep-dive summary  10월 10일 - 12일 간 배운 자바스크립트 deep-dive에 대한 정리 웹 프로그래밍 튜토리얼과 MDN 자바스크립트 문서를 참고. ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 @ES6 표시.  
+1. Built in Object  오브젝트의 구조
+ Host obj(user-made) Built in obj  Standard(global objects of window;global object) Native  BOM DOM    구성 순서: Standards -&gt; Native
+  2. Standard built-in Object  구조  Global Object(window;js | global;node)  Global Objects: Object, Function, Boolean, Number, String &hellip;    표준 빌트인 객체에는 글로벌 오브젝트인 윈도우와, 윈도우에 속하는 나머지 글로벌 오브젝트&rsquo;들&rsquo;이 있다.'>
+<meta property='og:url' content='http://cmygray.github.io/post/javascript/deep-dive/'>
+<meta property='og:site_name' content='cmygray'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='javascript'><meta property='article:published_time' content='2017-10-16T01:38:59&#43;09:00'/><meta property='article:modified_time' content='2017-10-16T01:38:59&#43;09:00'/>
+
+<meta name="generator" content="Hugo 0.29" />
+
+  <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
+  <title>javascript deep-dive summary • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/javascript/deep-dive/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/assets/css/main.77da63e1.css'><link rel='stylesheet' href='/css/custom.css'>
+</head>
+
+
+<body class='page type-post'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  <li>
+      <a href='/'>Home</a>
+    </li>
+  <li>
+      <a href='/categories/'>Categories</a>
+    </li>
+  <li>
+      <a href='/tags/'>Tags</a>
+    </li>
+  <li>
+      <a href='https://nullfull.github.io/visual-vocabulary/'>Visual-vocabulary</a>
+    </li>
+  
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>cmygray</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>javascript deep-dive summary</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2017-10-16T01:38:59&#43;09:00'>2017, Oct 16</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/> 
+  
+</svg>
+8 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  
+
+<h1 id="javascript-deep-dive-summary">javascript deep-dive summary</h1>
+
+<ul>
+<li>10월 10일 - 12일 간 배운 자바스크립트 deep-dive에 대한 정리</li>
+<li><a href="http://poiemaweb.com/" target="_blank">웹 프로그래밍 튜토리얼</a>과 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide" target="_blank">MDN 자바스크립트 문서</a>를 참고.</li>
+<li>ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 <em><code>@ES6</code></em> 표시.</li>
+</ul>
+
+<p></br></p>
+
+<h2 id="1-built-in-object">1. Built in Object</h2>
+
+<ul>
+<li><p>오브젝트의 구조</p>
+
+<ul>
+<li>Host obj(<em>user-made</em>)</li>
+<li><strong>Built in obj</strong>
+
+<ul>
+<li>Standard(<em>global objects of window;global object</em>)</li>
+<li>Native
+
+<ul>
+<li>BOM</li>
+<li>DOM</li>
+</ul></li>
+</ul></li>
+</ul></li>
+
+<li><p>구성 순서: Standards -&gt; Native</p></li>
+</ul>
+
+<h2 id="2-standard-built-in-object">2. Standard built-in Object</h2>
+
+<ul>
+<li>구조
+
+<ul>
+<li>Global Object(window;js | global;node)
+
+<ul>
+<li>Global Objects: Object, Function, Boolean, Number, String &hellip;</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p>표준 빌트인 객체에는 글로벌 오브젝트인 윈도우와, 윈도우에 속하는 나머지 글로벌 오브젝트&rsquo;들&rsquo;이 있다. 표준 빌트인 객체와 그 프로토타입에는 다양한 프로퍼티와 메소드가 존재하여 유용하게 사용할 수 있다(API).</p>
+
+<h3 id="2-1-global-object">2.1 Global Object</h3>
+
+<ul>
+<li>실행컨텍스트에 들어가기 전에 생성되며 임의로 생성할 수 없다.</li>
+
+<li><p>전역 스코프를 가진다. 전역 변수란 곧 G.O.의 프로퍼티이며 전역 변수에 할당된 함수(전역함수)는 전역 메소드이다.</p></li>
+
+<li><p>window.&lt;propertyName&gt;<br />
+주로 전역에서 사용되는 간단한 값들을 가진다.</p>
+
+<ul>
+<li><code>Infinity</code></li>
+<li><code>NaN</code></li>
+<li><code>undefined</code></li>
+</ul></li>
+
+<li><p>window.&lt;methodName&gt;<br />
+전역에서 호출이 가능한 함수이다.</p>
+
+<ul>
+<li><code>eval(expression)</code> return: value<br />
+주어진 식의 평가값을 반환한다. 잘 사용하지 않음.</li>
+<li><code>isFinite(testVal)</code> return: boolean<br />
+주어진 값이 유한값인지 평가한다.</li>
+<li><code>isNaN(testVal)</code> return: boolean<br />
+주어진 값이 숫자인지 평가한다.</li>
+<li><code>parseFloat(string)</code> return: number<br />
+주어진 값의 부동소수점 숫자를 반환한다. 시작문자가 숫자가 아닌경우 NaN</li>
+<li><code>parseInt(string)</code> return: number<br />
+주어진 값의 정수형 숫자를 반환한다. 시작문자가 숫자가 아닌경우 NaN</li>
+<li><code>encodeURI(uriAddress)</code>/<code>decodeURI(uriAddress)</code> return: string<br />
+주어진 문자열을 URI 표준인 ASCII 캐릭터셋으로 변환/복원하며, 구분자를 무시한다.</li>
+<li><code>encodeURIComponent(uriComp)</code>/<code>decodeURIComponent(uriComp)</code> return: string<br />
+URI의 컴포넌트에 사용하며, 구분자까지 처리한다.</li>
+</ul></li>
+</ul>
+
+<h3 id="2-2-global-objects">2.2 Global Objects</h3>
+
+<p>아래는 window(global) 객체에 속하는 standard built-in objects 이다. 이를 global objects라고도 부른다.</p>
+
+<ul>
+<li>Number</li>
+<li>String</li>
+<li>Boolean</li>
+<li>Symbol</li>
+</ul>
+
+<hr />
+
+<ul>
+<li>Math</li>
+</ul>
+
+<hr />
+
+<ul>
+<li>Function</li>
+<li>Object</li>
+<li>Array</li>
+<li>Date</li>
+<li>Error</li>
+<li>RegExp</li>
+</ul>
+
+<p>위 객체는 모두 standard built-in 이지만 몇가지 유형으로 구분할 수 있다.</p>
+
+<p><br></p>
+
+<ol>
+<li><p>wrapper 객체<br />
+생성자 있음(안씀). primitive와 관련. 생성자로써의 용도보단, literal primitive와 prototype을 공유하기 위한 용도. (Number, String, Boolean, Symbol이 여기에 해당한다.)</p>
+
+<blockquote>
+<p>기본자료형과 함께 관련된 표준 빌트인 객체의 메소드 혹은 프로퍼티를 호출하면 prototype을 공유하는 것처럼 정상적으로 작동한다. 이는 닷 연산자가 primitive를 일시적으로 wrapper object로 변환했기 때문이다.</p>
+</blockquote></li>
+
+<li><p>static<br />
+생성자 없음. (Math가 여기에 해당한다.)</p></li>
+
+<li><p>그외(뭐라고 칭해야 할지..)<br />
+생성자 있음. object와 관련. (Oabject, Function, Array, Date, RegExp가 여기에 해당한다.)</p></li>
+</ol>
+
+<h4 id="2-2-1-object-function-boolean-error">2.2.1. Object, Function, Boolean, Error</h4>
+
+<ul>
+<li><code>Object([value])</code> return: object<br />
+주어진 값에 따라 빈객체 또는 객체화된 리터럴을 생성한다. null 또는 undefined를 전달하면 빈 객체를 생성한다. 그 외에는 해당 자료형의 래퍼 객체를 생성자로 사용할 때와 결과가 동일하다.</li>
+<li><code>Function([...arguments[, function body]])</code> return: function<br /></li>
+<li><code>Boolean([value])</code> return: object</li>
+<li><code>Error([msg[, filename[, linenumber]]])</code> return: object<br />
+생성된 오브젝트는 <code>try</code>-<code>catch</code> 구문에서 <code>catch</code>의 인수로 전달된다.</li>
+</ul>
+
+<h4 id="2-2-2-math">2.2.2. Math</h4>
+
+<p>Math의 메소드와 프로퍼티는 모두 static;정적이다.</p>
+
+<ul>
+<li><p>Math.&lt;propertyName&gt;</p>
+
+<ul>
+<li><code>PI</code> value: 3.141592653589793</li>
+</ul></li>
+
+<li><p>Math.&lt;methodName&gt;</p>
+
+<ul>
+<li><code>abs(value)</code> return: number<br />
+주어진 값의 절대값을 반환한다.</li>
+<li><code>round(value)</code> return: number<br />
+주어진 값을 정수로 반올림한다. -n.5 &gt;&gt; -n 이 됨에 유의.</li>
+<li><code>sqrt(value)</code> return: number<br />
+주어진 값의 <em>양의</em> 제곱근을 반환한다.</li>
+<li><code>ceil(value)</code>/<code>floor(value)</code> return: number<br />
+주어진 값을 정수로 올림/내림한다.</li>
+<li><code>random()</code> return: number<br />
+0 &lt;= n &lt; 1 인 임의의 숫자(float) n을 반환한다.</li>
+<li><code>pow(base, exponent)</code> return: number<br />
+첫번째 인수를 밑, 두번째를 지수로 하는 거듭제곱수를 반환한다.</li>
+<li><code>max(...numbers)</code>/<code>min(...numbers)</code> return: number<br />
+가장 큰/작은 인수를 반환한다. 자동 형변환을 한다.</li>
+</ul></li>
+</ul>
+
+<h4 id="2-2-3-number">2.2.3. Number</h4>
+
+<ul>
+<li>with <code>new</code>: 형변환 후 object 반환.</li>
+
+<li><p>without <code>new</code>: 형변환 후 primitive value 반환.</p></li>
+
+<li><p>Number.&lt;propertyName&gt;<br />
+정적 프로퍼티로, 인스턴스 생성없이 사용한다.</p>
+
+<ul>
+<li><code>EPSILON</code> value: 엄청 작은 수(부동소수점 비교에 사용)<br />
+부동소수점 표현범위 내에서, 두 수의 거리 d &lt; EPSILON 이라면 두 수는 같다고 간주한다.</li>
+<li><code>MAX_VALUE</code>/<code>MIN_VALUE</code> value: 사용가능한 가장 큰/작은 숫자</li>
+<li><code>POSITIVE_INFINITY</code>/<code>NEGATIVE_INFINITY</code> value: 양/음의 무한대</li>
+</ul></li>
+
+<li><p>Number.&lt;methodName&gt;<br />
+아래 메서드는 모두 형변환 없이 판단한다.(윈도우 메서드에 비해 엄격)</p>
+
+<ul>
+<li><code>isFinite(value)</code> return: boolean<br /></li>
+<li><code>isInteger(value)</code> return: boolean<br /></li>
+<li><code>isNaN(value)</code> return: boolean</li>
+<li><code>isSafeInteger(value)</code> return: boolean</li>
+</ul></li>
+
+<li><p>numObj.&lt;methodName&gt; (prototype method)</p>
+
+<ul>
+<li><code>toExponential([fractionDigits])</code> return: string</li>
+<li><code>toFixed([digit = 0])</code> return: string</li>
+<li><code>toPrecision([precision])</code> return: string</li>
+<li><code>toString([radix])</code> return: string</li>
+<li><code>valueOf()</code> return: value<br />
+[[PrimitiveValue]] 또는 그냥 값 반환.</li>
+</ul></li>
+</ul>
+
+<h4 id="2-2-4-date">2.2.4. Date</h4>
+
+<p>Syntax</p>
+
+<ul>
+<li>year: 연도를 나타내는 숫자</li>
+<li>month: 0 ~ 11</li>
+<li>date: 1 ~ 31</li>
+<li>day: 0 ~ 6, 요일을 나타내는 숫자로 0은 일요일</li>
+<li>hour: 0 ~ 23</li>
+<li>minute: 0 ~ 59</li>
+<li>second: 0 ~ 59</li>
+<li>millisecond: 0 ~ 999</li>
+</ul>
+
+<p><br></p>
+
+<p>생성자로 사용하면&hellip;</p>
+
+<ul>
+<li><p>with <code>new</code>: 인수에 따라서 다른 객체를 생성한다.</p>
+
+<ul>
+<li>() : 현재 시간 객체 생성.</li>
+<li>(밀리초) : 1970.01.01. 00:00(UTC) 로부터 인수만큼 경과한 시간 객체 생성.</li>
+<li>(dateString) : 지정된 날짜와 시간 객체 생성. 단 파싱이 가능한 형식이어야 한다.</li>
+<li>(year, month[, day, hour, minute, second, millisecond])<br />
+전달한 인수만큼 세세한 시간 객체를 생성한다. 연 월은 필수지만 나머지는 안주면 0, 줄려면 모두 줘야한다.</li>
+</ul></li>
+
+<li><p>Date.&lt;methodName&gt;<br />
+기준시각(1970.01.01. 00:00 UTC)으로부터 ~~ 까지 경과한 시간을 밀리초로 반환한다.</p>
+
+<ul>
+<li><code>now()</code> return: number</li>
+<li><code>parse(dateString)</code> return: number</li>
+<li><code>UTC(dateString)</code> return: number</li>
+</ul></li>
+
+<li><p>dateObj.&lt;methodName&gt; (prototype method)</p>
+
+<ul>
+<li><code>getFullYear()</code> return: number(year)</li>
+<li><code>getMonth()</code> return: number(month)</li>
+<li><code>getDate()</code> return: number(date)</li>
+<li><code>getDay()</code> return: number(day)</li>
+<li><code>getHours()</code> return: number(hours)</li>
+<li><code>getMinutes()</code> return: number(minutes)</li>
+<li><code>getSeconds()</code> return: number(seconds)</li>
+<li><code>getMillieconds()</code> return: number(mseconds)</li>
+<li><code>setFullYear(year[, month[, date]])</code> return: number<br /></li>
+<li><code>setMonth(month[, date])</code> return: number</li>
+<li><code>setDate(date)</code> return: number</li>
+</ul>
+
+<blockquote>
+<p>day는 year-month-date에 의존적이기 때문에 setDay가 없는 것은 당연하다.</p>
+</blockquote>
+
+<ul>
+<li><code>setHours(hours[, minutes[, seconds[, ms]]])</code> return: number</li>
+<li><code>setMinutes(minutes[, seconds[, ms]])</code> return: number</li>
+<li><code>setSeconds(seconds[, ms])</code> return: number</li>
+<li><code>setMilliseconds(ms)</code> return: number</li>
+</ul>
+
+<blockquote>
+<p>set 메소드는 필수 인수인 [연월일시분초] 이하의 단위를 모두 변경할 수 있다.<br />
+set 메소드는 기준시각(1970.01.01. 00:00 UTC)부터 새로 바뀐 값까지의 경과시간을 반환.</p>
+</blockquote>
+
+<ul>
+<li><code>getTime()</code> return: number(경과시간)<br />
+기준시부터 callee가지 경과시간을 밀리세컨드로 반환한다.</li>
+<li><code>setTime(milliseconds)</code> return: number(input)<br />
+callee의 date를 인수만큼 경과한 값으로 바꾼다.</li>
+<li><code>getTimezoneOffset()</code> return: number(min)<br />
+UTC - LocalTimezone</li>
+<li><code>toDateString()</code> return: string</li>
+<li><code>toTimeString()</code> return: string</li>
+</ul></li>
+</ul>
+
+<h4 id="2-2-5-string">2.2.5. String</h4>
+
+<ul>
+<li>with <code>new</code>: 형변환 후 object 반환.</li>
+
+<li><p>without <code>new</code>: 형변환 후 primitive value 반환.</p></li>
+
+<li><p>String.&lt;propertyName&gt;</p>
+
+<ul>
+<li><code>length</code> value: 문자열 길이</li>
+</ul></li>
+
+<li><p>strObj.&lt;methodName&gt; (prototype method)</p>
+
+<ul>
+<li><code>charAt(index)</code> return: string</li>
+<li><code>indexOf(targetStr[, fromIndex])</code> return: number<br />
+문자(열)을 찾으면 첫번째 index를 반환한다. 여러 글자를 찾을땐 첫글자 인덱스를 반환하며, 못찾으면 -1을 반환한다.</li>
+<li><code>lastIndexOf(targetStr[, fromIndex])</code> return: number<br />
+위와 같은데 뒤에서부터 찾는다.</li>
+<li><code>replace(pattern|regexp, replacement[, flags])</code> return: string</li>
+<li><code>split([seperater=none [, limit]])</code> return: object(array)<br />
+인수가 없으면 문자열을 단 하나의 요소로 갖는 배열을 반환한다. 인수 limit는 반환 배열의 길이를 제한한다.</li>
+<li><code>substring(fromIndex[, toIndex])</code> return: string<br />
+from to 중, 작은 수 &lt;= index &lt; 큰수를 만족하는 문자열을 반환한다. 인수가 하나일 땐 마지막 문자까지 반환한다. 인수가 음수 또는 NaN일 땐 0으로, &gt; length일땐 length로 취급한다.</li>
+<li><code>toLowerCase()</code>/<code>toUpperCase()</code> return: string<br />
+모두 소/대문자로 바꿔서 반환한다.</li>
+<li><code>trim()</code> return: string<br />
+양 끝의 공백문자를 모두 제거하여 반환한다.</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>string은 primitive이다. 메소드를 사용해도 원시값이 바뀌진 않는다.</p>
+</blockquote>
+
+<h4 id="2-2-6-array">2.2.6. Array</h4>
+
+<p>배열은 프로퍼티명 대신 인덱스 넘버가 있는 객체이다. 어떤 자료형이든 배열의 요소가 될 수 있다.</p>
+
+<p><br/></p>
+
+<p>함수로 호출 시 인수에 따라 다른 결과를 반환한다.</p>
+
+<ol>
+<li>하나의 숫자: 모든 요소가 empty, length가 인수와 같은 배열 반환</li>
+<li>여러개의 anyValue: 각 인수를 요소로 가진 배열 반환</li>
+</ol>
+
+<ul>
+<li><p>Array property</p>
+
+<ul>
+<li><code>length</code> value: number<br />
+length 프로퍼티를 변경하면, (모자란 만큼)empty 요소가 생기거나 (넘치는)요소가 삭제된다.</li>
+</ul></li>
+
+<li><p>Array Method<br />
+<strong>아래 메소드는 원본 배열을 변경하지 않는다</strong></p>
+
+<ul>
+<li><code>isArray(any)</code> return: boolean</li>
+<li><code>indexOf(targetElement)</code> return: number<br />
+str.indexOf()와 동일하게 작동한다.</li>
+<li><code>concat(...item)</code> return: object(new array)<br />
+calle를 복사하고, 인수(배열 또는 값)를 요소로 추가해서 반환한다. 인수가 배열인 경우 각 엘리먼트를 풀어서 추가한다. nested 배열은 어쩔 수 없지만&hellip;</li>
+<li><code>join([seperator = ','])</code> return: string<br />
+faster than <code>+</code></li>
+<li><code>slice([start = 0[, end = length]])</code> return: object(sliced array)<br />
+인수가 음수인 경우, 배열의 끝에서부터의 인덱스를 나타낸다. 마지막 요소는 -1<br />
+인수를 생략해서 전체 배열을 복사할 때 자주 사용한다.<br /></li>
+</ul></li>
+
+<li><p>Array Method<br />
+<strong>아래 메소드는 원본 배열을 변경한다</strong></p>
+
+<ul>
+<li><code>push(...item)</code> 맨뒤에 추가</li>
+<li><code>unshift(...item)</code> 맨앞에 추가</li>
+</ul>
+
+<blockquote>
+<p>추가 시 변경된 배열의 length 반환</p>
+</blockquote>
+
+<ul>
+<li><code>pop()</code> 맨뒤에서 제거</li>
+<li><code>shift()</code> 맨앞에서 제거</li>
+</ul>
+
+<blockquote>
+<p>제거 시 제거한 요소를 반환한다.</p>
+</blockquote>
+
+<ul>
+<li><code>reverse()</code> return: object(new array)</li>
+<li><code>splice([start = 0[, delCount = length[, ...item]]])</code> return: object(deleted array)<br /></li>
+<li><code>sort([compareFunc])</code> return: object(sorted array)<br />
+콜백함수로 오름차순, 내림차순 등으로 정렬할 수 있다.</li>
+</ul></li>
+</ul>
+
+<blockquote>
+<p>요소 추가 메소드 중 원본 배열을 변경하는 것들은 배열 인수를 풀지않고 그대로 추가한다.<br />
+e.g. push, unshift, splice.<br />
+풀어서 넣을 땐 apply를 사용한다. 또 요소 추가 메소드는 변경된 배열의 length를 반환한다.<br />
+<code>@ES6</code> 스프레드 연산자와 배열을 사용하면 편리하게 풀 수 있다. 이걸 언팩이라고 해도 되나?</p>
+</blockquote>
+
+<ul>
+<li>Array Method with callback f()<br />
+아래 메소드들은 인수로 콜백함수와 this value를 받는다. 메소드에 따라 콜백함수로 전달하는 인자가 조금씩 다르다. 기본적으로는 <code>[,eachItem[,eachIndex[,array]]]</code> 순서를 따른다. 필요한 개수만큼 매개변수를 선언해 사용한다. 원본 배열의 변경가능성(세번째 인자 사용), return 구문의 요구 여부, return 구문을 평가하는 컨텍스트에 유의하여 사용하자.</li>
+</ul>
+
+<p><strong>아래 메소드는 원본 배열을 변경하지 않는다</strong></p>
+
+<ul>
+<li><code>forEach(callback[, this = this])</code></li>
+<li><code>map(callback[, this = this])</code></li>
+<li><code>filter(callback[, this = this])</code></li>
+<li><code>reduce(callback[, this = this])</code></li>
+<li><code>some(callback[, this = this])</code></li>
+<li><code>every(callback[, this = this])</code></li>
+<li><code>find(callback[, this = this])</code></li>
+</ul>
+
+<h4 id="2-2-7-regexp">2.2.7. RegExp</h4>
+
+<p>정규표현식이란?<br />
+문자열 검사에 사용되는 표현식으로 다음과 같은 형태로 작성한다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4">/expression/[,flags]</pre>
+</div>
+<p>Syntax</p>
+
+<ul>
+<li>&rsquo;/&lsquo;는 정규표현식의 시작과 끝을 의미한다</li>
+<li>찾고싶은 패턴을 표현식으로 작성한다</li>
+<li>추가조건을 의미하는 알파벳을 플래그라고 하며 정규식 바깥에 덧붙인다.</li>
+</ul>
+
+<p>조건 기호</p>
+
+<ul>
+<li>. 임의의 문자 &lsquo;한개&rsquo;를 찾는다(n개 찍으면 n개)</li>
+<li>^ 뒤에 이어지는 패턴을 맨 앞에서 찾는다</li>
+<li>$ 앞에 붙는 패턴을 맨 뒤에서 찾는다</li>
+<li>{} 내부에는 찾고자 하는 문자열의 개수를 입력한다. 두 수를 쉼표로 구분 시 범위를 의미한다.</li>
+<li>+ 를 패턴 뒤에 붙이면 반복을 허용한다는 뜻이다</li>
+<li>| 는 or의 의미를 가지며, 좌우 패턴을 모두 찾는다</li>
+<li>[] 내부의 문자는 모두 &lsquo;or&rsquo; 패턴이다</li>
+<li>- 를 사용해 범위를 지정한다. 단 [] 내부에서 사용한다. (e.g. [0-9A-Z])</li>
+</ul>
+
+<p>문자 클래스</p>
+
+<ul>
+<li>\d : digits</li>
+<li>\D : not digits</li>
+<li>\w : words === [A-Za-z0-9_]</li>
+<li>\W : not words</li>
+<li>\l : lower cases</li>
+<li>\u : upper cases</li>
+</ul>
+
+<p>공백문자 클래스</p>
+
+<ul>
+<li>/n : 개행문자</li>
+<li>/s : 공백문자(스페이스)</li>
+<li>/t : 공백문자(탭)</li>
+</ul>
+
+<p>플래그는 문자열 검색 옵션을 지정한다.</p>
+
+<ul>
+<li>i(ignore) : 대소문자 구분없이 검색</li>
+<li>g(global) : 문자열 전체 검색</li>
+<li>m(multi line) : 줄바꿈 무시</li>
+</ul>
+
+<h5 id="regexp-in-js">RegExp in JS</h5>
+
+<p>자바스크립트에서는 생성자 함수 <code>RegExp</code> 또는 리터럴 표기법을 사용하여 정규식 객체를 생성하는 것이 가능하다.<br />
+생성자를 사용하는 경우, <code>new RegExp(pattern[, flags])</code></p>
+
+<ol>
+<li>인수로 문자열 혹은 정규표현식 리터럴을 전달한다.</li>
+<li><code>@ES6</code>, 플래그까지 포함한 정규식 리터럴을 전달할 수 있다.</li>
+</ol>
+
+<ul>
+<li>regExpObj.&lt;methodName&gt; (prototype method)
+
+<ul>
+<li><code>exec(targetStr)</code> return: object(array) | null<br />
+반환하는 배열에는 찾은 문자열, 해당 인덱스, 타겟문자열이 들어있으며, 플래그를 사용해도 첫번째 매칭만 반환한다.</li>
+<li><code>test(targetStr)</code> return: boolean<br />
+찾으면 <code>true</code>, 못찾으면 <code>false</code></li>
+</ul></li>
+</ul>
+
+<h2 id="3-execution-context">3. Execution Context</h2>
+
+<p>insideMemoryStack&hellip;(LIFO)</p>
+
+<p>VO;VariableObj(GO;GlobalObj/AO;ActivatedObj)</p>
+
+<p>SC;ScopeChain</p>
+
+<p>this value</p>
+
+<p>controller의 할당(?), 반환 절차</p>
+
+<h2 id="4-closure">4. Closure</h2>
+
+<p>내부함수를 리턴하는 함수에서 선언한 지역변수가 내부함수에서 참조된 경우, 외부함수가 종료된 이후에도 AO가 유효하여 이후 실행되는 내부함수에서 지역변수를 참조할 수 있다. 해당 내부함수를 클로저함수라고 한다. 사라지지 않는 변수는 자유변수이다. <code>setTimeout()</code> 메소드로 내부함수를 지연호출하는 경우도 여기에 해당한다.</p>
+
+<p>주 용도는 전역변수 억제이다.</p>
+
+<h2 id="5-oop">5. OOP</h2>
+
+<hr />
+
+<h1 id="남겨진-궁금증">남겨진 궁금증&hellip;</h1>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> 배열 순회 메소드 중 원본 배열을 변경하지 않는 모든 것에 대해, 콜백함수의 세번째 인자를 이용하면 원본 배열이 변경되는지?</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> reduce()와 this?</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 이거 왜 이러는지 궁금하다&hellip;</label></li>
+</ul>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">  <span style="color:#007020;font-weight:bold">var</span> a <span style="color:#666">=</span> [<span style="color:#40a070">1</span>,<span style="color:#40a070">2</span>,<span style="color:#40a070">3</span>]
+  a.reduce(<span style="color:#007020;font-weight:bold">function</span>(b,c){<span style="color:#007020;font-weight:bold">return</span> b<span style="color:#666">+</span>c;}, a);
+  <span style="">// &#34;1,2,3123&#34;</span></code></pre>
+</div>
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  <div class='categories'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/javascript'>Javascript</a></div>
+<div class='tags'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/javascript'>Javascript</a></div>
+
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/post/til/171015_til/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>171015_TIL</a>
+    </div></div>
+</nav>
+
+  
+<div class='comments-container'>
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cmygray" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:cmygray@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br
+  />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='/assets/js/main.f29c93b9.js'></script><script src='/js/custom.js'></script></body>
+
+</html>
+
