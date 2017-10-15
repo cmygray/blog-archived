@@ -16,7 +16,7 @@
       <pubDate>Mon, 16 Oct 2017 01:38:59 +0900</pubDate>
       
       <guid>http://cmygray.github.io/post/javascript/deep-dive/</guid>
-      <description>javascript deep-dive summary  10월 10일 - 12일 간 배운 자바스크립트 deep-dive에 대한 정리 웹 프로그래밍 튜토리얼과 MDN 자바스크립트 문서를 참고. ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 @ES6 표시.  
+      <description>10월 10일 - 12일 간 배운 자바스크립트 deep-dive에 대한 정리 웹 프로그래밍 튜토리얼과 MDN 자바스크립트 문서를 참고. ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 @ES6 표시.  
 1. Built in Object  오브젝트의 구조
  Host obj(user-made) Built in obj  Standard(global objects of window;global object) Native  BOM DOM    구성 순서: Standards -&amp;gt; Native
   2. Standard built-in Object  구조  Global Object(window;js | global;node)  Global Objects: Object, Function, Boolean, Number, String &amp;hellip;    표준 빌트인 객체에는 글로벌 오브젝트인 윈도우와, 윈도우에 속하는 나머지 글로벌 오브젝트&amp;rsquo;들&amp;rsquo;이 있다.</description>
@@ -43,17 +43,17 @@
     </item>
     
     <item>
-      <title>JS_Fundamentals</title>
+      <title>javascript fundamentals summary</title>
       <link>http://cmygray.github.io/post/javascript/fundamentals/</link>
       <pubDate>Sat, 07 Oct 2017 01:15:36 +0900</pubDate>
       
       <guid>http://cmygray.github.io/post/javascript/fundamentals/</guid>
       <description>수정내역
 10.07. scope, this 내용 보충
-javascript fundamentals recap  지금(작성일 기준)까지 배운 자바스크립트의 기본 내용을 정리. 웹 프로그래밍 튜토리얼과 MDN 자바스크립트 문서를 참고하여 보완. 추가된 항목은 볼드표시해서 구분. ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 @ES6 표시.  programming 문제 인식 - 작은 문제로 쪼개기 - 쪼개진 문제를 해결 - 해결의 종합 - 문제 해결
+ 지금(작성일 기준)까지 배운 자바스크립트의 기본 내용을 정리. 웹 프로그래밍 튜토리얼과 MDN 자바스크립트 문서를 참고하여 보완. 추가된 항목은 볼드표시해서 구분. ES5를 기준으로 하며, ES6에 해당하는 내용은 상단에 @ES6 표시.  programming 문제 인식 - 작은 문제로 쪼개기 - 쪼개진 문제를 해결 - 해결의 종합 - 문제 해결
 Computational thinking을 토대로 위의 절차를 진행하는 것
 basic syntax  sentence;구문
-구문이란 자바스크립트 내의 모든 명령이다.</description>
+구문이란 자바스크립트 내의 모든 명령이다. 명령은 세미콜론(;)으로 분리된다.</description>
     </item>
     
     <item>
