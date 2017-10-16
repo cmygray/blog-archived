@@ -5,10 +5,20 @@
     <link>http://cmygray.github.io/categories/til/</link>
     <description>Recent content in TIL on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 16 Oct 2017 01:38:44 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 17 Oct 2017 00:13:28 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/categories/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>171016_TIL</title>
+      <link>http://cmygray.github.io/post/til/171016_til/</link>
+      <pubDate>Tue, 17 Oct 2017 00:13:28 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171016_til/</guid>
+      <description>17.10.16.(월) DONE  javascript DOM, Asynchronous processing model, Event preview: javascript Event, Ajax, REST API, SPA  Event preview
+  Event queue로 함수가 이동하는 시점: 바인딩 이벤트 발생 캡쳐링/버블링을 이벤트핸들러 메소드의 세번째 인수에 불린값으로 전달하여 Event queue에 쌓이는 순서를 조정한다(?) 요소에 이벤트리스너를 추가하면, 해당 이벤트가 자식 요소에서 발생하더라도 핸들링이 가능. 이때 e.target == 자식, e.currentTarget == this == 바인딩요소 e는 이벤트메서드의 콜백함수의 첫번째 인자인 이벤트객체를 의미한다. 암거나 써도 됨.</description>
+    </item>
     
     <item>
       <title>171015_TIL</title>
