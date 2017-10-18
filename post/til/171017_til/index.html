@@ -4,21 +4,19 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='17.10.16.(월) DONE  javascript DOM, Asynchronous processing model, Event preview: javascript Event, Ajax, REST API, SPA  Event preview
-  Event queue로 함수가 이동하는 시점: 바인딩 이벤트 발생 캡쳐링/버블링을 이벤트핸들러 메소드의 세번째 인수에 불린값으로 전달하여 Event queue에 쌓이는 순서를 조정한다(?) 요소에 이벤트리스너를 추가하면, 해당 이벤트가 자식 요소에서 발생하더라도 핸들링이 가능. 이때 e.target == 자식, e.currentTarget == this == 바인딩요소 e는 이벤트메서드의 콜백함수의 첫번째 인자인 이벤트객체를 의미한다. 암거나 써도 됨.'>
+<meta name='description' content='17.10.17.(화) DONE javascript Event, Ajax, REST 어제 예습하며 궁금했던 점들 해결 이벤트 발생 시점, 즉 이벤트큐로 함수가 이동할 때 e.clientX의 값이 저장되는 것인지? 만약 그렇지 않다면 콜스택으로 쌓이기까지의 시간동안 참조값이 바뀔 수도 있는데.. &gt; 이벤트 발생과 동시에 이벤트 객체에 관련 프로퍼티의 값이 할당된다. event.which? &gt; 클릭 이벤트의 프로퍼티 which는 클릭 시 사용된 마우스의 버튼을 숫자값으로 나타낸다.   TOTO google newslab fellowship 지원서 작성  // 인접한 요소끼리 반복연산에 reduce 메소드 사용하기 e.'>
 
-<meta property='og:title' content='171016_TIL • cmygray'>
-<meta property='og:description' content='17.10.16.(월) DONE  javascript DOM, Asynchronous processing model, Event preview: javascript Event, Ajax, REST API, SPA  Event preview
-  Event queue로 함수가 이동하는 시점: 바인딩 이벤트 발생 캡쳐링/버블링을 이벤트핸들러 메소드의 세번째 인수에 불린값으로 전달하여 Event queue에 쌓이는 순서를 조정한다(?) 요소에 이벤트리스너를 추가하면, 해당 이벤트가 자식 요소에서 발생하더라도 핸들링이 가능. 이때 e.target == 자식, e.currentTarget == this == 바인딩요소 e는 이벤트메서드의 콜백함수의 첫번째 인자인 이벤트객체를 의미한다. 암거나 써도 됨.'>
-<meta property='og:url' content='http://cmygray.github.io/post/til/171016_til/'>
+<meta property='og:title' content='171017_TIL • cmygray'>
+<meta property='og:description' content='17.10.17.(화) DONE javascript Event, Ajax, REST 어제 예습하며 궁금했던 점들 해결 이벤트 발생 시점, 즉 이벤트큐로 함수가 이동할 때 e.clientX의 값이 저장되는 것인지? 만약 그렇지 않다면 콜스택으로 쌓이기까지의 시간동안 참조값이 바뀔 수도 있는데.. &gt; 이벤트 발생과 동시에 이벤트 객체에 관련 프로퍼티의 값이 할당된다. event.which? &gt; 클릭 이벤트의 프로퍼티 which는 클릭 시 사용된 마우스의 버튼을 숫자값으로 나타낸다.   TOTO google newslab fellowship 지원서 작성  // 인접한 요소끼리 반복연산에 reduce 메소드 사용하기 e.'>
+<meta property='og:url' content='http://cmygray.github.io/post/til/171017_til/'>
 <meta property='og:site_name' content='cmygray'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-10-17T00:13:28&#43;09:00'/><meta property='article:modified_time' content='2017-10-17T00:13:28&#43;09:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-10-18T23:52:57&#43;09:00'/><meta property='article:modified_time' content='2017-10-18T23:52:57&#43;09:00'/>
 
 <meta name="generator" content="Hugo 0.29" />
 
   <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
-  <title>171016_TIL • cmygray</title>
-  <link rel='canonical' href='http://cmygray.github.io/post/til/171016_til/'>
+  <title>171017_TIL • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til/171017_til/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -67,7 +65,7 @@
     <header class='header-container'>
   <div class='header entry-header'>
     <div class='header-info'>
-      <h1 class='title'>171016_TIL</h1>
+      <h1 class='title'>171017_TIL</h1>
       
 
     </div>
@@ -82,7 +80,7 @@
   
 </svg>
 <span class='screen-reader'>Posted on </span>
-  <time class='date' datetime='2017-10-17T00:13:28&#43;09:00'>2017, Oct 17</time>
+  <time class='date' datetime='2017-10-18T23:52:57&#43;09:00'>2017, Oct 18</time>
 </span>
 
   
@@ -93,7 +91,7 @@
   <polyline points="12 6 12 12 15 15"/> 
   
 </svg>
-2 mins read
+One min read
 </span>
 
 
@@ -109,69 +107,40 @@
     <div class='entry-content'>
   
 
-<h1 id="17-10-16-월">17.10.16.(월)</h1>
+<h1 id="17-10-17-화">17.10.17.(화)</h1>
 
 <h2 id="done">DONE</h2>
 
-<ul>
-<li>javascript DOM, Asynchronous processing model, Event</li>
-<li>preview: javascript Event, Ajax, <del>REST API, SPA</del></li>
-</ul>
-
-<hr />
-
-<h3 id="event">Event</h3>
-
-<p>preview</p>
-
-<blockquote>
-<ol>
-<li>Event queue로 함수가 이동하는 시점: 바인딩 이벤트 발생</li>
-<li>캡쳐링/버블링을 이벤트핸들러 메소드의 세번째 인수에 불린값으로 전달하여 Event queue에 쌓이는 순서를 조정한다(?)</li>
-<li>요소에 이벤트리스너를 추가하면, 해당 이벤트가 자식 요소에서 발생하더라도 핸들링이 가능. 이때 e.target == 자식, e.currentTarget == this == 바인딩요소</li>
-<li>e는 이벤트메서드의 콜백함수의 첫번째 인자인 이벤트객체를 의미한다. 암거나 써도 됨..</li>
-<li>캡쳐 -&gt; 타깃 -&gt; 버블링</li>
-</ol>
-</blockquote>
-
-<p>questions</p>
+<ul class="task-list">
+<li>javascript Event, Ajax, REST</li>
+<li>어제 예습하며 궁금했던 점들 해결
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> 이벤트 발생 시점, 즉 이벤트큐로 함수가 이동할 때 <code>e.clientX</code>의 값이 저장되는 것인지? 만약 그렇지 않다면 콜스택으로 쌓이기까지의 시간동안 참조값이 바뀔 수도 있는데..</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> <code>event.which</code>?</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> 이벤트 발생 시점, 즉 이벤트큐로 함수가 이동할 때 <code>e.clientX</code>의 값이 저장되는 것인지? 만약 그렇지 않다면 콜스택으로 쌓이기까지의 시간동안 참조값이 바뀔 수도 있는데..
+&gt; 이벤트 발생과 동시에 이벤트 객체에 관련 프로퍼티의 값이 할당된다.</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> <code>event.which</code>?
+&gt; 클릭 이벤트의 프로퍼티 which는 클릭 시 사용된 마우스의 버튼을 숫자값으로 나타낸다.</label></li>
+</ul></li>
 </ul>
 
-<h3 id="ajax">Ajax</h3>
-
-<p>preview</p>
-
-<blockquote>
-<ol>
-<li>일반적으로 JSON 형식을 request/response에 사용하여 DOM 조작을 비동기적으로 처리한다.</li>
-<li>서버는 JSON을 문자열형태로 전해준다. 그말은 곧 parse를 먼저 해야 replacer를 사용할 수 있다는 뜻인가?</li>
-<li>JSON.stringify(대상객체, 콜백, 정렬옵션). 정렬옵션은 indentation number를 의미한다&hellip;</li>
-<li>req.open(method, url[, async = true])<br /></li>
-<li>open으로 준비하고, &lsquo;POST&rsquo;인 경우 헤더 만들고, send.</li>
-<li>리퀘스트 헤더로 헤더: 값 세트를 전달하는데, 각각을 두 인수로 전달한다. e.g setRequestHeader(&lsquo;Content-type&rsquo;, &lsquo;application/json) : 컨텐츠 타입 제이슨인거 줄게(?) 내놔(?) 요청정보를 담은 제이슨을 준다는건가..</li>
-<li>(3.2)Ajax response 맘대로 해석<br />
-reqest객체에 이벤트핸들러를 바인딩한다. request객체는 서버의 응답에따라 readyState가 바뀌니까, 이게 이벤트핸들러의 (콜스택으로의) 이동과 실행을 유발할 것. 이벤트 핸들러 내부는 조건문이 중첩되어있는데, 요청이 제대로 갔는지 체크하고, 응답이 정상적인지 체크하는 식으로 사용.</li>
-</ol>
-</blockquote>
-<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">req.readyState <span style="color:#666">===</span> XMLHttpRequest.DONE <span style="color:#666">?</span> 
-req.status <span style="color:#666">===</span> <span style="color:#40a070">200</span> <span style="color:#666">?</span> 뭔가 해라.. <span style="color:#666">:</span> 이상을 알려라..</code></pre>
-</div>
-<p>questions</p>
-
-<hr />
-
-<h2 id="todo">TODO</h2>
+<h2 id="toto">TOTO</h2>
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> 아침 등원길(?)에 REST API, SPA 체크</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> recharted 사이트 구상 -&gt; 연기</label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> google newslab fellowship 지원서 작성</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> 실험설계에 관한 통계 책을 파이썬으로 풀기 생각해보자 엑셀위주로</label></li>
 </ul>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#60a0b0;font-style:italic">// 인접한 요소끼리 반복연산에 reduce 메소드 사용하기 e.g. 인접수의 곱
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">const</span> oneToTen <span style="color:#666">=</span> [<span style="color:#40a070">1</span>, <span style="color:#40a070">2</span>, <span style="color:#40a070">3</span>, <span style="color:#40a070">4</span>, <span style="color:#40a070">5</span>, <span style="color:#40a070">6</span>, <span style="color:#40a070">7</span>, <span style="color:#40a070">8</span>, <span style="color:#40a070">9</span>, <span style="color:#40a070">10</span>];
+<span style="color:#007020;font-weight:bold">const</span> result <span style="color:#666">=</span> [];
+oneToTen.reduce(<span style="color:#007020;font-weight:bold">function</span>(prev, current){
+  result <span style="color:#666">=</span> result.concat(prev <span style="color:#666">*</span> current);
+  <span style="color:#60a0b0;font-style:italic">// 현재 비교값을 그대로 반환하여 다음 비교에 재사용
+</span><span style="color:#60a0b0;font-style:italic"></span>  <span style="color:#007020;font-weight:bold">return</span> current
+})
+console.log(result); <span style="">// [2, 6, 12, 20, 30, 42, 56, 72, 90]</span></code></pre>
+</div>
+<blockquote>
+<p>왠지 for문보다 편리할 것 같았는데 막상 써놓고 보니까 잘 모르겠다.</p>
+</blockquote>
 
 </div>
 
@@ -195,7 +164,7 @@ req.status <span style="color:#666">===</span> <span style="color:#40a070">200</
   
 <nav class='entry-nav-container'>
   <div class='entry-nav'><div class='prev-entry'>
-      <a href='/post/javascript/deep-dive/'>
+      <a href='/post/til/171016_til/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -203,10 +172,10 @@ req.status <span style="color:#666">===</span> <span style="color:#40a070">200</
   
 </svg>
  Previous</span>
-        <span class='screen-reader'>Previous post: </span>javascript deep-dive summary</a>
+        <span class='screen-reader'>Previous post: </span>171016_TIL</a>
     </div><div class='next-entry'>
-      <a href='/post/til/171017_til/'>
-        <span class='screen-reader'>Next post: </span>171017_TIL<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+      <a href='/post/til/171018_til/'>
+        <span class='screen-reader'>Next post: </span>171018_TIL<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="4" y1="12" x2="20" y2="12"/>
   <polyline points="14 6 20 12 14 18"/>

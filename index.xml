@@ -5,7 +5,7 @@
     <link>http://cmygray.github.io/</link>
     <description>Recent content in Home on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 17 Oct 2017 00:13:28 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 18 Oct 2017 23:54:05 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,6 +26,41 @@
       
       <guid>http://cmygray.github.io/tags/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Ajax</title>
+      <link>http://cmygray.github.io/post/javascript/ajax/</link>
+      <pubDate>Wed, 18 Oct 2017 23:54:05 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/javascript/ajax/</guid>
+      <description>Ajax Asyncronous Javascript and XML
+비동기 통신을 이용한 웹 개발 기법
+
+목적
+ 네트워크 블로킹 상태 억제. 사용성 증대, 패킷 절약.  효용
+ 페이지의 일부만 갱신 가능. 서버와 통신중에도 방해받지 않음.  방법
+ 서버와의 통신경과와 전송 데이터와 관련된 동작 스크립트의 실행컨텍스트를 이벤트 루프가 컨트롤하도록 한다. (DOM 객체 수정 스크립트의 실행컨텍스트를 사용자와 페이지 간 인터렉션에 의해 이벤트 루프가 컨트롤 하듯.) XMLHttpRequest 객체와 메소드가 이를 지원한다. 요청을 위해서는 먼저 request 객체를 생성, 요청에 관한 정보를 담아 완성 후 전송한다.</description>
+    </item>
+    
+    <item>
+      <title>171018_TIL</title>
+      <link>http://cmygray.github.io/post/til/171018_til/</link>
+      <pubDate>Wed, 18 Oct 2017 23:53:04 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171018_til/</guid>
+      <description>17.10.18.(수) DONE 알고리즘 퀴즈 리팩토링
+ String.prototype 메소드로 수식을 만들고, eval()로 연산하기  자릿수끼리 연산이 필요할 때, 문자열 메소드를 사용해서 split하고, join 시 seperator로 연산자를 문자열 형태로 전달하여 수식을 만들 수 있다. (예) 자릿수 더하기: number.toString().split(&#39;&#39;).join(&#39;+&#39;) =&amp;gt; eval()  concat(value), push(value), arr[length] = value의 성능을 비교하고 push를 concat으로 바꿔서 재작성  concat()  가장 빠르다 반복 추가 시 항상 재할당을 해야한다. 때문에 삼항연산자 사용이 용이하다.
+arr2 = condition ? arr1.</description>
+    </item>
+    
+    <item>
+      <title>171017_TIL</title>
+      <link>http://cmygray.github.io/post/til/171017_til/</link>
+      <pubDate>Wed, 18 Oct 2017 23:52:57 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171017_til/</guid>
+      <description>17.10.17.(화) DONE javascript Event, Ajax, REST 어제 예습하며 궁금했던 점들 해결 이벤트 발생 시점, 즉 이벤트큐로 함수가 이동할 때 e.clientX의 값이 저장되는 것인지? 만약 그렇지 않다면 콜스택으로 쌓이기까지의 시간동안 참조값이 바뀔 수도 있는데.. &amp;gt; 이벤트 발생과 동시에 이벤트 객체에 관련 프로퍼티의 값이 할당된다. event.which? &amp;gt; 클릭 이벤트의 프로퍼티 which는 클릭 시 사용된 마우스의 버튼을 숫자값으로 나타낸다.   TOTO google newslab fellowship 지원서 작성  // 인접한 요소끼리 반복연산에 reduce 메소드 사용하기 e.</description>
     </item>
     
     <item>

@@ -4,7 +4,7 @@
   
   <url>
     <loc>http://cmygray.github.io/</loc>
-    <lastmod>2017-10-17T00:13:28+09:00</lastmod>
+    <lastmod>2017-10-18T23:54:05+09:00</lastmod>
   </url>
   
   <url>
@@ -13,6 +13,21 @@
   
   <url>
     <loc>http://cmygray.github.io/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>http://cmygray.github.io/post/javascript/ajax/</loc>
+    <lastmod>2017-10-18T23:54:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://cmygray.github.io/post/til/171018_til/</loc>
+    <lastmod>2017-10-18T23:53:04+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://cmygray.github.io/post/til/171017_til/</loc>
+    <lastmod>2017-10-18T23:52:57+09:00</lastmod>
   </url>
   
   <url>
@@ -272,13 +287,13 @@
   
   <url>
     <loc>http://cmygray.github.io/tags/javascript/</loc>
-    <lastmod>2017-10-16T01:38:59+09:00</lastmod>
+    <lastmod>2017-10-18T23:54:05+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://cmygray.github.io/categories/javascript/</loc>
-    <lastmod>2017-10-16T01:38:59+09:00</lastmod>
+    <lastmod>2017-10-18T23:54:05+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -289,7 +304,7 @@
   
   <url>
     <loc>http://cmygray.github.io/post/</loc>
-    <lastmod>2017-10-17T00:13:28+09:00</lastmod>
+    <lastmod>2017-10-18T23:54:05+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -301,7 +316,7 @@
   
   <url>
     <loc>http://cmygray.github.io/categories/til/</loc>
-    <lastmod>2017-10-17T00:13:28+09:00</lastmod>
+    <lastmod>2017-10-18T23:53:04+09:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -5,10 +5,25 @@
     <link>http://cmygray.github.io/tags/javascript/</link>
     <description>Recent content in Javascript on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 16 Oct 2017 01:38:59 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 18 Oct 2017 23:54:05 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ajax</title>
+      <link>http://cmygray.github.io/post/javascript/ajax/</link>
+      <pubDate>Wed, 18 Oct 2017 23:54:05 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/javascript/ajax/</guid>
+      <description>Ajax Asyncronous Javascript and XML
+비동기 통신을 이용한 웹 개발 기법
+
+목적
+ 네트워크 블로킹 상태 억제. 사용성 증대, 패킷 절약.  효용
+ 페이지의 일부만 갱신 가능. 서버와 통신중에도 방해받지 않음.  방법
+ 서버와의 통신경과와 전송 데이터와 관련된 동작 스크립트의 실행컨텍스트를 이벤트 루프가 컨트롤하도록 한다. (DOM 객체 수정 스크립트의 실행컨텍스트를 사용자와 페이지 간 인터렉션에 의해 이벤트 루프가 컨트롤 하듯.) XMLHttpRequest 객체와 메소드가 이를 지원한다. 요청을 위해서는 먼저 request 객체를 생성, 요청에 관한 정보를 담아 완성 후 전송한다.</description>
+    </item>
     
     <item>
       <title>javascript deep-dive summary</title>
