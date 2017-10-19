@@ -5,10 +5,25 @@
     <link>http://cmygray.github.io/categories/til/</link>
     <description>Recent content in TIL on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 18 Oct 2017 23:53:04 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 20 Oct 2017 00:55:20 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/categories/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>171019_TIL</title>
+      <link>http://cmygray.github.io/post/til/171019_til/</link>
+      <pubDate>Fri, 20 Oct 2017 00:55:20 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171019_til/</guid>
+      <description>17.10.19.(목) DONE  todo list 실습
+ input 요소에 입력된 문자열을 리스트 아이템으로 추가하여 할일 목록을 만드는 페이지를 vanilla로 구현 부트스트랩 ui가 적용된 html과 css를 참고하여 추가, 제거, 완료체크 기능을 객체 데이터를 참조하여 렌더링 하는 방식(MVP)으로 구현
+ HTML 커스텀 데이터 어트리뷰트 사용하기 data-*=&amp;quot;value&amp;quot;
+ HTML 요소에 &amp;lsquo;data-&amp;lsquo;를 prefix로 하는 attibute를 부여할 수 있다
+ 해당 값은 node의 dataset 프로퍼티에 객체 형태로 저장된다
+ MVP 개념 숙지
+참조 데이터(예제의 todos 객체)로만 View를 변경하여야한다.</description>
+    </item>
     
     <item>
       <title>171018_TIL</title>
