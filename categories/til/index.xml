@@ -5,10 +5,38 @@
     <link>http://cmygray.github.io/categories/til/</link>
     <description>Recent content in TIL on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 24 Oct 2017 01:12:35 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 26 Oct 2017 21:35:24 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/categories/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>171026_TIL</title>
+      <link>http://cmygray.github.io/post/til/171026_til/</link>
+      <pubDate>Thu, 26 Oct 2017 21:35:24 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171026_til/</guid>
+      <description>17.10.26.(목) DONE  ECMAScript6- Destructuring, Class, Module, Babel, Webpack  identifier array = value array 의 형태로 할당하여 배열(객체)의 요소(프로퍼티) 분리하기 extends, super를 통해 class간 상속관계 만들기 base-sub class 간의 체인관계 이해- 클래스는 클래스끼리, 프로토타입은 프로토타입끼리의 연결되는 체인 &amp;amp; 스태틱, 프로토타입 메소드의 구분. ES6에서 제공되지만 아직 표준이 없어 브라우저에서는 지원하지 않는 import, export 키워드의 사용법 위의 제한사항을 극복하기 위해 Babel, Webpack으로 트랜스파일, 번들링 해보기 (간단한 파일로 실습)     하나의 HTML 문서에서 사용되는 여러개의 스크립트 파일들은 글로벌 스코프를 공유한다.</description>
+    </item>
+    
+    <item>
+      <title>171025_TIL</title>
+      <link>http://cmygray.github.io/post/til/171025_til/</link>
+      <pubDate>Thu, 26 Oct 2017 21:35:21 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171025_til/</guid>
+      <description> 17.10.25.(수) DONE  todo list lv3 완성  전체 리스트 체크/해제 버튼 완료된 것만 삭제하기 버튼 하단에 남은 할일 갯수 표시 전체보기, 완료/미완료한 할일만 보기 탭  일일 알고리즘- 2 * n 타일링   조합의 경우의 수를 구하는 로직은 틀리지 않은 것 같은데(작은 인풋값으로 테스트한 결과가 맞다면) 에상치 못하게 큰 수 처리에 애먹어서 일단 실패&amp;hellip; * ECMAScript6 Class preview
+ TODO &amp;hellip;  </description>
+    </item>
+    
+    <item>
+      <title>171024_TIL</title>
+      <link>http://cmygray.github.io/post/til/171024_til/</link>
+      <pubDate>Thu, 26 Oct 2017 21:35:13 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171024_til/</guid>
+      <description>17.10.24.(화) DONE  ECMAScript6 basic syntax  var, let, const: 추가된 변수 선언키워드와 블록레벨스코프 arrow function string, object property, template string, 등 추가기능과 축약표현 rest parameter, spread operator 등 추가기능 &amp;hellip;ES6 주요 변경점들  일일 알고리즘- 하나의 수를 연속된 다른 수의 합으로 표현할 수 있는 경우의 수 구하기 todo list lv2 리팩토링 어제 새로 작성한 코드를 ES6 문법, ESlint-airbnb-base 컨벤션에 맞추어 수정 todo list lv3 연습 전체 완료표시하기, 완료/미완료된 할일만 보기 구현하기.</description>
+    </item>
     
     <item>
       <title>171020~23_TIL</title>
