@@ -5,10 +5,21 @@
     <link>http://cmygray.github.io/post/</link>
     <description>Recent content in Posts on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 29 Oct 2017 20:01:31 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 30 Oct 2017 00:26:25 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>171029_TIL</title>
+      <link>http://cmygray.github.io/post/til/171029_til/</link>
+      <pubDate>Mon, 30 Oct 2017 00:26:25 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171029_til/</guid>
+      <description>17.10.29.(일) DONE  todos 페이지 백지부터 다시 만들기   const 키워드로 선언한 배열 변수의 모든 요소를 array 고차함수를 이용해서 삭제하는 것에 실패하여 어쩔 수 없이 let 사용. 불가피한건진 모르겠다. forEach 메서드를 사용해서 기존 배열을 변경할 때, 콜백함수의 index 인수가 매 iteration마다 갱신된 배열을 기준으로 하지 않는 문제를 해결해야.
+상태 체크 함수의 반환값을 다른 함수의 인수로 전달하여 불필요한 변수 선언을 더 줄였다.
+  일일 알고리즘 정리- 숫자의표현, 2*n 타일링 장고걸스 튜토리얼- 서버 띄우고 템플릿 만드는데 까지 일단 따라하기  TODO 타입스크립트, 앵귤러2 예습 x todos 백지상태에서 한번만 더 해보기; 함수 외부의 변수선언을 초기부터 억제하는 것에 주안점을 두고&amp;hellip; 매개변수로 함수의 반환값을 전달하는 패턴을 적재적소에 활용하면 어떨까 하는 막연한 생각이 있다.</description>
+    </item>
     
     <item>
       <title>1029_2*n 타일링</title>
@@ -17,15 +28,17 @@
       
       <guid>http://cmygray.github.io/post/algorithm/171029_tiling/</guid>
       <description>문제 2 X n 타일링하기
-세로타일 한개를 0 가로타일 두개를 1로 할 때,
+세로타일 한개를 0 가로타일 두개를 1로 할 때, 경우의 수를 일부만 써보면 아래와 같다. (여기서 뭔가 눈치를 챘어야 하는건데&amp;hellip;.)
+
 n=1|1 |0
 n=2|2 |00, 1 (k = 1)
 n=3|3 |000, 01 (k = 1)
 n=4|5 |0000, 001, 11 (k = 1, 2)
 n=5|8 |00000, 0001, 011 (k = 1, 2)
 n=6|13|000000, 00001, 0011, 111 (k = 1, 2, 3)
-/&amp;hellip;
- 0만 배열하는 경우는 1가지이므로 계산하지 않는다. 각 배열에서 1의 개수 k의 최대값 m = Math.floor(n / 2) 1의 사용횟수가 k일 때 배열의 길이 l = n - k 1의 사용횟수가 k일 때 가능한 배치의 경우의수는 lCk.</description>
+&amp;hellip;
+
+ 0만 배열하는 경우는 1가지이므로 계산하지 않는다.</description>
     </item>
     
     <item>
