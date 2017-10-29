@@ -4,19 +4,35 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='17.10.26.(목) DONE  ECMAScript6- Destructuring, Class, Module, Babel, Webpack  identifier array = value array 의 형태로 할당하여 배열(객체)의 요소(프로퍼티) 분리하기 extends, super를 통해 class간 상속관계 만들기 base-sub class 간의 체인관계 이해- 클래스는 클래스끼리, 프로토타입은 프로토타입끼리의 연결되는 체인 &amp; 스태틱, 프로토타입 메소드의 구분. ES6에서 제공되지만 아직 표준이 없어 브라우저에서는 지원하지 않는 import, export 키워드의 사용법 위의 제한사항을 극복하기 위해 Babel, Webpack으로 트랜스파일, 번들링 해보기 (간단한 파일로 실습)     하나의 HTML 문서에서 사용되는 여러개의 스크립트 파일들은 글로벌 스코프를 공유한다.'>
+<meta name='description' content='문제 숫자의 표현
+함수 expressions는 자연수를 입력받아 해당 숫자를 연속된 자연수의 합으로 표현할 수 있는 방법의 수를 반환한다. 예를 들어 15를 연속된 자연수의 합으로 표현하는 방법은 아래 4가지가 있다.
+(1&#43;2&#43;3&#43;4&#43;5)
+(4&#43;5&#43;6)
+(7&#43;8)
+(15)
+즉 expressions(15) 의 결과는 4이다.
+풀이 임의의 자연수 N을 연속된 n개의 수열의 합으로 표현할 때,
+ 길이가 같은 수열은 두개 이상 존재할 수 없다 수열의 평균 m = N / n 연속된 수열의 평균은 가운데 수 혹은 가운데 두 수의 중간값이다 즉 (N % n = 0, n은 홀수) 또는 (N % n = 0.'>
 
-<meta property='og:title' content='171026_TIL • cmygray'>
-<meta property='og:description' content='17.10.26.(목) DONE  ECMAScript6- Destructuring, Class, Module, Babel, Webpack  identifier array = value array 의 형태로 할당하여 배열(객체)의 요소(프로퍼티) 분리하기 extends, super를 통해 class간 상속관계 만들기 base-sub class 간의 체인관계 이해- 클래스는 클래스끼리, 프로토타입은 프로토타입끼리의 연결되는 체인 &amp; 스태틱, 프로토타입 메소드의 구분. ES6에서 제공되지만 아직 표준이 없어 브라우저에서는 지원하지 않는 import, export 키워드의 사용법 위의 제한사항을 극복하기 위해 Babel, Webpack으로 트랜스파일, 번들링 해보기 (간단한 파일로 실습)     하나의 HTML 문서에서 사용되는 여러개의 스크립트 파일들은 글로벌 스코프를 공유한다.'>
-<meta property='og:url' content='http://cmygray.github.io/post/til/171026_til/'>
+<meta property='og:title' content='1024_숫자의 표현 • cmygray'>
+<meta property='og:description' content='문제 숫자의 표현
+함수 expressions는 자연수를 입력받아 해당 숫자를 연속된 자연수의 합으로 표현할 수 있는 방법의 수를 반환한다. 예를 들어 15를 연속된 자연수의 합으로 표현하는 방법은 아래 4가지가 있다.
+(1&#43;2&#43;3&#43;4&#43;5)
+(4&#43;5&#43;6)
+(7&#43;8)
+(15)
+즉 expressions(15) 의 결과는 4이다.
+풀이 임의의 자연수 N을 연속된 n개의 수열의 합으로 표현할 때,
+ 길이가 같은 수열은 두개 이상 존재할 수 없다 수열의 평균 m = N / n 연속된 수열의 평균은 가운데 수 혹은 가운데 두 수의 중간값이다 즉 (N % n = 0, n은 홀수) 또는 (N % n = 0.'>
+<meta property='og:url' content='http://cmygray.github.io/post/algorithm/171024_serialnumbers/'>
 <meta property='og:site_name' content='cmygray'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-10-26T21:35:24&#43;09:00'/><meta property='article:modified_time' content='2017-10-26T21:35:24&#43;09:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='javascript'><meta property='article:published_time' content='2017-10-29T20:00:22&#43;09:00'/><meta property='article:modified_time' content='2017-10-29T20:00:22&#43;09:00'/>
 
 <meta name="generator" content="Hugo 0.29" />
 
   <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
-  <title>171026_TIL • cmygray</title>
-  <link rel='canonical' href='http://cmygray.github.io/post/til/171026_til/'>
+  <title>1024_숫자의 표현 • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/algorithm/171024_serialnumbers/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -65,7 +81,7 @@
     <header class='header-container'>
   <div class='header entry-header'>
     <div class='header-info'>
-      <h1 class='title'>171026_TIL</h1>
+      <h1 class='title'>1024_숫자의 표현</h1>
       
 
     </div>
@@ -80,7 +96,7 @@
   
 </svg>
 <span class='screen-reader'>Posted on </span>
-  <time class='date' datetime='2017-10-26T21:35:24&#43;09:00'>2017, Oct 26</time>
+  <time class='date' datetime='2017-10-29T20:00:22&#43;09:00'>2017, Oct 29</time>
 </span>
 
   
@@ -107,48 +123,49 @@ One min read
     <div class='entry-content'>
   
 
-<h1 id="17-10-26-목">17.10.26.(목)</h1>
+<h2 id="문제">문제</h2>
 
-<h2 id="done">DONE</h2>
+<p><a href="https://programmers.co.kr/learn/challenge_codes/156" target="_blank">숫자의 표현</a></p>
 
-<ul>
-<li>ECMAScript6- Destructuring, Class, Module, Babel, Webpack
+<p>함수 expressions는 자연수를 입력받아 해당 숫자를 연속된 자연수의 합으로 표현할 수 있는 방법의 수를 반환한다. 예를 들어 15를 연속된 자연수의 합으로 표현하는 방법은 아래 4가지가 있다.</p>
 
-<ul>
-<li>identifier array = value array 의 형태로 할당하여 배열(객체)의 요소(프로퍼티) 분리하기</li>
-<li><code>extends</code>, <code>super</code>를 통해 class간 상속관계 만들기</li>
-<li>base-sub class 간의 체인관계 이해- 클래스는 클래스끼리, 프로토타입은 프로토타입끼리의 연결되는 체인 &amp; 스태틱, 프로토타입 메소드의 구분.</li>
-<li>ES6에서 제공되지만 아직 표준이 없어 브라우저에서는 지원하지 않는 <code>import</code>, <code>export</code> 키워드의 사용법</li>
-<li>위의 제한사항을 극복하기 위해 Babel, Webpack으로 트랜스파일, 번들링 해보기 (간단한 파일로 실습)</li>
-</ul></li>
-</ul>
+<p>(1+2+3+4+5)<br />
+(4+5+6)<br />
+(7+8)<br />
+(15)</p>
 
-<blockquote>
+<p>즉 expressions(15) 의 결과는 4이다.</p>
+
+<h2 id="풀이">풀이</h2>
+
+<p>임의의 자연수 N을 연속된 n개의 수열의 합으로 표현할 때,</p>
+
 <ol>
-<li>하나의 HTML 문서에서 사용되는 여러개의 스크립트 파일들은 글로벌 스코프를 공유한다. 즉 실행순서만을 담보할 수 있을 뿐이며 논리적 연결관계의 구현이 어렵다.
-때문에 바벨, 웹팩과 같은 도구의 도움이 필수적이다. 빌드 툴을 사용해야 하는 이유를 조금 더 구체적으로 알 수 있어서 배우는 데 거부감이 줄었다.</li>
-<li>babel 을 barbel 로 타이핑해서 겪은 오류가 오늘만 5번 넘는듯&hellip;</li>
+<li>길이가 같은 수열은 두개 이상 존재할 수 없다</li>
+<li>수열의 평균 m = N / n</li>
+<li>연속된 수열의 평균은 가운데 수 혹은 가운데 두 수의 중간값이다</li>
+<li>즉 (N % n = 0, n은 홀수) 또는 (N % n = 0.5, n은 짝수) 일 때 조건을 만족하는 수열이 존재한다</li>
+<li>1 &lt;= n &lt;= N 과 조건 3.을 만족하는 n의 개수를 구하라</li>
 </ol>
-</blockquote>
-
-<ul>
-<li>todos 페이지를 실습하며 어렴풋이 느낀 함수형 프로그래밍이 궁금하여 몇가지 글들을 읽어봤다</li>
-</ul>
-
-<blockquote>
-<p>비순수함수의 억제. 명확히 구분할 순 없지만 지속적으로 재할당이 일어나야 하는 값(주로 상태를 나타내는)만을 최상위 스코프에 둔다. (현재 레벨에서는
-  글로벌 스코프를 사용하지 않고, 단 하나의 IIFE 함수 내부에 모든 것을 작성하기 때문에 &lsquo;최상위&rsquo;라는 단어를 사용했다.)</p>
-</blockquote>
-
-<h2 id="todo">TODO</h2>
-
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> 타입스크립트, 앵귤러2 예습</label></li>
-<li><a href="주말" target="_blank"> </a> todos 백지상태에서 한번만 더 해보기; 함수 외부의 변수선언을 초기부터 억제하는 것에 주안점을 두고&hellip; 매개변수로 함수의 반환값을 전달하는 패턴을
-적재적소에 활용하면 어떨까 하는 막연한 생각이 있다.</li>
-<li><a href="주말" target="_blank"> </a> 데일리 알고리즘 쌓인거 정리해서 업로드하기.</li>
-</ul>
-
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#007020;font-weight:bold">function</span> expressions(num) {
+    <span style="color:#007020;font-weight:bold">var</span> answer <span style="color:#666">=</span> <span style="color:#40a070">0</span>;
+    <span style="color:#007020;font-weight:bold">for</span> (<span style="color:#007020;font-weight:bold">var</span> i <span style="color:#666">=</span> <span style="color:#40a070">1</span>; i <span style="color:#666">&lt;=</span> num; i<span style="color:#666">++</span>) {
+        <span style="color:#60a0b0;font-style:italic">// 길이가 홀수인 수열로 표현하려면
+</span><span style="color:#60a0b0;font-style:italic"></span>        <span style="color:#007020;font-weight:bold">if</span> (i <span style="color:#666">%</span> <span style="color:#40a070">2</span>) {
+            <span style="color:#60a0b0;font-style:italic">// 중간값이 자연수여야 한다
+</span><span style="color:#60a0b0;font-style:italic"></span>            answer <span style="color:#666">+=</span> num <span style="color:#666">%</span> i <span style="color:#666">?</span> <span style="color:#40a070">0</span> <span style="color:#666">:</span> <span style="color:#40a070">1</span>;
+        }
+        <span style="color:#60a0b0;font-style:italic">// 길이가 짝수인 수열로 표현하려면
+</span><span style="color:#60a0b0;font-style:italic"></span>        <span style="color:#007020;font-weight:bold">if</span> (<span style="color:#666">!</span>(i <span style="color:#666">%</span> <span style="color:#40a070">2</span>)) {
+            <span style="color:#60a0b0;font-style:italic">// 중간값은 자연수 + 0.5
+</span><span style="color:#60a0b0;font-style:italic"></span>            answer <span style="color:#666">+=</span> num <span style="color:#666">%</span> i <span style="color:#666">===</span> <span style="color:#40a070">0.5</span> <span style="color:#666">?</span> <span style="color:#40a070">1</span> <span style="color:#666">:</span> <span style="color:#40a070">0</span>;
+        }
+    }
+    <span style="color:#007020;font-weight:bold">return</span> answer;
+}
+<span style="color:#60a0b0;font-style:italic">// 아래는 테스트로 출력해 보기 위한 코드입니다.
+</span><span style="color:#60a0b0;font-style:italic"></span>console.log(expressions(<span style="color:#40a070">15</span>));</code></pre>
+</div>
 </div>
 
     
@@ -161,7 +178,16 @@ One min read
   
 </svg>
 </span>
-  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/til'>TIL</a></div>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/algorithm'>Algorithm</a></div>
+<div class='tags'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/javascript'>Javascript</a></div>
 
   </div>
 </footer>
@@ -171,7 +197,7 @@ One min read
   
 <nav class='entry-nav-container'>
   <div class='entry-nav'><div class='prev-entry'>
-      <a href='/post/til/171025_til/'>
+      <a href='/post/til/171026_til/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -179,10 +205,10 @@ One min read
   
 </svg>
  Previous</span>
-        <span class='screen-reader'>Previous post: </span>171025_TIL</a>
+        <span class='screen-reader'>Previous post: </span>171026_TIL</a>
     </div><div class='next-entry'>
-      <a href='/post/algorithm/171024_serialnumbers/'>
-        <span class='screen-reader'>Next post: </span>1024_숫자의 표현<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+      <a href='/post/algorithm/171029_tiling/'>
+        <span class='screen-reader'>Next post: </span>1029_2*n 타일링<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="4" y1="12" x2="20" y2="12"/>
   <polyline points="14 6 20 12 14 18"/>
