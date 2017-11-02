@@ -5,10 +5,21 @@
     <link>http://cmygray.github.io/tags/javascript/</link>
     <description>Recent content in Javascript on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 29 Oct 2017 20:01:31 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 02 Nov 2017 23:41:50 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Class</title>
+      <link>http://cmygray.github.io/post/javascript/class/</link>
+      <pubDate>Thu, 02 Nov 2017 23:41:50 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/javascript/class/</guid>
+      <description>Javascript Class  Definition  ES5 ES6  Inheritance  ES6   Definition 자바스크립트는 프로토타입 기반 멀티 패러다임 랭귀지이다. ES5에서는 생성자 함수와 프로토타입을 사용하여 객체 지향 프로그래밍을 구현했다. ES6에서는 Class 키워드를 도입하여 객체 지향 프로그래밍을 지원하지만, 생성자 함수와 프로토타입을 이용한 내부 동작 원리는 같다.
+ES5 ES5 클래스 구현 코드 예제
+// ES5 var Person = (function () { // 1. 변수 Person에 함수의 반환값을 할당하였다.  function Person(name) { // 3.</description>
+    </item>
     
     <item>
       <title>1029_2*n 타일링</title>

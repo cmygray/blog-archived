@@ -5,7 +5,7 @@
     <link>http://cmygray.github.io/</link>
     <description>Recent content in Home on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 01 Nov 2017 23:52:49 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 02 Nov 2017 23:41:50 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,6 +26,26 @@
       
       <guid>http://cmygray.github.io/tags/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Class</title>
+      <link>http://cmygray.github.io/post/javascript/class/</link>
+      <pubDate>Thu, 02 Nov 2017 23:41:50 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/javascript/class/</guid>
+      <description>Javascript Class  Definition  ES5 ES6  Inheritance  ES6   Definition 자바스크립트는 프로토타입 기반 멀티 패러다임 랭귀지이다. ES5에서는 생성자 함수와 프로토타입을 사용하여 객체 지향 프로그래밍을 구현했다. ES6에서는 Class 키워드를 도입하여 객체 지향 프로그래밍을 지원하지만, 생성자 함수와 프로토타입을 이용한 내부 동작 원리는 같다.
+ES5 ES5 클래스 구현 코드 예제
+// ES5 var Person = (function () { // 1. 변수 Person에 함수의 반환값을 할당하였다.  function Person(name) { // 3.</description>
+    </item>
+    
+    <item>
+      <title>171102_TIL</title>
+      <link>http://cmygray.github.io/post/til/171102_til/</link>
+      <pubDate>Thu, 02 Nov 2017 23:40:57 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171102_til/</guid>
+      <description>17.11.01.(수) DONE  axios 라이브러리 기능을 흉내낸 모듈 스크립트를 작성 &amp;gt; 1. 공유할 수 있는 데이터는 최대한 Axios 클래스 멤버변수로 선언하려고 했으나, 고작 origin location만 재활용하였다.(딸랑 하나&amp;hellip;) 그래도 Promise를 활용한 HTTP 기본 CRUD를 클래스 메서드로 주렁주렁 달면서 기본적인 원리와 JSON stringify, parse 메서드에 익숙해질 수 있었다. 어제까지만 해도 class, http request에 쩔쩔매던거에 비하면 조금 발전.    생각해보니까 오늘 Class 요약하면서 무려, &amp;ldquo;맥락이 없는, 단지 재사용을 위한 클래스 구조설계는 좋은 프로그래밍이 아니&amp;rdquo; 라고 썼는데.</description>
     </item>
     
     <item>
