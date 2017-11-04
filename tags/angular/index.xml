@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Typescript on cmygray</title>
-    <link>http://cmygray.github.io/tags/typescript/</link>
-    <description>Recent content in Typescript on cmygray</description>
+    <title>Angular on cmygray</title>
+    <link>http://cmygray.github.io/tags/angular/</link>
+    <description>Recent content in Angular on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 04 Nov 2017 23:47:30 +0900</lastBuildDate>
     
-	<atom:link href="http://cmygray.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://cmygray.github.io/tags/angular/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,19 +23,6 @@
  개발 생산성(대규모 지향, 컴포넌트 중심) 전체 구조를 아우르는 방식  Cons
  퍼포먼스(렌더링 속도)  two-way binding =&amp;gt; digest loop =&amp;gt; lower performance  not support IE8  CLI 개발환경으로서 제공하는 기능
  build test add/rm element internal server  Architecture Component  has own view (component, directive, pipe) =&amp;gt; view  Directive  format: HTML element || attribute role: Direction view를 가지고 있지 않음  종류</description>
-    </item>
-    
-    <item>
-      <title>TypeScript Basics</title>
-      <link>http://cmygray.github.io/post/javascript/typescript_basics/</link>
-      <pubDate>Sat, 04 Nov 2017 22:56:48 +0900</pubDate>
-      
-      <guid>http://cmygray.github.io/post/javascript/typescript_basics/</guid>
-      <description>TypeScript basic syntax and features Class, Interface, Generic
-Class 타입스크립트의 클래스는 ES6 클래스와 전반적으로 비슷하지만, 몇가지 고유 기능이 존재한다.
- member var declaration access modifier(public, protected, private default=public) static member var abstract class  Definition ES6
-class Person { constructor(name) { this.name = name; // public  } walk() { console.log(`${this.name}walk`); } }  TS
-class Person { name: string; // public  constructor(name: string) { this.name = name; } walk() { console.</description>
     </item>
     
   </channel>

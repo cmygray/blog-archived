@@ -5,10 +5,25 @@
     <link>http://cmygray.github.io/tags/javascript/</link>
     <description>Recent content in Javascript on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 04 Nov 2017 22:56:48 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 04 Nov 2017 23:47:30 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angular2_brief_summary</title>
+      <link>http://cmygray.github.io/post/angular/angular2_brief_summary/</link>
+      <pubDate>Sat, 04 Nov 2017 23:47:30 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/angular/angular2_brief_summary/</guid>
+      <description>Angular - brief summary Angular2 프로젝트와 수업을 대비하여 간단하게 살펴보고 정리중입니다. 내용은 지속적으로 추가됩니다.
+
+참고자료
+ poiemaweb tutorials Angular2 vs. React  Common Pros
+ 개발 생산성(대규모 지향, 컴포넌트 중심) 전체 구조를 아우르는 방식  Cons
+ 퍼포먼스(렌더링 속도)  two-way binding =&amp;gt; digest loop =&amp;gt; lower performance  not support IE8  CLI 개발환경으로서 제공하는 기능
+ build test add/rm element internal server  Architecture Component  has own view (component, directive, pipe) =&amp;gt; view  Directive  format: HTML element || attribute role: Direction view를 가지고 있지 않음  종류</description>
+    </item>
     
     <item>
       <title>TypeScript Basics</title>

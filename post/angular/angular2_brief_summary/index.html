@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Angular - brief summary Angular2 프로젝트와 수업을 대비하여 간단하게 살펴보고 정리중입니다. 내용은 지속적으로 추가됩니다.
+
+참고자료
+ poiemaweb tutorials Angular2 vs. React  Common Pros
+ 개발 생산성(대규모 지향, 컴포넌트 중심) 전체 구조를 아우르는 방식  Cons
+ 퍼포먼스(렌더링 속도)  two-way binding =&gt; digest loop =&gt; lower performance  not support IE8  CLI 개발환경으로서 제공하는 기능
+ build test add/rm element internal server  Architecture Component  has own view (component, directive, pipe) =&gt; view  Directive  format: HTML element || attribute role: Direction view를 가지고 있지 않음  종류'>
+
+<meta property='og:title' content='Angular2_brief_summary • cmygray'>
+<meta property='og:description' content='Angular - brief summary Angular2 프로젝트와 수업을 대비하여 간단하게 살펴보고 정리중입니다. 내용은 지속적으로 추가됩니다.
+
+참고자료
+ poiemaweb tutorials Angular2 vs. React  Common Pros
+ 개발 생산성(대규모 지향, 컴포넌트 중심) 전체 구조를 아우르는 방식  Cons
+ 퍼포먼스(렌더링 속도)  two-way binding =&gt; digest loop =&gt; lower performance  not support IE8  CLI 개발환경으로서 제공하는 기능
+ build test add/rm element internal server  Architecture Component  has own view (component, directive, pipe) =&gt; view  Directive  format: HTML element || attribute role: Direction view를 가지고 있지 않음  종류'>
+<meta property='og:url' content='http://cmygray.github.io/post/angular/angular2_brief_summary/'>
+<meta property='og:site_name' content='cmygray'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='javascript'><meta property='article:tag' content='typescript'><meta property='article:tag' content='angular'><meta property='article:published_time' content='2017-11-04T23:47:30&#43;09:00'/><meta property='article:modified_time' content='2017-11-04T23:47:30&#43;09:00'/>
+
+<meta name="generator" content="Hugo 0.29" />
+
+  <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
+  <title>Angular2_brief_summary • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/angular/angular2_brief_summary/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/assets/css/main.77da63e1.css'><link rel='stylesheet' href='/css/custom.css'>
+</head>
+
+
+<body class='page type-post'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  <li>
+      <a href='/'>Home</a>
+    </li>
+  <li>
+      <a href='/categories/'>Categories</a>
+    </li>
+  <li>
+      <a href='/tags/'>Tags</a>
+    </li>
+  <li>
+      <a href='https://nullfull.github.io/visual-vocabulary/'>Visual-vocabulary</a>
+    </li>
+  
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>cmygray</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>Angular2_brief_summary</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2017-11-04T23:47:30&#43;09:00'>2017, Nov 4</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/> 
+  
+</svg>
+One min read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  
+
+<h1 id="angular-brief-summary">Angular - brief summary</h1>
+
+<p>Angular2 프로젝트와 수업을 대비하여 간단하게 살펴보고 정리중입니다. 내용은 지속적으로 추가됩니다.</p>
+
+<p><br></p>
+
+<p>참고자료</p>
+
+<ul>
+<li><a href="http://poiemaweb.com/angular-basics" target="_blank">poiemaweb tutorials</a></li>
+<li><a href="http://han41858.tistory.com/9" target="_blank">Angular2 vs. React</a></li>
+</ul>
+
+<h2 id="common">Common</h2>
+
+<p>Pros</p>
+
+<ul>
+<li>개발 생산성(대규모 지향, 컴포넌트 중심)</li>
+<li>전체 구조를 아우르는 방식</li>
+</ul>
+
+<p>Cons</p>
+
+<ul>
+<li>퍼포먼스(렌더링 속도)
+
+<ul>
+<li>two-way binding =&gt; digest loop =&gt; lower performance</li>
+</ul></li>
+<li>not support IE8</li>
+</ul>
+
+<h2 id="cli">CLI</h2>
+
+<p>개발환경으로서 제공하는 기능</p>
+
+<ul>
+<li>build</li>
+<li>test</li>
+<li>add/rm element</li>
+<li>internal server</li>
+</ul>
+
+<h2 id="architecture">Architecture</h2>
+
+<h2 id="component">Component</h2>
+
+<ul>
+<li>has own view</li>
+<li>(component, directive, pipe) =&gt; view</li>
+</ul>
+
+<h2 id="directive">Directive</h2>
+
+<ul>
+<li>format: HTML element || attribute</li>
+<li>role: Direction</li>
+<li>view를 가지고 있지 않음</li>
+</ul>
+
+<p>종류</p>
+
+<ul>
+<li>component</li>
+<li>attribute</li>
+<li>structure</li>
+</ul>
+
+<h2 id="pipe">Pipe</h2>
+
+<h2 id="lifecycle-hooks">Lifecycle Hooks</h2>
+
+<h2 id="service-dependency-injection">Service &amp; Dependency Injection</h2>
+
+<h2 id="rxjs">RxJS</h2>
+
+<h2 id="httpclient">HttpClient</h2>
+
+<h2 id="forms">Forms</h2>
+
+<h2 id="ngmodule">NgModule</h2>
+
+<h2 id="routing">Routing</h2>
+
+<h2 id="deploy">Deploy</h2>
+
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  <div class='categories'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/javascript'>Javascript</a>, <a class='category' href='/categories/angular'>Angular</a></div>
+<div class='tags'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/javascript'>Javascript</a>, <a class='tag' href='/tags/typescript'>Typescript</a>, <a class='tag' href='/tags/angular'>Angular</a></div>
+
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/post/til/171104_til/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>171104_TIL</a>
+    </div></div>
+</nav>
+
+  
+<div class='comments-container'>
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cmygray" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:cmygray@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br
+  />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='/assets/js/main.f29c93b9.js'></script><script src='/js/custom.js'></script></body>
+
+</html>
+

@@ -5,7 +5,7 @@
     <link>http://cmygray.github.io/</link>
     <description>Recent content in Home on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 04 Nov 2017 22:56:48 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 04 Nov 2017 23:47:30 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,6 +26,30 @@
       
       <guid>http://cmygray.github.io/tags/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Angular2_brief_summary</title>
+      <link>http://cmygray.github.io/post/angular/angular2_brief_summary/</link>
+      <pubDate>Sat, 04 Nov 2017 23:47:30 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/angular/angular2_brief_summary/</guid>
+      <description>Angular - brief summary Angular2 프로젝트와 수업을 대비하여 간단하게 살펴보고 정리중입니다. 내용은 지속적으로 추가됩니다.
+
+참고자료
+ poiemaweb tutorials Angular2 vs. React  Common Pros
+ 개발 생산성(대규모 지향, 컴포넌트 중심) 전체 구조를 아우르는 방식  Cons
+ 퍼포먼스(렌더링 속도)  two-way binding =&amp;gt; digest loop =&amp;gt; lower performance  not support IE8  CLI 개발환경으로서 제공하는 기능
+ build test add/rm element internal server  Architecture Component  has own view (component, directive, pipe) =&amp;gt; view  Directive  format: HTML element || attribute role: Direction view를 가지고 있지 않음  종류</description>
+    </item>
+    
+    <item>
+      <title>171104_TIL</title>
+      <link>http://cmygray.github.io/post/til/171104_til/</link>
+      <pubDate>Sat, 04 Nov 2017 23:42:02 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171104_til/</guid>
+      <description> 17.11.03.(금) DONE  TypeScript summary- Class, Interface, Generic Angular 훑어보기- basics, cli  TODO Typescript Class summary todos 더블클릭 시 input 창으로 바뀌도록 기능추가 todos label, input CSS 분리 todos 지금까지 구현한 기능도를 알고리즘으로 그려보기 todos node collection, classLists를 사용해서 array 메소드를 보다 적극적으로 사용하도록 수정하기 장고 튜토리얼을 마무리하는대로, aws 무료서버로 옮겨보고 성공 시 장고로 todo 서버를 구축하고 aws에 db까지 하자는 원대한 포부는 과연&amp;hellip;  </description>
     </item>
     
     <item>
