@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Typescript on cmygray</title>
+    <link>http://cmygray.github.io/tags/typescript/</link>
+    <description>Recent content in Typescript on cmygray</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 04 Nov 2017 22:56:48 +0900</lastBuildDate>
+    
+	<atom:link href="http://cmygray.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TypeScript Basics</title>
+      <link>http://cmygray.github.io/post/javascript/typescript_basics/</link>
+      <pubDate>Sat, 04 Nov 2017 22:56:48 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/javascript/typescript_basics/</guid>
+      <description>TypeScript basic syntax and features Class, Interface, Generic
+Class 타입스크립트의 클래스는 ES6 클래스와 전반적으로 비슷하지만, 몇가지 고유 기능이 존재한다.
+ member var declaration access modifier(public, protected, private default=public) static member var abstract class  Definition ES6
+class Person { constructor(name) { this.name = name; // public  } walk() { console.log(`${this.name}walk`); } }  TS
+class Person { name: string; // public  constructor(name: string) { this.name = name; } walk() { console.</description>
+    </item>
+    
+  </channel>
+</rss>

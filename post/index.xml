@@ -5,10 +5,32 @@
     <link>http://cmygray.github.io/post/</link>
     <description>Recent content in Posts on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 02 Nov 2017 23:41:50 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 04 Nov 2017 22:56:48 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TypeScript Basics</title>
+      <link>http://cmygray.github.io/post/javascript/typescript_basics/</link>
+      <pubDate>Sat, 04 Nov 2017 22:56:48 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/javascript/typescript_basics/</guid>
+      <description>TypeScript basic syntax and features Class, Interface, Generic
+Class 타입스크립트의 클래스는 ES6 클래스와 전반적으로 비슷하지만, 몇가지 고유 기능이 존재한다.
+ member var declaration access modifier(public, protected, private default=public) static member var abstract class  Definition ES6
+class Person { constructor(name) { this.name = name; // public  } walk() { console.log(`${this.name}walk`); } }  TS
+class Person { name: string; // public  constructor(name: string) { this.name = name; } walk() { console.</description>
+    </item>
+    
+    <item>
+      <title>171103_TIL</title>
+      <link>http://cmygray.github.io/post/til/171103_til/</link>
+      <pubDate>Sat, 04 Nov 2017 22:55:45 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171103_til/</guid>
+      <description> 17.11.03.(금) DONE  DB 서비스 관리자 토큰 github에 업로드 금지. .gitignore파일로 관리 필수. 소프트웨어 공학 기초  백엔드 개발자와의 협업을 위한 DB 기초지식(Schema 등) Web, Web browser, Web API(SOAP, REST), Framework, 개발툴 변천사 간단한 파이썬 코드로 네트워크 소켓 실습 팀프로젝트 기능구현 시나리오에 맞춰서 REST API 구상해보기  알고리즘 학습 팁  Stack, Queue, Linked list를 js에서 구현한 방식을 low-level에서 이해해보기 Priority queue, Quick sort 원리 이해 Hacker rank 사이트 참고   TODO Typescript Class summary todos 더블클릭 시 input 창으로 바뀌도록 기능추가 todos 지금까지 구현한 기능도를 알고리즘으로 그려보기 todos node collection, classLists를 사용해서 array 메소드를 보다 적극적으로 사용하도록 수정하기 장고 튜토리얼을 마무리하는대로, aws 무료서버로 옮겨보고 성공 시 장고로 todo 서버를 구축하고 aws에 db까지 하자는 원대한 포부는 과연&amp;hellip;  </description>
+    </item>
     
     <item>
       <title>ES5, ES6 Class 비교</title>

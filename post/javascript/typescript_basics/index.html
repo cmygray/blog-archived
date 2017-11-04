@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='TypeScript basic syntax and features Class, Interface, Generic
+Class 타입스크립트의 클래스는 ES6 클래스와 전반적으로 비슷하지만, 몇가지 고유 기능이 존재한다.
+ member var declaration access modifier(public, protected, private default=public) static member var abstract class  Definition ES6
+class Person { constructor(name) { this.name = name; // public  } walk() { console.log(`${this.name}walk`); } }  TS
+class Person { name: string; // public  constructor(name: string) { this.name = name; } walk() { console.'>
+
+<meta property='og:title' content='TypeScript Basics • cmygray'>
+<meta property='og:description' content='TypeScript basic syntax and features Class, Interface, Generic
+Class 타입스크립트의 클래스는 ES6 클래스와 전반적으로 비슷하지만, 몇가지 고유 기능이 존재한다.
+ member var declaration access modifier(public, protected, private default=public) static member var abstract class  Definition ES6
+class Person { constructor(name) { this.name = name; // public  } walk() { console.log(`${this.name}walk`); } }  TS
+class Person { name: string; // public  constructor(name: string) { this.name = name; } walk() { console.'>
+<meta property='og:url' content='http://cmygray.github.io/post/javascript/typescript_basics/'>
+<meta property='og:site_name' content='cmygray'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='javascript'><meta property='article:tag' content='typescript'><meta property='article:published_time' content='2017-11-04T22:56:48&#43;09:00'/><meta property='article:modified_time' content='2017-11-04T22:56:48&#43;09:00'/>
+
+<meta name="generator" content="Hugo 0.29" />
+
+  <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
+  <title>TypeScript Basics • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/javascript/typescript_basics/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/assets/css/main.77da63e1.css'><link rel='stylesheet' href='/css/custom.css'>
+</head>
+
+
+<body class='page type-post'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  <li>
+      <a href='/'>Home</a>
+    </li>
+  <li>
+      <a href='/categories/'>Categories</a>
+    </li>
+  <li>
+      <a href='/tags/'>Tags</a>
+    </li>
+  <li>
+      <a href='https://nullfull.github.io/visual-vocabulary/'>Visual-vocabulary</a>
+    </li>
+  
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>cmygray</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>TypeScript Basics</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2017-11-04T22:56:48&#43;09:00'>2017, Nov 4</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/> 
+  
+</svg>
+4 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  
+
+<h1 id="typescript-basic-syntax-and-features">TypeScript basic syntax and features</h1>
+
+<p>Class, Interface, Generic</p>
+
+<h2 id="class">Class</h2>
+
+<p>타입스크립트의 클래스는 ES6 클래스와 전반적으로 비슷하지만, 몇가지 고유 기능이 존재한다.</p>
+
+<ul>
+<li>member var declaration</li>
+<li>access modifier(<code>public</code>, <code>protected</code>, <code>private</code> default=<code>public</code>)</li>
+<li><code>static</code> member var</li>
+<li><code>abstract class</code></li>
+</ul>
+
+<h3 id="definition">Definition</h3>
+
+<p><strong>ES6</strong></p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#007020;font-weight:bold">class</span> Person {
+  constructor(name) {
+    <span style="color:#007020;font-weight:bold">this</span>.name <span style="color:#666">=</span> name; <span style="color:#60a0b0;font-style:italic">// public
+</span><span style="color:#60a0b0;font-style:italic"></span>  }
+  walk() {
+    console.log(<span style="color:#4070a0">`</span><span style="color:#70a0d0;font-style:italic">${</span><span style="color:#007020;font-weight:bold">this</span>.name<span style="color:#70a0d0;font-style:italic">}</span><span style="color:#4070a0"> walk`</span>);
+  }
+}</code></pre>
+</div>
+<p><strong>TS</strong></p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#007020;font-weight:bold">class</span> Person {
+  name: <span style="color:#902000">string</span>; <span style="color:#60a0b0;font-style:italic">// public
+</span><span style="color:#60a0b0;font-style:italic"></span>  <span style="color:#007020;font-weight:bold">constructor</span>(name: <span style="color:#902000">string</span>) {
+    <span style="color:#007020;font-weight:bold">this</span>.name <span style="color:#666">=</span> name;
+  }
+  walk() {
+    console.log(<span style="color:#4070a0">`</span><span style="color:#70a0d0;font-style:italic">${</span><span style="color:#007020;font-weight:bold">this</span>.name<span style="color:#70a0d0;font-style:italic">}</span><span style="color:#4070a0"> walk`</span>);
+  }
+}</code></pre>
+</div>
+<p><strong>TS class definition with access identifier</strong></p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#007020;font-weight:bold">class</span> Foo {
+  <span style="color:#007020;font-weight:bold">public</span> x: <span style="color:#902000">string</span>;
+  <span style="color:#007020;font-weight:bold">protected</span> y: <span style="color:#902000">string</span>;
+  <span style="color:#007020;font-weight:bold">private</span> z: <span style="color:#902000">string</span>;
+
+  <span style="color:#007020;font-weight:bold">constructor</span>(x: <span style="color:#902000">string</span>, y: <span style="color:#902000">string</span>, z: <span style="color:#902000">string</span>) {
+    <span style="color:#007020;font-weight:bold">this</span>.x <span style="color:#666">=</span> x;
+    <span style="color:#007020;font-weight:bold">this</span>.y <span style="color:#666">=</span> y;
+    <span style="color:#007020;font-weight:bold">this</span>.z <span style="color:#666">=</span> z;
+  }
+  print() {
+    console.log(x, y );
+  }
+}
+
+<span style="color:#007020;font-weight:bold">const</span> foo <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> Foo(<span style="color:#4070a0">&#39;xx&#39;</span>, <span style="color:#4070a0">&#39;yy&#39;</span>, <span style="color:#4070a0">&#39;zz&#39;</span>);
+foo.print();</code></pre>
+</div>
+<p><strong>access identifier types</strong></p>
+
+<ul>
+<li>public: base, sub, instance</li>
+<li>protected: base, sub</li>
+<li>private: only base</li>
+</ul>
+
+<p>접근제한자는 constructor 파라메터에도 사용할 수 있다.</p>
+
+<hr />
+
+<ul>
+<li>readonly: readonly(as <code>const</code>, use after access identifier)</li>
+</ul>
+
+<p><strong>Abstract Class</strong></p>
+
+<ul>
+<li>인스턴스 생성 불가</li>
+<li>sub class에서 상속 시 implementation이 필요하다</li>
+<li>absctract method, standard method를 포함</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#007020;font-weight:bold">abstract</span> <span style="color:#007020;font-weight:bold">class</span> Animal {
+  <span style="color:#007020;font-weight:bold">abstract</span> makeSound()<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">void</span>;
+  move()<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">void</span> {
+    console.log(<span style="color:#4070a0">&#39;Animal can walk...&#39;</span>);
+  }
+}
+
+<span style="color:#007020;font-weight:bold">class</span> Dog <span style="color:#007020;font-weight:bold">extends</span> Animal {
+  makeSound() {
+    console.log(<span style="color:#4070a0">&#39;bowwow&#39;</span>);
+  }
+}
+
+<span style="color:#007020;font-weight:bold">const</span> myDog <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> Dog();
+myDog.makeSound()
+myDog.move();</code></pre>
+</div>
+<h2 id="interface">Interface</h2>
+
+<p>Class - Implementation = Interface</p>
+
+<ul>
+<li>일종의 (여러 타입의 프로퍼티로 이루어진)자료형을 정의하는 행위. 즉 객체의 타입 지정</li>
+<li>인터페이스 내부에 메소드를 정의할 수도 있다.</li>
+<li>인터페이스를 함수에 사용할 수 있다.</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#007020;font-weight:bold">interface</span> IPerson {
+  <span style="color:#60a0b0;font-style:italic">// 멤버변수의 자료형을 사전에 선언한다. IPerson은 이제 커스텀 자료형이 된 셈.
+</span><span style="color:#60a0b0;font-style:italic"></span>  name: <span style="color:#902000">string</span>;
+  age: <span style="color:#902000">number</span>;
+  gender: <span style="color:#902000">boolean</span>;
+  introduce()<span style="color:#666">:</span> <span style="color:#902000">string</span>; <span style="color:#60a0b0;font-style:italic">// interface에서 메소드를 선언할 수 있다.
+</span><span style="color:#60a0b0;font-style:italic"></span>}
+
+<span style="color:#60a0b0;font-style:italic">// IPerson 인터페이스를 따르는 파라메터를 사용하는 함수를 선언한다.
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">function</span> introduce(person: <span style="color:#902000">IPerson</span>)<span style="color:#666">:</span> <span style="color:#902000">string</span> {
+  <span style="color:#007020;font-weight:bold">return</span> <span style="color:#4070a0">`
+</span><span style="color:#4070a0">  My name is </span><span style="color:#70a0d0;font-style:italic">${</span>person.name<span style="color:#70a0d0;font-style:italic">}</span><span style="color:#4070a0">.
+</span><span style="color:#4070a0">  I am </span><span style="color:#70a0d0;font-style:italic">${</span>person.age<span style="color:#70a0d0;font-style:italic">}</span><span style="color:#4070a0"> years old.
+</span><span style="color:#4070a0">  I am </span><span style="color:#70a0d0;font-style:italic">${</span>person.gender <span style="color:#666">?</span> <span style="color:#4070a0">&#39;male&#39;</span> <span style="color:#666">:</span> <span style="color:#4070a0">&#39;female&#39;</span><span style="color:#70a0d0;font-style:italic">}</span><span style="color:#4070a0">.`</span>
+}
+
+<span style="color:#60a0b0;font-style:italic">// IPerson 인터페이스를 따르는 변수를 선언할 땐 자료형을 표시할 때와 같이 콜론(:)을 사용한다
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">const</span> me: <span style="color:#902000">IPerson</span> <span style="color:#666">=</span> {
+  name<span style="color:#666">:</span> <span style="color:#4070a0">&#39;Kim&#39;</span>, <span style="color:#60a0b0;font-style:italic">// 각 프로퍼티의 이름과 자료형이 인터페이스와 일치해야하며, 빠뜨려서도 안된다.
+</span><span style="color:#60a0b0;font-style:italic"></span>  age: <span style="color:#902000">28</span>,
+  gender: <span style="color:#902000">true</span>
+  };
+console.log(introduce(me));</code></pre>
+</div>
+<p><strong>클래스 선언 시 특정 인터페이스를 따르도록 할 수 있다.</strong></p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#60a0b0;font-style:italic">// 위에서 선언한 IPerson interface를 따르는 class 선언
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">class</span> Person <span style="color:#007020;font-weight:bold">implements</span> IPerson {
+  <span style="color:#007020;font-weight:bold">constructor</span> (<span style="color:#007020;font-weight:bold">public</span> name: <span style="color:#902000">string</span>, <span style="color:#007020;font-weight:bold">public</span> age: <span style="color:#902000">number</span>, <span style="color:#007020;font-weight:bold">public</span> gender: <span style="color:#902000">boolean</span>) {
+  }
+  introduce() { <span style="color:#60a0b0;font-style:italic">// IPerson 인터페이스에 포함됐으므로, 구현해야한다.
+</span><span style="color:#60a0b0;font-style:italic"></span>    <span style="color:#007020;font-weight:bold">return</span> <span style="color:#4070a0">`
+</span><span style="color:#4070a0">    My name is </span><span style="color:#70a0d0;font-style:italic">${</span><span style="color:#007020;font-weight:bold">this</span>.name<span style="color:#70a0d0;font-style:italic">}</span><span style="color:#4070a0">.
+</span><span style="color:#4070a0">    I am </span><span style="color:#70a0d0;font-style:italic">${</span><span style="color:#007020;font-weight:bold">this</span>.age<span style="color:#70a0d0;font-style:italic">}</span><span style="color:#4070a0"> years old.
+</span><span style="color:#4070a0">    I am </span><span style="color:#70a0d0;font-style:italic">${</span><span style="color:#007020;font-weight:bold">this</span>.gender <span style="color:#666">?</span> <span style="color:#4070a0">&#39;male&#39;</span> <span style="color:#666">:</span> <span style="color:#4070a0">&#39;female&#39;</span><span style="color:#70a0d0;font-style:italic">}</span><span style="color:#4070a0">.`</span>
+  }
+}
+
+<span style="color:#007020;font-weight:bold">const</span> lee <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> Person(<span style="color:#4070a0">&#39;Lee&#39;</span>, <span style="color:#40a070">30</span>, <span style="color:#007020;font-weight:bold">false</span>);
+console.log(lee.introduce());</code></pre>
+</div>
+<h3 id="duck-typing-https-ko-wikipedia-org-wiki-eb-8d-95-ed-83-80-ec-9d-b4-ed-95-91-ea-b0-9c-eb-85-90-ec-a0-81-ec-98-88-ec-a0-9c"><a href="https://ko.wikipedia.org/wiki/%EB%8D%95_%ED%83%80%EC%9D%B4%ED%95%91#.EA.B0.9C.EB.85.90.EC.A0.81_.EC.98.88.EC.A0.9C" target="_blank">Duck typing</a></h3>
+
+<blockquote>
+<p>만약 어떤 새가 오리처럼 걷고, 헤엄치고, 꽥꽥거리는 소리를 낸다면 나는 그 새를 오리라고 부를 것이다. &ldquo;덕 테스트&rdquo;</p>
+</blockquote>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#60a0b0;font-style:italic">// 오리란 꽥꽥대기 마련이니까 인터페이스를 만들자 (느슨하기 짝이 없는 덕 테스트에 해당한다)
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">interface</span> IDuck {
+  quack()<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">void</span>;
+}
+<span style="color:#60a0b0;font-style:italic">// 중국오리는 gaga
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">class</span> ChineseDuck <span style="color:#007020;font-weight:bold">implements</span> IDuck {
+  quack() {
+    console.log(<span style="color:#4070a0">&#39;gaga&#39;</span>) <span style="color:#60a0b0;font-style:italic">// implementaion of interface method
+</span><span style="color:#60a0b0;font-style:italic"></span>  }
+}
+<span style="color:#60a0b0;font-style:italic">// 한국 오리는 꽥꽥
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">class</span> KoreanDuck <span style="color:#007020;font-weight:bold">implements</span> IDuck {
+  quack() {
+    console.log(<span style="color:#4070a0">&#39;꽥꽥&#39;</span>)
+  }
+}
+<span style="color:#60a0b0;font-style:italic">// 소리내봐 니가 오리라면
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">function</span> makeNoise(duck: <span style="color:#902000">IDuck</span>)<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">void</span> {
+  duck.quack();
+}
+<span style="color:#60a0b0;font-style:italic">// 사냥꾼은 오리가 아니지만 꽥꽥거리는 척 총을 쏜다
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">class</span> DuckHunter {
+  quack() {
+    console.log(<span style="color:#4070a0">&#39;탕탕&#39;</span>)
+  }
+}
+
+makeNoise(<span style="color:#007020;font-weight:bold">new</span> ChineseDuck()); <span style="color:#60a0b0;font-style:italic">// gaga
+</span><span style="color:#60a0b0;font-style:italic"></span>makeNoise(<span style="color:#007020;font-weight:bold">new</span> KoreanDuck()); <span style="color:#60a0b0;font-style:italic">// 꽥꽥
+</span><span style="color:#60a0b0;font-style:italic"></span>makeNoise(<span style="color:#007020;font-weight:bold">new</span> DuckHunter()); <span style="">// 탕탕 (!?)</span></code></pre>
+</div>
+<p>사냥꾼이 덕 테스트를 통과해버렸다.</p>
+
+<ul>
+<li>클래스가 인터페이스를 implements 하고 있지 않더라도 조건(인터페이스를 충실히 구현하고 있는가)이 일치하면 같은 타입으로 판단.</li>
+</ul>
+
+<p>일반 변수의 경우에도 마찬가지이다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#007020;font-weight:bold">function</span> checkGender(person: <span style="color:#902000">IPerson</span>)<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">boolean</span> {
+  <span style="color:#007020;font-weight:bold">return</span> person.gender;
+}
+
+<span style="color:#007020;font-weight:bold">const</span> dog <span style="color:#666">=</span> { name<span style="color:#666">:</span> <span style="color:#4070a0">&#39;&#39;</span>, age: <span style="color:#902000">2</span>, gender: <span style="color:#902000">true</span>, introduce() {<span style="color:#007020;font-weight:bold">return</span> <span style="color:#007020;font-weight:bold">null</span>}}
+checkGender(dog); <span style="">// true</span></code></pre>
+</div>
+<p>변수 dog는 클래스가 없다. 다만 IPerson 인터페이스에서 요구하는 implementation을 만족하는 리터럴 객체이다. 따라서 IPerson 타입의 객체만을 인수로 받는 checkGender 함수가 작동하였다.<br />
+인터페이스는 개발 단계에서의 도움을 위해 제공되는 기능으로, 컴파일 시 사라진다.</p>
+
+<p>그외 인터페이스의 기능</p>
+
+<ul>
+<li>함수 typing</li>
+<li>Optional property</li>
+</ul>
+
+<p>함수 typing은 파라메터와 리턴의 타입을 함수 선언에 앞서 지정하는 것이다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#007020;font-weight:bold">interface</span> Calc {
+  (base: <span style="color:#902000">number</span>, adder: <span style="color:#902000">number</span>)<span style="color:#666">:</span> <span style="color:#902000">number</span>;
+}
+
+<span style="color:#007020;font-weight:bold">const</span> adder: <span style="color:#902000">Calc</span> <span style="color:#666">=</span> (base: <span style="color:#902000">number</span>, adder: <span style="color:#902000">number</span>) <span style="color:#666">=&gt;</span> base <span style="color:#666">+</span> adder;
+console.log(adder(<span style="color:#40a070">1</span>,<span style="color:#40a070">1</span>)) <span style="">// 2</span></code></pre>
+</div>
+<p>Optional property 이름 뒤에는 <code>?</code>를 붙인다. 해당 프로퍼티는 필수가 아니므로 클래스 또는 변수 implementation에서 생략이 가능하다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#007020;font-weight:bold">interface</span> IUserInfo {
+  username: <span style="color:#902000">string</span>;
+  password: <span style="color:#902000">string</span>;
+  age?: <span style="color:#902000">number</span>;
+  address?: <span style="color:#902000">string</span>;
+}
+
+<span style="color:#007020;font-weight:bold">function</span> checkUserInfo(user: <span style="color:#902000">IUserInfo</span>)<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">boolean</span> {
+  <span style="color:#007020;font-weight:bold">return</span> (user.username <span style="color:#666">&lt;</span> <span style="color:#40a070">10</span> <span style="color:#666">&amp;&amp;</span> user.password <span style="color:#666">&gt;</span> <span style="color:#40a070">8</span>)
+}
+
+<span style="color:#007020;font-weight:bold">const</span> userInfo <span style="color:#666">=</span> {
+  username<span style="color:#666">:</span> <span style="color:#4070a0">&#39;cmygray&#39;</span>
+  password<span style="color:#666">:</span> <span style="color:#4070a0">&#39;cmycmy1234&#39;</span>
+}
+
+console.log(checkUserInfo(userInfo)); <span style="">// true</span></code></pre>
+</div>
+<h2 id="generic">Generic</h2>
+
+<p>FIFO형 자료(Queue)를 만드는 예제</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#007020;font-weight:bold">class</span> Queue {
+  <span style="color:#007020;font-weight:bold">protected</span> data: <span style="color:#902000">any</span>[] <span style="color:#666">=</span> [];
+  push(item)<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">void</span> {
+    <span style="color:#007020;font-weight:bold">this</span>.data.push(item);
+  }
+  pop()<span style="color:#666">:</span>any {
+    <span style="color:#007020;font-weight:bold">return</span> <span style="color:#007020;font-weight:bold">this</span>.data.shift();
+  }
+}
+
+<span style="color:#007020;font-weight:bold">class</span> NumberQueue <span style="color:#007020;font-weight:bold">extends</span> Queue {
+  push(item: <span style="color:#902000">number</span>)<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">void</span> {
+    <span style="color:#007020;font-weight:bold">super</span>.push(item);
+    console.log(<span style="color:#007020;font-weight:bold">this</span>.data);
+  }
+  pop()<span style="color:#666">:</span> <span style="color:#902000">number</span> {
+    console.log(<span style="color:#007020;font-weight:bold">this</span>.data);
+    <span style="color:#007020;font-weight:bold">return</span> <span style="color:#007020;font-weight:bold">super</span>.pop();
+  }
+}
+
+<span style="color:#007020;font-weight:bold">const</span> queue <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> NumberQueue();
+
+queue.push(<span style="color:#40a070">1</span>);
+queue.push(<span style="color:#40a070">2</span>);
+queue.push(<span style="color:#40a070">3</span>);
+queue.push(<span style="color:#40a070">4</span>);
+queue.push(<span style="color:#40a070">5</span>);
+queue.pop();
+queue.pop();
+queue.pop();
+queue.pop();
+queue.pop();</code></pre>
+</div>
+<p>generic</p>
+
+<ul>
+<li>type parameter</li>
+<li>class 선언 시 <code>&lt;T&gt;</code>(관행적 T) 사용</li>
+<li>class 내부에서 타입 대신 매개변수로 활용</li>
+<li>인스턴스 생성 시 T 자리에 type 전달.</li>
+<li>커스텀 타입도 가능(as <code>interface</code>)</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#007020;font-weight:bold">class</span> Queue<span style="color:#666">&lt;</span>T<span style="color:#666">&gt;</span> {
+  <span style="color:#007020;font-weight:bold">protected</span> data: <span style="color:#902000">any</span>[] <span style="color:#666">=</span> [];
+  push(item: <span style="color:#902000">T</span>)<span style="color:#666">:</span> T[] {
+    <span style="color:#007020;font-weight:bold">this</span>.data.push(item);
+    <span style="color:#007020;font-weight:bold">return</span> <span style="color:#007020;font-weight:bold">this</span>.data;
+  }
+  pop()<span style="color:#666">:</span> T {
+    <span style="color:#007020;font-weight:bold">return</span> <span style="color:#007020;font-weight:bold">this</span>.data.shift();
+  }
+}
+
+<span style="color:#007020;font-weight:bold">const</span> numberQueue <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> Queue<span style="color:#666">&lt;</span><span style="color:#902000">number</span><span style="color:#666">&gt;</span>();
+console.log(numberQueue.push(<span style="color:#40a070">0</span>));
+console.log(numberQueue.push(<span style="color:#40a070">1</span>));
+console.log(numberQueue.push(<span style="color:#40a070">2</span>));
+console.log(numberQueue.pop());
+console.log(numberQueue.pop());
+console.log(numberQueue.pop());</code></pre>
+</div>
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  <div class='categories'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/javascript'>Javascript</a></div>
+<div class='tags'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/javascript'>Javascript</a>, <a class='tag' href='/tags/typescript'>Typescript</a></div>
+
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/post/til/171103_til/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>171103_TIL</a>
+    </div></div>
+</nav>
+
+  
+<div class='comments-container'>
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cmygray" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:cmygray@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br
+  />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='/assets/js/main.f29c93b9.js'></script><script src='/js/custom.js'></script></body>
+
+</html>
+
