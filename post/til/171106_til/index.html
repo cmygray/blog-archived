@@ -4,31 +4,35 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Angular - brief summary Angular2 프로젝트와 수업을 대비하여 간단하게 살펴보고 정리중입니다. 내용은 지속적으로 추가됩니다.
+<meta name='description' content='17.11.04.(토) DONE  TypeScript basic: Type, Class, Interface, Generic Cracking the code interview techniques
+ Technical interview 사고의 절차를 말로 표현하는 것에 익숙해지는 연습 막히더라도 생각의 헤드라인(?)이라도 먼저 밝혀라 조용한것보단 중얼중얼하는 것이 낫다
+ Behavioral questions
+ Quick shows of success(concrete things)
+ Direct to key stories
+ Technical habbit(even toy-project). Non technical =&gt; make it relevant
+ 7 Steps to solve algorithm problems
+ 문제를 주의깊게 듣기
+ 테스트 인풋은 적당히 크고 특수 케이스를 벗어나도록'>
 
-참고자료
- poiemaweb tutorials Angular2 vs. React  Common Pros
- 개발 생산성(대규모 지향, 컴포넌트 중심) 전체 구조를 아우르는 방식  Cons
- 퍼포먼스(렌더링 속도)  two-way binding =&gt; digest loop =&gt; lower performance  not support IE8  CLI 개발환경으로서 제공하는 기능
- build test add/rm element internal server  Architecture Component  has own view (component, directive, pipe) =&gt; view  Directive  format: HTML element || attribute role: Direction view를 가지고 있지 않음  종류'>
-
-<meta property='og:title' content='Angular2_brief_summary • cmygray'>
-<meta property='og:description' content='Angular - brief summary Angular2 프로젝트와 수업을 대비하여 간단하게 살펴보고 정리중입니다. 내용은 지속적으로 추가됩니다.
-
-참고자료
- poiemaweb tutorials Angular2 vs. React  Common Pros
- 개발 생산성(대규모 지향, 컴포넌트 중심) 전체 구조를 아우르는 방식  Cons
- 퍼포먼스(렌더링 속도)  two-way binding =&gt; digest loop =&gt; lower performance  not support IE8  CLI 개발환경으로서 제공하는 기능
- build test add/rm element internal server  Architecture Component  has own view (component, directive, pipe) =&gt; view  Directive  format: HTML element || attribute role: Direction view를 가지고 있지 않음  종류'>
-<meta property='og:url' content='http://cmygray.github.io/post/angular/angular2_brief_summary/'>
+<meta property='og:title' content='171106_TIL • cmygray'>
+<meta property='og:description' content='17.11.04.(토) DONE  TypeScript basic: Type, Class, Interface, Generic Cracking the code interview techniques
+ Technical interview 사고의 절차를 말로 표현하는 것에 익숙해지는 연습 막히더라도 생각의 헤드라인(?)이라도 먼저 밝혀라 조용한것보단 중얼중얼하는 것이 낫다
+ Behavioral questions
+ Quick shows of success(concrete things)
+ Direct to key stories
+ Technical habbit(even toy-project). Non technical =&gt; make it relevant
+ 7 Steps to solve algorithm problems
+ 문제를 주의깊게 듣기
+ 테스트 인풋은 적당히 크고 특수 케이스를 벗어나도록'>
+<meta property='og:url' content='http://cmygray.github.io/post/til/171106_til/'>
 <meta property='og:site_name' content='cmygray'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='javascript'><meta property='article:tag' content='typescript'><meta property='article:tag' content='angular'><meta property='article:published_time' content='2017-11-04T23:47:30&#43;09:00'/><meta property='article:modified_time' content='2017-11-04T23:47:30&#43;09:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-11-06T23:29:50&#43;09:00'/><meta property='article:modified_time' content='2017-11-06T23:29:50&#43;09:00'/>
 
 <meta name="generator" content="Hugo 0.29" />
 
   <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
-  <title>Angular2_brief_summary • cmygray</title>
-  <link rel='canonical' href='http://cmygray.github.io/post/angular/angular2_brief_summary/'>
+  <title>171106_TIL • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til/171106_til/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -77,7 +81,7 @@
     <header class='header-container'>
   <div class='header entry-header'>
     <div class='header-info'>
-      <h1 class='title'>Angular2_brief_summary</h1>
+      <h1 class='title'>171106_TIL</h1>
       
 
     </div>
@@ -92,7 +96,7 @@
   
 </svg>
 <span class='screen-reader'>Posted on </span>
-  <time class='date' datetime='2017-11-04T23:47:30&#43;09:00'>2017, Nov 4</time>
+  <time class='date' datetime='2017-11-06T23:29:50&#43;09:00'>2017, Nov 6</time>
 </span>
 
   
@@ -119,92 +123,75 @@ One min read
     <div class='entry-content'>
   
 
-<h1 id="angular-brief-summary">Angular - brief summary</h1>
+<h3 id="17-11-04-토">17.11.04.(토)</h3>
 
-<p>Angular2 프로젝트와 수업을 대비하여 간단하게 살펴보고 정리중입니다. 내용은 지속적으로 추가됩니다.</p>
-
-<p><br></p>
-
-<p>참고자료</p>
+<h3 id="done">DONE</h3>
 
 <ul>
-<li><a href="http://poiemaweb.com/angular-basics" target="_blank">poiemaweb tutorials</a></li>
-<li><a href="http://han41858.tistory.com/9" target="_blank">Angular2 vs. React</a></li>
-</ul>
+<li>TypeScript basic: Type, Class, Interface, Generic</li>
 
-<h2 id="common">Common</h2>
-
-<p>Pros</p>
+<li><p><a href="https://www.hackerrank.com/domains/tutorials/cracking-the-coding-interview" target="_blank">Cracking the code interview techniques</a></p>
 
 <ul>
-<li>개발 생산성(대규모 지향, 컴포넌트 중심)</li>
-<li>전체 구조를 아우르는 방식</li>
-</ul>
+<li><em>Technical interview</em></li>
+<li>사고의 절차를 말로 표현하는 것에 익숙해지는 연습</li>
+<li>막히더라도 생각의 헤드라인(?)이라도 먼저 밝혀라</li>
 
-<p>Cons</p>
+<li><p>조용한것보단 중얼중얼하는 것이 낫다</p></li>
+
+<li><p><em>Behavioral questions</em></p></li>
+
+<li><p>Quick shows of success(concrete things)</p></li>
+
+<li><p>Direct to key stories</p></li>
+
+<li><p>Technical habbit(even toy-project). Non technical =&gt; make it relevant</p></li>
+
+<li><p><em>7 Steps to solve algorithm problems</em></p></li>
+
+<li><p>문제를 주의깊게 듣기</p></li>
+
+<li><p>테스트 인풋은 적당히 크고 특수 케이스를 벗어나도록</p></li>
+
+<li><p>Brute-force first</p></li>
+
+<li><p>Optimize</p></li>
+
+<li><p>Walk throught algorithm</p></li>
+
+<li><p>Code it</p>
 
 <ul>
-<li>퍼포먼스(렌더링 속도)
-
-<ul>
-<li>two-way binding =&gt; digest loop =&gt; lower performance</li>
+<li>coding style matter(brace, case-style, naming). 어떤 스타일이냐보다는 일관성을 유지하는 것이 중요하다.</li>
 </ul></li>
-<li>not support IE8</li>
-</ul>
 
-<h2 id="cli">CLI</h2>
+<li><p>&hellip;</p></li>
 
-<p>개발환경으로서 제공하는 기능</p>
+<li><p>3 Algorithm strategies&hellip;</p></li>
+</ul></li>
 
-<ul>
-<li>build</li>
-<li>test</li>
-<li>add/rm element</li>
-<li>internal server</li>
-</ul>
-
-<h2 id="architecture">Architecture</h2>
-
-<h2 id="component">Component</h2>
+<li><p>Todos 리팩토링</p>
 
 <ul>
-<li>has own view</li>
-<li>(component, directive, pipe) =&gt; view</li>
+<li>할일 클릭 시 input창이 나타나서 내용 수정 가능하게 변경</li>
+</ul></li>
 </ul>
 
-<h2 id="directive">Directive</h2>
+<h3 id="todo">TODO</h3>
 
-<ul>
-<li>format: HTML element || attribute</li>
-<li>role: Direction</li>
-<li>view를 가지고 있지 않음</li>
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> todos label, input CSS 분리
+&gt; 원인은 CSS가 아니라 label tag의 for attribute 때문이었다. 질문하다가 해결.. 미심쩍을 때 테스트를 해봤어야 했다.</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> todos node collection, classLists를 사용해서 array 메소드를 보다 적극적으로 사용하도록 수정하기</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 장고 튜토리얼을 마무리하는대로, aws 무료서버로 옮겨보고 성공 시 장고로 todo 서버를 구축하고 aws에 db까지 하자는 원대한 포부는 과연&hellip;</label></li>
 </ul>
 
-<p>종류</p>
-
-<ul>
-<li>component</li>
-<li>attribute</li>
-<li>structure</li>
-</ul>
-
-<h2 id="pipe">Pipe</h2>
-
-<h2 id="lifecycle-hooks">Lifecycle Hooks</h2>
-
-<h2 id="service-dependency-injection">Service &amp; Dependency Injection</h2>
-
-<h2 id="rxjs">RxJS</h2>
-
-<h2 id="httpclient">HttpClient</h2>
-
-<h2 id="forms">Forms</h2>
-
-<h2 id="ngmodule">NgModule</h2>
-
-<h2 id="routing">Routing</h2>
-
-<h2 id="deploy">Deploy</h2>
+<blockquote>
+<ol>
+<li>마음이 급하다. 코딩 할 때든, 뭘 하든&hellip;</li>
+<li>마크다운 타이포그래피 CSS 수정이 시급한데 시간이 없다. 리스트 중첩 시 엉망진창.</li>
+</ol>
+</blockquote>
 
 </div>
 
@@ -218,16 +205,7 @@ One min read
   
 </svg>
 </span>
-  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/javascript'>Javascript</a>, <a class='category' href='/categories/angular'>Angular</a></div>
-<div class='tags'>
-  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
-  <line x1="7" y1="7" x2="7" y2="7"/>
-  
-</svg>
-</span>
-  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/javascript'>Javascript</a>, <a class='tag' href='/tags/typescript'>Typescript</a>, <a class='tag' href='/tags/angular'>Angular</a></div>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/til'>TIL</a></div>
 
   </div>
 </footer>
@@ -237,7 +215,7 @@ One min read
   
 <nav class='entry-nav-container'>
   <div class='entry-nav'><div class='prev-entry'>
-      <a href='/post/til/171104_til/'>
+      <a href='/post/angular/angular2_brief_summary/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -245,17 +223,7 @@ One min read
   
 </svg>
  Previous</span>
-        <span class='screen-reader'>Previous post: </span>171104_TIL</a>
-    </div><div class='next-entry'>
-      <a href='/post/til/171106_til/'>
-        <span class='screen-reader'>Next post: </span>171106_TIL<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader'>Previous post: </span>Angular2_brief_summary</a>
     </div></div>
 </nav>
 
