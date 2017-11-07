@@ -5,7 +5,7 @@
     <link>http://cmygray.github.io/</link>
     <description>Recent content in Home on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Nov 2017 23:29:50 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 07 Nov 2017 23:51:52 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -29,20 +29,24 @@
     </item>
     
     <item>
+      <title>171107_TIL</title>
+      <link>http://cmygray.github.io/post/til/171107_til/</link>
+      <pubDate>Tue, 07 Nov 2017 23:51:52 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171107_til/</guid>
+      <description> 17.11.07.(화) DONE  Angular basic- CLI, Component todomvc vanillaJS 버전 완성 DOM input.value 프로퍼티 변경하는 경우, 인터폴레이션을 쌍따옴표로 감싸준다. &amp;gt; 공백으로 분리된 문자가 씹혀서 고생 좀 했다&amp;hellip; DOM API의 문제인가 싶었는데 템플릿 표기법 문제였다니&amp;hellip; popup input 조작 시 keyup, focusout 이벤트가 서로 중첩되는 것에 주의.  HTML 텍스트 인터폴레이션에서 쌍따옴표를 생략하면 생기는 일
+const inputValue = &amp;#39;Hello World&amp;#39;; document.innerHTML = `&amp;lt;input type=&amp;#34;text&amp;#34; value=&amp;#34;${inputValue}&amp;#34;&amp;gt;`; // value=&amp;#34;Hello World&amp;#34; document.innerHTML = `&amp;lt;input type=&amp;#34;text&amp;#34; value=${inputValue}&amp;gt;`; // value=&amp;#34;Hello&amp;#34; World  TODO todos node collection, classLists를 사용해서 array 메소드를 보다 적극적으로 사용하도록 수정하기 장고 튜토리얼을 마무리하는대로, aws 무료서버로 옮겨보고 성공 시 장고로 todo 서버를 구축하고 aws에 db까지 하자는 원대한 포부는 과연&amp;hellip;  </description>
+    </item>
+    
+    <item>
       <title>171106_TIL</title>
       <link>http://cmygray.github.io/post/til/171106_til/</link>
       <pubDate>Mon, 06 Nov 2017 23:29:50 +0900</pubDate>
       
       <guid>http://cmygray.github.io/post/til/171106_til/</guid>
-      <description>17.11.04.(토) DONE  TypeScript basic: Type, Class, Interface, Generic Cracking the code interview techniques
- Technical interview 사고의 절차를 말로 표현하는 것에 익숙해지는 연습 막히더라도 생각의 헤드라인(?)이라도 먼저 밝혀라 조용한것보단 중얼중얼하는 것이 낫다
- Behavioral questions
- Quick shows of success(concrete things)
- Direct to key stories
- Technical habbit(even toy-project). Non technical =&amp;gt; make it relevant
- 7 Steps to solve algorithm problems
- 문제를 주의깊게 듣기
- 테스트 인풋은 적당히 크고 특수 케이스를 벗어나도록</description>
+      <description>17.11.06.(월) DONE  TypeScript basic: Type, Class, Interface, Generic Cracking the code interview techniques
+ Technical interview   사고의 절차를 말로 표현하는 것에 익숙해지는 연습 막히더라도 생각의 헤드라인(?)이라도 먼저 밝혀라 조용한것보단 중얼중얼하는 것이 낫다   Behavioral questions   Quick shows of success(concrete things) Direct to key stories Technical habbit(even toy-project). Non technical =&amp;gt; make it relevant
+   7 Steps to solve algorithm problems   문제를 주의깊게 듣기 테스트 인풋은 적당히 크고 특수 케이스를 벗어나도록 Brute-force first Optimize Walk throught algorithm Code it  coding style matter(brace, case-style, naming convention&amp;hellip;) 어떤 스타일이냐보다는 일관성을 유지하는 것이 중요하다.</description>
     </item>
     
     <item>
