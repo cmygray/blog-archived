@@ -5,10 +5,20 @@
     <link>http://cmygray.github.io/post/</link>
     <description>Recent content in Posts on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 08 Nov 2017 21:44:23 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 09 Nov 2017 00:25:46 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>171108_TIL</title>
+      <link>http://cmygray.github.io/post/til/171108_til/</link>
+      <pubDate>Thu, 09 Nov 2017 00:25:46 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171108_til/</guid>
+      <description>17.11.08.(수) DONE  Daily algorithm: 해커랭크 코딩 인터뷰 부시기 Easy 난이도 클리어  ____한동안 데일리 알고리즘을 등한시하고 DOM 조작질만 했더니 머리가 안돌아간다. 쉬운거라도 매일매일, 해커랭크 문제는 자료구조 원리를 알려주는 식이라서 좋다. 프로그래머스에는 이제 너무 쉽거나 너무 어려운 문제만 남아서 손댈 수가 없다..
+ Django girls tutorial - ORM 쿼리셋으로 블로그 템플릿 적용하기  ____1. post를 관리하는 ORM 쿼리셋을 view에 추가하였다. HTML템플릿 문법이 Angular와 비스무리하니까 그나마 이해가 빠르다. 오랜만에 하다보니 python-anywhere 연동하는데 좀 헤맸다.</description>
+    </item>
     
     <item>
       <title>Cracking the Coding Interview (Easy)</title>
