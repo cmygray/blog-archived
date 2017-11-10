@@ -5,10 +5,23 @@
     <link>http://cmygray.github.io/post/</link>
     <description>Recent content in Posts on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 09 Nov 2017 00:25:46 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 10 Nov 2017 14:38:57 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>171109_TIL</title>
+      <link>http://cmygray.github.io/post/til/171109_til/</link>
+      <pubDate>Fri, 10 Nov 2017 14:38:57 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171109_til/</guid>
+      <description>17.11.09.(목) DONE  Angular Component- Template, Data binding, Built-in directive
+ MVC &amp;amp; MVVC [참고]프론트엔드 웹애플리케이션 아키텍쳐 비교분석 : MVC와 MVVM()
+  ____결정적 차이는 뷰의 추상화 기능에 있다. 기존의 Controller처럼 매번 뷰에 접근하지 않고, View를 추상화 한 ViewModel;VM과 뷰 간 Data Binding을 관리한다.
+____MVC 아키텍쳐에서 단위테스트의 어려움이란, todoMVC의 전역 IIFE 함수와 render()함수 등이 항시 동반되어야만 부분적 기능 테스트가 가능했던 점에 빗대어 이해했다.
+ HTML attribute vs. property [참고]Angular DOC  ____Attribute는 DOM property를 *initialize;초기화*하는 역할만 담당한다.</description>
+    </item>
     
     <item>
       <title>171108_TIL</title>

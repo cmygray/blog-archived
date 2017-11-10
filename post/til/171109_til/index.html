@@ -4,21 +4,27 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='17.11.08.(수) DONE  Daily algorithm: 해커랭크 코딩 인터뷰 부시기 Easy 난이도 클리어  ____한동안 데일리 알고리즘을 등한시하고 DOM 조작질만 했더니 머리가 안돌아간다. 쉬운거라도 매일매일, 해커랭크 문제는 자료구조 원리를 알려주는 식이라서 좋다. 프로그래머스에는 이제 너무 쉽거나 너무 어려운 문제만 남아서 손댈 수가 없다..
- Django girls tutorial - ORM 쿼리셋으로 블로그 템플릿 적용하기  ____1. post를 관리하는 ORM 쿼리셋을 view에 추가하였다. HTML템플릿 문법이 Angular와 비스무리하니까 그나마 이해가 빠르다. 오랜만에 하다보니 python-anywhere 연동하는데 좀 헤맸다.'>
+<meta name='description' content='17.11.09.(목) DONE  Angular Component- Template, Data binding, Built-in directive
+ MVC &amp; MVVC [참고]프론트엔드 웹애플리케이션 아키텍쳐 비교분석 : MVC와 MVVM()
+  ____결정적 차이는 뷰의 추상화 기능에 있다. 기존의 Controller처럼 매번 뷰에 접근하지 않고, View를 추상화 한 ViewModel;VM과 뷰 간 Data Binding을 관리한다.
+____MVC 아키텍쳐에서 단위테스트의 어려움이란, todoMVC의 전역 IIFE 함수와 render()함수 등이 항시 동반되어야만 부분적 기능 테스트가 가능했던 점에 빗대어 이해했다.
+ HTML attribute vs. property [참고]Angular DOC  ____Attribute는 DOM property를 *initialize;초기화*하는 역할만 담당한다.'>
 
-<meta property='og:title' content='171108_TIL • cmygray'>
-<meta property='og:description' content='17.11.08.(수) DONE  Daily algorithm: 해커랭크 코딩 인터뷰 부시기 Easy 난이도 클리어  ____한동안 데일리 알고리즘을 등한시하고 DOM 조작질만 했더니 머리가 안돌아간다. 쉬운거라도 매일매일, 해커랭크 문제는 자료구조 원리를 알려주는 식이라서 좋다. 프로그래머스에는 이제 너무 쉽거나 너무 어려운 문제만 남아서 손댈 수가 없다..
- Django girls tutorial - ORM 쿼리셋으로 블로그 템플릿 적용하기  ____1. post를 관리하는 ORM 쿼리셋을 view에 추가하였다. HTML템플릿 문법이 Angular와 비스무리하니까 그나마 이해가 빠르다. 오랜만에 하다보니 python-anywhere 연동하는데 좀 헤맸다.'>
-<meta property='og:url' content='http://cmygray.github.io/post/til/171108_til/'>
+<meta property='og:title' content='171109_TIL • cmygray'>
+<meta property='og:description' content='17.11.09.(목) DONE  Angular Component- Template, Data binding, Built-in directive
+ MVC &amp; MVVC [참고]프론트엔드 웹애플리케이션 아키텍쳐 비교분석 : MVC와 MVVM()
+  ____결정적 차이는 뷰의 추상화 기능에 있다. 기존의 Controller처럼 매번 뷰에 접근하지 않고, View를 추상화 한 ViewModel;VM과 뷰 간 Data Binding을 관리한다.
+____MVC 아키텍쳐에서 단위테스트의 어려움이란, todoMVC의 전역 IIFE 함수와 render()함수 등이 항시 동반되어야만 부분적 기능 테스트가 가능했던 점에 빗대어 이해했다.
+ HTML attribute vs. property [참고]Angular DOC  ____Attribute는 DOM property를 *initialize;초기화*하는 역할만 담당한다.'>
+<meta property='og:url' content='http://cmygray.github.io/post/til/171109_til/'>
 <meta property='og:site_name' content='cmygray'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-11-09T00:25:46&#43;09:00'/><meta property='article:modified_time' content='2017-11-09T00:25:46&#43;09:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-11-10T14:38:57&#43;09:00'/><meta property='article:modified_time' content='2017-11-10T14:38:57&#43;09:00'/>
 
 <meta name="generator" content="Hugo 0.29" />
 
   <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
-  <title>171108_TIL • cmygray</title>
-  <link rel='canonical' href='http://cmygray.github.io/post/til/171108_til/'>
+  <title>171109_TIL • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til/171109_til/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -67,7 +73,7 @@
     <header class='header-container'>
   <div class='header entry-header'>
     <div class='header-info'>
-      <h1 class='title'>171108_TIL</h1>
+      <h1 class='title'>171109_TIL</h1>
       
 
     </div>
@@ -82,7 +88,7 @@
   
 </svg>
 <span class='screen-reader'>Posted on </span>
-  <time class='date' datetime='2017-11-09T00:25:46&#43;09:00'>2017, Nov 9</time>
+  <time class='date' datetime='2017-11-10T14:38:57&#43;09:00'>2017, Nov 10</time>
 </span>
 
   
@@ -109,29 +115,33 @@ One min read
     <div class='entry-content'>
   
 
-<h3 id="17-11-08-수">17.11.08.(수)</h3>
+<h3 id="17-11-09-목">17.11.09.(목)</h3>
 
 <h3 id="done">DONE</h3>
 
 <ul>
-<li>Daily algorithm: <a href="https://cmygray.github.io/post/algorithm/cracking-the-coding-interview-easy/" target="_blank">해커랭크 코딩 인터뷰 부시기 Easy 난이도 클리어</a></li>
+<li><p>Angular Component- Template, Data binding, Built-in directive</p></li>
+
+<li><p>MVC &amp; MVVC <a href="https://medium.com/@manyoung/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%9B%B9%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90-%EB%B9%84%EA%B5%90%EB%B6%84%EC%84%9D-mvc%EC%99%80-mvvm-e446a0f46d8c" target="_blank">[참고]프론트엔드 웹애플리케이션 아키텍쳐 비교분석 : MVC와 MVVM()</a></p></li>
 </ul>
 
-<p>____한동안 데일리 알고리즘을 등한시하고 DOM 조작질만 했더니 머리가 안돌아간다. 쉬운거라도 매일매일, 해커랭크 문제는 자료구조 원리를 알려주는 식이라서 좋다. 프로그래머스에는 이제 너무 쉽거나 너무 어려운 문제만 남아서 손댈 수가 없다..</p>
+<p>____결정적 차이는 뷰의 추상화 기능에 있다. 기존의 Controller처럼 매번 뷰에 접근하지 않고, View를 추상화 한 ViewModel;VM과 뷰 간 Data Binding을 관리한다.</p>
+
+<p>____MVC 아키텍쳐에서 단위테스트의 어려움이란, todoMVC의 전역 IIFE 함수와 render()함수 등이 항시 동반되어야만 부분적 기능 테스트가 가능했던 점에 빗대어 이해했다.</p>
 
 <ul>
-<li>Django girls tutorial - ORM 쿼리셋으로 블로그 템플릿 적용하기</li>
+<li>HTML attribute vs. property <a href="https://angular.io/guide/template-syntax#html-attribute-vs-dom-property" target="_blank">[참고]Angular DOC</a></li>
 </ul>
 
-<p>____1. post를 관리하는 ORM 쿼리셋을 view에 추가하였다. HTML템플릿 문법이 Angular와 비스무리하니까 그나마 이해가 빠르다. 오랜만에 하다보니 python-anywhere 연동하는데 좀 헤맸다. 서버 코드 수정 -&gt; 로컬서버에서 확인 및 github push -&gt; python-anywhere에서 git pull.</p>
+<p>____Attribute는 DOM property를 *initialize;초기화*하는 역할만 담당한다. Attribute는 변경할 수 없지만, property는 가능하다. 특정 attribute는 그에 대응하는 property가 존재하지 않으며 반대의 경우 역시 마찬가지다. 또 같은 역할이지만 명칭이 다른 경우도 있다.(e.g. class, className)</p>
 
-<p>____2. 서버 API에 대한 내용이 없어서 장고걸스 튜토리얼만 보고 todoMVC의 mongoDB를 따라만드는건 어려울 것 같다. 기존에 사용중인 서버 소스코드를 구글 웹서버에 올리는 것 부터 해보는 것으로 변경. 튜토리얼 시작할 무렵엔 무개념이라 이거 하면 간단한 서버는 만들 수 있을 줄 알았지&hellip;</p>
+<p>____<code>disabled</code> attribute는 예외적이다. 버튼 요소는 기본적으로 활성상태이며, <code>disable</code> <strong>attribute</strong>를 추가하면(값 없이) 비활성화된다. 때문에 <code>&lt;button disabled=&quot;false&quot;&gt;&lt;/button&gt;</code>라고 써도 버튼은 비활성화 상태가 된다. 이 때, Angular <strong>property</strong> binding을 통해 버튼의 <code>disabled</code> 프로퍼티를 관리할 수 있다.</p>
 
 <ul>
-<li>RxJS 맛보기: btn click stream + filtered input value stream =&gt; Promise stream의 url 쿼리로 전달해서 현재 기온 받기</li>
+<li>todoMVC Angular 프레임워크로 구현(탭기능, 서버통신 미구현)</li>
 </ul>
 
-<p>____zip code가 잘못된건지, api key가 잘못된 건지 모르겠지만 city not found. todoMVC에 얹어보는것도 괜찮겠다는 생각.</p>
+<hr />
 
 <h3 id="todo">TODO</h3>
 
@@ -163,7 +173,7 @@ One min read
   
 <nav class='entry-nav-container'>
   <div class='entry-nav'><div class='prev-entry'>
-      <a href='/post/algorithm/cracking-the-coding-interview-easy/'>
+      <a href='/post/til/171108_til/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -171,17 +181,7 @@ One min read
   
 </svg>
  Previous</span>
-        <span class='screen-reader'>Previous post: </span>Cracking the Coding Interview (Easy)</a>
-    </div><div class='next-entry'>
-      <a href='/post/til/171109_til/'>
-        <span class='screen-reader'>Next post: </span>171109_TIL<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader'>Previous post: </span>171108_TIL</a>
     </div></div>
 </nav>
 
