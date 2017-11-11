@@ -4,27 +4,21 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='17.11.09.(목) DONE  Angular Component- Template, Data binding, Built-in directive
- MVC &amp; MVVC [참고]프론트엔드 웹애플리케이션 아키텍쳐 비교분석 : MVC와 MVVM()
-  ____결정적 차이는 뷰의 추상화 기능에 있다. 기존의 Controller처럼 매번 뷰에 접근하지 않고, View를 추상화 한 ViewModel;VM과 뷰 간 Data Binding을 관리한다.
-____MVC 아키텍쳐에서 단위테스트의 어려움이란, todoMVC의 전역 IIFE 함수와 render()함수 등이 항시 동반되어야만 부분적 기능 테스트가 가능했던 점에 빗대어 이해했다.
- HTML attribute vs. property [참고]Angular DOC  ____Attribute는 DOM property를 *initialize;초기화*하는 역할만 담당한다.'>
+<meta name='description' content='17.11.10.(금) ~ 11.(토) DONE 해커톤 (금 14시 ~ 토 07시) Angular로 todoMVC 만들기 Angular Material 적용하기 HTTP request module 사용해서 리팩토링하기 mongoDB로 작성된 데이터베이스를 django 모델로 옮기기   ____1. Angular template syntax에 익숙하지 않아서, 기존 VanillarJS와 다를바 없는 코드가 몇줄 있었다. Http module component를 분리하고 싶었으나&hellip; root component와 어떤 식으로 연동되는지 몰라서 중간에 포기하고 한 컴포넌트에 몰아넣었다. 튜토리얼을 보면서 어영부영 만들다보니 request header가 뭔가 문제를 일으키는 상태.
+____2. ng Material은 form control면에서 제공하는 기능이 매우 많았다.'>
 
-<meta property='og:title' content='171109_TIL • cmygray'>
-<meta property='og:description' content='17.11.09.(목) DONE  Angular Component- Template, Data binding, Built-in directive
- MVC &amp; MVVC [참고]프론트엔드 웹애플리케이션 아키텍쳐 비교분석 : MVC와 MVVM()
-  ____결정적 차이는 뷰의 추상화 기능에 있다. 기존의 Controller처럼 매번 뷰에 접근하지 않고, View를 추상화 한 ViewModel;VM과 뷰 간 Data Binding을 관리한다.
-____MVC 아키텍쳐에서 단위테스트의 어려움이란, todoMVC의 전역 IIFE 함수와 render()함수 등이 항시 동반되어야만 부분적 기능 테스트가 가능했던 점에 빗대어 이해했다.
- HTML attribute vs. property [참고]Angular DOC  ____Attribute는 DOM property를 *initialize;초기화*하는 역할만 담당한다.'>
-<meta property='og:url' content='http://cmygray.github.io/post/til/171109_til/'>
+<meta property='og:title' content='171110-11_TIL • cmygray'>
+<meta property='og:description' content='17.11.10.(금) ~ 11.(토) DONE 해커톤 (금 14시 ~ 토 07시) Angular로 todoMVC 만들기 Angular Material 적용하기 HTTP request module 사용해서 리팩토링하기 mongoDB로 작성된 데이터베이스를 django 모델로 옮기기   ____1. Angular template syntax에 익숙하지 않아서, 기존 VanillarJS와 다를바 없는 코드가 몇줄 있었다. Http module component를 분리하고 싶었으나&hellip; root component와 어떤 식으로 연동되는지 몰라서 중간에 포기하고 한 컴포넌트에 몰아넣었다. 튜토리얼을 보면서 어영부영 만들다보니 request header가 뭔가 문제를 일으키는 상태.
+____2. ng Material은 form control면에서 제공하는 기능이 매우 많았다.'>
+<meta property='og:url' content='http://cmygray.github.io/post/til/171111_til/'>
 <meta property='og:site_name' content='cmygray'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-11-10T14:38:57&#43;09:00'/><meta property='article:modified_time' content='2017-11-10T14:38:57&#43;09:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-11-11T23:46:16&#43;09:00'/><meta property='article:modified_time' content='2017-11-11T23:46:16&#43;09:00'/>
 
 <meta name="generator" content="Hugo 0.29" />
 
   <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
-  <title>171109_TIL • cmygray</title>
-  <link rel='canonical' href='http://cmygray.github.io/post/til/171109_til/'>
+  <title>171110-11_TIL • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til/171111_til/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -73,7 +67,7 @@ ____MVC 아키텍쳐에서 단위테스트의 어려움이란, todoMVC의 전역
     <header class='header-container'>
   <div class='header entry-header'>
     <div class='header-info'>
-      <h1 class='title'>171109_TIL</h1>
+      <h1 class='title'>171110-11_TIL</h1>
       
 
     </div>
@@ -88,7 +82,7 @@ ____MVC 아키텍쳐에서 단위테스트의 어려움이란, todoMVC의 전역
   
 </svg>
 <span class='screen-reader'>Posted on </span>
-  <time class='date' datetime='2017-11-10T14:38:57&#43;09:00'>2017, Nov 10</time>
+  <time class='date' datetime='2017-11-11T23:46:16&#43;09:00'>2017, Nov 11</time>
 </span>
 
   
@@ -115,41 +109,24 @@ One min read
     <div class='entry-content'>
   
 
-<h3 id="17-11-09-목">17.11.09.(목)</h3>
+<h3 id="17-11-10-금-11-토">17.11.10.(금) ~ 11.(토)</h3>
 
 <h3 id="done">DONE</h3>
 
-<ul>
-<li><p>Angular Component- Template, Data binding, Built-in directive</p></li>
-
-<li><p>MVC &amp; MVVC <a href="https://medium.com/@manyoung/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%EC%9B%B9%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98-%EC%95%84%ED%82%A4%ED%85%8D%EC%B3%90-%EB%B9%84%EA%B5%90%EB%B6%84%EC%84%9D-mvc%EC%99%80-mvvm-e446a0f46d8c" target="_blank">[참고]프론트엔드 웹애플리케이션 아키텍쳐 비교분석 : MVC와 MVVM()</a></p></li>
-</ul>
-
-<p>____결정적 차이는 뷰의 추상화 기능에 있다. 기존의 Controller처럼 매번 뷰에 접근하지 않고, View를 추상화 한 ViewModel;VM과 뷰 간 Data Binding을 관리한다.</p>
-
-<p>____MVC 아키텍쳐에서 단위테스트의 어려움이란, todoMVC의 전역 IIFE 함수와 render()함수 등이 항시 동반되어야만 부분적 기능 테스트가 가능했던 점에 빗대어 이해했다.</p>
-
-<ul>
-<li>HTML attribute vs. property <a href="https://angular.io/guide/template-syntax#html-attribute-vs-dom-property" target="_blank">[참고]Angular DOC</a></li>
-</ul>
-
-<p>____Attribute는 DOM property를 *initialize;초기화*하는 역할만 담당한다. Attribute는 변경할 수 없지만, property는 가능하다. 특정 attribute는 그에 대응하는 property가 존재하지 않으며 반대의 경우 역시 마찬가지다. 또 같은 역할이지만 명칭이 다른 경우도 있다.(e.g. class, className)</p>
-
-<p>____<code>disabled</code> attribute는 예외적이다. 버튼 요소는 기본적으로 활성상태이며, <code>disable</code> <strong>attribute</strong>를 추가하면(값 없이) 비활성화된다. 때문에 <code>&lt;button disabled=&quot;false&quot;&gt;&lt;/button&gt;</code>라고 써도 버튼은 비활성화 상태가 된다. 이 때, Angular <strong>property</strong> binding을 통해 버튼의 <code>disabled</code> 프로퍼티를 관리할 수 있다.</p>
-
-<ul>
-<li>todoMVC Angular 프레임워크로 구현(탭기능, 서버통신 미구현)</li>
-</ul>
-
-<hr />
-
-<h3 id="todo">TODO</h3>
+<ul class="task-list">
+<li>해커톤 (금 14시 ~ 토 07시)
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> todos node collection, classLists를 사용해서 array 메소드를 보다 적극적으로 사용하도록 수정하기</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> 장고 튜토리얼을 마무리하는대로, aws 무료서버로 옮겨보고 성공 시 장고로 todo 서버를 구축하고 aws에 db까지 하자는 원대한 포부는 과연&hellip;</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> mlab에 있는 todoMVC 서버 google webserver로 이사하기</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Angular로 todoMVC 만들기</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Angular Material 적용하기</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> HTTP request module 사용해서 리팩토링하기</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> mongoDB로 작성된 데이터베이스를 django 모델로 옮기기</label></li>
+</ul></li>
 </ul>
+
+<p>____1. Angular template syntax에 익숙하지 않아서, 기존 VanillarJS와 다를바 없는 코드가 몇줄 있었다. Http module component를 분리하고 싶었으나&hellip; root component와 어떤 식으로 연동되는지 몰라서 중간에 포기하고 한 컴포넌트에 몰아넣었다. 튜토리얼을 보면서 어영부영 만들다보니 request header가 뭔가 문제를 일으키는 상태.</p>
+
+<p>____2. ng Material은 form control면에서 제공하는 기능이 매우 많았다. 커스터마이징도 어느정도 가능하고, 프로젝트에서 사용하기 좋을 것 같다. 오히려 할일이 너무 줄어드는게 아닌가 걱정될 정도..지만 그럴일은 없겠지. 하지만 제공하는 컴포넌트별로 커스터마이징 시 사용할 클래스 identifier가 다르고, 나의 CSS 지식이 일천하여.. 가장 시간을 많이 잡아먹었다.</p>
 
 </div>
 
@@ -173,7 +150,7 @@ One min read
   
 <nav class='entry-nav-container'>
   <div class='entry-nav'><div class='prev-entry'>
-      <a href='/post/til/171108_til/'>
+      <a href='/post/til/171109_til/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -181,17 +158,7 @@ One min read
   
 </svg>
  Previous</span>
-        <span class='screen-reader'>Previous post: </span>171108_TIL</a>
-    </div><div class='next-entry'>
-      <a href='/post/til/171111_til/'>
-        <span class='screen-reader'>Next post: </span>171110-11_TIL<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader'>Previous post: </span>171109_TIL</a>
     </div></div>
 </nav>
 

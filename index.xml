@@ -5,7 +5,7 @@
     <link>http://cmygray.github.io/</link>
     <description>Recent content in Home on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 10 Nov 2017 14:38:57 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 11 Nov 2017 23:46:16 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,6 +26,16 @@
       
       <guid>http://cmygray.github.io/tags/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>171110-11_TIL</title>
+      <link>http://cmygray.github.io/post/til/171111_til/</link>
+      <pubDate>Sat, 11 Nov 2017 23:46:16 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171111_til/</guid>
+      <description>17.11.10.(금) ~ 11.(토) DONE 해커톤 (금 14시 ~ 토 07시) Angular로 todoMVC 만들기 Angular Material 적용하기 HTTP request module 사용해서 리팩토링하기 mongoDB로 작성된 데이터베이스를 django 모델로 옮기기   ____1. Angular template syntax에 익숙하지 않아서, 기존 VanillarJS와 다를바 없는 코드가 몇줄 있었다. Http module component를 분리하고 싶었으나&amp;hellip; root component와 어떤 식으로 연동되는지 몰라서 중간에 포기하고 한 컴포넌트에 몰아넣었다. 튜토리얼을 보면서 어영부영 만들다보니 request header가 뭔가 문제를 일으키는 상태.
+____2. ng Material은 form control면에서 제공하는 기능이 매우 많았다.</description>
     </item>
     
     <item>
