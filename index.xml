@@ -5,7 +5,7 @@
     <link>http://cmygray.github.io/</link>
     <description>Recent content in Home on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 14 Nov 2017 02:53:30 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 15 Nov 2017 02:48:17 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,6 +26,15 @@
       
       <guid>http://cmygray.github.io/tags/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>171114_TIL</title>
+      <link>http://cmygray.github.io/post/til/171114_til/</link>
+      <pubDate>Wed, 15 Nov 2017 02:48:17 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171114_til/</guid>
+      <description>17.11.14.(화) DONE  Angular &amp;gt; Component, Directive, Pipe, Lifecycle Hooks  커스텀 pipe 만들어서 todoMVC 모델 필터링하기 todoMVC 쪼개기. select와 ul 요소를 컴포넌트로, 커스텀 pipe는 파이프로 분리하기  Angular summary 처음부터 Component 후반부까지 다시한번 정리  TODO resume 수정 Angular summary daily algorithm(hacker rank)  ____바쁘다 바빠&amp;hellip;</description>
     </item>
     
     <item>
@@ -106,18 +115,18 @@ const inputValue = &amp;#39;Hello World&amp;#39;; document.innerHTML = `&amp;lt;
     </item>
     
     <item>
-      <title>Angular2_brief_summary</title>
+      <title>Angular summary!!!</title>
       <link>http://cmygray.github.io/post/angular/angular2_brief_summary/</link>
       <pubDate>Sat, 04 Nov 2017 23:47:30 +0900</pubDate>
       
       <guid>http://cmygray.github.io/post/angular/angular2_brief_summary/</guid>
-      <description>Angular - brief summary Angular2 프로젝트와 수업을 대비하여 간단하게 살펴보고 정리중입니다. 내용은 지속적으로 추가됩니다.
-
-참고자료
- poiemaweb tutorials Angular2 vs. React  Common Pros
- 개발 생산성(대규모 지향, 컴포넌트 중심) 전체 구조를 아우르는 방식  Cons
- 퍼포먼스(렌더링 속도)  two-way binding =&amp;gt; digest loop =&amp;gt; lower performance  not support IE8  CLI 개발환경으로서 제공하는 기능
- build test add/rm element internal server  Architecture Component  has own view (component, directive, pipe) =&amp;gt; view  Directive  format: HTML element || attribute role: Direction view를 가지고 있지 않음  종류</description>
+      <description>Angular summary 참고자료
+ poiemaweb tutorials  TODO: 질문
+sourcemap 파일과 디버깅의 관계 spec.ts를 생성하지 않는 이유  Common AngularJS =&amp;gt; Angular
+ Digest Loop 문제 해결
+____Two-way binding;양방향 바인딩 데이터의 change detection;변화감지 개선. AoT Compile, Lazy loading 제공
+____성능 개선을 위한 추가 기능을 제공한다는 것은.. 쓰지 않으면 그전과 다를 바 없다는 얘기다.  CLI 개발환경으로서 제공하는 기능
+ build Unit test, End to end test env support add/rm element Live reload internal server  $ ng new &amp;lt;project-name&amp;gt; [,--skip-install]: create new project [skip package install]</description>
     </item>
     
     <item>

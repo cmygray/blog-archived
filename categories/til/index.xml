@@ -5,10 +5,19 @@
     <link>http://cmygray.github.io/categories/til/</link>
     <description>Recent content in TIL on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 14 Nov 2017 02:53:30 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 15 Nov 2017 02:48:17 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/categories/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>171114_TIL</title>
+      <link>http://cmygray.github.io/post/til/171114_til/</link>
+      <pubDate>Wed, 15 Nov 2017 02:48:17 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171114_til/</guid>
+      <description>17.11.14.(화) DONE  Angular &amp;gt; Component, Directive, Pipe, Lifecycle Hooks  커스텀 pipe 만들어서 todoMVC 모델 필터링하기 todoMVC 쪼개기. select와 ul 요소를 컴포넌트로, 커스텀 pipe는 파이프로 분리하기  Angular summary 처음부터 Component 후반부까지 다시한번 정리  TODO resume 수정 Angular summary daily algorithm(hacker rank)  ____바쁘다 바빠&amp;hellip;</description>
+    </item>
     
     <item>
       <title>171113_TIL</title>

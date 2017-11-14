@@ -5,21 +5,106 @@
     <link>http://cmygray.github.io/categories/algorithm/</link>
     <description>Recent content in Algorithm on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 08 Nov 2017 21:44:23 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 29 Oct 2017 20:01:31 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Cracking the Coding Interview (Easy)</title>
-      <link>http://cmygray.github.io/post/algorithm/cracking-the-coding-interview-easy/</link>
-      <pubDate>Wed, 08 Nov 2017 21:44:23 +0900</pubDate>
+      <title>1029_2*n 타일링</title>
+      <link>http://cmygray.github.io/post/algorithm/171029_tiling/</link>
+      <pubDate>Sun, 29 Oct 2017 20:01:31 +0900</pubDate>
       
-      <guid>http://cmygray.github.io/post/algorithm/cracking-the-coding-interview-easy/</guid>
-      <description>____hackerrank.com에서 제공하는 Cracking the Coding Interview Challenges 알고리즘 퀴즈를 풀어보자. 자료구조, 알고리즘, 테크닉 세 개의 카테고리가 있으며 총 20문제가 있다. 오늘은 Easy 난이도만 풀어보고 나머지 문제는 차차 풀어볼 생각. *Javascript를 사용한다.
-문제 설명(공통)
-____각 문제에는 Max Score가 정해져 있어 제출 코드의 퀄리티에 따라 다른 점수가 부여된다. 아마도 코드에 복잡도에 따라 점수가 달라지는 것 같다.
-____해커랭크 에디터는 Node.js 환경을 제공한다. 인풋을 main함수로 전달해주는 코드가 미리 작성되어 있으므로, 해당 함수 내부에 코드를 작성하면 된다.</description>
+      <guid>http://cmygray.github.io/post/algorithm/171029_tiling/</guid>
+      <description>문제 2 X n 타일링하기
+세로타일 한개를 0 가로타일 두개를 1로 할 때, 경우의 수를 일부만 써보면 아래와 같다. (여기서 뭔가 눈치를 챘어야 하는건데&amp;hellip;.)
+
+n=1|1 |0
+n=2|2 |00, 1 (k = 1)
+n=3|3 |000, 01 (k = 1)
+n=4|5 |0000, 001, 11 (k = 1, 2)
+n=5|8 |00000, 0001, 011 (k = 1, 2)
+n=6|13|000000, 00001, 0011, 111 (k = 1, 2, 3)
+&amp;hellip;
+
+ 0만 배열하는 경우는 1가지이므로 계산하지 않는다.</description>
+    </item>
+    
+    <item>
+      <title>1024_숫자의 표현</title>
+      <link>http://cmygray.github.io/post/algorithm/171024_serialnumbers/</link>
+      <pubDate>Sun, 29 Oct 2017 20:00:22 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/algorithm/171024_serialnumbers/</guid>
+      <description>문제 숫자의 표현
+함수 expressions는 자연수를 입력받아 해당 숫자를 연속된 자연수의 합으로 표현할 수 있는 방법의 수를 반환한다. 예를 들어 15를 연속된 자연수의 합으로 표현하는 방법은 아래 4가지가 있다.
+(1+2+3+4+5)
+(4+5+6)
+(7+8)
+(15)
+즉 expressions(15) 의 결과는 4이다.
+풀이 임의의 자연수 N을 연속된 n개의 수열의 합으로 표현할 때,
+ 길이가 같은 수열은 두개 이상 존재할 수 없다 수열의 평균 m = N / n 연속된 수열의 평균은 가운데 수 혹은 가운데 두 수의 중간값이다 즉 (N % n = 0, n은 홀수) 또는 (N % n = 0.</description>
+    </item>
+    
+    <item>
+      <title>다트 게임(카카오 코딩테스트)</title>
+      <link>http://cmygray.github.io/post/algorithm/171012_dart_game/</link>
+      <pubDate>Thu, 12 Oct 2017 22:31:49 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/algorithm/171012_dart_game/</guid>
+      <description>문제 카카오톡 신입 공채 1차 코딩테스트 2번 문제입니다.
+ 다트 게임은 총 3번의 기회로 구성된다. 각 기회마다 얻을 수 있는 점수는 0점에서 10점까지이다. 점수와 함께 Single(S), Double(D), Triple(T) 영역이 존재하고 각 영역 당첨 시 점수에서 1제곱, 2제곱, 3제곱 (점수^1 , 점수^2 , 점수^3 )으로 계산된다. 옵션으로 스타상(*) , 아차상(#)이 존재하며 스타상(*) 당첨 시 해당 점수와 바로 전에 얻은 점수를 각 2배로 만든다. 아차상(#) 당첨 시 해당 점수는 마이너스된다. 스타상(*)은 첫 번째 기회에서도 나올 수 있다.</description>
+    </item>
+    
+    <item>
+      <title>야근 지수</title>
+      <link>http://cmygray.github.io/post/algorithm/171010_overwork/</link>
+      <pubDate>Tue, 10 Oct 2017 23:31:35 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/algorithm/171010_overwork/</guid>
+      <description>문제 야근 지수
+회사원인 수민이는 많은 일이 쌓여 있습니다. 수민이는 야근을 최소화하기 위해 남은 일의 작업량을 숫자로 메기고, 일에 대한 야근 지수를 줄이기로 결정했습니다. 야근 지수는 남은 일의 작업량을 제곱하여 더한 값을 의미합니다. 수민이는 1시간 동안 남은 일 중 하나를 골라 작업량 1만큼 처리할 수 있습니다. 수민이의 퇴근까지 남은 N 시간과 각 일에 대한 작업량이 있을 때, noOvertime 함수를 제작하여 수민이의 야근 지수를 최소화 한 결과를 출력해 주세요. 예를 들어, N=4 일 때, 남은 일의 작업량이 [4, 3, 3] 이라면 야근 지수를 최소화하기 위해 일을 한 결과는 [2, 2, 2]가 되고 야근 지수는 22 + 22 + 22 = 12가 되어 12를 반환해 줍니다.</description>
+    </item>
+    
+    <item>
+      <title>다음 큰 수 찾기</title>
+      <link>http://cmygray.github.io/post/algorithm/171008_next_big_number/</link>
+      <pubDate>Sun, 08 Oct 2017 19:21:15 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/algorithm/171008_next_big_number/</guid>
+      <description>문제 어떤 수 N(1≤N≤1,000,000) 이 주어졌을 때, N의 다음 큰 숫자는 다음과 같습니다.
+ N의 다음 큰 숫자는 N을 2진수로 바꾸었을 때의 1의 개수와 같은 개수로 이루어진 수입니다. 1번째 조건을 만족하는 숫자들 중 N보다 큰 수 중에서 가장 작은 숫자를 찾아야 합니다.  예를 들어, 78을 2진수로 바꾸면 1001110 이며, 78의 다음 큰 숫자는 83으로 2진수는 1010011 입니다. N이 주어질 때, N의 다음 큰 숫자를 찾는 nextBigNumber 함수를 완성하세요.</description>
+    </item>
+    
+    <item>
+      <title>N개의 최소공배수</title>
+      <link>http://cmygray.github.io/post/algorithm/171005_nlcm/</link>
+      <pubDate>Thu, 05 Oct 2017 15:05:30 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/algorithm/171005_nlcm/</guid>
+      <description>문제 두 수의 최소공배수(Least Common Multiple)란 입력된 두 수의 배수 중 공통이 되는 가장 작은 숫자를 의미합니다. 예를 들어 2와 7의 최소공배수는 14가 됩니다. 정의를 확장해서, n개의 수의 최소공배수는 n 개의 수들의 배수 중 공통이 되는 가장 작은 숫자가 됩니다. nlcm 함수를 통해 n개의 숫자가 입력되었을 때, 최소공배수를 반환해 주세요. 예를들어 [2,6,8,14] 가 입력된다면 168을 반환해 주면 됩니다.
+풀이  가장 큰 수에 1,2,3&amp;hellip;배 한 값에 대해 다른 수의 나머지 체크 &amp;gt; 연산시간 초과로 실패</description>
+    </item>
+    
+    <item>
+      <title>콜라츠 추측</title>
+      <link>http://cmygray.github.io/post/algorithm/171004_collatz/</link>
+      <pubDate>Wed, 04 Oct 2017 14:30:45 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/algorithm/171004_collatz/</guid>
+      <description>문제: 콜라츠 추측 1937년 Collatz란 사람에 의해 제기된 이 추측은, 입력된 수가 짝수라면 2로 나누고, 홀수라면 3을 곱하고 1을 더한 다음, 결과로 나온 수에 같은 작업을 1이 될 때까지 반복할 경우 모든 수가 1이 된다는 추측입니다. 예를 들어, 입력된 수가 6이라면 6→3→10→5→16→8→4→2→1 이 되어 총 8번 만에 1이 됩니다. collatz 함수를 만들어 입력된 수가 몇 번 만에 1이 되는지 반환해 주세요. 단, 500번을 반복해도 1이 되지 않는다면 –1을 반환해 주세요.</description>
+    </item>
+    
+    <item>
+      <title>최소값 만들기</title>
+      <link>http://cmygray.github.io/post/algorithm/171003_getminsum/</link>
+      <pubDate>Tue, 03 Oct 2017 21:40:07 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/algorithm/171003_getminsum/</guid>
+      <description>문제 자연수로 이루어진 길이가 같은 수열 A,B가 있습니다. 최솟값 만들기는 A, B에서 각각 한 개의 숫자를 뽑아 두 수를 곱한 값을 누적하여 더합니다. 이러한 과정을 수열의 길이만큼 반복하여 최종적으로 누적된 값이 최소가 되도록 만드는 것이 목표입니다.
+예를 들어 A = [1, 2] , B = [3, 4] 라면 1. A에서 1, B에서 4를 뽑아 곱하여 더합니다. 2. A에서 2, B에서 3을 뽑아 곱하여 더합니다.
+수열의 길이만큼 반복하여 최솟값 10을 얻을 수 있으며, 이 10이 최솟값이 됩니다.</description>
     </item>
     
   </channel>

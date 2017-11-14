@@ -4,22 +4,22 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Angular - brief summary Angular2 프로젝트와 수업을 대비하여 간단하게 살펴보고 정리중입니다. 내용은 지속적으로 추가됩니다.
+<meta name='description' content='Angular summary 참고자료
+ poiemaweb tutorials  TODO: 질문
+sourcemap 파일과 디버깅의 관계 spec.ts를 생성하지 않는 이유  Common AngularJS =&gt; Angular
+ Digest Loop 문제 해결
+____Two-way binding;양방향 바인딩 데이터의 change detection;변화감지 개선. AoT Compile, Lazy loading 제공
+____성능 개선을 위한 추가 기능을 제공한다는 것은.. 쓰지 않으면 그전과 다를 바 없다는 얘기다.  CLI 개발환경으로서 제공하는 기능
+ build Unit test, End to end test env support add/rm element Live reload internal server  $ ng new &lt;project-name&gt; [,--skip-install]: create new project [skip package install]'>
 
-참고자료
- poiemaweb tutorials Angular2 vs. React  Common Pros
- 개발 생산성(대규모 지향, 컴포넌트 중심) 전체 구조를 아우르는 방식  Cons
- 퍼포먼스(렌더링 속도)  two-way binding =&gt; digest loop =&gt; lower performance  not support IE8  CLI 개발환경으로서 제공하는 기능
- build test add/rm element internal server  Architecture Component  has own view (component, directive, pipe) =&gt; view  Directive  format: HTML element || attribute role: Direction view를 가지고 있지 않음  종류'>
-
-<meta property='og:title' content='Angular2_brief_summary • cmygray'>
-<meta property='og:description' content='Angular - brief summary Angular2 프로젝트와 수업을 대비하여 간단하게 살펴보고 정리중입니다. 내용은 지속적으로 추가됩니다.
-
-참고자료
- poiemaweb tutorials Angular2 vs. React  Common Pros
- 개발 생산성(대규모 지향, 컴포넌트 중심) 전체 구조를 아우르는 방식  Cons
- 퍼포먼스(렌더링 속도)  two-way binding =&gt; digest loop =&gt; lower performance  not support IE8  CLI 개발환경으로서 제공하는 기능
- build test add/rm element internal server  Architecture Component  has own view (component, directive, pipe) =&gt; view  Directive  format: HTML element || attribute role: Direction view를 가지고 있지 않음  종류'>
+<meta property='og:title' content='Angular summary!!! • cmygray'>
+<meta property='og:description' content='Angular summary 참고자료
+ poiemaweb tutorials  TODO: 질문
+sourcemap 파일과 디버깅의 관계 spec.ts를 생성하지 않는 이유  Common AngularJS =&gt; Angular
+ Digest Loop 문제 해결
+____Two-way binding;양방향 바인딩 데이터의 change detection;변화감지 개선. AoT Compile, Lazy loading 제공
+____성능 개선을 위한 추가 기능을 제공한다는 것은.. 쓰지 않으면 그전과 다를 바 없다는 얘기다.  CLI 개발환경으로서 제공하는 기능
+ build Unit test, End to end test env support add/rm element Live reload internal server  $ ng new &lt;project-name&gt; [,--skip-install]: create new project [skip package install]'>
 <meta property='og:url' content='http://cmygray.github.io/post/angular/angular2_brief_summary/'>
 <meta property='og:site_name' content='cmygray'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='javascript'><meta property='article:tag' content='typescript'><meta property='article:tag' content='angular'><meta property='article:published_time' content='2017-11-04T23:47:30&#43;09:00'/><meta property='article:modified_time' content='2017-11-04T23:47:30&#43;09:00'/>
@@ -27,7 +27,7 @@
 <meta name="generator" content="Hugo 0.29" />
 
   <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
-  <title>Angular2_brief_summary • cmygray</title>
+  <title>Angular summary!!! • cmygray</title>
   <link rel='canonical' href='http://cmygray.github.io/post/angular/angular2_brief_summary/'>
   
   
@@ -77,7 +77,7 @@
     <header class='header-container'>
   <div class='header entry-header'>
     <div class='header-info'>
-      <h1 class='title'>Angular2_brief_summary</h1>
+      <h1 class='title'>Angular summary!!!</h1>
       
 
     </div>
@@ -103,7 +103,7 @@
   <polyline points="12 6 12 12 15 15"/> 
   
 </svg>
-One min read
+8 mins read
 </span>
 
 
@@ -119,37 +119,30 @@ One min read
     <div class='entry-content'>
   
 
-<h1 id="angular-brief-summary">Angular - brief summary</h1>
-
-<p>Angular2 프로젝트와 수업을 대비하여 간단하게 살펴보고 정리중입니다. 내용은 지속적으로 추가됩니다.</p>
-
-<p><br></p>
+<h1 id="angular-summary">Angular summary</h1>
 
 <p>참고자료</p>
 
 <ul>
 <li><a href="http://poiemaweb.com/angular-basics" target="_blank">poiemaweb tutorials</a></li>
-<li><a href="http://han41858.tistory.com/9" target="_blank">Angular2 vs. React</a></li>
+</ul>
+
+<p><strong>TODO:</strong> 질문</p>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> sourcemap 파일과 디버깅의 관계</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> spec.ts를 생성하지 않는 이유</label></li>
 </ul>
 
 <h2 id="common">Common</h2>
 
-<p>Pros</p>
+<p>AngularJS =&gt; Angular</p>
 
 <ul>
-<li>개발 생산성(대규모 지향, 컴포넌트 중심)</li>
-<li>전체 구조를 아우르는 방식</li>
-</ul>
-
-<p>Cons</p>
-
-<ul>
-<li>퍼포먼스(렌더링 속도)
-
-<ul>
-<li>two-way binding =&gt; digest loop =&gt; lower performance</li>
-</ul></li>
-<li>not support IE8</li>
+<li>Digest Loop 문제 해결<br />
+____Two-way binding;양방향 바인딩 데이터의 change detection;변화감지 개선.</li>
+<li>AoT Compile, Lazy loading 제공<br />
+____성능 개선을 위한 추가 기능을 제공한다는 것은.. 쓰지 않으면 그전과 다를 바 없다는 얘기다.</li>
 </ul>
 
 <h2 id="cli">CLI</h2>
@@ -158,18 +151,332 @@ One min read
 
 <ul>
 <li>build</li>
-<li>test</li>
+<li>Unit test, End to end test env support</li>
 <li>add/rm element</li>
-<li>internal server</li>
+<li>Live reload internal server</li>
 </ul>
+
+<p><code>$ ng new &lt;project-name&gt; [,--skip-install]</code>: create new project [skip package install]</p>
+
+<p><code>$ ng serve [,--open] --port &lt;number&gt;]]</code>: preview [open in browser]
+* compile
+* bundling
+* run internal server(port: 4200)
+* live reload</p>
+
+<p><code>$ ng build</code>: 배포 (dist/)
+* 내부에서 webpack이 작동하며&hellip;
+    * ts -&gt; js (transpiling)
+    * write map files(for debugging)
+    * bundling
+    * AoT compile (?)
+    * syntax check(error)
+    * semantic check(warn)
+    * minimize
+* 프로덕션 빌드 옵션 <code>--target=production</code> || <code>-prod</code></p>
+
+<p>AoT compile &lt;-&gt; JIT
+* template 파일의 컴파일 타임
+    * prod build : AoT
+    * dev build : JIT<br />
+____ng5부터는 둘다 AoT 컴파일</p>
 
 <h2 id="architecture">Architecture</h2>
 
-<h2 id="component">Component</h2>
+<p>default scaffolding</p>
+
+<p>my-app/<br />
+├── .git/<br />
+├── e2e/ (for end to end test)<br />
+├── node_modules/<br />
+├── <strong>src/</strong><br />
+├── .angular-cli.json<br />
+├── .editorconfig<br />
+├── .gitignore<br />
+├── karma.conf.js<br />
+├── package.json<br />
+├── protractor.conf.js<br />
+├── README.md<br />
+├── tsconfig.json<br />
+└── tslint.json</p>
+
+<p><strong>src</strong> 살펴보기</p>
+
+<p>src/<br />
+├── app/: angular 구성요소(컴포넌트, 모듈, 등등 cli에서 생성한 모든 파일)<br />
+│   ├── app.component.css<br />
+│   ├── app.component.html<br />
+│   ├── app.component.spec.ts<br />
+│   ├── app.component.ts<br />
+│   └── app.module.ts<br />
+├── assets/ (static files e.g. img)<br />
+├── environments/<br />
+│   ├── environment.prod.ts<br />
+│   └── environment.ts<br />
+├── favicon.ico<br />
+├── index.html (default page)<br />
+├── main.ts<br />
+├── polyfills.ts<br />
+├── styles.css (전역에 영향을 미치는 css)<br />
+├── test.ts (유닛 테스트용)<br />
+├── tsconfig.app.json<br />
+├── tsconfig.spec.json<br />
+└── typings.d.ts</p>
+
+<p>bootstrap process</p>
 
 <ul>
-<li>has own view</li>
-<li>(component, directive, pipe) =&gt; view</li>
+<li>dist/index.html 로드(5가지 bundle.js 파일을 포함한다)
+
+<ul>
+<li>inline</li>
+<li>polifills</li>
+<li>styles &lt;= style bundles(전역과 스코프 스타일 모두 HTML 헤더로 쪼개져서 들어간다)</li>
+<li>vendor &lt;= ng dependency modules</li>
+<li><strong>main</strong> &lt;= src/app/*.ts</li>
+</ul></li>
+<li>angular-cli.json 설정에 의해 main.ts 로드</li>
+<li>main.ts에 사전에 작성한 명령에 의해, module bootstrap</li>
+<li>app.module에 의해 component bootstrap</li>
+<li>component에 의해 템플릿과 데이터가 뷰로 전달된다.</li>
+</ul>
+
+<p>app 구성요소</p>
+
+<ul>
+<li>component; 컴포넌트
+
+<ul>
+<li>template, metadata, class<br />
+____뷰 생성이 주 목적. 템플릿 경로(또는 인라인 템플릿), 스타일 경로(또는 인라인 스타일), 셀렉터(상위 컴포넌트 혹은 정적파일(index.html)에서 컴포넌트를 사용하기 위한 태그명)를 데코레이터 함수의 인자로 전달하여 클래스로 공개한다. ng의 핵심! ng의 모든 것!</li>
+</ul></li>
+<li>directive; 디렉티브
+
+<ul>
+<li>=viewless component<br />
+____컴포넌트의 스타일, 이벤트, 구조에 대한 정보를 담고 있으며 템플릿에서 타깃 태그의 attribute로써 사용된다. <code>*ngFor</code>, <code>*ngIf</code>, <code>*ngSwitch</code>는 컴포넌트의 구조적 정보를 나타내는 ng native directive.</li>
+</ul></li>
+<li>service; 서비스
+
+<ul>
+<li>application common logic<br />
+____애플리케이션 공통 로직에 대한 정보를 담고 있으며 공개한 클래스의 constructor는 의존성 주입이 가능하다.</li>
+</ul></li>
+<li>router; 라우터
+
+<ul>
+<li>replace component</li>
+<li>change view</li>
+</ul></li>
+<li>module; 모듈
+
+<ul>
+<li>binding(component + directive + pipe + service) mechanism</li>
+</ul></li>
+</ul>
+
+<h2 id="component">Component</h2>
+
+<p>(component, directive, pipe) =&gt; view</p>
+
+<p>____웹 표준을 따르는 Web component를 기반으로, HTML과 JS뿐 아니라 CSS까지 독립적인 스코프를 가지도록 부품화한 것. 부품으로 분리할 때 중점은 재사용성이다.</p>
+
+<p>웹 컴포넌트의 기능적 정의(4대 기술 스펙)와 ng component 구현, 사용법</p>
+
+<ol>
+<li>뷰를 생성한다(HTML Template)<br />
+____컴포넌트 생성 시 개별 템플릿과 스타일을 작성할 수 있다. 또 directive, pipe의 도움을 통해 구조, 스타일, 이벤트, 데이터의 표현방식을 컨트롤 할 수 있다.</li>
+<li>스코프를 분리하여 DOM을 캡슐화한다(Shadow DOM)<br />
+____컴포넌트의 Encapsulation 옵션 선언을 통해 style 룰셋의 상속을 억제한다.</li>
+<li>외부에서 호출이 가능하다(HTML import)<br />
+____컴포넌트 생성 시 지정한 셀렉터는 상위 컴포넌트에서 custom tag처럼 사용할 수 있다.</li>
+<li>HTML element처럼 명칭(태그 역할을 하는 alias)을 가진다(Custom Element)<br />
+____위와 동일</li>
+</ol>
+
+<p>컴포넌트 트리</p>
+
+<p>____애플리케이션 각 페이지의 View를 재사용성을 고려해 컴포넌트 단위로 분할하여 컴포넌트 트리를 만든다. 컴포넌트 트리 노드의 연결은 정보 흐름의 통로가 된다. 컴포넌트 분할에 대한 구상은 매우 중요하다.. 아무튼 중요하다&hellip;</p>
+
+<blockquote>
+<p><strong>Eat, Sleep, Breath Components!</strong>
+Angular is all about components. Design the components first, before starting to code. By design, I mean –
+Draw outlines on the Visual-Designs to clearly demarcate which screen area will be owned by which component. Make the components small enough so that they can be reused at many places But large enough that making them any smaller makes no sense. It takes a bit of time to get used to creating this this logical grouping but you can naturally do this in 2–3 sprints. I insist on my entire team doing this for EVERY story in EVERY sprint.
+Once you know your component, document the “inputs” and “outputs”. I have a small design-checklist which I make every developer fill-up as a short design documentation for each story. Please see Design Narrative section at the bottom of below this post if you want to adapt it in your project.
+Design each component with Re-usability in mind. Try to create commonly used UI element as separate component and re-use them in the screens. <a href="https://hackernoon.com/best-practices-learnt-from-delivering-a-quality-angular4-application-2cd074ea53b3" target="_blank">Vijay Dharap, Best-practices learnt from delivering a quality Angular4 application</a></p>
+</blockquote>
+
+<p>컴포넌트 코드의 생김새</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ts" data-lang="ts"><span style="color:#60a0b0;font-style:italic">// 1. 임포트 영역
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">import</span> { Component } from <span style="color:#4070a0">&#39;@angular/core&#39;</span>;
+
+<span style="color:#60a0b0;font-style:italic">// 2. @Component 데코레이터 영역
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">@Component</span>({
+  selector<span style="color:#666">:</span> <span style="color:#4070a0">&#39;app-root&#39;</span>,
+  templateUrl<span style="color:#666">:</span> <span style="color:#4070a0">&#39;./app.component.html&#39;</span>,
+  styleUrls<span style="color:#666">:</span> [<span style="color:#4070a0">&#39;./app.component.css&#39;</span>]
+})
+<span style="color:#60a0b0;font-style:italic">// 3. 컴포넌트 클래스 영역
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">export</span> <span style="color:#007020;font-weight:bold">class</span> AppComponent {
+  title <span style="color:#666">=</span> <span style="color:#4070a0">&#39;app&#39;</span>;
+}</code></pre>
+</div>
+<ol>
+<li>import: 그냥 import다&hellip;</li>
+<li>@Component: ng 내장 Component 함수(?)를 데코레이터(<code>@</code>)를 붙여 호출하면 바로 아래에 위치한 class의 constructor를 변경한다.(바로 아래 클래스를 변경하는건 그냥 원래 그런거다. ES7 데코레이터의 기능) 데코레이터로 호출한 Component 함수의 인자는 메타데이터 객체다. 컴포넌트에 대한 정보를 인수로 전달해서 class로 공개될 component의 내용을 채운다.</li>
+<li>데코레이터에 전달한 내용을 반영하여 class를 선언한다. 이 클래스는 외부로 공개되며, app.module.ts 파일의 @NgModule 데코레이터의 인수(이것도 메타데이터?)의 일부로 전달됨으로써 호출이 가능해진다. 다만 호출 시엔 클래스명이 아니라 메타데이터에 담긴 셀렉터 프로퍼티를 custom element처럼 사용한다.</li>
+</ol>
+
+<p>컴포넌트의 동작</p>
+
+<ul>
+<li>템플릿에서 발생한 정보는 이벤트 바인딩을 통해 컴포넌트에게 전달</li>
+<li>컴포넌트 클래스가 가진 정보는 프로퍼티 바인딩을 통해 템플릿에게 전달</li>
+</ul>
+
+<p>네이밍 규칙</p>
+
+<p>____component 생성 시 hello-world 라는 이름을 전달했다면(command: <code>ng g c hello-world</code>) 관련된 각각의 이름은 아래와 같이 생성된다(cli 사용 시에는 케밥 케이스를 사용하는 것이 좋다).</p>
+
+<ul>
+<li>file name: hello-world.component.ts<br />
+____convention! 기능을 명확히 설명할 것</li>
+<li>selector name: app-hello-world<br />
+____이 때 &lsquo;app&rsquo;은 default prefix, 프로젝트 생성 시 옵션 커맨드로 정하거나 생성 후 .angular-cli.json에서 변경한다.</li>
+<li>class name: HelloWorldComponent</li>
+<li>inner template: <code>&lt;app-hello-world&gt;&lt;/app-hello-world&gt;</code></li>
+</ul>
+
+<h3 id="component-template">Component &gt; Template</h3>
+
+<p>컴포넌트 클래스(<strong>C</strong>)와 템플릿(<strong>T</strong>) 연동</p>
+
+<ul>
+<li>T to T<br />
+=&gt; DOM element 참조정보 전달<br />
+____템플릿 내부 임의의 요소 태그에 식별자를 선언(syntax: <code>#refIdentifier</code>)하면, 템플릿 내부에서 변수처럼 사용할 수 있다. 가리키는 값은 DOM element 객체.<br /></li>
+<li>C to T<br />
+=&gt; 상태정보의 전달<br />
+____class에 선언한 property는 템플릿의 ts 컨텍스트에서 참조가 가능하다. *ts 컨텍스트*란 편의상 만든 임의적 명칭으로, 표현식이 요구되는 인터폴레이션(<code>{{ expression }}</code>) 또는 데이터 바인딩 따옴표(<code>&quot;expression&quot;</code>)—정확한 명칭을 알수없다— 내부를 의미한다.<br /></li>
+<li>T to C<br />
+=&gt; 이벤트 발생정보, 핸들러 함수의 인수 전달<br />
+____eventful(?) HTML element가 템플릿에서 사용된다면, 표준 이벤트 바인딩(syntax: <code>(eventName)=&quot;handlerFunc(arg)&quot;</code>)이 가능하다.<br /></li>
+</ul>
+
+<h3 id="component-data-binding">Component &gt; Data binding</h3>
+
+<p>컴포넌트 내부에서 클래스가 보유한 정보와 템플릿의 연결을 &ldquo;선언&rdquo;함으로써 Vanillar보다 간결한 DOM 접근 코드.<br />
+____대신 무겁다(간결한데 무겁다).</p>
+
+<p>느슨한 바인딩으로 뷰와 모델의 분리가 깔끔하다.<br />
+____대신 감지 체계에 배신당한다.</p>
+
+<p>data binding 종류</p>
+
+<ul>
+<li>컴포넌트 클래스 to 템플릿<br />
+____exp에 컴포넌트 클래스 프로퍼티를 사용할 수 있다. 삼항연산자 사용도 가능하다.<br />
+
+<ul>
+<li>interpolation: HTML content | attribute value <code>{{ exp }}</code><br /></li>
+<li>prop binding: HTML property(parm) <code>[property]=exp</code></li>
+<li>attr binding: HTML attribute(arg) <code>[attrName.]</code><br />
+____HTML attr : before parsing(static), DOM property : after parsing(dynamic)</li>
+<li>class binding: <code>[class.className]=&quot;booleanExp&quot;</code> OR <code>[class]=&quot;classNames&quot;</code></li>
+<li>style binding: <code>[style.styleProp]=&quot;exp&quot;</code><br />
+____camelCase, kebap-case 모두 허용</li>
+</ul></li>
+<li>템플릿 to 컴포넌트 클래스
+
+<ul>
+<li>event binding: <code>(eventName)=&quot;statement&quot;</code></li>
+</ul></li>
+<li>양방향
+
+<ul>
+<li>two-way binding(fake): <code>[(ngModel)]=&quot;var(classProp)&quot;</code><br />
+____폼 요소의 고유 이벤트를 감지하는 built-in directive <code>ngModel</code>은 별도의 표준 이벤트 바인딩 없이 곧장 컴포넌트 클래스 프로퍼티와 바인딩할 수 있다. 이 때 모듈에 <code>FormsModule</code>을 import해야한다.</li>
+</ul></li>
+</ul>
+
+<p>Change detection</p>
+
+<p>____angular 사용 상 핵심이 컴포넌트라면, 기능? 원리? 상 핵심은 변화감지. zone.js에 대한 이해가 필요하기 때문에, 그리고 나는 아직 이해를 못했기 때문에&hellip; 배운대로 상태 정보 객체를 변경할 땐 무조건 재할당함으로써 변화감지 체계의 배신을 방지한다. 상태정보를 파헤친 글들만 모아둔 상태.</p>
+
+<ul>
+<li><a href="https://www.lucidchart.com/techblog/2016/05/04/angular-2-best-practices-change-detector-performance/" target="_blank">ANGULAR 2 BEST PRACTICES: CHANGE DETECTOR PERFORMANCE</a></li>
+<li><a href="https://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html" target="_blank">ANGULAR CHANGE DETECTION EXPLAINED</a></li>
+</ul>
+
+<h3 id="component-built-in-directive">Component &gt; built-in Directive</h3>
+
+<p>built-in directive 종류</p>
+
+<ul>
+<li>Component directive</li>
+<li>Attribute directive
+
+<ul>
+<li>ngClass: multiple class binding <code>[ngClass]=&quot;exp&quot;</code>, <code>resolvedExp = 'class1 class2 ...' || ['class1', 'class2', ...] || { 'class1': exp, 'class2': exp, ... } || anyMethod(): object</code><br />
+____컴포넌트 클래스 프로퍼티에 복수의 클래스명을 할당하고, exp에서 참조한다. 타입은 string(공백 구분), string[], object, method(): object 등등 쓰기 나름. 객체 타입 사용 시 각 프로퍼티를 클래스명으로, 값을 boolean exp로 지정해 클래스 toggle에 응용한다.</li>
+<li>ngStyle: <code>*ngStyle=&quot;{ 'cssAttr[.unitPrefix]': exp, ... }&quot;</code><br />
+____하나 이상의 스타일을 객체리터럴 형태로 지정한다. 프로퍼티명은 css attribute, 값은 그에 적절한 number 또는 string. number인 경우 단위는 프로퍼티의 suffix로 표시한다.</li>
+</ul></li>
+<li>Structural directive<br />
+____주의사항: host당 한번만 사용.<br />
+
+<ul>
+<li>ngIf: <code>*ngIf=exp</code> (exp ? add : don&rsquo;t add), <code>*ngIf=&quot;exp; else elemRef&quot;</code> (exp ? add : add elemRef)<br />
+____else를 사용한다면, 템플릿 내부 참조가 필요하기 때문에 템플릿 참조변수나 표현식이 필요하다.</li>
+<li>ngFor: <code>*ngFor=&quot;let iter of iters[; let &lt;identifier&gt;=index[; trackBy: &lt;trackMethod&gt;]]&quot;</code>
+____index, first, last, even, odd를 변수로 받을 수 있다. <code>trackMethod = (iter type injection?) =&gt; target</code> <strong>TODO: 내용 보충이 필요함</strong></li>
+<li>ngSwitch: <code>&lt;base-elem [ngSwitch]=&quot;exp&quot;&gt;&lt;sub-elem *ngSwitchCase=&quot;caseExp&quot;&gt;...&lt;sub-elem *ngSwitchDefault&gt;</code></li>
+</ul></li>
+</ul>
+
+<p>요소를 숨기는(템플릿 구조를 컨트롤하는) 방법은 여러가지다</p>
+
+<ul>
+<li>구조 디렉티브를 써서 DOM에 추가 안하기</li>
+<li>DOM에 추가하되 조건부 스타일 바인딩으로 none 또는 hidden 처리</li>
+
+<li><p>css에 display, visible 룰셋을 선언하고, 해당 클래스를 조건부로 부여하기(전통적인&hellip;)</p></li>
+
+<li><p>[ ] <strong>TODO:</strong> display: none, visible: hidden 의 차이점 다시 보기. d: none 해도 inspector element list에선 사라지던데&hellip;</p></li>
+</ul>
+
+<h3 id="component-template-ref-var-exp-operator">Component &gt; Template ref var &amp; exp operator</h3>
+
+<p>template ref var</p>
+
+<p>____T to T || T to C, syntax: <code>&lt;target-elem #identifier&gt;...&lt;base-elem (event)=handlerFunc(identifier)&gt;{{ identifier }}</code></p>
+
+<p>template exp operator</p>
+
+<p>____템플릿의 ts context(<code>{{ 여기 }}</code>, <code>[]=&quot;여기&quot;</code>, <code>*ngFor=&quot;let item of items(여기)&quot;</code>, &hellip;) 에서 표현식을 사용할 때 컴포넌트 클래스 프로퍼티를 참조했었다. 이때 함께 사용할 수 있는 연산자를 템플릿 표현식 연산자라고 한다. 데이터를 변경하지 않고 보여주는 방식만 변경한다.</p>
+
+<ul>
+<li>Safe nav: <code>exp?</code> — resolved exp가 존재하지 않아도 오류 X</li>
+<li>pipe: <code>exp | pipe: *args</code> — resoved exp를 빌트인/[커스텀 파이프]()를 통해 반환한다</li>
+</ul>
+
+<h3 id="component-interaction">Component &gt; Interaction</h3>
+
+<p>Component 간 상태 공유</p>
+
+<ul>
+<li>top down: <code>@Input</code>, <code>ViewChild</code>, <code>ViewChildren</code></li>
+<li>bottom up: <code>@Output</code>(+emitter; 노드 건너뛰기)</li>
+<li>미지의 고급진 방법&hellip;: [서비스 중재자](), [NgRx](), [Redux]()</li>
+</ul>
+
+<p>@Input</p>
+
+<p>____부모는 자신의 템플릿에서 자식 템플릿을 호출, 동시에 프로퍼티 바인딩을 함으로써 정보를 전달한다. 자식은 자신의 클래스 내부에서 Input 데코레이터를 사용, 전달받은 정보를 프로퍼티에 바인딩한다. 여기서 사용되는 데코레이터는 인스턴스로(?<strong>TODO: 사실확인</strong>) 쓰이기 때문에 메타데이터 전달과 후행 클래스가 필요없다.</p>
+
+<ul>
+<li>parent: <code>&lt;child-component-selector [propName]=&quot;exp&quot;&gt;</code></li>
+<li>child: <code>@Input() propName: type</code></li>
 </ul>
 
 <h2 id="directive">Directive</h2>
@@ -205,6 +512,17 @@ One min read
 <h2 id="routing">Routing</h2>
 
 <h2 id="deploy">Deploy</h2>
+
+<hr />
+
+<p>파일 분할 패턴, 그에 대한 궁금증과 기억해둘 것들</p>
+
+<ul class="task-list">
+<li>타입 관리를 위해 클래스 파일을 분할했다<br />
+____interface보다 class로 관리하는 것이 더 강력하다는 것을 기억할 것</li>
+<li>루트 컴포넌트 템플릿은 실제 상황에선 매우 깨끗하다..</li>
+<li><label><input type="checkbox" disabled class="task-list-item"> <strong>TODO:</strong> HTTP 요청 메소드 파일은 어떻게 하는지 모르겠다</label></li>
+</ul>
 
 </div>
 
