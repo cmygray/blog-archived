@@ -5,7 +5,7 @@
     <link>http://cmygray.github.io/</link>
     <description>Recent content in Home on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 15 Nov 2017 02:48:17 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 19 Nov 2017 23:29:47 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,6 +26,15 @@
       
       <guid>http://cmygray.github.io/tags/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>171116~19_TIL</title>
+      <link>http://cmygray.github.io/post/til/171116~19_til/</link>
+      <pubDate>Sun, 19 Nov 2017 23:29:47 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171116~19_til/</guid>
+      <description>17.11.16.(목) DONE  데이터 저널리즘 컨퍼런스 참석  js crowler도 많이 사용한다는 사실(e.g., cheerio) 왜 모바일 퍼스트인지 고민해야한다&amp;hellip; 그리고 인터랙티브 요소가 들어갈 방법도 같은 시각화도 PC보다 모바일 독자가 수동적으로 정보를 수용하는 경향   17.11.17.(금) DONE  socket.io 튜토리얼—채팅 서버 만들기 Angular and a11y 번역완료 Angular Decorator 살펴보기  ____Angular Component Interaction을 사용하면서, 생소한 데코레이터 함수를 짚고 넘어갈 필요가 있었다. ES7 관련 글과 ng DOC, TS DOC을 참조하여, 데코레이터가 클래스와 프로퍼티에 사용되는 경우를 구분하고 각 상황에서 함수가 받는 파라메터의 의미를 이해했다.</description>
     </item>
     
     <item>

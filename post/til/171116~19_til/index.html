@@ -4,19 +4,19 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='17.11.14.(화) DONE  Angular &gt; Component, Directive, Pipe, Lifecycle Hooks  커스텀 pipe 만들어서 todoMVC 모델 필터링하기 todoMVC 쪼개기. select와 ul 요소를 컴포넌트로, 커스텀 pipe는 파이프로 분리하기  Angular summary 처음부터 Component 후반부까지 다시한번 정리  TODO resume 수정 Angular summary daily algorithm(hacker rank)  ____바쁘다 바빠&hellip;'>
+<meta name='description' content='17.11.16.(목) DONE  데이터 저널리즘 컨퍼런스 참석  js crowler도 많이 사용한다는 사실(e.g., cheerio) 왜 모바일 퍼스트인지 고민해야한다&hellip; 그리고 인터랙티브 요소가 들어갈 방법도 같은 시각화도 PC보다 모바일 독자가 수동적으로 정보를 수용하는 경향   17.11.17.(금) DONE  socket.io 튜토리얼—채팅 서버 만들기 Angular and a11y 번역완료 Angular Decorator 살펴보기  ____Angular Component Interaction을 사용하면서, 생소한 데코레이터 함수를 짚고 넘어갈 필요가 있었다. ES7 관련 글과 ng DOC, TS DOC을 참조하여, 데코레이터가 클래스와 프로퍼티에 사용되는 경우를 구분하고 각 상황에서 함수가 받는 파라메터의 의미를 이해했다.'>
 
-<meta property='og:title' content='171114_TIL • cmygray'>
-<meta property='og:description' content='17.11.14.(화) DONE  Angular &gt; Component, Directive, Pipe, Lifecycle Hooks  커스텀 pipe 만들어서 todoMVC 모델 필터링하기 todoMVC 쪼개기. select와 ul 요소를 컴포넌트로, 커스텀 pipe는 파이프로 분리하기  Angular summary 처음부터 Component 후반부까지 다시한번 정리  TODO resume 수정 Angular summary daily algorithm(hacker rank)  ____바쁘다 바빠&hellip;'>
-<meta property='og:url' content='http://cmygray.github.io/post/til/171114_til/'>
+<meta property='og:title' content='171116~19_TIL • cmygray'>
+<meta property='og:description' content='17.11.16.(목) DONE  데이터 저널리즘 컨퍼런스 참석  js crowler도 많이 사용한다는 사실(e.g., cheerio) 왜 모바일 퍼스트인지 고민해야한다&hellip; 그리고 인터랙티브 요소가 들어갈 방법도 같은 시각화도 PC보다 모바일 독자가 수동적으로 정보를 수용하는 경향   17.11.17.(금) DONE  socket.io 튜토리얼—채팅 서버 만들기 Angular and a11y 번역완료 Angular Decorator 살펴보기  ____Angular Component Interaction을 사용하면서, 생소한 데코레이터 함수를 짚고 넘어갈 필요가 있었다. ES7 관련 글과 ng DOC, TS DOC을 참조하여, 데코레이터가 클래스와 프로퍼티에 사용되는 경우를 구분하고 각 상황에서 함수가 받는 파라메터의 의미를 이해했다.'>
+<meta property='og:url' content='http://cmygray.github.io/post/til/171116~19_til/'>
 <meta property='og:site_name' content='cmygray'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-11-15T02:48:17&#43;09:00'/><meta property='article:modified_time' content='2017-11-15T02:48:17&#43;09:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-11-19T23:29:47&#43;09:00'/><meta property='article:modified_time' content='2017-11-19T23:29:47&#43;09:00'/>
 
 <meta name="generator" content="Hugo 0.29" />
 
   <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
-  <title>171114_TIL • cmygray</title>
-  <link rel='canonical' href='http://cmygray.github.io/post/til/171114_til/'>
+  <title>171116~19_TIL • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til/171116~19_til/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -65,7 +65,7 @@
     <header class='header-container'>
   <div class='header entry-header'>
     <div class='header-info'>
-      <h1 class='title'>171114_TIL</h1>
+      <h1 class='title'>171116~19_TIL</h1>
       
 
     </div>
@@ -80,7 +80,7 @@
   
 </svg>
 <span class='screen-reader'>Posted on </span>
-  <time class='date' datetime='2017-11-15T02:48:17&#43;09:00'>2017, Nov 15</time>
+  <time class='date' datetime='2017-11-19T23:29:47&#43;09:00'>2017, Nov 19</time>
 </span>
 
   
@@ -107,29 +107,71 @@ One min read
     <div class='entry-content'>
   
 
-<h3 id="17-11-14-화">17.11.14.(화)</h3>
+<h3 id="17-11-16-목">17.11.16.(목)</h3>
 
 <h3 id="done">DONE</h3>
 
 <ul>
-<li>Angular &gt; Component, Directive, Pipe, Lifecycle Hooks
+<li>데이터 저널리즘 컨퍼런스 참석
 
 <ul>
-<li>커스텀 pipe 만들어서 todoMVC 모델 필터링하기</li>
-<li>todoMVC 쪼개기. select와 ul 요소를 컴포넌트로, 커스텀 pipe는 파이프로 분리하기</li>
+<li>js crowler도 많이 사용한다는 사실(e.g., cheerio)</li>
+<li>왜 모바일 퍼스트인지 고민해야한다&hellip; 그리고 인터랙티브 요소가 들어갈 방법도</li>
+<li>같은 시각화도 PC보다 모바일 독자가 수동적으로 정보를 수용하는 경향</li>
 </ul></li>
-<li>Angular summary 처음부터 Component 후반부까지 다시한번 정리</li>
 </ul>
 
-<h3 id="todo">TODO</h3>
+<h3 id="17-11-17-금">17.11.17.(금)</h3>
 
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> resume 수정</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Angular summary</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> daily algorithm(hacker rank)</label></li>
+<h3 id="done-1">DONE</h3>
+
+<ul>
+<li>socket.io 튜토리얼—채팅 서버 만들기</li>
+<li><a href="https://medium.com/dailyjs/angular-and-accessibility-8ae1f601803a" target="_blank">Angular and a11y</a> <a href="https://medium.com/@cmygray/%EB%B2%88%EC%97%AD-angular%EC%99%80-%EC%A0%91%EA%B7%BC%EC%84%B1-2952ae50f0c2" target="_blank">번역완료</a></li>
+<li>Angular Decorator 살펴보기</li>
 </ul>
 
-<p>____바쁘다 바빠&hellip;</p>
+<p>____Angular Component Interaction을 사용하면서, 생소한 데코레이터 함수를 짚고 넘어갈 필요가 있었다. ES7 관련 글과 ng DOC, TS DOC을 참조하여, 데코레이터가 클래스와 프로퍼티에 사용되는 경우를 구분하고 각 상황에서 함수가 받는 파라메터의 의미를 이해했다.</p>
+
+<h3 id="17-11-18-토">17.11.18.(토)</h3>
+
+<h3 id="done-2">DONE</h3>
+
+<ul>
+<li>todoMVC Angular + ClarityUI 사용해서 만들기</li>
+</ul>
+
+<p>____변화감지가 말을 안듣는다&hellip; 상황에 따라 어떤 바인딩을 사용할지 아직 많이 헷갈린다.<br />
+____데이터바인딩(특히 이벤트 바인딩) 시 네이밍이 정말 어렵다! 가장 어려운게 이름짓기라는 진리를 이렇게 깨닫나&hellip;</p>
+
+<ul>
+<li>Framework Change Detection 알아보기</li>
+</ul>
+
+<p>____본격적으로 프레임워크를 익히면서, 문제 상황에서 어떤 정보를 찾아봐야하는지 파악하는게 점점 어렵다. 곰곰히 생각해서 빠른 해결책을 찾기보다 프레임워크 전체를 이해하려고 하니까 코딩보다 읽기에 여념이 없어지는데.. 뭐가 맞는건지는 잘 모르겠다.</p>
+
+<h3 id="17-11-19-일">17.11.19.(일)</h3>
+
+<h3 id="done-3">DONE</h3>
+
+<ul>
+<li>GDG dev fest 참가
+
+<ul>
+<li>React with TypeScript &amp; Clean architecture 사용기</li>
+<li>Angular–React–Vue; 모던 웹 프레임워크 톺아보기</li>
+</ul></li>
+<li>Angular 예습
+
+<ul>
+<li>Service and Dependency Injection</li>
+<li>RxJS</li>
+</ul></li>
+
+<li><p>React 튜토리얼을 시작하였다..</p></li>
+
+<li><p>[ ] 다음 번역: <a href="https://vsavkin.com/angular-2-template-syntax-5f2ee9f13c6a" target="_blank">Angular Template Syntax</a></p></li>
+</ul>
 
 </div>
 
@@ -153,7 +195,7 @@ One min read
   
 <nav class='entry-nav-container'>
   <div class='entry-nav'><div class='prev-entry'>
-      <a href='/post/til/171113_til/'>
+      <a href='/post/til/171114_til/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -161,17 +203,7 @@ One min read
   
 </svg>
  Previous</span>
-        <span class='screen-reader'>Previous post: </span>171113_TIL</a>
-    </div><div class='next-entry'>
-      <a href='/post/til/171116~19_til/'>
-        <span class='screen-reader'>Next post: </span>171116~19_TIL<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader'>Previous post: </span>171114_TIL</a>
     </div></div>
 </nav>
 

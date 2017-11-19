@@ -103,7 +103,7 @@ ____성능 개선을 위한 추가 기능을 제공한다는 것은.. 쓰지 않
   <polyline points="12 6 12 12 15 15"/> 
   
 </svg>
-8 mins read
+10 mins read
 </span>
 
 
@@ -472,11 +472,13 @@ ____index, first, last, even, odd를 변수로 받을 수 있다. <code>trackMet
 
 <p>@Input</p>
 
-<p>____부모는 자신의 템플릿에서 자식 템플릿을 호출, 동시에 프로퍼티 바인딩을 함으로써 정보를 전달한다. 자식은 자신의 클래스 내부에서 Input 데코레이터를 사용, 전달받은 정보를 프로퍼티에 바인딩한다. 여기서 사용되는 데코레이터는 인스턴스로(?<strong>TODO: 사실확인</strong>) 쓰이기 때문에 메타데이터 전달과 후행 클래스가 필요없다.</p>
+<p>____부모는 자신의 템플릿에서 자식 템플릿을 호출, 동시에 프로퍼티 바인딩을 함으로써 정보를 전달한다. 자식은 자신의 클래스 내부에서 Input 데코레이터를 사용, 전달받은 정보를 프로퍼티에 바인딩한다. Input 데코레이터는 class member를 대상으로 사용되므로 메타데이터 전달과 후행 클래스가 필요없다.</p>
 
 <ul>
-<li>parent: <code>&lt;child-component-selector [propName]=&quot;exp&quot;&gt;</code></li>
-<li>child: <code>@Input() propName: type</code></li>
+<li>parent: <code>&lt;child-component-selector [propName]=&quot;exp&quot;&gt;</code><br />
+____부모 컴포넌트가 정보를 전할 땐 프로퍼티 바인딩으로 냅다 보낸다.</li>
+<li>child: <code>@Input() propName: type</code><br />
+____자식 컴포넌트가 정보를 받을 땐 타입체크만 해주면 된다.</li>
 </ul>
 
 <h2 id="directive">Directive</h2>
@@ -515,13 +517,93 @@ ____index, first, last, even, odd를 변수로 받을 수 있다. <code>trackMet
 
 <hr />
 
-<p>파일 분할 패턴, 그에 대한 궁금증과 기억해둘 것들</p>
+<h1 id="others">Others</h1>
+
+<p>지금까지 접한 ng 파일 분할 패턴, 궁금증과 기억해둘 것들</p>
 
 <ul class="task-list">
 <li>타입 관리를 위해 클래스 파일을 분할했다<br />
 ____interface보다 class로 관리하는 것이 더 강력하다는 것을 기억할 것</li>
 <li>루트 컴포넌트 템플릿은 실제 상황에선 매우 깨끗하다..</li>
 <li><label><input type="checkbox" disabled class="task-list-item"> <strong>TODO:</strong> HTTP 요청 메소드 파일은 어떻게 하는지 모르겠다</label></li>
+</ul>
+
+<h2 id="typescript-es6-문법-주워담기">TypeScript, ES6 문법 주워담기</h2>
+
+<h3 id="es6-decorator">ES6 Decorator</h3>
+
+<p>참고 자료| <a href="https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841" target="_blank">Exploring EcmaScript Decorators</a></p>
+
+<p>____Angular를 사용하면 데코레이터가 자주 등장하는데, 타입스크립트 데코레이터 문법에 익숙하지 않아 매번 헷갈려서 정리해봤다. (참고글은 ES7에 도입가능성이 있는 데코레이터를 ES6 문법으로 구현하는 내용이다. 구현 코드는 아래에 다시 등장한다.)</p>
+
+<p>문법: <code>@myDecorator</code></p>
+
+<p>____@는 데코레이터 사용 선언을, myDecorator는 앞서 선언한 함수의 이름을 의미한다.</p>
+
+<p>사용패턴</p>
+
+<p>____클래스 멤버 또는 클래스를 대상으로 사용된다. 위 글에 따르면, 프로토타입에 정보가 기록되기 전에 중재자로서 끼어들어 프로퍼티나 클래스를 티 안나게 바꾼다고 한다.</p>
+
+<ul>
+<li>클래스 멤버에 사용하는 경우<br />
+____데코레이터 함수는 순서대로 target, key, descriptor 세개의 인자를 받을 수 있다.<br />
+바로 아랫줄에 작성하는 property를 기준으로 target은 자신을 소유한 객체, key는 이름, descriptor는 자신을 기술하는 객체를 의미한다.</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#60a0b0;font-style:italic">// 데코레이터로서 호출할 함수 readonly를 작성한다. 대상 프로퍼티(데코레이터로 호출한 뒤에 따라올)의 descriptor 객체의 writable 프로퍼티의 값을 false로 바꾸고, 변경된 descriptor를 반환한다. 즉 대상 프로퍼티를 읽기전용으로 변경한다.
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">function</span> readonly(target, key, descriptor) {
+  descriptor.writable <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">false</span>;
+  <span style="color:#007020;font-weight:bold">return</span> descriptor
+}
+
+<span style="color:#60a0b0;font-style:italic">// Cat 클래스를 선언한다. readonly 데코레이터는 바로 아래 행에 위치한 meow 메소드를 readonly로 변경할 것이다.
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">class</span> Cat {
+  constructor(name) {
+    <span style="color:#007020;font-weight:bold">this</span>.name <span style="color:#666">=</span> name;
+  }
+  <span style="">@</span>readonly
+  meow() { <span style="color:#007020;font-weight:bold">return</span> <span style="color:#4070a0">`</span><span style="color:#70a0d0;font-style:italic">${</span><span style="color:#007020;font-weight:bold">this</span>.name<span style="color:#70a0d0;font-style:italic">}</span><span style="color:#4070a0"> says Meow!!`</span>; }
+}</code></pre>
+</div>
+<p>descriptor는 무엇인가?</p>
+
+<p>____<code>Object.getOwnPropertyDescriptor(object, key)</code>를 실행하면 반환하는 객체로, 프로퍼티의 메타데이터를 담고있다. value, writable, enumerable, configurable 프로퍼티를 가진다. (메타데이터라서 프로퍼티에 대한 객체의 프로퍼티&hellip;헷갈리지만 어쩔 수 없다)</p>
+
+<p>데코레이터 없이 Cat 클래스를 선언한다면, 아래와 같은 일이 일어날 것이다. ES6에서 클래스를 구현하는 방식.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#007020">Object</span>.defineProperties(Cat.prototype, {
+  <span style="color:#4070a0">&#39;name&#39;</span><span style="color:#666">:</span> {
+    value<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">undefined</span>,
+    writable<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">true</span>,
+    enumerable<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">true</span>,
+    configurable<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">true</span>
+  },
+  <span style="color:#4070a0">&#39;meow&#39;</span><span style="color:#666">:</span> {
+    value<span style="color:#666">:</span> <span style="color:#4070a0">&#39;meow() { return `${this.name} sounds meow!!`; }&#39;</span>,
+    writable<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">true</span>,
+    enumerable<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">false</span>,
+    configurable<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">true</span>
+  }
+});</code></pre>
+</div>
+<p>데코레이터를 사용하면, Cat.prototype에 접근하기 이전에 readonly 함수 내부에서 &lsquo;뭔가&rsquo; 일어난다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#60a0b0;font-style:italic">// 뒤따르는 meow 메소드를 참조하여 스코프 내에 지역변수를 생성한다.
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">let</span> descriptor <span style="color:#666">=</span> { <span style="color:#60a0b0;font-style:italic">// 기본값을 가진 descriptor가 생성된다.
+</span><span style="color:#60a0b0;font-style:italic"></span>  value<span style="color:#666">:</span> <span style="color:#4070a0">&#39;meow() { return `${this.name} sounds meow!!`; }&#39;</span>,
+  writable<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">true</span>,
+  enumerable<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">false</span>,
+  configurable<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">true</span>,
+};
+<span style="color:#60a0b0;font-style:italic">// 지역변수 descriptor를 readonly 함수를 통과시켜 재할당한다. OR 연산자는 작성자가 임의로 넣은 방호코드로 보인다. 여기 쓰인 구현코드가 실제와 정확히 일치한다고 할 수는 없지싶다.
+</span><span style="color:#60a0b0;font-style:italic"></span>descriptor <span style="color:#666">=</span> readonly(Cat.prototype, <span style="color:#4070a0">&#39;meow&#39;</span>, descriptor) <span style="color:#666">||</span> descriptor;
+<span style="color:#60a0b0;font-style:italic">// readonly 함수를 거쳐서 writable: false 프로퍼티를 지니도록 변경된 descriptor를 사용, 비로소 프로토타입에 정보를 저장한다.
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020">Object</span>.defineProperty(Cat.prototype, <span style="color:#4070a0">&#39;meow&#39;</span>, descriptor)</code></pre>
+</div>
+<p>이제 Cat 클래스 인스턴스의 meow 프로퍼티에 변경을 시도하면 Exeption 에러가 발생할 것이다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#007020;font-weight:bold">var</span> nyang <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">new</span> Cat(<span style="color:#4070a0">&#39;nayang&#39;</span>);
+nyang.meow <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">function</span>() { console.log(<span style="color:#4070a0">&#39;냥냥냥&#39;</span>) };
+<span style="">// Exeption</span></code></pre>
+</div>
+<ul>
+<li>클래스에 사용하는 경우<br /></li>
 </ul>
 
 </div>
