@@ -5,7 +5,7 @@
     <link>http://cmygray.github.io/</link>
     <description>Recent content in Home on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 19 Nov 2017 23:29:47 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 21 Nov 2017 11:07:08 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,6 +26,17 @@
       
       <guid>http://cmygray.github.io/tags/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>171120_TIL</title>
+      <link>http://cmygray.github.io/post/til/171120_til/</link>
+      <pubDate>Tue, 21 Nov 2017 11:07:08 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171120_til/</guid>
+      <description> 17.11.20.(월) DONE  Angular  Service and Dependency Injection
+____todoMVC ng HttpClient 모듈 사용 로직을 서비스로 분리 RxJS
+____HttpClient response  Django Restframework 튜토리얼  BBS 서버 만들고 Postman으로 테스트   TODO 다음 번역: Angular Template Syntax  </description>
     </item>
     
     <item>
