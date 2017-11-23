@@ -4,23 +4,25 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content=' 17.11.21.(화) DONE  Angular 수업
- FormsModule, ReactiveForms, built-in Validators ____FormModel, FormDirective 사용해서 userid, password 유효성 검사하기.  todoMVC angula &amp; clarity UI 사용해서 만들기
- http client module 사용 시 CORS 오류인지, service injection 오류인지 알 수 없지만 GET 실패.   TODO 다음 번역: Angular Template Syntax  '>
+<meta name='description' content='17.11.22.(수) DONE  Angular Tour of Hero tutorial  service 생성 시 module injection 설정하는 방법
+____proj-dir $ ng g s &lt;serviceName&gt; --module=&lt;moduleName&gt; &ldquo;Services are a great way to share information among classes that don&rsquo;t know each other&rdquo; style guide: naming convention
+____@Output 데코레이터로 이벤트 바인딩 시 접두사 &lsquo;on&rsquo; X, EventEmitter 인스턴스의 이름에 접두사 &lsquo;on&rsquo; O
+____http client로 CRUD 메소드 생성 시 이름은 뭐가 적합한지 헷갈린다. http1.1과 일치하는 get? 앱 이름과 관련되도록 getTodo?'>
 
-<meta property='og:title' content='171121_TIL • cmygray'>
-<meta property='og:description' content=' 17.11.21.(화) DONE  Angular 수업
- FormsModule, ReactiveForms, built-in Validators ____FormModel, FormDirective 사용해서 userid, password 유효성 검사하기.  todoMVC angula &amp; clarity UI 사용해서 만들기
- http client module 사용 시 CORS 오류인지, service injection 오류인지 알 수 없지만 GET 실패.   TODO 다음 번역: Angular Template Syntax  '>
-<meta property='og:url' content='http://cmygray.github.io/post/til/171121_til/'>
+<meta property='og:title' content='171122_TIL • cmygray'>
+<meta property='og:description' content='17.11.22.(수) DONE  Angular Tour of Hero tutorial  service 생성 시 module injection 설정하는 방법
+____proj-dir $ ng g s &lt;serviceName&gt; --module=&lt;moduleName&gt; &ldquo;Services are a great way to share information among classes that don&rsquo;t know each other&rdquo; style guide: naming convention
+____@Output 데코레이터로 이벤트 바인딩 시 접두사 &lsquo;on&rsquo; X, EventEmitter 인스턴스의 이름에 접두사 &lsquo;on&rsquo; O
+____http client로 CRUD 메소드 생성 시 이름은 뭐가 적합한지 헷갈린다. http1.1과 일치하는 get? 앱 이름과 관련되도록 getTodo?'>
+<meta property='og:url' content='http://cmygray.github.io/post/til/171122_til/'>
 <meta property='og:site_name' content='cmygray'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-11-22T01:11:28&#43;09:00'/><meta property='article:modified_time' content='2017-11-22T01:11:28&#43;09:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-11-23T11:04:49&#43;09:00'/><meta property='article:modified_time' content='2017-11-23T11:04:49&#43;09:00'/>
 
 <meta name="generator" content="Hugo 0.29" />
 
   <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
-  <title>171121_TIL • cmygray</title>
-  <link rel='canonical' href='http://cmygray.github.io/post/til/171121_til/'>
+  <title>171122_TIL • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til/171122_til/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -69,7 +71,7 @@
     <header class='header-container'>
   <div class='header entry-header'>
     <div class='header-info'>
-      <h1 class='title'>171121_TIL</h1>
+      <h1 class='title'>171122_TIL</h1>
       
 
     </div>
@@ -84,7 +86,7 @@
   
 </svg>
 <span class='screen-reader'>Posted on </span>
-  <time class='date' datetime='2017-11-22T01:11:28&#43;09:00'>2017, Nov 22</time>
+  <time class='date' datetime='2017-11-23T11:04:49&#43;09:00'>2017, Nov 23</time>
 </span>
 
   
@@ -111,23 +113,22 @@ One min read
     <div class='entry-content'>
   
 
-<h3 id="17-11-21-화">17.11.21.(화)</h3>
+<h3 id="17-11-22-수">17.11.22.(수)</h3>
 
 <h3 id="done">DONE</h3>
 
 <ul>
-<li><p>Angular 수업</p>
+<li>Angular Tour of Hero tutorial
 
 <ul>
-<li>FormsModule, ReactiveForms, built-in Validators
-____FormModel, FormDirective 사용해서 userid, password 유효성 검사하기.</li>
+<li>service 생성 시 module injection 설정하는 방법<br />
+____<code>proj-dir $ ng g s &lt;serviceName&gt; --module=&lt;moduleName&gt;</code></li>
+<li>&ldquo;Services are a great way to share information among classes that don&rsquo;t know each other&rdquo;</li>
+<li>style guide: naming convention<br />
+____@Output 데코레이터로 이벤트 바인딩 시 접두사 &lsquo;on&rsquo; X, EventEmitter 인스턴스의 이름에 접두사 &lsquo;on&rsquo; O<br />
+____http client로 CRUD 메소드 생성 시 이름은 뭐가 적합한지 헷갈린다. http1.1과 일치하는 get? 앱 이름과 관련되도록 getTodo?<br /></li>
 </ul></li>
-
-<li><p>todoMVC angula &amp; clarity UI 사용해서 만들기</p>
-
-<ul>
-<li>http client module 사용 시 CORS 오류인지, service injection 오류인지 알 수 없지만 GET 실패.</li>
-</ul></li>
+<li>Namu project IA, Backlog 작성</li>
 </ul>
 
 <h3 id="todo">TODO</h3>
@@ -158,7 +159,7 @@ ____FormModel, FormDirective 사용해서 userid, password 유효성 검사하�
   
 <nav class='entry-nav-container'>
   <div class='entry-nav'><div class='prev-entry'>
-      <a href='/post/til/171120_til/'>
+      <a href='/post/til/171121_til/'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -166,17 +167,7 @@ ____FormModel, FormDirective 사용해서 userid, password 유효성 검사하�
   
 </svg>
  Previous</span>
-        <span class='screen-reader'>Previous post: </span>171120_TIL</a>
-    </div><div class='next-entry'>
-      <a href='/post/til/171122_til/'>
-        <span class='screen-reader'>Next post: </span>171122_TIL<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
-  
-  <line x1="4" y1="12" x2="20" y2="12"/>
-  <polyline points="14 6 20 12 14 18"/>
-  
-</svg>
-</span>
-      </a>
+        <span class='screen-reader'>Previous post: </span>171121_TIL</a>
     </div></div>
 </nav>
 
