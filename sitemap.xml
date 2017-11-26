@@ -4,7 +4,7 @@
   
   <url>
     <loc>http://cmygray.github.io/</loc>
-    <lastmod>2017-11-24T01:19:54+09:00</lastmod>
+    <lastmod>2017-11-26T23:52:29+09:00</lastmod>
   </url>
   
   <url>
@@ -13,6 +13,16 @@
   
   <url>
     <loc>http://cmygray.github.io/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>http://cmygray.github.io/post/python/django-basic-1/</loc>
+    <lastmod>2017-11-26T23:52:29+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://cmygray.github.io/post/til/171126_til/</loc>
+    <lastmod>2017-11-26T23:48:23+09:00</lastmod>
   </url>
   
   <url>
@@ -461,7 +471,13 @@
   
   <url>
     <loc>http://cmygray.github.io/post/</loc>
-    <lastmod>2017-11-24T01:19:54+09:00</lastmod>
+    <lastmod>2017-11-26T23:52:29+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://cmygray.github.io/categories/python/</loc>
+    <lastmod>2017-11-26T23:52:29+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -473,7 +489,7 @@
   
   <url>
     <loc>http://cmygray.github.io/categories/til/</loc>
-    <lastmod>2017-11-24T01:19:54+09:00</lastmod>
+    <lastmod>2017-11-26T23:48:23+09:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on cmygray</title>
+    <link>http://cmygray.github.io/categories/python/</link>
+    <description>Recent content in Python on cmygray</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 26 Nov 2017 23:52:29 +0900</lastBuildDate>
+    
+	<atom:link href="http://cmygray.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Django Basic [1/2]</title>
+      <link>http://cmygray.github.io/post/python/django-basic-1/</link>
+      <pubDate>Sun, 26 Nov 2017 23:52:29 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/python/django-basic-1/</guid>
+      <description>인프런 Django 초보가이드 영상을 보면서 작성.
+index MVC, MFV 디자인 패턴 =&amp;gt; Django의 패턴 개념 =&amp;gt; 프로젝트와 앱 다루기 =&amp;gt; settings.py: 전체 프로젝트 설정관리 파일 =&amp;gt; manage.py: 전체 프로젝트를 관리하고 db접근을 위한 파일
+MVC &amp;amp; MVT the Essence of MVC
+ M: Data from-to DB V: View (on Client, by Data) C: Control, T: Template (by Client)  협업의 효율화를 위해 셋으로 분리한 패턴
+Django의 패턴구현  Client에서 Web Server를 향해 요청 요청정보는 WSGI(게이트웨이 인터페이스)를 통과하여 req가 된다 urls.</description>
+    </item>
+    
+  </channel>
+</rss>

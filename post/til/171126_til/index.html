@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='17.11.24.(금) DONE  todoMVC with Angular 실습 마무리  http request method를 별도의 service로 분리하기 todos 메인 뷰를 header, navigation, list, footer 네 개의 Component로 분리
+____http request data(이 경우 todos)와 유관한 컴포넌트 혹은 요소에는 ngIf 디렉티브를 사용해서, 데이터가 존재할 때만 렌더링 되도록 관리해야한다. 분리한 각 Component에 이벤트 바인딩, 메인 Component와 연동하기 (미완료)   17.11.26.(일) DONE  todoMVC with Angular &#43; Material module  분리한 각 Component에 이벤트 바인딩, 메인 Component와 연동하기 (미완료)  자식 컴포넌트의 DOM event 발생 및 핸들러 함수 호출 : 핸들러 함수명은 prefix &lsquo;on&rsquo;을 사용 EventEmitter instance(=event) 발생 : 인스턴스 이름은 $event로 전달될 데이터를 설명하는 이름을 사용 부모 컴포넌트의 핸들러 함수 호출 : 핸들러 함수의 이름은 데이터를 변경하는 동작을 의미해야한다.'>
+
+<meta property='og:title' content='171124, 26_TIL • cmygray'>
+<meta property='og:description' content='17.11.24.(금) DONE  todoMVC with Angular 실습 마무리  http request method를 별도의 service로 분리하기 todos 메인 뷰를 header, navigation, list, footer 네 개의 Component로 분리
+____http request data(이 경우 todos)와 유관한 컴포넌트 혹은 요소에는 ngIf 디렉티브를 사용해서, 데이터가 존재할 때만 렌더링 되도록 관리해야한다. 분리한 각 Component에 이벤트 바인딩, 메인 Component와 연동하기 (미완료)   17.11.26.(일) DONE  todoMVC with Angular &#43; Material module  분리한 각 Component에 이벤트 바인딩, 메인 Component와 연동하기 (미완료)  자식 컴포넌트의 DOM event 발생 및 핸들러 함수 호출 : 핸들러 함수명은 prefix &lsquo;on&rsquo;을 사용 EventEmitter instance(=event) 발생 : 인스턴스 이름은 $event로 전달될 데이터를 설명하는 이름을 사용 부모 컴포넌트의 핸들러 함수 호출 : 핸들러 함수의 이름은 데이터를 변경하는 동작을 의미해야한다.'>
+<meta property='og:url' content='http://cmygray.github.io/post/til/171126_til/'>
+<meta property='og:site_name' content='cmygray'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2017-11-26T23:48:23&#43;09:00'/><meta property='article:modified_time' content='2017-11-26T23:48:23&#43;09:00'/>
+
+<meta name="generator" content="Hugo 0.29" />
+
+  <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
+  <title>171124, 26_TIL • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til/171126_til/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/assets/css/main.77da63e1.css'><link rel='stylesheet' href='/css/custom.css'>
+</head>
+
+
+<body class='page type-post'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  <li>
+      <a href='/'>Home</a>
+    </li>
+  <li>
+      <a href='/categories/'>Categories</a>
+    </li>
+  <li>
+      <a href='/tags/'>Tags</a>
+    </li>
+  <li>
+      <a href='https://nullfull.github.io/visual-vocabulary/'>Visual-vocabulary</a>
+    </li>
+  
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>cmygray</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>171124, 26_TIL</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2017-11-26T23:48:23&#43;09:00'>2017, Nov 26</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/> 
+  
+</svg>
+2 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  
+
+<h3 id="17-11-24-금">17.11.24.(금)</h3>
+
+<h3 id="done">DONE</h3>
+
+<ul>
+<li>todoMVC with Angular 실습 마무리
+
+<ul>
+<li>http request method를 별도의 service로 분리하기</li>
+<li>todos 메인 뷰를 header, navigation, list, footer 네 개의 Component로 분리<br />
+____http request data(이 경우 <code>todos</code>)와 유관한 컴포넌트 혹은 요소에는 <code>ngIf</code> 디렉티브를 사용해서, 데이터가 존재할 때만 렌더링 되도록 관리해야한다.</li>
+<li>분리한 각 Component에 이벤트 바인딩, 메인 Component와 연동하기 (미완료)</li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h3 id="17-11-26-일">17.11.26.(일)</h3>
+
+<h3 id="done-1">DONE</h3>
+
+<ul>
+<li>todoMVC with Angular + Material module
+
+<ul>
+<li>분리한 각 Component에 이벤트 바인딩, 메인 Component와 연동하기 (미완료)
+
+<ol>
+<li>자식 컴포넌트의 DOM event 발생 및 핸들러 함수 호출 : 핸들러 함수명은 prefix &lsquo;on&rsquo;을 사용</li>
+<li>EventEmitter instance(=event) 발생 : 인스턴스 이름은 <code>$event</code>로 전달될 데이터를 설명하는 이름을 사용</li>
+<li>부모 컴포넌트의 핸들러 함수 호출 : 핸들러 함수의 이름은 데이터를 변경하는 동작을 의미해야한다.</li>
+<li>콜백함수로 http 서비스의 메소드 호출 : 메소드명은 가급적 api명을 따라 짓는다<br />
+____위의 네이밍 컨벤션에 따를 때 todoMVC에서 사용하는 이벤트 핸들링의 예를 들면 이런 식이다.<br />
+<code>onEnter()</code> =&gt; <code>todoEntered</code> =&gt; <code>onTodoEntered(content)</code> =&gt; <code>addTodo(payload)</code><br />
+<code>onClick(id)</code> =&gt; <code>todoRemoved</code> =&gt; <code>onTodoRemoved(id)</code> =&gt; <code>deleteTodoById(payload)</code><br />
+1.에선 DOM event명으로, 2,3은 데이터모델과 변경행위를, 4는 데이터모델변경행위를 server api에 근거해서 이름지었다. 어떤 방법이 가장 협업에 좋은지 궁금. 여기서 사용한 규칙은 Angular style guide를 참고했다.</li>
+</ol></li>
+<li>dblclick 이벤트로 mat-dialog 모듈 호출해서 할일 내용 수정하기 =&gt; 실패;</li>
+</ul></li>
+<li>인프런 django 초보가이드 1강 수강
+
+<ul>
+<li>MVC 패턴의 개념과 django 아키텍쳐</li>
+<li>프로젝트와 애플리케이션의 구분</li>
+<li>기본 스캐폴딩의 파일별 역할</li>
+<li><code>settings.py</code>, <code>manage.py</code> 각 코드의 의미</li>
+<li><code>manage.py</code> 기본 명령어</li>
+</ul></li>
+<li>axure 와이어프레임 툴로 namu 서비스 <a href="https://mbx562.axshare.com/" target="_blank">와이어프레임 작성</a>
+
+<ul>
+<li>일단 메인 레이아웃과 nav만&hellip;<br />
+____어도비 툴 쓰던 추억이 새록새록.. 이거 재밌으면 안되는데&hellip;</li>
+</ul></li>
+</ul>
+
+<h3 id="todo">TODO</h3>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> 다음 번역: <a href="https://vsavkin.com/angular-2-template-syntax-5f2ee9f13c6a" target="_blank">Angular Template Syntax</a></label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Namu프로젝트 레이아웃 구성에 필요한만큼만 Material design guide 읽기</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> django 기초 2강 보기</label></li>
+</ul>
+
+<p>Q.</p>
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Observable 형태로 도착한 것을 .subscribe 체이닝 시 첫번째 콜백함수로 받을 수 있는데, http client를 주입해서 만든 메소드의 return 값을 컨트롤할 방법은 없는지?(조건부 반환이라 타입이 불분명하다..) <em>자체해결</em></label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> 서비스 import와 provider 차이 불분명</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> pathMatch: full 무엇..?</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> router snapshot 다시 볼 것.</label></li>
+</ul>
+
+<h3 id="review">review</h3>
+
+<ol>
+<li><p>django 강의는 프론트엔드 개발을 분리하지 않고 진행하다보니 프로세스에서 어느 부분을 angular로 대체하여야 하는지 아직 모르겠다. 일단 기초강의를 듣고, todoMVC 모델을 생성하면 갈피가 잡히려나.. 잡히겠지&hellip;</p></li>
+
+<li><p>venv 세팅과 django 프로젝트 관리는 다시 보니까 명확히 이해가 됐다. migration도 무작정 튜토리얼을 따라할 때보다 정확히 이해했고 필요한 건 sqlite 쿼리 문법에 대한 두려움 없애기&hellip;</p></li>
+</ol>
+
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  <div class='categories'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/til'>TIL</a></div>
+
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/post/til/171123_til/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>171123_TIL</a>
+    </div><div class='next-entry'>
+      <a href='/post/python/django-basic-1/'>
+        <span class='screen-reader'>Next post: </span>Django Basic [1/2]<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+  
+<div class='comments-container'>
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cmygray" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:cmygray@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br
+  />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='/assets/js/main.f29c93b9.js'></script><script src='/js/custom.js'></script></body>
+
+</html>
+

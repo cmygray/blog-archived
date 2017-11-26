@@ -5,7 +5,7 @@
     <link>http://cmygray.github.io/</link>
     <description>Recent content in Home on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 24 Nov 2017 01:19:54 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 26 Nov 2017 23:52:29 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,6 +26,29 @@
       
       <guid>http://cmygray.github.io/tags/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Django Basic [1/2]</title>
+      <link>http://cmygray.github.io/post/python/django-basic-1/</link>
+      <pubDate>Sun, 26 Nov 2017 23:52:29 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/python/django-basic-1/</guid>
+      <description>인프런 Django 초보가이드 영상을 보면서 작성.
+index MVC, MFV 디자인 패턴 =&amp;gt; Django의 패턴 개념 =&amp;gt; 프로젝트와 앱 다루기 =&amp;gt; settings.py: 전체 프로젝트 설정관리 파일 =&amp;gt; manage.py: 전체 프로젝트를 관리하고 db접근을 위한 파일
+MVC &amp;amp; MVT the Essence of MVC
+ M: Data from-to DB V: View (on Client, by Data) C: Control, T: Template (by Client)  협업의 효율화를 위해 셋으로 분리한 패턴
+Django의 패턴구현  Client에서 Web Server를 향해 요청 요청정보는 WSGI(게이트웨이 인터페이스)를 통과하여 req가 된다 urls.</description>
+    </item>
+    
+    <item>
+      <title>171124, 26_TIL</title>
+      <link>http://cmygray.github.io/post/til/171126_til/</link>
+      <pubDate>Sun, 26 Nov 2017 23:48:23 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171126_til/</guid>
+      <description>17.11.24.(금) DONE  todoMVC with Angular 실습 마무리  http request method를 별도의 service로 분리하기 todos 메인 뷰를 header, navigation, list, footer 네 개의 Component로 분리
+____http request data(이 경우 todos)와 유관한 컴포넌트 혹은 요소에는 ngIf 디렉티브를 사용해서, 데이터가 존재할 때만 렌더링 되도록 관리해야한다. 분리한 각 Component에 이벤트 바인딩, 메인 Component와 연동하기 (미완료)   17.11.26.(일) DONE  todoMVC with Angular + Material module  분리한 각 Component에 이벤트 바인딩, 메인 Component와 연동하기 (미완료)  자식 컴포넌트의 DOM event 발생 및 핸들러 함수 호출 : 핸들러 함수명은 prefix &amp;lsquo;on&amp;rsquo;을 사용 EventEmitter instance(=event) 발생 : 인스턴스 이름은 $event로 전달될 데이터를 설명하는 이름을 사용 부모 컴포넌트의 핸들러 함수 호출 : 핸들러 함수의 이름은 데이터를 변경하는 동작을 의미해야한다.</description>
     </item>
     
     <item>
