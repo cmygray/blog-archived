@@ -5,10 +5,33 @@
     <link>http://cmygray.github.io/categories/til/</link>
     <description>Recent content in TIL on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 26 Nov 2017 23:48:23 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 01 Dec 2017 01:06:20 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/categories/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>171130_TIL</title>
+      <link>http://cmygray.github.io/post/til/171130_til/</link>
+      <pubDate>Fri, 01 Dec 2017 01:06:20 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171130_til/</guid>
+      <description>17.11.30.(목) sprint1, day4 DONE  main-feed-component 분리 후 관련 요소 작성  main-feed-content-component 작업 answer-component 작업
+____mat-card component를 사용해서 질문 포스팅, 답변이 완료된 질문 포스팅 카드 마크업, 스타일 구성 완료   TODO 다음번역: Visualizing Data with Angular and D3 -&amp;gt; 주말 Namu프로젝트 레이아웃 구성에 필요한만큼만 Material design guide 읽기 [ ] django 기초 2강 보기 -&amp;gt; 주말
+ 궁금한것들 -&amp;gt; 주말
+Observable 형태로 도착한 것을 .subscribe 체이닝 시 첫번째 콜백함수로 받을 수 있는데, http client를 주입해서 만든 메소드의 return 값을 컨트롤할 방법은 없는지?</description>
+    </item>
+    
+    <item>
+      <title>171127~29_TIL</title>
+      <link>http://cmygray.github.io/post/til/171127~29_til/</link>
+      <pubDate>Fri, 01 Dec 2017 01:06:13 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til/171127~29_til/</guid>
+      <description>17.11.27.(월) sprint start DONE  Nanum 팀프로젝트 와이어프레임 작성  답변 달기 페이지, 프로필 페이지 프로토타이핑  먼지먹고 무임승차 페이지 만들기: free-ride-with-dust
+____리소스 조사만 하고 거의 라이브코딩 관람모드&amp;hellip; 서버를 배우자&amp;hellip;  17.11.28.(화) sprint1, day2 DONE  메인페이지와 글로벌 css 룰셋 작성
+____clarty UI system 과 960 grid system 사이에서 갈팡질팡 삽질을 거듭하다 결국 960으로..  17.11.29.(수) sprint1, day3  메인페이지 레이아웃 작성  메인 피드, 포스트, 사이드메뉴 레이아웃 작성 ____스크립트는 대체 언제 할 거니&amp;hellip;?</description>
+    </item>
     
     <item>
       <title>171124, 26_TIL</title>
