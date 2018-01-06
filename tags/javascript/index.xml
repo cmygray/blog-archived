@@ -5,10 +5,21 @@
     <link>http://cmygray.github.io/tags/javascript/</link>
     <description>Recent content in Javascript on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 08 Nov 2017 21:44:23 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jan 2018 21:40:27 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>You Don&#39;t Know JS: 객체</title>
+      <link>http://cmygray.github.io/post/til-2018/0106/</link>
+      <pubDate>Sat, 06 Jan 2018 21:40:27 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til-2018/0106/</guid>
+      <description>객체; Object  In ECMAScript, an object is a collection of zero or more properties each with attributes that determine how each property can be used (&amp;hellip;) Properties are containers that hold other objects, primitive values, or functions.
+ {}도 객체요, { msg: &#39;hello world&#39; } 또한 객체다. 객체를 구성하는 프로퍼티는 키와 값으로 구분되며, 객체, 원시값, 함수를 값으로 취한다.
+프로퍼티 값의 타입이 함수일 때, 흔히 메소드라고 부른다. 하지만 이런 견해도 있다.</description>
+    </item>
     
     <item>
       <title>Cracking the Coding Interview (Easy)</title>
