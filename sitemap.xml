@@ -8,15 +8,15 @@
   </url>
   
   <url>
+    <loc>http://cmygray.github.io/about/</loc>
+  </url>
+  
+  <url>
     <loc>http://cmygray.github.io/categories/</loc>
   </url>
   
   <url>
     <loc>http://cmygray.github.io/tags/</loc>
-  </url>
-  
-  <url>
-    <loc>http://cmygray.github.io/about/</loc>
   </url>
   
   <url>
@@ -436,13 +436,13 @@
   </url>
   
   <url>
-    <loc>http://cmygray.github.io/categories/angular/</loc>
+    <loc>http://cmygray.github.io/tags/angular/</loc>
     <lastmod>2017-11-04T23:47:30+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://cmygray.github.io/tags/angular/</loc>
+    <loc>http://cmygray.github.io/categories/angular/</loc>
     <lastmod>2017-11-04T23:47:30+09:00</lastmod>
     <priority>0</priority>
   </url>
@@ -477,14 +477,14 @@
   </url>
   
   <url>
-    <loc>http://cmygray.github.io/categories/javascript/</loc>
-    <lastmod>2017-11-04T23:47:30+09:00</lastmod>
+    <loc>http://cmygray.github.io/tags/javascript/</loc>
+    <lastmod>2018-01-06T21:40:27+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://cmygray.github.io/tags/javascript/</loc>
-    <lastmod>2018-01-06T21:40:27+09:00</lastmod>
+    <loc>http://cmygray.github.io/categories/javascript/</loc>
+    <lastmod>2017-11-04T23:47:30+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -500,14 +500,14 @@
   </url>
   
   <url>
-    <loc>http://cmygray.github.io/categories/python/</loc>
-    <lastmod>2017-11-26T23:52:29+09:00</lastmod>
+    <loc>http://cmygray.github.io/tags/python/</loc>
+    <lastmod>2017-10-10T23:31:35+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://cmygray.github.io/tags/python/</loc>
-    <lastmod>2017-10-10T23:31:35+09:00</lastmod>
+    <loc>http://cmygray.github.io/categories/python/</loc>
+    <lastmod>2017-11-26T23:52:29+09:00</lastmod>
     <priority>0</priority>
   </url>
   
