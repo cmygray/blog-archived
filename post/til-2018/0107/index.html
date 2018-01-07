@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='객체 객체는 0개 이상의 프로퍼티로 구성되며, 프로퍼티는 데이터 프로퍼티와 접근자 프로퍼티로 나뉜다. 또 ES5부터 모든 프로퍼티는 서술자; Property Descriptor에 의해 표기되며 프로퍼티의 종류에 따라 서술자의 어트리뷰트가 달라진다. 프로퍼티 서술자의 어트리뷰트로는, [[Value]], [[Writable]], [[Configurable]], [[Enumerable]], [[Get]], [[Set]] 등이 있다. 까지가 앞서 살펴본 내용이었다.
+ 기본적으로 [[Get]] 연산은 주어진 이름의 프로퍼티를 찾아보고 있으면 그 값을 반환한다. 프로퍼티를 찾아보고 없으면 (&hellip;) 다른 중요한 작업을 하도록 정의되어 있는데(&hellip;)
+ 일반적으로 프로퍼티 접근자를 사용했을 때의 동작을 설명하고 있다.'>
+
+<meta property='og:title' content='You Don&#39;t Know JS: 객체(마무리) • cmygray'>
+<meta property='og:description' content='객체 객체는 0개 이상의 프로퍼티로 구성되며, 프로퍼티는 데이터 프로퍼티와 접근자 프로퍼티로 나뉜다. 또 ES5부터 모든 프로퍼티는 서술자; Property Descriptor에 의해 표기되며 프로퍼티의 종류에 따라 서술자의 어트리뷰트가 달라진다. 프로퍼티 서술자의 어트리뷰트로는, [[Value]], [[Writable]], [[Configurable]], [[Enumerable]], [[Get]], [[Set]] 등이 있다. 까지가 앞서 살펴본 내용이었다.
+ 기본적으로 [[Get]] 연산은 주어진 이름의 프로퍼티를 찾아보고 있으면 그 값을 반환한다. 프로퍼티를 찾아보고 없으면 (&hellip;) 다른 중요한 작업을 하도록 정의되어 있는데(&hellip;)
+ 일반적으로 프로퍼티 접근자를 사용했을 때의 동작을 설명하고 있다.'>
+<meta property='og:url' content='http://cmygray.github.io/post/til-2018/0107/'>
+<meta property='og:site_name' content='cmygray'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='javascript'><meta property='article:published_time' content='2018-01-07T14:53:27&#43;09:00'/><meta property='article:modified_time' content='2018-01-07T14:53:27&#43;09:00'/>
+
+<meta name="generator" content="Hugo 0.29" />
+
+  <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
+  <title>You Don&#39;t Know JS: 객체(마무리) • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til-2018/0107/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/assets/css/main.77da63e1.css'><link rel='stylesheet' href='/css/custom.css'>
+</head>
+
+
+<body class='page type-post'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  <li>
+      <a href='/'>Home</a>
+    </li>
+  <li>
+      <a href='/about/'>About</a>
+    </li>
+  <li>
+      <a href='/categories/'>Categories</a>
+    </li>
+  <li>
+      <a href='/tags/'>Tags</a>
+    </li>
+  
+    <li>
+      <form role="search" method="get" action="https://www.google.com/search" target="w">
+        <input type="search" placeholder="Search..." value="" name="q" title="Search for:">
+        <input type="hidden" name="sitesearch" value="cmygray.github.io/">
+      </form>
+    </li>
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>cmygray</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>You Don&#39;t Know JS: 객체(마무리)</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2018-01-07T14:53:27&#43;09:00'>2018, Jan 7</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/> 
+  
+</svg>
+4 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  
+
+<h1 id="객체">객체</h1>
+
+<p>객체는 0개 이상의 프로퍼티로 구성되며, 프로퍼티는 데이터 프로퍼티와 접근자 프로퍼티로 나뉜다. 또 ES5부터 모든 프로퍼티는 서술자; Property Descriptor에 의해 표기되며 프로퍼티의 종류에 따라 서술자의 어트리뷰트가 달라진다. 프로퍼티 서술자의 어트리뷰트로는, <code>[[Value]]</code>, <code>[[Writable]]</code>, <code>[[Configurable]]</code>, <code>[[Enumerable]]</code>, <code>[[Get]]</code>, <code>[[Set]]</code> 등이 있다. 까지가 앞서 살펴본 내용이었다.</p>
+
+<blockquote>
+<p>기본적으로 [[Get]] 연산은 주어진 이름의 프로퍼티를 찾아보고 있으면 그 값을 반환한다. 프로퍼티를 찾아보고 없으면 (&hellip;) 다른 중요한 작업을 하도록 정의되어 있는데(&hellip;)</p>
+</blockquote>
+
+<p>일반적으로 프로퍼티 접근자를 사용했을 때의 동작을 설명하고 있다. 여기서 말하는 [[Get]]연산은 Specification Types 중, Reference Type에 대한 abstract operation이며 책에서 설명하는 동작은 아래를 의미한다.</p>
+
+<blockquote>
+<p>GetValue (V)<br />
+(&hellip;)<br />
+5. If IsPropertyReference(V), then<br />
+    a. If HasPrimitiveBase(V) is true, then<br />
+        i. Assert: In this case, base will never be null or undefined.<br />
+        ii. Let base be ToObject(base).
+    b. Return base.<a href="GetReferencedName(V), GetThisValue(V)" target="_blank">[Get]</a>.<br />
+6. Else base must be an Environment Record,<br />
+    a. Return base.GetBindingValue(GetReferencedName(V), IsStrictReference(V))</p>
+</blockquote>
+
+<p>다른 중요한작업(프로토타입 체인 참조)은 6.a와 같다.</p>
+
+<blockquote>
+<p>[[Put]] 알고리즘은 이미 존재하는 프로퍼티에 대해 대략 다음의 확인 절차를 밟는다.
+1. 프로퍼티가 접근 서술자인가? 맞으면 세터를 호출한다.
+2. 프로퍼티가 <code>writable: false</code>인 데이터 서술자인가? 맞으면 비엄격 모드에서 조용히 실패하고 엄격모드에선 <code>TypeError</code>가 발생한다.
+3. 이외에는 프로퍼티에 해당 값을 세팅한다.</p>
+</blockquote>
+
+<p>[[Get]]에 이어서 [[Put]] 연산도 설명하고 있다.</p>
+
+<blockquote>
+<p>PutValue (V, W)<br />
+(&hellip;)<br />
+6. Else if IsPropertyReference(V), then<br />
+    a. If HasPrimitiveBase(V) is true, then<br />
+        i. Assert: In this case, base will never be null or undefined.<br />
+        ii. Set base to ToObject(base).<br />
+    b. Let succeeded be base.<a href="GetReferencedName(V), W, GetThisValue(V)" target="_blank">[Set]</a>.<br />
+    c. ReturnIfAbrupt(succeeded).<br />
+    d. If succeeded is false and IsStrictReference(V) is true, throw a TypeError exception.<br />
+    e. Return.<br />
+7. Else base must be an Environment Record.<br />
+    a. Return base.SetMutableBinding(GetReferencedName(V), W, IsStrictReference(V))</p>
+</blockquote>
+
+<p>Get, Put은 데이터 프로퍼티를 통해 객체 수준에서 값을 조회/변경하는 로직이다.</p>
+
+<blockquote>
+<p>ES5부터는 게터/세터를 통해 프로퍼티 수준에서 (&hellip;) 게터/세터는 각각 실제로 값을 가져오는/세팅하는 감춰진 함수를 호출하는 프로퍼티다.</p>
+</blockquote>
+
+<p>게터/세터는 get, set 메소드로 구현되어있으며 접근 서술자이기 때문에 데이터 서술자와는 다른 어트리뷰트를 가진다. 명세에 표시된 syntax는 아래와 같다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">get PropertyName ( ) { FunctionBody }
+set PropertyName ( PropertySetParameterList ) { FunctionBody }</code></pre>
+</div>
+<p>예로 든 코드는 리터럴 방식이지만, <code>Object.defineProperty</code> 함수를 사용할 수도 있다. 게터/세터, <code>enumerable</code>, <code>configurable</code> 어트리뷰트를 포함하는 접근 서술자 형식의 객체를 전달하여 프로퍼티를 생성한다.</p>
+
+<blockquote>
+<p>게터와 세터는 항상 둘 다 선언하는 것이 좋다(한쪽만 선언하면 예상외의 결과가 나올 수 있다.</p>
+</blockquote>
+
+<p>게터와 세터를 동시에 선언하는 예. 게터는 세터에 의해 할당되는 프로퍼티 <code>_a_</code>에 의존적이다. 예상외의 결과에 대한 자세한 설명은 없지만, 아무래도 Encapsulation에 대한 것으로 보인다. 하지만 예제 코드만으로는 <code>_a_</code> 프로퍼티를 데이터 접근자처럼 사용하는 것을 막을 수 없다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#007020;font-weight:bold">var</span> obj <span style="color:#666">=</span> {
+  get a() {
+    <span style="color:#007020;font-weight:bold">return</span> <span style="color:#007020;font-weight:bold">this</span>._a_;
+  },
+  set a(val) {
+    <span style="color:#007020;font-weight:bold">this</span>._a_ <span style="color:#666">=</span> val <span style="color:#666">*</span> <span style="color:#40a070">2</span>;
+  }
+};</code></pre>
+</div>
+<blockquote>
+<p>getter가 바인딩된 프로퍼티는 동시에 실제 값을 가질 수는 없지만, getter와 setter를 동시에 바인딩해 일종의 유사 프로퍼티(pseudo-property)를 만들 수는 있습니다. MDN 문서에서 발췌</p>
+</blockquote>
+
+<p>마침 좋은 스레드를 찾아서 스크랩 <a href="http://qna.iamprogrammer.io/t/encapsulation-getter-setter/193" target="_blank">캡슐화(encapsulation)를 위한 getter, setter는 정말 필요한 걸까요?</a>. Immutability 이슈는 타입스크립트와 함수형 프로그래밍을 통해서 알아볼 것이기 때문에 ES5의 명세를 더 후벼파봤자 큰 효과가 없을 것 같다.</p>
+
+<p>열거</p>
+
+<p>프로퍼티 서술자의 어트리뷰트 중 하나인 <code>enumerable</code>의 값에 따라서 <code>for...in</code> 루프로 객체를 순회했을 때 특정 프로퍼티의 포함여부를 결정할 수 있다.</p>
+
+<blockquote>
+<p>for &hellip; in 루프를 배열에 사용하면 배열 인덱스뿐만 아니라 다른 열거 가능한 프로퍼티까지 (&hellip;) 배열은 과거처럼 숫자 인덱스로 순회하는 편이 바람직하다.</p>
+
+<p><code>propertyIsEnumerable()</code>은 어떤 프로퍼티가 해당 객체의 직속 프로퍼티인 동시에 <code>enumerable: true</code>인지 검사한다.</p>
+</blockquote>
+
+<p>직속 프로퍼티란 프로토타입에 위임되지 않은(프로토타입 체인을 거슬러올라가며 찾지 않은 채) 프로퍼티라를 말한다.</p>
+
+<p>순회</p>
+
+<p>뭔가 링크드 리스트같지만 확신할 순 없는, 지금까지 못본 척 했던 <code>iterator</code> 객체가 등장했다&hellip;</p>
+
+<p>배열의 내장 iterator를 알고리즘으로 만들어서 프로퍼티에 할당하는 패턴이 등장한다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#60a0b0;font-style:italic">// target
+</span><span style="color:#60a0b0;font-style:italic"></span><span style="color:#007020;font-weight:bold">var</span> obj <span style="color:#666">=</span> {
+    a<span style="color:#666">:</span> <span style="color:#40a070">2</span>,
+    b<span style="color:#666">:</span> <span style="color:#40a070">3</span>
+};
+
+<span style="color:#007020">Object</span>.defineProperty.(obj, Symbol.iterator, { <span style="color:#60a0b0;font-style:italic">// Symbol.iterator라는 이름은 순전히 내장 이터레이터를 따라한 것
+</span><span style="color:#60a0b0;font-style:italic"></span>    enumerable<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">false</span>,
+    writable<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">false</span>,
+    configurable<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">true</span>,
+    value<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">function</span>() {
+        <span style="color:#007020;font-weight:bold">var</span> o <span style="color:#666">=</span> <span style="color:#007020;font-weight:bold">this</span>; <span style="color:#60a0b0;font-style:italic">// this === obj
+</span><span style="color:#60a0b0;font-style:italic"></span>        <span style="color:#007020;font-weight:bold">var</span> idx <span style="color:#666">=</span> <span style="color:#40a070">0</span>; <span style="color:#60a0b0;font-style:italic">// initialize
+</span><span style="color:#60a0b0;font-style:italic"></span>        <span style="color:#007020;font-weight:bold">var</span> ks <span style="color:#666">=</span> <span style="color:#007020">Object</span>.keys(o); <span style="color:#60a0b0;font-style:italic">// =&gt; prop[]
+</span><span style="color:#60a0b0;font-style:italic"></span>        <span style="color:#007020;font-weight:bold">return</span> {
+            next<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">function</span>() {
+                <span style="color:#007020;font-weight:bold">return</span> {
+                    value<span style="color:#666">:</span> o[ks[idx<span style="color:#666">++</span>]], <span style="color:#60a0b0;font-style:italic">// 마지막 루프에서 value: undefined 출력을 막을 방도는 없어보인다
+</span><span style="color:#60a0b0;font-style:italic"></span>                    done<span style="color:#666">:</span> (idx <span style="color:#666">&gt;</span> ks.length)
+                };
+            }
+        };
+    }
+});
+
+<span style="color:#007020;font-weight:bold">var</span> it <span style="color:#666">=</span> obj.[Symbol.iterator]();
+it.next();
+it.next();
+it.next();</code></pre>
+</div>
+<blockquote>
+<p>ES6의 for&hellip;of 루프와 커스텀 순회자는 사용자 정의 객체를 조작하는 데 아주 탁월한 새로운 구문 도구다.</p>
+</blockquote>
+
+<h1 id="참고자료">참고자료</h1>
+
+<ol>
+<li>카일 심슨. (2017). <em>You Don&rsquo;t Know JS:This와 객체 프로토타입 비동기와 성능</em>. 한빛미디어</li>
+<li>Ecma International. (2015). <em>ECMAScript® 2015 Language Specification</em>.</li>
+</ol>
+
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  <div class='categories'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/til-2018'>TIL-2018</a></div>
+<div class='tags'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/javascript'>Javascript</a></div>
+
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/post/til-2018/0106/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>You Don&#39;t Know JS: 객체</a>
+    </div></div>
+</nav>
+
+  
+<div class='comments-container'>
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cmygray" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:cmygray@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br
+  />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='/assets/js/main.f29c93b9.js'></script><script src='/js/custom.js'></script></body>
+
+</html>
+
