@@ -5,10 +5,21 @@
     <link>http://cmygray.github.io/post/</link>
     <description>Recent content in Posts on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 07 Jan 2018 14:53:27 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jan 2018 16:17:08 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>You Don&#39;t Know JS: 클래스와 객체의 혼합</title>
+      <link>http://cmygray.github.io/post/til-2018/0109/</link>
+      <pubDate>Tue, 09 Jan 2018 16:17:08 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til-2018/0109/</guid>
+      <description>앞 장에서 다룬 객체와 이번 장의 내용을 통해 자바스크립트 데이터로써 객체(Object type) 개념보다 확장된, 개발 패턴으로서의 객체 개념을 조금이나마 이해할 수 있었다.
+ 클래스와 상속은 (&amp;hellip;) 실생활 영역의 문제를 소프트웨어로 모델링 하기 위한 방법이다. (&amp;hellip;) 객체 지향 또는 클래스 지향 프로그래밍에서 (&amp;hellip;) 데이터와 작동을 함께 잘 감싸는 것이 올바른 설계라고 강조한다; Capsulation.
+ 본문에선 내장 객체 String을 예로 든다. 즉 데이터(문자열 타입)와 관련 동작(문자열 타입 데이터에 필요한 메소드)을 캡슐화한 결과가 바로 자바스크립트의 Native Object, String이다.</description>
+    </item>
     
     <item>
       <title>You Don&#39;t Know JS: 객체(마무리)</title>

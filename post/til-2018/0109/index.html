@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='앞 장에서 다룬 객체와 이번 장의 내용을 통해 자바스크립트 데이터로써 객체(Object type) 개념보다 확장된, 개발 패턴으로서의 객체 개념을 조금이나마 이해할 수 있었다.
+ 클래스와 상속은 (&hellip;) 실생활 영역의 문제를 소프트웨어로 모델링 하기 위한 방법이다. (&hellip;) 객체 지향 또는 클래스 지향 프로그래밍에서 (&hellip;) 데이터와 작동을 함께 잘 감싸는 것이 올바른 설계라고 강조한다; Capsulation.
+ 본문에선 내장 객체 String을 예로 든다. 즉 데이터(문자열 타입)와 관련 동작(문자열 타입 데이터에 필요한 메소드)을 캡슐화한 결과가 바로 자바스크립트의 Native Object, String이다.'>
+
+<meta property='og:title' content='You Don&#39;t Know JS: 클래스와 객체의 혼합 • cmygray'>
+<meta property='og:description' content='앞 장에서 다룬 객체와 이번 장의 내용을 통해 자바스크립트 데이터로써 객체(Object type) 개념보다 확장된, 개발 패턴으로서의 객체 개념을 조금이나마 이해할 수 있었다.
+ 클래스와 상속은 (&hellip;) 실생활 영역의 문제를 소프트웨어로 모델링 하기 위한 방법이다. (&hellip;) 객체 지향 또는 클래스 지향 프로그래밍에서 (&hellip;) 데이터와 작동을 함께 잘 감싸는 것이 올바른 설계라고 강조한다; Capsulation.
+ 본문에선 내장 객체 String을 예로 든다. 즉 데이터(문자열 타입)와 관련 동작(문자열 타입 데이터에 필요한 메소드)을 캡슐화한 결과가 바로 자바스크립트의 Native Object, String이다.'>
+<meta property='og:url' content='http://cmygray.github.io/post/til-2018/0109/'>
+<meta property='og:site_name' content='cmygray'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='javascript'><meta property='article:published_time' content='2018-01-09T16:17:08&#43;09:00'/><meta property='article:modified_time' content='2018-01-09T16:17:08&#43;09:00'/>
+
+<meta name="generator" content="Hugo 0.29" />
+
+  <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
+  <title>You Don&#39;t Know JS: 클래스와 객체의 혼합 • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til-2018/0109/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/assets/css/main.77da63e1.css'><link rel='stylesheet' href='/css/custom.css'>
+</head>
+
+
+<body class='page type-post'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  <li>
+      <a href='/'>Home</a>
+    </li>
+  <li>
+      <a href='/categories/'>Categories</a>
+    </li>
+  <li>
+      <a href='/tags/'>Tags</a>
+    </li>
+  <li>
+      <a href='/about/'>About</a>
+    </li>
+  
+    <li>
+      <form role="search" method="get" action="https://www.google.com/search" target="w">
+        <input type="search" placeholder="Search..." value="" name="q" title="Search for:">
+        <input type="hidden" name="sitesearch" value="cmygray.github.io/">
+      </form>
+    </li>
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>cmygray</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>You Don&#39;t Know JS: 클래스와 객체의 혼합</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2018-01-09T16:17:08&#43;09:00'>2018, Jan 9</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/> 
+  
+</svg>
+3 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  
+
+<p>앞 장에서 다룬 객체와 이번 장의 내용을 통해 자바스크립트 데이터로써 객체(Object type) 개념보다 확장된, 개발 패턴으로서의 객체 개념을 조금이나마 이해할 수 있었다.</p>
+
+<blockquote>
+<p>클래스와 상속은 (&hellip;) 실생활 영역의 문제를 소프트웨어로 모델링 하기 위한 방법이다. (&hellip;) 객체 지향 또는 클래스 지향 프로그래밍에서 (&hellip;) 데이터와 작동을 함께 잘 감싸는 것이 올바른 설계라고 강조한다; Capsulation.</p>
+</blockquote>
+
+<p>본문에선 내장 객체 <code>String</code>을 예로 든다. 즉 데이터(문자열 타입)와 관련 동작(문자열 타입 데이터에 필요한 메소드)을 캡슐화한 결과가 바로 자바스크립트의 Native Object, String이다. 실생활을 모델링했다는 의미는 &ldquo;특정 데이터와 그에 대한 동작끼리 묶는 것이 효율적이다&rdquo;는 보편적인 인식을 의미한다고 생각한다.</p>
+
+<blockquote>
+<p>소프트웨어에서는 이런 관계를 Vehicle 클래스, Car 클래스로 각각 모델링 한다. (&hellip;) Car는 Vehicle에 있는 기반 정의를 상속(확장)받아 정의한다. Car가 일반적인 Vehicle의 정의를 세분화한 셈이다.</p>
+</blockquote>
+
+<p>포괄적인 정의를 먼저 내리고, 보다 세부적인 정의로 세분화한다. 반복적인 코드 줄이기(생산성 관점이지만 자연스럽지 못하면 오히려 저해되는, 리팩토링으로 보완되려나?), 보편적으로 합리적인 논리적 절차에 따른 프로그램(기계가 보기에 좋았더라), 가독성 좋은 코드(사람이 보기에 좋았더라)를 구현하기 위한 방식쯤 되려나.</p>
+
+<blockquote>
+<p>(&hellip;) 클래스 역시 디자인 패턴의 일종이란 생각은 한 번도 해본 적이 없을 것이다. (&hellip;) 클래스가 과연 모든 코드의 근본적인 기초일까 아니면 코드를 선택적으로 추상화한 것일까란 의문을 품는 자체가 어색하게 느껴질 것이다.</p>
+
+<p>(&hellip;) 클래스 디자인 패턴을 실현하려는 욕구를 충족시키고자 많은 변신을 거듭해왔다.</p>
+</blockquote>
+
+<p>ES6의 class가 등장한 배경과 그 동작원리가 달리 있는 것이 아닌 syntactic-sugar의 결과라는 사실을 어렴풋이 알고있어서 다행(?)이다. 한편으로는 주니어 개발자에게 요구하는 조건인 &ldquo;OOP에 대한 이해&rdquo;의 진의가 궁금해진다. 함수형 프로그래밍 패러다임과의 차이와 장, 단점을 알고있음을 의미하거나, 닥치고 OOP겠지. 내 목적은 둘의 차이를 이해하는 것과 자바스크립트에 걸맞는 패러다임을 판단하는 방법을 아는 것이다.</p>
+
+<p>클래스와 인스턴스, 상속의 개념적 이해를 돕기위해 흔히 부모 자식관계에 비유하곤 한다.</p>
+
+<blockquote>
+<p>클래스 지향 언어에서는 (&hellip;) 첫 번째 클래스를 상속받는 두 번째 클래스를 정의할 수 있다. 이때 첫 번째 클래스를 &lsquo;부모 클래스&rsquo;, 두 번째 클래스를 &lsquo;자식 클래스&rsquo;라고 통칭한다. 부모/자식 간의 관계를 비유하다 보니 굳혀진 용어지만 실은 <strong>적잖이 왜곡된 비유다</strong>.</p>
+</blockquote>
+
+<p>객체지향 프로그래밍과 클래스 기반 언어, 이를 프로토타입으로 구현한 자바스크립트에 대해 배우면서 나 역시 여러번 접한 비유. 객체 지향 패러다임에 대한 비판과 위의 왜곡이 관련있는지 궁금하지만 아직은 알 수 없다..</p>
+
+<blockquote>
+<p>부모가 나중에 다 컸을 때 대화를 나눌 실제 자식을 낳으려면 한 벌의 DNA를 조합하여 새 생명을 잉태(인스턴스화)해야 한다. (&hellip;) 그런데 만일 클래스가 상속을 두 클래스로부터 받는다면 앞의 부모/자식 비유와 잘 들어맞을 것 같다.</p>
+</blockquote>
+
+<p>위 비유를 보다 충실히 구현한 모델로 다중 상속개념이 등장하며, 이름이 같은 메소드를 양 쪽에서 상속하려할 때의 문제(마름모 문제)는 짤막하게 언급된다. Angular, TypeScript를 쓸 때 응용했던 <code>implements</code>, 덕타이핑 등이 여기에 해당한다. <em>의존성 주입 시스템은 모계 사회를 보다 사실적으로 구현한 것인가&hellip;</em></p>
+
+<p>명시적 믹스인(자바스크립트의 <code>extend</code> 기능)의 의사코드 구현</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#007020;font-weight:bold">function</span> mixin(sourceObj, targetObj) {
+    <span style="color:#007020;font-weight:bold">for</span> (<span style="color:#007020;font-weight:bold">var</span> key <span style="color:#007020;font-weight:bold">in</span> sourceObj) {
+        <span style="color:#007020;font-weight:bold">if</span> (<span style="color:#666">!</span>(key <span style="color:#007020;font-weight:bold">in</span> targetObj)) {
+            targetObj[key] <span style="color:#666">=</span> sourceObj[key];
+        }
+    }
+    <span style="color:#007020;font-weight:bold">return</span> targetObj;
+}
+
+<span style="color:#007020;font-weight:bold">var</span> Vehicle <span style="color:#666">=</span> {
+    engines<span style="color:#666">:</span> <span style="color:#40a070">1</span>,
+    ingnition<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">function</span>() { console.log(<span style="color:#4070a0">&#39;engine starts.&#39;</span>); },
+    drive<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">function</span>() { console.log(<span style="color:#4070a0">&#39;vehicle moves&#39;</span>); }
+}
+
+<span style="color:#007020;font-weight:bold">var</span> Car <span style="color:#666">=</span> mixin(Vehicle, {
+    wheels<span style="color:#666">:</span> <span style="color:#40a070">4</span>,
+    drive<span style="color:#666">:</span> <span style="color:#007020;font-weight:bold">function</span>() {
+        <span style="color:#60a0b0;font-style:italic">// Vehicle, Drive 각각에 모두 존재하기 때문에 명시적으로 호출(명시적 (의사)다형성)
+</span><span style="color:#60a0b0;font-style:italic"></span>        Vehicle.drive.call(<span style="color:#007020;font-weight:bold">this</span>); <span style="color:#60a0b0;font-style:italic">// this instanceof Car 
+</span><span style="color:#60a0b0;font-style:italic"></span>        console.log(<span style="color:#4070a0">&#39;car moves with&#39;</span> <span style="color:#666">+</span> <span style="color:#007020;font-weight:bold">this</span>.wheels <span style="color:#666">+</span> <span style="color:#4070a0">&#39;wheels&#39;</span>)
+    }
+})</code></pre>
+</div>
+<p>명시적/암시적 특징을 모두 가지는 믹스인 패턴은 Car의 메소드 내부에서 Vehicle 메소드를 호출하기 이전에, 내부 레퍼런스에 별도로 저장한 것이 그 차이점이다. 나중에 프로토타입 작동위임을 통해 자세히 다룬다고 하니까 적당히 이해하고 넘어가자&hellip;</p>
+
+<h1 id="참고자료">참고자료</h1>
+
+<ol>
+<li>카일 심슨. (2017). <em>You Don&rsquo;t Know JS:This와 객체 프로토타입 비동기와 성능</em>. 한빛미디어</li>
+<li>조영호, <em>객체지향의 사실과 오해</em>, 위키북스</li>
+<li>nacyot, <em>프로그래밍은 왜 어려운가 - 벤 프라이(Ben Fry)의 Distellamap으로 생각해보는 다익스트라의 &lsquo;GOTO문은 해롭다(Go To Statement Considered Harmful)&rsquo;</em>, <a href="http://blog.nacyot.com/articles/2015-12-02-programming-is-difficult/" target="_blank">nacyot의 프로그래밍 이야기</a></li>
+</ol>
+
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  <div class='categories'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/til-2018'>TIL-2018</a></div>
+<div class='tags'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/javascript'>Javascript</a></div>
+
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/post/til-2018/0107/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>You Don&#39;t Know JS: 객체(마무리)</a>
+    </div></div>
+</nav>
+
+  
+<div class='comments-container'>
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cmygray" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:cmygray@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br
+  />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='/assets/js/main.f29c93b9.js'></script><script src='/js/custom.js'></script></body>
+
+</html>
+
