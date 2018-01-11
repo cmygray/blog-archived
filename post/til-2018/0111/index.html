@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='자료구조 특징이 있는 정보를, 고유의 특징을 보존하며 저장하기 위한 방식.
+데이터 구조란, 메모리에 데이터를 효율적으로 관리하는 방법. 효율이란, 검색과 저장 등 작업에서 메모리 사용량과 소요시간을 최소화 하는 것.
+파이썬의 기본 자료구조는 List, Tuble, Set, Dictionary가 있음.
+ 스택/큐 튜플/셋 딕셔너리 (&#43; 콜렉션)  스택; Stack LIFO, (이벤트 루프에 의해 작동하는 자바스크립트 콜스택도 동일함) push|pop 으로 입,출력.
+파이썬은 기본 자료형 List 객체에 append, pop 메소드를 사용하며 별도로 collections 모듈을 사용하기도 함.'>
+
+<meta property='og:title' content='데이터 과학을 위한 파이썬 입문: 자료구조 • cmygray'>
+<meta property='og:description' content='자료구조 특징이 있는 정보를, 고유의 특징을 보존하며 저장하기 위한 방식.
+데이터 구조란, 메모리에 데이터를 효율적으로 관리하는 방법. 효율이란, 검색과 저장 등 작업에서 메모리 사용량과 소요시간을 최소화 하는 것.
+파이썬의 기본 자료구조는 List, Tuble, Set, Dictionary가 있음.
+ 스택/큐 튜플/셋 딕셔너리 (&#43; 콜렉션)  스택; Stack LIFO, (이벤트 루프에 의해 작동하는 자바스크립트 콜스택도 동일함) push|pop 으로 입,출력.
+파이썬은 기본 자료형 List 객체에 append, pop 메소드를 사용하며 별도로 collections 모듈을 사용하기도 함.'>
+<meta property='og:url' content='http://cmygray.github.io/post/til-2018/0111/'>
+<meta property='og:site_name' content='cmygray'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='python'><meta property='article:published_time' content='2018-01-11T18:29:44&#43;09:00'/><meta property='article:modified_time' content='2018-01-11T18:29:44&#43;09:00'/>
+
+<meta name="generator" content="Hugo 0.29" />
+
+  <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
+  <title>데이터 과학을 위한 파이썬 입문: 자료구조 • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til-2018/0111/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/assets/css/main.77da63e1.css'><link rel='stylesheet' href='/css/custom.css'>
+</head>
+
+
+<body class='page type-post'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  <li>
+      <a href='/'>Home</a>
+    </li>
+  <li>
+      <a href='/categories/'>Categories</a>
+    </li>
+  <li>
+      <a href='/tags/'>Tags</a>
+    </li>
+  <li>
+      <a href='/about/'>About</a>
+    </li>
+  
+    <li>
+      <form role="search" method="get" action="https://www.google.com/search" target="w">
+        <input type="search" placeholder="Search..." value="" name="q" title="Search for:">
+        <input type="hidden" name="sitesearch" value="cmygray.github.io/">
+      </form>
+    </li>
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>cmygray</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>데이터 과학을 위한 파이썬 입문: 자료구조</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2018-01-11T18:29:44&#43;09:00'>2018, Jan 11</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/> 
+  
+</svg>
+3 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  
+
+<h1 id="자료구조">자료구조</h1>
+
+<p><strong>특징</strong>이 있는 정보를, 고유의 특징을 보존하며 저장하기 위한 방식.</p>
+
+<p>데이터 구조란, 메모리에 데이터를 <strong>효율적</strong>으로 관리하는 방법. 효율이란, 검색과 저장 등 작업에서 메모리 사용량과 소요시간을 최소화 하는 것.</p>
+
+<p>파이썬의 기본 자료구조는 List, Tuble, Set, Dictionary가 있음.</p>
+
+<ul>
+<li>스택/큐</li>
+<li>튜플/셋</li>
+<li>딕셔너리 (+ 콜렉션)</li>
+</ul>
+
+<h2 id="스택-stack">스택; Stack</h2>
+
+<p>LIFO, (이벤트 루프에 의해 작동하는 자바스크립트 콜스택도 동일함) push|pop 으로 입,출력.</p>
+
+<p>파이썬은 기본 자료형 List 객체에 append, pop 메소드를 사용하며 별도로 collections 모듈을 사용하기도 함.</p>
+
+<blockquote>
+<p>&lsquo;<em>&rsquo; 에 대해&hellip; for 문에서 사용되는 &lsquo;</em>&lsquo;는 반복문에서 별도의 변수로 활용하지 않을때, 단지 반복만을 위해 사용할 때 쓴다</p>
+</blockquote>
+
+<h2 id="큐-queue">큐; Queue</h2>
+
+<p>FIFO, (자바스크립트의 shift|unshift 메소드와 같은 원리) 파이썬은 append, pop(0)를 사용.</p>
+
+<h2 id="튜플-tuple">튜플; Tuple</h2>
+
+<p>리스트와 비슷하지만, 요소의 값을 변경할 수 없다. 연산, 인덱싱, 슬라이싱 등은 똑같이 사용할 수 있다. 즉 변경할 일 없는 데이터를 저장하기 위한 자료형. <em>메모리 저장 방식이 다르지만, 여기선 다루지 않음</em></p>
+
+<h2 id="셋-set">셋; Set</h2>
+
+<p>요소의 중복을 허용하지 않는다. (알고리즘 문제를 풀 때 리스트의 중복값을 제거하는 꼼수로 사용해왔지&hellip;) add|remove로 입출하며 update를 통해 여러 요소를 한번에 추가한다. 이때 순서가 무시됨. 그밖에 discard, clear 사용 가능.</p>
+
+<p>union(합집합; <code>|</code>), intersection(교집합; <code>&amp;</code>), difference(차집합; <code>-</code>) 등의 연산자 제공됨.</p>
+
+<h2 id="딕셔너리-dictionary">딕셔너리; Dictionary</h2>
+
+<p>key &amp; value. <code>dict</code> type(a.k.a. hash table)</p>
+
+<blockquote>
+<p>자바스크립트에서는 프로토타입이 <code>null</code>인 리터럴 객체.</p>
+</blockquote>
+
+<p><code>items()</code>를 사용, key: value 쌍들을 열거(순서무관)하거나, 언패킹이 가능하다. <code>keys()</code>, <code>values()</code>는 키 또는 값만을 열거하므로 언패킹이 필요없다.</p>
+
+<h2 id="collections">Collections</h2>
+
+<p>파이썬 빌트인 패키지. deque, Counter, OrderedDict, defaultdict, namedtuple 등의 모듈로 확장 자료구조 제공.</p>
+
+<p><strong>deque</strong></p>
+
+<p>양방향 링크드 리스트를 제공. append|appendleft 를 사용해서 요소를 양쪽에서 추가할 수 있다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">collections</span> <span style="color:#007020;font-weight:bold">import</span> deque
+
+dq_list <span style="color:#666">=</span> deque() <span style="color:#60a0b0;font-style:italic"># 빈 디큐 리스트를 생성하여 변수에 할당</span>
+
+<span style="color:#007020;font-weight:bold">for</span> i <span style="color:#007020;font-weight:bold">in</span> <span style="color:#007020">range</span>(<span style="color:#40a070">5</span>):
+    dq_list<span style="color:#666">.</span>append(i) <span style="color:#60a0b0;font-style:italic"># 0에서 4까지의 정수를 요소로 추가한다</span>
+
+dq_list<span style="color:#666">.</span>appendleft(<span style="color:#40a070">10</span>) <span style="color:#60a0b0;font-style:italic"># 정수 10을 맨 처음 요소로 추가한다</span></code></pre>
+</div>
+<p>rotate, reverse–링크드 리스트의 특성–을 지원함. ~rotate는 원형 링크드 리스트로 변환하는 것인가?~</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py">dq_list <span style="color:#60a0b0;font-style:italic"># [10, 0, 1, 2, 3, 4]</span>
+dq_list<span style="color:#666">.</span>rotate(<span style="color:#40a070">2</span>)
+dq_list <span style="color:#60a0b0;font-style:italic"># [3, 4, 10, 0, 1, 2]</span>
+dq_list<span style="color:#666">.</span>reverse()
+dq_list <span style="color:#60a0b0;font-style:italic"># [2, 1, 0, 10, 4, 3]</span></code></pre>
+</div>
+<p>deque는 list보다 빠르다.</p>
+
+<p><strong>OrderedDict</strong></p>
+
+<p>내장 dict와 달리, 요소의 순서를 보장(입력 순)하는 확장 자료형.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#60a0b0;font-style:italic"># 선언</span>
+<span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">collections</span> <span style="color:#007020;font-weight:bold">import</span> OrderedDict <span style="color:#60a0b0;font-style:italic"># PascalCase!!</span>
+
+o_dict <span style="color:#666">=</span> OrderedDict()
+
+<span style="color:#60a0b0;font-style:italic"># 입력</span>
+o_dict[<span style="color:#4070a0"></span><span style="color:#4070a0">&#39;key_name&#39;</span>] <span style="color:#666">=</span> <span style="color:#4070a0"></span><span style="color:#4070a0">&#39;value_to_assign&#39;</span></code></pre>
+</div>
+<p>정렬은 <code>sorted</code>, <code>lamda</code>를 이용해서 간편하게 할 수 있는데 나는 람다함수를 모르니까(arrow function과 비슷한 것 같지만).. <code>pass</code></p>
+
+<p><strong>defaultdict</strong></p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#60a0b0;font-style:italic"># 선언</span>
+<span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">collections</span> <span style="color:#007020;font-weight:bold">import</span> defaultdict
+df_dict <span style="color:#666">=</span> defaultdict()
+df_dict <span style="color:#60a0b0;font-style:italic"># defaultdict(None, {})</span>
+df_dict[<span style="color:#4070a0"></span><span style="color:#4070a0">&#39;first&#39;</span>] <span style="color:#60a0b0;font-style:italic"># KeyError: &#39;first&#39;</span>
+
+df_dict <span style="color:#666">=</span> defaultdict(<span style="color:#007020">object</span>)
+df_dict <span style="color:#60a0b0;font-style:italic"># defaultdict(&lt;class &#39;object&#39;&gt;, {})</span>
+df_dict[<span style="color:#4070a0"></span><span style="color:#4070a0">&#39;first&#39;</span>] <span style="color:#60a0b0;font-style:italic"># &lt;object object at 0x108135120&gt;</span>
+
+df_dict <span style="color:#666">=</span> defaultdict(<span style="color:#4070a0"></span><span style="color:#4070a0">&#39;hello&#39;</span>)
+df_dict[<span style="color:#4070a0"></span><span style="color:#4070a0">&#39;anything&#39;</span>] <span style="color:#60a0b0;font-style:italic"># &#39;hello&#39;</span></code></pre>
+</div>
+<p>예측할 수 없는 키가 추가되는 상황에서, 값의 초기화가 필요할 때 사용한다. 조건문으로 키의 존재여부를 판단하고 값을 할당해도 무방하지만&hellip;</p>
+
+<p><strong>Counter</strong></p>
+
+<p>시퀀스형(문자열 같은) 데이터의 요소별 개수를 dict 형태로 (정렬해서) 반환해준다.</p>
+
+<p>같은 키끼리 값의 연산도 가능하다. 엄청 편하네&hellip;</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">collections</span> <span style="color:#007020;font-weight:bold">import</span> Counter
+c <span style="color:#666">=</span> Counter(a<span style="color:#666">=</span><span style="color:#40a070">4</span>, b<span style="color:#666">=</span><span style="color:#40a070">3</span>)
+d <span style="color:#666">=</span> Counter(a<span style="color:#666">=</span><span style="color:#40a070">2</span>, b<span style="color:#666">=</span><span style="color:#40a070">1</span>)
+c<span style="color:#666">.</span>subtract(d) <span style="color:#60a0b0;font-style:italic"># c - d</span>
+<span style="color:#007020;font-weight:bold">print</span>(c) <span style="color:#60a0b0;font-style:italic"># Counter({&#39;a&#39;: 2, &#39;b&#39;: 2})</span></code></pre>
+</div>
+<p><code>+</code>는 요소의 덧셈, <code>&amp;</code>은 교집합, <code>|</code>는 합집합.</p>
+
+<p><strong>namedtuple</strong></p>
+
+<p>값은 못바꾸지만, 값의 할당 변수명을 사전에 지정할 수 있음. 할당 시 kwarg를 전달.</p>
+
+<p>2차원 좌표 자료 입력 예제</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py" data-lang="py"><span style="color:#007020;font-weight:bold">from</span> <span style="color:#0e84b5;font-weight:bold">collections</span> <span style="color:#007020;font-weight:bold">import</span> namedtuple
+
+Point <span style="color:#666">=</span> namedtuple(<span style="color:#4070a0"></span><span style="color:#4070a0">&#39;Point&#39;</span>, [<span style="color:#4070a0"></span><span style="color:#4070a0">&#39;x&#39;</span>, <span style="color:#4070a0"></span><span style="color:#4070a0">&#39;y&#39;</span>]) <span style="color:#60a0b0;font-style:italic"># &lt;tupleName&gt;, [&lt;value_names&gt;]</span>
+point <span style="color:#666">=</span> Point(<span style="color:#40a070">11</span>, y<span style="color:#666">=</span><span style="color:#40a070">22</span>) <span style="color:#60a0b0;font-style:italic"># position arg, kwarg 아무거나...</span>
+<span style="color:#007020;font-weight:bold">print</span>(point) <span style="color:#60a0b0;font-style:italic"># Point(x=11, y=22)</span>
+<span style="color:#007020;font-weight:bold">print</span>(point<span style="color:#666">.</span>x, point<span style="color:#666">.</span>y) <span style="color:#60a0b0;font-style:italic"># 11 22</span></code></pre>
+</div>
+<h1 id="참고자료">참고자료</h1>
+
+<ol>
+<li><a href="https://www.inflearn.com/course/python-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9E%85%EB%AC%B8-%EA%B0%95%EC%A2%8C/" target="_blank">TEAMLAB, 데이터 과학을 위한 파이썬 입문, inflearn</a></li>
+</ol>
+
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  <div class='categories'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/til-2018'>TIL-2018</a></div>
+<div class='tags'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/python'>Python</a></div>
+
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/post/til-2018/0109/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>You Don&#39;t Know JS: 클래스와 객체의 혼합</a>
+    </div></div>
+</nav>
+
+  
+<div class='comments-container'>
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cmygray" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:cmygray@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br
+  />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='/assets/js/main.f29c93b9.js'></script><script src='/js/custom.js'></script></body>
+
+</html>
+
