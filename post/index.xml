@@ -5,10 +5,20 @@
     <link>http://cmygray.github.io/post/</link>
     <description>Recent content in Posts on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 11 Jan 2018 18:29:44 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jan 2018 15:29:44 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HTTP–The Definitive Guide, &#39;Overview of HTTP&#39;</title>
+      <link>http://cmygray.github.io/post/til-2018/0119/</link>
+      <pubDate>Fri, 19 Jan 2018 15:29:44 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til-2018/0119/</guid>
+      <description>무엇을 알아보나?  웹 클라이언트와 서버의 통신 방법 웹 컨텐츠는 어디로부터 오는가 웹의 입출은 어떻게 작동하나 HTTP 통신에서 사용되는 메시지 포맷 TCP 네트워크 전송의 근간 다양한 HTTP 프로토콜 인터넷에 설치된 주요 HTTP 컴포넌트들  클라이언트와 서버  클라이언트는 HTTP 요청을 서버에게 서버는 HTTP 응답을 클라이언트에게  &amp;hellip;?!
+리소스; Resource  웹 컨텐츠의 소스 text/ HTML/ Word/ img/ &amp;hellip; software programs that generate content on demand (e.g., 웹 애플리케이션) Anything(!)  미디어 타입  MIME 타입; Multipurpose Internet Mail Extensions  서로 다른 전자우편 시스템 간의 메세지 전송을 위해 고안되었으나 쓸모가 많아서 HTTP에서도 사용한다 서버가 응답한 오브젝트가 무엇인지 명시하여 브라우저의 대응을 돕는다 오브젝트타입/서브타입 으로 표시 (e.</description>
+    </item>
     
     <item>
       <title>데이터 과학을 위한 파이썬 입문: 자료구조</title>

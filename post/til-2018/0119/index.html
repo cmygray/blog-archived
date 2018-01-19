@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='무엇을 알아보나?  웹 클라이언트와 서버의 통신 방법 웹 컨텐츠는 어디로부터 오는가 웹의 입출은 어떻게 작동하나 HTTP 통신에서 사용되는 메시지 포맷 TCP 네트워크 전송의 근간 다양한 HTTP 프로토콜 인터넷에 설치된 주요 HTTP 컴포넌트들  클라이언트와 서버  클라이언트는 HTTP 요청을 서버에게 서버는 HTTP 응답을 클라이언트에게  &hellip;?!
+리소스; Resource  웹 컨텐츠의 소스 text/ HTML/ Word/ img/ &hellip; software programs that generate content on demand (e.g., 웹 애플리케이션) Anything(!)  미디어 타입  MIME 타입; Multipurpose Internet Mail Extensions  서로 다른 전자우편 시스템 간의 메세지 전송을 위해 고안되었으나 쓸모가 많아서 HTTP에서도 사용한다 서버가 응답한 오브젝트가 무엇인지 명시하여 브라우저의 대응을 돕는다 오브젝트타입/서브타입 으로 표시 (e.'>
+
+<meta property='og:title' content='HTTP–The Definitive Guide, &#39;Overview of HTTP&#39; • cmygray'>
+<meta property='og:description' content='무엇을 알아보나?  웹 클라이언트와 서버의 통신 방법 웹 컨텐츠는 어디로부터 오는가 웹의 입출은 어떻게 작동하나 HTTP 통신에서 사용되는 메시지 포맷 TCP 네트워크 전송의 근간 다양한 HTTP 프로토콜 인터넷에 설치된 주요 HTTP 컴포넌트들  클라이언트와 서버  클라이언트는 HTTP 요청을 서버에게 서버는 HTTP 응답을 클라이언트에게  &hellip;?!
+리소스; Resource  웹 컨텐츠의 소스 text/ HTML/ Word/ img/ &hellip; software programs that generate content on demand (e.g., 웹 애플리케이션) Anything(!)  미디어 타입  MIME 타입; Multipurpose Internet Mail Extensions  서로 다른 전자우편 시스템 간의 메세지 전송을 위해 고안되었으나 쓸모가 많아서 HTTP에서도 사용한다 서버가 응답한 오브젝트가 무엇인지 명시하여 브라우저의 대응을 돕는다 오브젝트타입/서브타입 으로 표시 (e.'>
+<meta property='og:url' content='http://cmygray.github.io/post/til-2018/0119/'>
+<meta property='og:site_name' content='cmygray'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='HTTP'><meta property='article:published_time' content='2018-01-19T15:29:44&#43;09:00'/><meta property='article:modified_time' content='2018-01-19T15:29:44&#43;09:00'/>
+
+<meta name="generator" content="Hugo 0.29" />
+
+  <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
+  <title>HTTP–The Definitive Guide, &#39;Overview of HTTP&#39; • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til-2018/0119/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/assets/css/main.77da63e1.css'><link rel='stylesheet' href='/css/custom.css'>
+</head>
+
+
+<body class='page type-post'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  <li>
+      <a href='/'>Home</a>
+    </li>
+  <li>
+      <a href='/categories/'>Categories</a>
+    </li>
+  <li>
+      <a href='/tags/'>Tags</a>
+    </li>
+  <li>
+      <a href='/about/'>About</a>
+    </li>
+  
+    <li>
+      <form role="search" method="get" action="https://www.google.com/search" target="w">
+        <input type="search" placeholder="Search..." value="" name="q" title="Search for:">
+        <input type="hidden" name="sitesearch" value="cmygray.github.io/">
+      </form>
+    </li>
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>cmygray</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>HTTP–The Definitive Guide, &#39;Overview of HTTP&#39;</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2018-01-19T15:29:44&#43;09:00'>2018, Jan 19</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/> 
+  
+</svg>
+5 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  
+
+<h1 id="무엇을-알아보나">무엇을 알아보나?</h1>
+
+<ul>
+<li>웹 클라이언트와 서버의 통신 방법</li>
+<li>웹 컨텐츠는 어디로부터 오는가</li>
+<li>웹의 입출은 어떻게 작동하나</li>
+<li>HTTP 통신에서 사용되는 메시지 포맷</li>
+<li>TCP 네트워크 전송의 근간</li>
+<li>다양한 HTTP 프로토콜</li>
+<li>인터넷에 설치된 주요 HTTP 컴포넌트들</li>
+</ul>
+
+<h1 id="클라이언트와-서버">클라이언트와 서버</h1>
+
+<ul>
+<li>클라이언트는 HTTP 요청을 서버에게</li>
+<li>서버는 HTTP 응답을 클라이언트에게</li>
+</ul>
+
+<p>&hellip;?!</p>
+
+<h1 id="리소스-resource">리소스; Resource</h1>
+
+<ul>
+<li>웹 컨텐츠의 소스</li>
+<li>text/ HTML/ Word/ img/ &hellip;</li>
+<li>software programs that generate content on demand (e.g., 웹 애플리케이션)</li>
+<li>Anything(!)</li>
+</ul>
+
+<h1 id="미디어-타입">미디어 타입</h1>
+
+<ul>
+<li>MIME 타입; Multipurpose Internet <strong>Mail</strong> Extensions
+
+<ul>
+<li>서로 다른 전자우편 시스템 간의 메세지 전송을 위해 고안되었으나</li>
+<li>쓸모가 많아서 HTTP에서도 사용한다</li>
+<li>서버가 응답한 오브젝트가 무엇인지 명시하여 브라우저의 대응을 돕는다</li>
+<li>오브젝트타입/서브타입 으로 표시 (e.g, text/html)</li>
+</ul></li>
+</ul>
+
+<h1 id="uris">URIs</h1>
+
+<ul>
+<li>서버가 가진 리소스의 <strong>유일한</strong> 이름; Uniform Resource Identifier</li>
+<li>하위개념: URL / URN</li>
+</ul>
+
+<h1 id="urls">URLs</h1>
+
+<ul>
+<li>흔히 사용하는 식별자; Uniform Resource <strong>Locator</strong>. 오늘날 대부분의 URI는 URL.</li>
+</ul>
+
+<p><img src="https://cascadingmedia.com/assets/images/insites/2015/02/url-anatomy/url-anatomy-55598c24.png" alt="HTTP URL Anatomy" /></p>
+
+<ul>
+<li>(1) Scheme: 프로토콜 명시</li>
+<li>(2~4) Domain: 서버의 인터넷 주소</li>
+<li>(5) Port</li>
+<li>(6~8) Path+Query+Fragment : 서버내부의 리소스 위치+요청에 필요한 추가정보+문서의 특정 위치</li>
+</ul>
+
+<h1 id="urns">URNs</h1>
+
+<ul>
+<li>Uniform Resource <strong>Name</strong></li>
+<li>리소스의 현재 위치와 무관한 식별자</li>
+<li>리소스의 위치가 변경되어도 사용할 수 있다</li>
+<li>같은 이름으로 여러개의 네트워크 접근이 가능하다</li>
+</ul>
+
+<h1 id="트랜잭션-transactions">트랜잭션; Transactions</h1>
+
+<ul>
+<li>Request command &amp; Response result</li>
+<li>HTTP message 포맷으로 이루어짐</li>
+</ul>
+
+<p>요청 메세지</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4">GET /specials/saw-blade.gif HTTP/1.0 HOST: www.joes-hardware.com</pre>
+</div>
+<p>응답 메세지</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4">HTTP/1.0 200 OK Content-type: image/gif Content-length: 8572</pre>
+</div>
+<h1 id="메소드-methods">메소드; Methods</h1>
+
+<ul>
+<li>HTTP가 지원하는 요청 명령들을 의미한다
+
+<ul>
+<li>GET: 요청한 리소스를 보내달라</li>
+<li>PUT: 요청과 함께 보낸 데이터를 첨부한 위치에 저장해달라</li>
+<li>POST: 요청과 함께 보낸 데이터를 (서버 게이트웨이 네가) 어딘가에 알아서 저장해달라</li>
+<li>DELETE: 요청한 위치의 리소스를 지워달라</li>
+<li>HEAD: 요청에 대한 헤더만 먼저 보내봐라</li>
+<li>&hellip;</li>
+</ul></li>
+</ul>
+
+<p><a href="http://blog.embian.com/66" target="_blank">PUT, POST의 차이는 멱등성과 리소스 결정권에 의해&hellip;</a></p>
+
+<h1 id="상태-코드-status-codes">상태 코드; Status Codes</h1>
+
+<p><a href="https://httpstatuses.com/" target="_blank">https://httpstatuses.com/</a>에서 모든 코드를 보여준다</p>
+
+<ul>
+<li>모든 응답 메시지는 상태 코드를 가지고 있다
+
+<ul>
+<li>200: 요청에 대해 제대로 응답됨</li>
+<li>302: 여기엔 없는데 &lsquo;요기&rsquo;로 가면 돼</li>
+<li>404: 그런거 없는데</li>
+</ul></li>
+<li>프로세스는 세자리 숫자에 의해 처리됨</li>
+<li>설명을 위한 텍스트도 같이 전송됨; reason phrase</li>
+</ul>
+
+<h1 id="복수의-오브젝트로-구성된-웹-페이지">복수의 오브젝트로 구성된 웹 페이지</h1>
+
+<ul>
+<li>하나의 페이지를 그리기 위해 연쇄적인 트랜잭션이 발생한다</li>
+<li>&ldquo;웹 페이지&rdquo;란 리소스들의 집합</li>
+</ul>
+
+<h1 id="메세지">메세지</h1>
+
+<p><a href="https://developer.mozilla.org/ko/docs/Web/HTTP/Messages" target="_blank">MDN HTTP Messages</a></p>
+
+<p><a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html" target="_blank">w3c: HTTP Messages</a></p>
+
+<ul>
+<li>줄바꿈으로 구분되는 문자의 나열. 플레인 텍스트. 크게 세 부분으로 나눔.
+
+<ul>
+<li>Start Line(한줄이다)<br />
+<strong>요청시</strong>: 메소드 경로 버전 | <strong>응답시</strong>: 버전 상태코드 Reason-phrase</li>
+<li>Headers<br />
+쌍점(:)으로 구분하는 이름과 값(들)으로 구성. 맨 끝에 빈 행을 덧붙여 기술이 종료됨을 명시한다(필수).</li>
+<li>Body<br />
+요청 또는 응답에 의해 전송되는 데이터.</li>
+</ul></li>
+</ul>
+
+<h1 id="연결-tcp-ip">연결–TCP/IP</h1>
+
+<p>HTTP는 응용 계층의 프로토콜이며, 네트워크 통신의 세부적인 것은 전송 제어 프로토콜; Transmission Control Protocol과 인터넷 프로토콜; Internet Protocol을 따른다. 둘을 합쳐서 흔히 인터넷 프로토콜 스위트라고 부르며 전송과 네트워크 계층에 속한다.</p>
+
+<p>TCP가 제공하는 것:</p>
+
+<ul>
+<li>에러없는 데이터 전송</li>
+<li>순서대로 전송(발송 순서와 도착순서가 같다)</li>
+<li>분할되지 않은 데이터 스트림</li>
+</ul>
+
+<p>HTTP 네트워크 프로토콜 스택</p>
+
+<ul>
+<li>HTTP/ Application layer</li>
+<li>TCP/ Transport layer</li>
+<li>IP/ Network layer</li>
+<li>Network-specifil link interface/ Data link layer</li>
+<li>Physical network hardware/ Physical layer</li>
+</ul>
+
+<h1 id="연결-ip-주소와-포트-번호">연결–IP 주소와 포트 번호</h1>
+
+<ul>
+<li>HTTP 메세지를 주고받기에 앞서 TCP/IP 연결을 구축한다</li>
+<li>여기에 필요한 것이 IP 주소와 포트 번호</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="left">scheme</th>
+<th align="left">host name</th>
+<th align="left">port</th>
+<th align="left">path</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left"><code>http://</code></td>
+<td align="left"><code>www.netscape.com/</code></td>
+<td align="left"><code>:80</code></td>
+<td align="left"><code>/index.html</code></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>host name은 DNS; Domain Name Service를 통해 IP주소로 변환된다</li>
+<li>port의 기본값은 80이다</li>
+</ul>
+
+<p><strong>절차</strong></p>
+
+<p>URL을 입력하면 브라우저는&hellip;</p>
+
+<ol>
+<li>호스트 네임을 추출한다</li>
+<li>호스트 네임을 IP 주소로 변환한다</li>
+<li>포트번호를 추출하고 없으면 80으로 지정한다</li>
+<li>웹 서버에 대한 TCP 연결을 구성한다</li>
+<li>HTTP 요청 메세지를 서버에 전송한다</li>
+<li>HTTP 응답 메세지를 서버로부터 돌려받는다</li>
+<li>연결이 종료된다</li>
+</ol>
+
+<h1 id="웹-아키텍처-컴포넌트">웹 아키텍처 컴포넌트</h1>
+
+<ul>
+<li>Proxy</li>
+<li>Cache</li>
+<li>Gateway</li>
+<li>Tunnel</li>
+<li>Agent</li>
+</ul>
+
+<h2 id="프록시-proxies">프록시; Proxies</h2>
+
+<p><a href="https://ko.wikipedia.org/wiki/%ED%94%84%EB%A1%9D%EC%8B%9C_%EC%84%9C%EB%B2%84" target="_blank">프록시 서버: 위키백과</a></p>
+
+<p>보안, 어플리케이션 통합, 성능 최적화를 위해서 사용(예를 들면 우회접속이나 캐싱, 컨텐츠 전송 네트워크)</p>
+
+<ul>
+<li>클라이언트와 서버 사이에서 모든 요청을 받아서 중계한다</li>
+</ul>
+
+<h2 id="캐시-caches">캐시; Caches</h2>
+
+<ul>
+<li>프록시 서버의 한 종류로 요청이 잦은 문서들의 사본을 보관한다.</li>
+<li>동일 문서에 대한 다음 요청은 복사된 캐시로 응답한다(성능 향상).</li>
+<li>물리적으로 웹서버 보다 가까운 곳에 위치해 더 빠른 통신이 가능하게 한다.</li>
+</ul>
+
+<h2 id="게이트웨이-gateways">게이트웨이; Gateways</h2>
+
+<ul>
+<li>HTTP 트래픽을 다른 프로토콜로 변환하는데 흔히 사용</li>
+</ul>
+
+<p>예를 들어서 FTP 서버에 접근하고싶은 HTTP 요청이 있을 때, 게이트웨이는 요청을 FTP로, 응답을 HTTP로 변환한다.</p>
+
+<h2 id="터널-tunnels">터널; Tunnels</h2>
+
+<p>모르겠다&hellip; 무슨소리니&hellip;</p>
+
+<p><a href="http://www.ktword.co.kr/abbr_view.php?m_temp1=1957" target="_blank">전송 계층 보안</a></p>
+
+<ul>
+<li>어쨌든 중계역할</li>
+<li>HTTP 요청 메세지에는 별로 관심이 없으며 중계만 한다</li>
+<li>전송계층보안을 위해 사용되는 터널의 예로 TLS, SSL이 있다</li>
+</ul>
+
+<h2 id="에이전트-agents">에이전트; Agents</h2>
+
+<p>유저 에이전트(또는 에이전트): 사용자를 대신하여 HTTP 요청을 생성해주는 클라이언트 프로그램</p>
+
+<ul>
+<li>웹 요청을 발생시키는 모든 어플리케이션을 HTTP 에이전트라고 한다</li>
+<li>브라우저를 제외하고도 다양한 에이전트가 존재한다</li>
+<li>사용자의 감시 없이도 웹의 다양한 리소스를 요청 (예: 크롤러)</li>
+</ul>
+
+<h1 id="정리">정리</h1>
+
+<p>HTTP 기초</p>
+
+<ul>
+<li>클라이언트의 요청과 서버의 응답이 따르는 규약</li>
+<li>어플리케이션 계층에서 사용하는 통신 규약</li>
+<li>웹에 존재하는 다양한 리소스를 요청/응답하기 위한 프로토콜</li>
+<li>다양한 미디어타입의 전송을 위해서 MIME 타입을 사용한다</li>
+</ul>
+
+<p>리소스의 주소</p>
+
+<ul>
+<li>URI ⊃ [URL | URN]</li>
+<li>리소스의 위치를 나타내는 방식을 통틀어 URI 라고 한다. Uniform Resource Identifier</li>
+<li>표현 방식에 따라 URL, URN의 하위 개념으로 분류할 수 있다.</li>
+<li>URL은 고정된 위치를 나타내며, URN은 위치에 구애받지 않는 식별자</li>
+<li>Scheme + Domain + Port + Path + Query + Fragment</li>
+<li>사람이 알기 쉬운 Domain은 DNS에 의해서 IP주소로 변경된다</li>
+</ul>
+
+<p>HTTP 메세지</p>
+
+<ul>
+<li>요청/응답은 줄바꿈으로 구분되는 플레인텍스트 메세지를 통해 이루어진다</li>
+<li>메세지는 Starting line, Header(s), Body 세 부분으로 구성
+
+<ul>
+<li>시작줄: <code>HTTP메소드, 버전, 리소스의 경로</code> | <code>버전, 상태코드, reason phrase</code></li>
+<li>Header(s): 요청에 필요한 메타데이터(이름과 값으로 이루어진)들을 담고있으며 반드시 empty line으로 끝나야한다</li>
+<li>Body: 일부 메소드는 요청/응답에 데이터가 수반된다. 해당 데이터는 body에 담긴다.</li>
+</ul></li>
+</ul>
+
+<p>HTTP 트랜잭션 환경</p>
+
+<ul>
+<li>전송 제어 규약(TCP)와 인터넷 규약(IP)를 합쳐서 인터넷 프로토콜 스위트 또는 TCP/IP라고 칭한다</li>
+<li>HTTP 통신은 주로 TCP/IP 환경 위에서 이루어진다.</li>
+<li>OSI 7 Layer에서 TCP는 전송 계층, IP는 네트워크 계층에 해당한다</li>
+<li>TCP/IP 환경은 전송 간 아래 세가지를 보장한다
+
+<ul>
+<li>에러 없이</li>
+<li>안정적이면서</li>
+<li>순서대로</li>
+</ul></li>
+</ul>
+
+<p>클라이언트와 서버 외에 통신에 관여하는 것들</p>
+
+<ul>
+<li>프록시: 서버와 클라이언트 사이에서 중계하는 서버의 총칭</li>
+<li>게이트웨이: 마치 자신이 목적지 서버인 양 요청을 받아주는 중계역</li>
+<li>캐시: 특정 리소스의 사본을 보관하여 동일한 요청에 더 빨리 대응</li>
+<li>터널: HTTP 메세지를 열람하지 않고 암호화 등의 처리를 해주는 통로</li>
+<li>에이전트: 유저를 대신하여 HTTP 요청을 발생시키는 모든 것</li>
+</ul>
+
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  <div class='categories'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/til-2018'>TIL-2018</a></div>
+<div class='tags'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/http'>HTTP</a></div>
+
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/post/til-2018/0111/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>데이터 과학을 위한 파이썬 입문: 자료구조</a>
+    </div></div>
+</nav>
+
+  
+<div class='comments-container'>
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cmygray" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:cmygray@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br
+  />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='/assets/js/main.f29c93b9.js'></script><script src='/js/custom.js'></script></body>
+
+</html>
+
