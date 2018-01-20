@@ -5,10 +5,19 @@
     <link>http://cmygray.github.io/tags/javascript/</link>
     <description>Recent content in Javascript on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 09 Jan 2018 16:17:08 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jan 2018 22:32:56 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>You Don&#39;t Know JS: 프로토타입</title>
+      <link>http://cmygray.github.io/post/til-2018/0110/</link>
+      <pubDate>Wed, 10 Jan 2018 22:32:56 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til-2018/0110/</guid>
+      <description>자바스크립트의 중요한 동작원리인 [[Prototype]] 체인과 기존 프로그래밍 언어의 클래스, 객체 지향 패턴을 구분함으로써 오해를 바로잡아주는 한편 어째서 (숱한 개발자들이) 클래스를 통한 객체지향 프로그래밍을 구현하려고 애써왔는지(본문에서는 무려 어거지라고 표현한다!) 궁금하게 만드는 장. 급격하게 팽창한 웹에서 필수적 역할을 했던 자바스크립트에 대해서 &amp;ldquo;가장 오해받는 언어&amp;rdquo;라는 주장을 자주 볼 수 있는데, 이것이 사실인지 항변인지 현재의 나로서는 알 수가 없다. 그 떄문에 객체지향과 클래스를 좀 더 명확하게 알아야 할 필요를 느낀다. 그 수준에 이르면 성능이나 속도, 업계의 수요같은 얕은 요소를 넘어서 더 넓은 시야로 프론트엔드 프레임워크(라이브러리)를 바라볼 수 있을 것 같기 때문이다.</description>
+    </item>
     
     <item>
       <title>You Don&#39;t Know JS: 클래스와 객체의 혼합</title>

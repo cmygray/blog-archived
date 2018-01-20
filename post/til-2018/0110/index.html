@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='자바스크립트의 중요한 동작원리인 [[Prototype]] 체인과 기존 프로그래밍 언어의 클래스, 객체 지향 패턴을 구분함으로써 오해를 바로잡아주는 한편 어째서 (숱한 개발자들이) 클래스를 통한 객체지향 프로그래밍을 구현하려고 애써왔는지(본문에서는 무려 어거지라고 표현한다!) 궁금하게 만드는 장. 급격하게 팽창한 웹에서 필수적 역할을 했던 자바스크립트에 대해서 &ldquo;가장 오해받는 언어&rdquo;라는 주장을 자주 볼 수 있는데, 이것이 사실인지 항변인지 현재의 나로서는 알 수가 없다. 그 떄문에 객체지향과 클래스를 좀 더 명확하게 알아야 할 필요를 느낀다. 그 수준에 이르면 성능이나 속도, 업계의 수요같은 얕은 요소를 넘어서 더 넓은 시야로 프론트엔드 프레임워크(라이브러리)를 바라볼 수 있을 것 같기 때문이다.'>
+
+<meta property='og:title' content='You Don&#39;t Know JS: 프로토타입 • cmygray'>
+<meta property='og:description' content='자바스크립트의 중요한 동작원리인 [[Prototype]] 체인과 기존 프로그래밍 언어의 클래스, 객체 지향 패턴을 구분함으로써 오해를 바로잡아주는 한편 어째서 (숱한 개발자들이) 클래스를 통한 객체지향 프로그래밍을 구현하려고 애써왔는지(본문에서는 무려 어거지라고 표현한다!) 궁금하게 만드는 장. 급격하게 팽창한 웹에서 필수적 역할을 했던 자바스크립트에 대해서 &ldquo;가장 오해받는 언어&rdquo;라는 주장을 자주 볼 수 있는데, 이것이 사실인지 항변인지 현재의 나로서는 알 수가 없다. 그 떄문에 객체지향과 클래스를 좀 더 명확하게 알아야 할 필요를 느낀다. 그 수준에 이르면 성능이나 속도, 업계의 수요같은 얕은 요소를 넘어서 더 넓은 시야로 프론트엔드 프레임워크(라이브러리)를 바라볼 수 있을 것 같기 때문이다.'>
+<meta property='og:url' content='http://cmygray.github.io/post/til-2018/0110/'>
+<meta property='og:site_name' content='cmygray'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='javascript'><meta property='article:published_time' content='2018-01-10T22:32:56&#43;09:00'/><meta property='article:modified_time' content='2018-01-10T22:32:56&#43;09:00'/>
+
+<meta name="generator" content="Hugo 0.29" />
+
+  <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
+  <title>You Don&#39;t Know JS: 프로토타입 • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til-2018/0110/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/assets/css/main.77da63e1.css'><link rel='stylesheet' href='/css/custom.css'>
+</head>
+
+
+<body class='page type-post'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  <li>
+      <a href='/'>Home</a>
+    </li>
+  <li>
+      <a href='/categories/'>Categories</a>
+    </li>
+  <li>
+      <a href='/tags/'>Tags</a>
+    </li>
+  <li>
+      <a href='/about/'>About</a>
+    </li>
+  
+    <li>
+      <form role="search" method="get" action="https://www.google.com/search" target="w">
+        <input type="search" placeholder="Search..." value="" name="q" title="Search for:">
+        <input type="hidden" name="sitesearch" value="cmygray.github.io/">
+      </form>
+    </li>
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>cmygray</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>You Don&#39;t Know JS: 프로토타입</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2018-01-10T22:32:56&#43;09:00'>2018, Jan 10</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/> 
+  
+</svg>
+3 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  
+
+<p>자바스크립트의 중요한 동작원리인 <code>[[Prototype]]</code> 체인과 기존 프로그래밍 언어의 클래스, 객체 지향 패턴을 구분함으로써 오해를 바로잡아주는 한편 어째서 (숱한 개발자들이) 클래스를 통한 객체지향 프로그래밍을 구현하려고 애써왔는지(본문에서는 무려 어거지라고 표현한다!) 궁금하게 만드는 장. 급격하게 팽창한 웹에서 필수적 역할을 했던 자바스크립트에 대해서 &ldquo;가장 오해받는 언어&rdquo;라는 주장을 자주 볼 수 있는데, 이것이 사실인지 항변인지 현재의 나로서는 알 수가 없다. 그 떄문에 객체지향과 클래스를 좀 더 명확하게 알아야 할 필요를 느낀다. 그 수준에 이르면 성능이나 속도, 업계의 수요같은 얕은 요소를 넘어서 더 넓은 시야로 프론트엔드 프레임워크(라이브러리)를 바라볼 수 있을 것 같기 때문이다.</p>
+
+<h1 id="프로토타입">프로토타입</h1>
+
+<p>[[Get]] 연산은 해당 프로퍼티가 존재하면 그 값을 반환하고, 없으면 <strong>다른 중요한 작업</strong>을 한다고 했었다. 다른 중요한 작업이란, 프로토타입 체인을 탐색하는 것이다.</p>
+
+<blockquote>
+<p>연쇄 끝에 이르러서도 프로퍼티가 발견되지 않으면 [[Get]]은 결과값으로 <code>undefined</code>를 반환한다. (&hellip;) <code>in</code> 연산자로 객체의 프로퍼티 유무를 확인할 때에는 (열거 가능 여부와 상관없이) 객체의 연쇄를 전부 샅샅이 뒤진다.</p>
+</blockquote>
+
+<p><code>hasOwnProperty</code>는 책에서 직속 프로퍼티라고 칭하는, 해당 객체에서 곧바로 찾을 수 있는 프로퍼티만을 탐색한다.</p>
+
+<blockquote>
+<p>일반 [[Prototype]] 연쇄는 결국 내장 프로토타입 <code>Object.prototype</code>에서 끝난다.</p>
+</blockquote>
+
+<p><code>Object.prototype.__proto__</code> 는 <code>null</code>을 반환한다. 책에서 &ldquo;던더스코어&rdquo;라고 칭하는 &lsquo;**&lsquo;가 양쪽에 붙은 <code>**proto\_\_</code>는 상위 프로토타입에 접근할 수 있는 일종의 게터 함수로 이후 본문에 등장하며 대체하여 사용할 수 있는 명령도 언급한다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js">myObject.foo <span style="color:#666">=</span> <span style="color:#4070a0">&#39;bar&#39;</span>;</code></pre>
+</div>
+<p>위 구문을 실행하면, 1. foo 가 <code>myObject</code>의 직속 프로퍼티인지 확인하고, 2. 없다면 프로토타입 체인을 순회하고, 3. 끝내 발견하지 못하면 foo 를 추가하고 &lsquo;bar&rsquo;를 할당한다. 이를 가려짐; Shadowing 이라고 한다.</p>
+
+<blockquote>
+<ol>
+<li>프로토타입 체인의 상위 수준에서 해당 프로퍼티가 존재하지만 <code>writable: true</code>일 경우 <code>myObject</code>에 직속 프로퍼티를 추가한다.(shadowed property)</li>
+<li><code>writable: false</code>라면 엄격 모드에선 에러가 발생하며, 그 외의 경우 세팅이 무시된다.</li>
+<li>만일 상위 프로토타입의 <code>foo</code>가 세터인 경우 세터가 호출될 뿐 직속 프로퍼티의 추가와 재정의는 일어나지 않는다.</li>
+</ol>
+</blockquote>
+
+<p>즉, 직속 프로퍼티에 새 값이 할당되는 경우는 1. 뿐이다.</p>
+
+<blockquote>
+<p>2, 3 번에서 <code>foo</code>를 가리려면 <code>=</code> 할당 연산자를 쓰면 안되고 <code>Object.defineProperty()</code> 메서드를 사용하여 <code>myObject</code>에 <code>foo</code>를 추가해야한다.</p>
+</blockquote>
+
+<p>상위 프로토타입에 같은 이름의 읽기 전용 프로퍼티가 존재하면 값 할당이 차단되는 &ldquo;규칙&rdquo;은 클래스 지향 방식을 따르기 위한 의도라고 한다. 하지만 할당 연산자에 의한 행위만 억제할 뿐 Object.defineProperty 메소드는 여기서 자유롭다는 것은 이해하기 힘들다고&hellip;</p>
+
+<h1 id="클래스">클래스</h1>
+
+<p>자바스크립트의 클래스는 무늬만 클래스인, 프로토타입 체인을 내장 객체 메소드로 조작하여 구현한 것이다. 여기서는 그 구현을 위한 다양한 패턴을(꼼수라고 칭하는) 살펴보면서 프로토타입의 정의를 분명히 하고있다.</p>
+
+<blockquote>
+<p>&lsquo;일종의 클래스&rsquo;같은 독특한 작동은 모든 함수가 기본으로 (다른 임의의 객체를 가리키는) 프로토타입이라는 Public/Nonenumerable 프로퍼티를 가진다는 이상한 특성에 기인한다.</p>
+</blockquote>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#007020;font-weight:bold">function</span> Foo() {
+  <span style="color:#60a0b0;font-style:italic">// ... 대문자로 선언한 함수가 생성자인 것은 단지 컨벤션일 뿐, 관건은 new 키워드이다
+</span><span style="color:#60a0b0;font-style:italic"></span>}
+
+Foo.prototype; <span style="">// { constructor: Foo(), __proto__: Object }</span></code></pre>
+</div>
+<p>자기참조 프로퍼티 <code>constructor</code>와 상위 프로토타입 체인 탐색을 위한 <code>__proto__</code>는 기본적으로 세팅된다.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#007020;font-weight:bold">for</span> (<span style="color:#007020;font-weight:bold">let</span> prop <span style="color:#007020;font-weight:bold">in</span> Foo.prototype) {
+  console.log(prop); <span style="color:#60a0b0;font-style:italic">// undefined, 위 두 값은 열거가 불가능하기 때문이다
+</span><span style="color:#60a0b0;font-style:italic"></span>}</code></pre>
+</div>
+<blockquote>
+<p>이 객체를 보통 Foo 의 프로토타입이라고 하는데, 불행히도 <code>Foo.prototype</code>이라고 명명된 프로퍼티 레퍼런스를 통해 접근하기에 그렇게 부른다. (&hellip;) 임의로 &lsquo;Foo dot prototype&rsquo; 정도가 좋겠다.</p>
+</blockquote>
+
+<p>프로토타입은 인스턴스와 공유하는 프로퍼티의 저장소다. &ldquo;생성자&rdquo;로써 정의된 함수의 <code>prototype</code> 프로퍼티 또는 그 인스턴스의 <code>__proto__</code> 프로퍼티로 접근할 수 있다.</p>
+
+<blockquote>
+<p>(&hellip;) 클래스 인스턴스화 자체가 &lsquo;클래스 작동 계획을 실제 객체로 복사하는 것&rsquo;이므로 인스턴스마다 복사가 일어난다.</p>
+</blockquote>
+
+<p>이것은 자바스크립트에선 해당되지 않는 이야기다.</p>
+
+<blockquote>
+<p>기본적으로 어떠한 복사도 일어나지 않아서 결과적으로 자바스크립트에서 객체들은 서로 완전히 떨어져 분리되는 것이 아니라 끈끈하게 연결된다.</p>
+</blockquote>
+
+<p>프로토타입은 (일반적으로)익숙한 클래스 개념을 따르기 위한, 인스턴스와 공유하는 데이터의 보관소다. 하지만 인스턴스 생성 시 데이터를 복사하는 것이 아니라 연결정보만 전달한다. 끈끈하게 연결되어있다는 뜻은 프로토타입의 데이터를 변경하면 연결된 인스턴스도 영향을 받는다는 의미다.</p>
+
+<blockquote>
+<p>공연히 &lsquo;프로토타입 상속&rsquo; (그리고 클래스, 생성자, 인스턴스, 다형성 등 클래스 지향 언어에 해당하는 용어들을 함부로 가져다 쓰는 것)처럼 용어를 합성하여 혼란을 가져온 건 자바스크립트 체계의 실체를 이해하는 데 득보다 실이 더 많다. (&hellip;) 위임이야말로 자바스크립트 객체–연결 체계를 훨씬 더 정확하게 나타낸 용어다.</p>
+</blockquote>
+
+<h1 id="참고자료">참고자료</h1>
+
+<ol>
+<li>카일 심슨. (2017). <em>You Don&rsquo;t Know JS:This 와 객체 프로토타입 비동기와 성능</em>. 한빛미디어</li>
+<li>Ecma International. (2015). <em>ECMAScript® 2015 Language Specification</em>.</li>
+</ol>
+
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  <div class='categories'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/til-2018'>TIL-2018</a></div>
+<div class='tags'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/javascript'>Javascript</a></div>
+
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/post/til-2018/0109/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>You Don&#39;t Know JS: 클래스와 객체의 혼합</a>
+    </div><div class='next-entry'>
+      <a href='/post/til-2018/0111/'>
+        <span class='screen-reader'>Next post: </span>데이터 과학을 위한 파이썬 입문: 자료구조<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+  
+<div class='comments-container'>
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cmygray" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:cmygray@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br
+  />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='/assets/js/main.f29c93b9.js'></script><script src='/js/custom.js'></script></body>
+
+</html>
+
