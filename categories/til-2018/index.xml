@@ -5,10 +5,19 @@
     <link>http://cmygray.github.io/categories/til-2018/</link>
     <description>Recent content in TIL-2018 on cmygray</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 19 Jan 2018 15:29:44 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jan 2018 17:58:54 +0900</lastBuildDate>
     
 	<atom:link href="http://cmygray.github.io/categories/til-2018/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>HTTP–The Definitive Guide, &#39;URls and Resources&#39;</title>
+      <link>http://cmygray.github.io/post/til-2018/0120/</link>
+      <pubDate>Sat, 20 Jan 2018 17:58:54 +0900</pubDate>
+      
+      <guid>http://cmygray.github.io/post/til-2018/0120/</guid>
+      <description>무엇을?  URL 표기법, 각 구성요소의 의미와 동작 웹 클라이언트가 지원하는 상대, 확장 URL 같은 단축 URL URL 인코딩 &amp;amp; 문자열 규칙 다양한 인터넷 정보시스템을 지원하는 공통 URL scheme 이름을 그대로 유지하면서도 객체를 다른 곳으로 옮길 수 있게 해주는 URN 을 포함한 URL 의 미래  인터넷의 리소스 탐색  앞 장에서 말했듯이, URI ⊃ [URL | URN] 실제 HTTP 애플리케이션은 URL 을 URI 의 일부분으로 취급한다  다시 보는 URL anatomy</description>
+    </item>
     
     <item>
       <title>HTTP–The Definitive Guide, &#39;Overview of HTTP&#39;</title>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang='ko'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='무엇을?  URL 표기법, 각 구성요소의 의미와 동작 웹 클라이언트가 지원하는 상대, 확장 URL 같은 단축 URL URL 인코딩 &amp; 문자열 규칙 다양한 인터넷 정보시스템을 지원하는 공통 URL scheme 이름을 그대로 유지하면서도 객체를 다른 곳으로 옮길 수 있게 해주는 URN 을 포함한 URL 의 미래  인터넷의 리소스 탐색  앞 장에서 말했듯이, URI ⊃ [URL | URN] 실제 HTTP 애플리케이션은 URL 을 URI 의 일부분으로 취급한다  다시 보는 URL anatomy'>
+
+<meta property='og:title' content='HTTP–The Definitive Guide, &#39;URls and Resources&#39; • cmygray'>
+<meta property='og:description' content='무엇을?  URL 표기법, 각 구성요소의 의미와 동작 웹 클라이언트가 지원하는 상대, 확장 URL 같은 단축 URL URL 인코딩 &amp; 문자열 규칙 다양한 인터넷 정보시스템을 지원하는 공통 URL scheme 이름을 그대로 유지하면서도 객체를 다른 곳으로 옮길 수 있게 해주는 URN 을 포함한 URL 의 미래  인터넷의 리소스 탐색  앞 장에서 말했듯이, URI ⊃ [URL | URN] 실제 HTTP 애플리케이션은 URL 을 URI 의 일부분으로 취급한다  다시 보는 URL anatomy'>
+<meta property='og:url' content='http://cmygray.github.io/post/til-2018/0120/'>
+<meta property='og:site_name' content='cmygray'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='HTTP'><meta property='article:published_time' content='2018-01-20T17:58:54&#43;09:00'/><meta property='article:modified_time' content='2018-01-20T17:58:54&#43;09:00'/>
+
+<meta name="generator" content="Hugo 0.29" />
+
+  <meta name="google-site-verification" content="Nr7i6uR7CjoTinZAs79UPCich8YNHUGFpCueYNn1yKE" />
+  <title>HTTP–The Definitive Guide, &#39;URls and Resources&#39; • cmygray</title>
+  <link rel='canonical' href='http://cmygray.github.io/post/til-2018/0120/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700&subset=latin'>
+<link rel='stylesheet' href='/assets/css/main.77da63e1.css'><link rel='stylesheet' href='/css/custom.css'>
+</head>
+
+
+<body class='page type-post'>
+  <div class='site'>
+
+    <a class='screen-reader' href='#main'>Skip to Content</a>
+
+    <header id='header' class='header-container'>
+      <div class='header site-header'>
+        <nav id='main-menu' class='main-menu-container' aria-label='Main Menu'>
+  <ul class='main-menu'>
+  <li>
+      <a href='/'>Home</a>
+    </li>
+  <li>
+      <a href='/categories/'>Categories</a>
+    </li>
+  <li>
+      <a href='/tags/'>Tags</a>
+    </li>
+  <li>
+      <a href='/about/'>About</a>
+    </li>
+  
+    <li>
+      <form role="search" method="get" action="https://www.google.com/search" target="w">
+        <input type="search" placeholder="Search..." value="" name="q" title="Search for:">
+        <input type="hidden" name="sitesearch" value="cmygray.github.io/">
+      </form>
+    </li>
+  </ul>
+</nav>
+
+        <div class='header-info'>
+          
+          <p class='site-title title'>cmygray</p>
+          
+          <p class='site-description subtitle'></p>
+        </div>
+      </div>
+    </header>
+
+
+<main id='main' class='main'>
+  <article lang='en' class='entry'>
+    <header class='header-container'>
+  <div class='header entry-header'>
+    <div class='header-info'>
+      <h1 class='title'>HTTP–The Definitive Guide, &#39;URls and Resources&#39;</h1>
+      
+
+    </div>
+    
+<div class='meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader'>Posted on </span>
+  <time class='date' datetime='2018-01-20T17:58:54&#43;09:00'>2018, Jan 20</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/> 
+  
+</svg>
+2 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+    
+    
+
+    <div class='entry-content'>
+  
+
+<h1 id="무엇을">무엇을?</h1>
+
+<ul>
+<li>URL 표기법, 각 구성요소의 의미와 동작</li>
+<li>웹 클라이언트가 지원하는 상대, 확장 URL 같은 단축 URL</li>
+<li>URL 인코딩 &amp; 문자열 규칙</li>
+<li>다양한 인터넷 정보시스템을 지원하는 공통 URL scheme</li>
+<li>이름을 그대로 유지하면서도 객체를 다른 곳으로 옮길 수 있게 해주는 URN 을 포함한 URL 의 미래</li>
+</ul>
+
+<h1 id="인터넷의-리소스-탐색">인터넷의 리소스 탐색</h1>
+
+<ul>
+<li>앞 장에서 말했듯이, URI ⊃ [URL | URN]</li>
+<li>실제 HTTP 애플리케이션은 URL 을 URI 의 일부분으로 취급한다</li>
+</ul>
+
+<p>다시 보는 URL anatomy</p>
+
+<p><img src="https://cascadingmedia.com/assets/images/insites/2015/02/url-anatomy/url-anatomy-55598c24.png" alt="HTTP URL Anatomy" /></p>
+
+<p>주요 구성요소:</p>
+
+<ul>
+<li>스킴; scheme: 어떻게 접근할 것인가?</li>
+<li>호스트; host: 호스팅 위치가 어디인가?</li>
+<li>패스; path: 서버 상 로컬리소스의 위치는 어디인가?</li>
+</ul>
+
+<p>효용</p>
+
+<ul>
+<li>리소스를 일관된 이름으로 가리킬 수 있다<br />
+(e.g., <code>&lt;scheme&gt;://&lt;server-location&gt;/&lt;path&gt;</code>)</li>
+</ul>
+
+<h1 id="url-문법">URL 문법</h1>
+
+<p>대표적인 구성요소는 앞서 언급한, 스킴 | 호스트 | 패스. 그밖에:</p>
+
+<ul>
+<li>사용자명</li>
+<li>비밀번호</li>
+<li>포트</li>
+<li>파라메터</li>
+<li>쿼리</li>
+<li>프래그먼트</li>
+</ul>
+
+<p>파라메터와 쿼리의 차이?</p>
+
+<ul>
+<li>파라메터는 리소스 접근에 필요한 추가 정보를, 쿼리는 접근한 리소스의 범위를 좁히기 위해 사용</li>
+<li>파라메터는 path 의 각 조각에 <code>;</code>과 함께 <code>&lt;name=value&gt;</code> 형식을 사용</li>
+<li>쿼리는 path 의 끝에 <code>?</code>와 함께 <code>&lt;name=value&gt;</code> 형식을 사용하며 여러개일 경우 <code>&amp;</code>으로 구분</li>
+</ul>
+
+<p><em>프래그먼트는 서버로 전달되지 않는다. 다만 응답이 완료된 후 클라이언트가 위치를 찾기 위해 사용한다</em></p>
+
+<h1 id="단축-url">단축 URL</h1>
+
+<p>리소스를 간결하게 기술하는 URL 과, 일부만 입력해도 자동으로 완성해주는 &lsquo;URL 확장&rsquo;</p>
+
+<p>상대 URL</p>
+
+<ul>
+<li>어떤 리소스 내부에서 동일한 호스트의 다른 리소스를 요청할 때 –예를 들면 <code>href</code></li>
+<li>기준은 <strong>base URL</strong>:
+
+<ul>
+<li>명시적인 방법: <code>&lt;base href=&quot;https://baseurl&quot;&gt;</code></li>
+<li>암시적인 방법: 단축 URL 이 내용에 포함된 리소스 자신의 URL</li>
+</ul></li>
+<li>알고리즘에 의해 상대 URL 을 파싱하고, 부족한 것을 base URL 에서 상속</li>
+</ul>
+
+<p>URL 확장</p>
+
+<ul>
+<li>호스트명의 앞 뒤로 도메인을 완성해주거나,</li>
+<li>방문 기록을 참조해서 제안하는 익숙한 기능</li>
+</ul>
+
+<h1 id="불완전한-문자열">불완전한 문자열</h1>
+
+<ul>
+<li>각 리소스의 유일한 이름을 정확히 가리키기 위해서</li>
+<li>URL 의 특정 문자열을 보다 완전한 문자로 인코딩하도록</li>
+<li><strong>이스케이프</strong> 기능 추가</li>
+</ul>
+
+<p>ASCII 코드에 존재하지 않는 문자열을 ASCII 코드의 조합으로 표현. 대표적으로 빈문자열은 <code>%20</code>. 퍼센티지 기호로 시작함. (&ldquo;%&rdquo; 자기 자신은 <code>%25</code>)</p>
+
+<p>제한된 문자</p>
+
+<ul>
+<li>예약되어있거나</li>
+<li>US-ASCII 로 출력이 불가능하거나</li>
+<li>다른 계층에서 헷갈릴 여지가 존재하거나</li>
+</ul>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4">% / . .. # ? ; : $ + @ &amp; = { } | \ * ~ [ ] ` &lt; &gt; &#34; 0x00`0x1F 0x7F &gt;0x7F</pre>
+</div>
+<h1 id="스킴의-바다">스킴의 바다</h1>
+
+<p>익숙한 것만:</p>
+
+<ul>
+<li>http; default port: 80 | <code>host : port / path ? query # fragment</code></li>
+<li>https; default port: 443 | <code>host : port / path ? query # fragment</code><br />
+차이점은 SSL(TSL)을 사용하는 것–1 장의 proxy tunnel 에서 다뤘다.</li>
+<li>mailto; 메일 보내기 링크에 자주 쓰는거&hellip;</li>
+<li>ftp; <code>username : password @ host : port / path ; parameter</code></li>
+<li>rtsp, rtspu; Real Time Streaming Protocol (UDP)<br />
+TCP 보다 신뢰도와 안정성은 떨어지지만 빠른 프로토콜로 스트리밍, 게임등에서 사용</li>
+<li>file; <code>host / path</code> 호스트 생략 시 로컬호스트(내 컴퓨터)</li>
+</ul>
+
+<h1 id="미래">미래</h1>
+
+<ul>
+<li>위치에 자유로운 식별자를 고안하기 위한 노력 =&gt; URN</li>
+<li>위치가 변경되어도 중간에서 처리해주는 방법 =&gt; PURL</li>
+<li>결론: 일단 URL 을 잘 알자(!?)</li>
+</ul>
+
+</div>
+
+    
+<footer class='entry-footer-container'>
+  <div class='entry-footer'>
+  <div class='categories'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Categories: </span><a class='category' href='/categories/til-2018'>TIL-2018</a></div>
+<div class='tags'>
+  <span class='taxonomyTerm-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader'>Tags: </span><a class='tag' href='/tags/http'>HTTP</a></div>
+
+  </div>
+</footer>
+
+
+  </article>
+  
+<nav class='entry-nav-container'>
+  <div class='entry-nav'><div class='prev-entry'>
+      <a href='/post/til-2018/0119/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader'>Previous post: </span>HTTP–The Definitive Guide, &#39;Overview of HTTP&#39;</a>
+    </div></div>
+</nav>
+
+  
+<div class='comments-container'>
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "cmygray" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</main>
+
+    <footer id='footer' class='footer-container'>
+      <div class='footer'>
+        <div class='social-menu-container'>
+  <nav aria-label='Social Menu'>
+    <ul class='social-menu'><li>
+        <a href='mailto:cmygray@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://facebook.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Facebook account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/cmygray' target='_blank' rel='noopener'>
+          <span class='screen-reader'>Open Instagram account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</div>
+        <div class='copyright'>
+
+  <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br
+  />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+</div>
+
+      </div>
+    </footer>
+
+  </div><script src='/assets/js/main.f29c93b9.js'></script><script src='/js/custom.js'></script></body>
+
+</html>
+
