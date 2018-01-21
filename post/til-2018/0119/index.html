@@ -5,11 +5,11 @@
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='무엇을 알아보나?  웹 클라이언트와 서버의 통신 방법 웹 컨텐츠는 어디로부터 오는가 웹의 입출은 어떻게 작동하나 HTTP 통신에서 사용되는 메시지 포맷 TCP 네트워크 전송의 근간 다양한 HTTP 프로토콜 인터넷에 설치된 주요 HTTP 컴포넌트들  클라이언트와 서버  클라이언트는 HTTP 요청을 서버에게 서버는 HTTP 응답을 클라이언트에게  &hellip;?!
-리소스; Resource  웹 컨텐츠의 소스 text/ HTML/ Word/ img/ &hellip; software programs that generate content on demand (e.g., 웹 애플리케이션) Anything(!)  미디어 타입  MIME 타입; Multipurpose Internet Mail Extensions  서로 다른 전자우편 시스템 간의 메세지 전송을 위해 고안되었으나 쓸모가 많아서 HTTP에서도 사용한다 서버가 응답한 오브젝트가 무엇인지 명시하여 브라우저의 대응을 돕는다 오브젝트타입/서브타입 으로 표시 (e.'>
+리소스; Resource  웹 컨텐츠의 소스 text/ HTML/ Word/ img/ &hellip; software programs that generate content on demand (e.g., 웹 애플리케이션) Anything(!)  미디어 타입  MIME 타입; Multipurpose Internet Mail Extensions  서로 다른 전자우편 시스템 간의 메세지 전송을 위해 고안되었으나 쓸모가 많아서 HTTP 에서도 사용한다 서버가 응답한 오브젝트가 무엇인지 명시하여 브라우저의 대응을 돕는다 오브젝트타입/서브타입 으로 표시 (e.'>
 
 <meta property='og:title' content='HTTP–The Definitive Guide, &#39;Overview of HTTP&#39; • cmygray'>
 <meta property='og:description' content='무엇을 알아보나?  웹 클라이언트와 서버의 통신 방법 웹 컨텐츠는 어디로부터 오는가 웹의 입출은 어떻게 작동하나 HTTP 통신에서 사용되는 메시지 포맷 TCP 네트워크 전송의 근간 다양한 HTTP 프로토콜 인터넷에 설치된 주요 HTTP 컴포넌트들  클라이언트와 서버  클라이언트는 HTTP 요청을 서버에게 서버는 HTTP 응답을 클라이언트에게  &hellip;?!
-리소스; Resource  웹 컨텐츠의 소스 text/ HTML/ Word/ img/ &hellip; software programs that generate content on demand (e.g., 웹 애플리케이션) Anything(!)  미디어 타입  MIME 타입; Multipurpose Internet Mail Extensions  서로 다른 전자우편 시스템 간의 메세지 전송을 위해 고안되었으나 쓸모가 많아서 HTTP에서도 사용한다 서버가 응답한 오브젝트가 무엇인지 명시하여 브라우저의 대응을 돕는다 오브젝트타입/서브타입 으로 표시 (e.'>
+리소스; Resource  웹 컨텐츠의 소스 text/ HTML/ Word/ img/ &hellip; software programs that generate content on demand (e.g., 웹 애플리케이션) Anything(!)  미디어 타입  MIME 타입; Multipurpose Internet Mail Extensions  서로 다른 전자우편 시스템 간의 메세지 전송을 위해 고안되었으나 쓸모가 많아서 HTTP 에서도 사용한다 서버가 응답한 오브젝트가 무엇인지 명시하여 브라우저의 대응을 돕는다 오브젝트타입/서브타입 으로 표시 (e.'>
 <meta property='og:url' content='http://cmygray.github.io/post/til-2018/0119/'>
 <meta property='og:site_name' content='cmygray'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='HTTP'><meta property='article:published_time' content='2018-01-19T15:29:44&#43;09:00'/><meta property='article:modified_time' content='2018-01-19T15:29:44&#43;09:00'/>
@@ -152,7 +152,7 @@
 
 <ul>
 <li>서로 다른 전자우편 시스템 간의 메세지 전송을 위해 고안되었으나</li>
-<li>쓸모가 많아서 HTTP에서도 사용한다</li>
+<li>쓸모가 많아서 HTTP 에서도 사용한다</li>
 <li>서버가 응답한 오브젝트가 무엇인지 명시하여 브라우저의 대응을 돕는다</li>
 <li>오브젝트타입/서브타입 으로 표시 (e.g, text/html)</li>
 </ul></li>
@@ -168,7 +168,7 @@
 <h1 id="urls">URLs</h1>
 
 <ul>
-<li>흔히 사용하는 식별자; Uniform Resource <strong>Locator</strong>. 오늘날 대부분의 URI는 URL.</li>
+<li>흔히 사용하는 식별자; Uniform Resource <strong>Locator</strong>. 오늘날 대부분의 URI 는 URL.</li>
 </ul>
 
 <p><img src="https://cascadingmedia.com/assets/images/insites/2015/02/url-anatomy/url-anatomy-55598c24.png" alt="HTTP URL Anatomy" /></p>
@@ -205,7 +205,7 @@
 <h1 id="메소드-methods">메소드; Methods</h1>
 
 <ul>
-<li>HTTP가 지원하는 요청 명령들을 의미한다
+<li>HTTP 가 지원하는 요청 명령들을 의미한다
 
 <ul>
 <li>GET: 요청한 리소스를 보내달라</li>
@@ -217,7 +217,7 @@
 </ul></li>
 </ul>
 
-<p><a href="http://blog.embian.com/66" target="_blank">PUT, POST의 차이는 멱등성과 리소스 결정권에 의해&hellip;</a></p>
+<p><a href="http://blog.embian.com/66" target="_blank">PUT, POST 의 차이는 멱등성과 리소스 결정권에 의해&hellip;</a></p>
 
 <h1 id="상태-코드-status-codes">상태 코드; Status Codes</h1>
 
@@ -263,9 +263,9 @@
 
 <h1 id="연결-tcp-ip">연결–TCP/IP</h1>
 
-<p>HTTP는 응용 계층의 프로토콜이며, 네트워크 통신의 세부적인 것은 전송 제어 프로토콜; Transmission Control Protocol과 인터넷 프로토콜; Internet Protocol을 따른다. 둘을 합쳐서 흔히 인터넷 프로토콜 스위트라고 부르며 전송과 네트워크 계층에 속한다.</p>
+<p>HTTP 는 응용 계층의 프로토콜이며, 네트워크 통신의 세부적인 것은 전송 제어 프로토콜; Transmission Control Protocol 과 인터넷 프로토콜; Internet Protocol 을 따른다. 둘을 합쳐서 흔히 인터넷 프로토콜 스위트라고 부르며 전송과 네트워크 계층에 속한다.</p>
 
-<p>TCP가 제공하는 것:</p>
+<p>TCP 가 제공하는 것:</p>
 
 <ul>
 <li>에러없는 데이터 전송</li>
@@ -311,18 +311,18 @@
 </table>
 
 <ul>
-<li>host name은 DNS; Domain Name Service를 통해 IP주소로 변환된다</li>
-<li>port의 기본값은 80이다</li>
+<li>host name 은 DNS; Domain Name Service 를 통해 IP 주소로 변환된다</li>
+<li>port 의 기본값은 80 이다</li>
 </ul>
 
 <p><strong>절차</strong></p>
 
-<p>URL을 입력하면 브라우저는&hellip;</p>
+<p>URL 을 입력하면 브라우저는&hellip;</p>
 
 <ol>
 <li>호스트 네임을 추출한다</li>
 <li>호스트 네임을 IP 주소로 변환한다</li>
-<li>포트번호를 추출하고 없으면 80으로 지정한다</li>
+<li>포트번호를 추출하고 없으면 80 으로 지정한다</li>
 <li>웹 서버에 대한 TCP 연결을 구성한다</li>
 <li>HTTP 요청 메세지를 서버에 전송한다</li>
 <li>HTTP 응답 메세지를 서버로부터 돌려받는다</li>
@@ -363,7 +363,7 @@
 <li>HTTP 트래픽을 다른 프로토콜로 변환하는데 흔히 사용</li>
 </ul>
 
-<p>예를 들어서 FTP 서버에 접근하고싶은 HTTP 요청이 있을 때, 게이트웨이는 요청을 FTP로, 응답을 HTTP로 변환한다.</p>
+<p>예를 들어서 FTP 서버에 접근하고싶은 HTTP 요청이 있을 때, 게이트웨이는 요청을 FTP 로, 응답을 HTTP 로 변환한다.</p>
 
 <h2 id="터널-tunnels">터널; Tunnels</h2>
 
@@ -374,7 +374,7 @@
 <ul>
 <li>어쨌든 중계역할</li>
 <li>HTTP 요청 메세지에는 별로 관심이 없으며 중계만 한다</li>
-<li>전송계층보안을 위해 사용되는 터널의 예로 TLS, SSL이 있다</li>
+<li>전송계층보안을 위해 사용되는 터널의 예로 TLS, SSL 이 있다</li>
 </ul>
 
 <h2 id="에이전트-agents">에이전트; Agents</h2>
@@ -403,10 +403,10 @@
 <ul>
 <li>URI ⊃ [URL | URN]</li>
 <li>리소스의 위치를 나타내는 방식을 통틀어 URI 라고 한다. Uniform Resource Identifier</li>
-<li>표현 방식에 따라 URL, URN의 하위 개념으로 분류할 수 있다.</li>
-<li>URL은 고정된 위치를 나타내며, URN은 위치에 구애받지 않는 식별자</li>
+<li>표현 방식에 따라 URL, URN 의 하위 개념으로 분류할 수 있다.</li>
+<li>URL 은 고정된 위치를 나타내며, URN 은 위치에 구애받지 않는 식별자</li>
 <li>Scheme + Domain + Port + Path + Query + Fragment</li>
-<li>사람이 알기 쉬운 Domain은 DNS에 의해서 IP주소로 변경된다</li>
+<li>사람이 알기 쉬운 Domain 은 DNS 에 의해서 IP 주소로 변경된다</li>
 </ul>
 
 <p>HTTP 메세지</p>
@@ -417,17 +417,17 @@
 
 <ul>
 <li>시작줄: <code>HTTP메소드, 버전, 리소스의 경로</code> | <code>버전, 상태코드, reason phrase</code></li>
-<li>Header(s): 요청에 필요한 메타데이터(이름과 값으로 이루어진)들을 담고있으며 반드시 empty line으로 끝나야한다</li>
-<li>Body: 일부 메소드는 요청/응답에 데이터가 수반된다. 해당 데이터는 body에 담긴다.</li>
+<li>Header(s): 요청에 필요한 메타데이터(이름과 값으로 이루어진)들을 담고있으며 반드시 empty line 으로 끝나야한다</li>
+<li>Body: 일부 메소드는 요청/응답에 데이터가 수반된다. 해당 데이터는 body 에 담긴다.</li>
 </ul></li>
 </ul>
 
 <p>HTTP 트랜잭션 환경</p>
 
 <ul>
-<li>전송 제어 규약(TCP)와 인터넷 규약(IP)를 합쳐서 인터넷 프로토콜 스위트 또는 TCP/IP라고 칭한다</li>
+<li>전송 제어 규약(TCP)와 인터넷 규약(IP)를 합쳐서 인터넷 프로토콜 스위트 또는 TCP/IP 라고 칭한다</li>
 <li>HTTP 통신은 주로 TCP/IP 환경 위에서 이루어진다.</li>
-<li>OSI 7 Layer에서 TCP는 전송 계층, IP는 네트워크 계층에 해당한다</li>
+<li>OSI 7 Layer 에서 TCP 는 전송 계층, IP 는 네트워크 계층에 해당한다</li>
 <li>TCP/IP 환경은 전송 간 아래 세가지를 보장한다
 
 <ul>
@@ -446,6 +446,12 @@
 <li>터널: HTTP 메세지를 열람하지 않고 암호화 등의 처리를 해주는 통로</li>
 <li>에이전트: 유저를 대신하여 HTTP 요청을 발생시키는 모든 것</li>
 </ul>
+
+<h1 id="참고자료">참고자료</h1>
+
+<ol>
+<li>David Gourley. (2002). <em>HTTP: The Definitive Guide</em>. O&rsquo;REILLY</li>
+</ol>
 
 </div>
 
